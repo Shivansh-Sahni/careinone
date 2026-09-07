@@ -1,0 +1,12 @@
+.git
+.venv
+.build
+build
+DerivedData
+artifacts
+**/__pycache__
+**/.env
+**/.env.*
+!backend/.env.example
+**/*.store*
+**/*.m4a

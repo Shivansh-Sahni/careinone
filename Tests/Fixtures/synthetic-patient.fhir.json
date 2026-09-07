@@ -1,0 +1,11 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {"tag": [{"system": "urn:carecontinuity:demo", "code": "synthetic", "display": "Entirely synthetic demonstration data"}]},
+  "entry": [
+    {"resource": {"resourceType": "Patient", "id": "synthetic-person", "name": [{"text": "Synthetic Patient"}]}},
+    {"resource": {"resourceType": "ServiceRequest", "id": "synthetic-cbc-order", "status": "active", "intent": "order", "subject": {"reference": "Patient/synthetic-person"}, "authoredOn": "2026-09-01", "code": {"coding": [{"system": "http://loinc.org", "code": "58410-2", "display": "CBC panel"}]}}},
+    {"resource": {"resourceType": "Observation", "id": "synthetic-cbc-result", "status": "final", "subject": {"reference": "Patient/synthetic-person"}, "effectiveDateTime": "2026-09-03", "code": {"coding": [{"system": "http://loinc.org", "code": "58410-2", "display": "CBC panel"}]}, "valueString": "Synthetic result available; see original report"}},
+    {"resource": {"resourceType": "Appointment", "id": "synthetic-visit", "status": "booked", "description": "Synthetic primary care appointment", "start": "2026-09-11T10:00:00-04:00", "end": "2026-09-11T10:30:00-04:00", "participant": [{"actor": {"reference": "Patient/synthetic-person"}, "status": "accepted"}]}}
+  ]
+}

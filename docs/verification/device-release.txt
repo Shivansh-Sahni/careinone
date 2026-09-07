@@ -1,0 +1,6 @@
+2026-09-07 · Xcode 26.6 · iOS SDK 26.5 · arm64 iPhone
+Configuration: Release; deployment target iOS 18.0
+Signing disabled only for this environment verification.
+Command: xcodebuild -project CareContinuity.xcodeproj -scheme CareContinuity -configuration Release -destination generic/platform=iOS -derivedDataPath /private/tmp/CareContinuityDevice -jobs 2 CODE_SIGNING_ALLOWED=NO build
+Result: BUILD SUCCEEDED
+Benign SDK warning: AppIntents metadata extraction skipped because the application has no AppIntents dependency.

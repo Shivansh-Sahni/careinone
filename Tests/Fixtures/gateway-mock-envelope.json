@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "care-schema-1.0",
+  "claims": [
+    {
+      "kind": "other",
+      "label": "Synthetic note: CBC ordered.",
+      "quote": "Synthetic note: CBC ordered.",
+      "action": "mentioned",
+      "subject": "unknown",
+      "certainty": "uncertain",
+      "confidence": 0,
+      "speakerUncertain": true
+    }
+  ]
+}

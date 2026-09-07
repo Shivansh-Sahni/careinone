@@ -1,0 +1,35 @@
+test_auth_required (test_gateway.GatewayTests.test_auth_required) ... ok
+test_clarification_cap (test_gateway.GatewayTests.test_clarification_cap) ... ok
+test_disconnect_cancels_work (test_gateway.GatewayTests.test_disconnect_cancels_work) ... ok
+test_duplicate_auth_denied (test_gateway.GatewayTests.test_duplicate_auth_denied) ... ok
+test_failure_never_echoes_phi_or_secrets (test_gateway.GatewayTests.test_failure_never_echoes_phi_or_secrets) ... ok
+test_health_is_content_free (test_gateway.GatewayTests.test_health_is_content_free) ... ok
+test_invalid_request (test_gateway.GatewayTests.test_invalid_request) ... ok
+test_no_cache_headers (test_gateway.GatewayTests.test_no_cache_headers) ... ok
+test_no_patient_state_retained (test_gateway.GatewayTests.test_no_patient_state_retained) ... ok
+test_primary_fallback (test_gateway.GatewayTests.test_primary_fallback) ... ok
+test_prompt_injection_is_only_source_data (test_gateway.GatewayTests.test_prompt_injection_is_only_source_data) ... ok
+test_rate_limit (test_gateway.GatewayTests.test_rate_limit) ... ok
+test_raw_size_limit (test_gateway.GatewayTests.test_raw_size_limit) ... ok
+test_requires_json_content_type (test_gateway.GatewayTests.test_requires_json_content_type) ... ok
+test_unvalidated_primary_falls_back (test_gateway.GatewayTests.test_unvalidated_primary_falls_back) ... ok
+test_wrong_token (test_gateway.GatewayTests.test_wrong_token) ... ok
+test_chunk_overlap_and_dedup (test_gateway.SchemaTests.test_chunk_overlap_and_dedup) ... ok
+test_consent_required (test_gateway.SchemaTests.test_consent_required) ... ok
+test_date_validation (test_gateway.SchemaTests.test_date_validation) ... ok
+test_duplicate_json_keys_rejected (test_gateway.SchemaTests.test_duplicate_json_keys_rejected) ... ok
+test_exact_quote_required (test_gateway.SchemaTests.test_exact_quote_required) ... ok
+test_explicit_unknown_defaults (test_gateway.SchemaTests.test_explicit_unknown_defaults) ... ok
+test_mock_requires_explicit_configuration (test_gateway.SchemaTests.test_mock_requires_explicit_configuration) ... ok
+test_nan_json_rejected (test_gateway.SchemaTests.test_nan_json_rejected) ... ok
+test_no_additional_state_fields (test_gateway.SchemaTests.test_no_additional_state_fields) ... ok
+test_numeric_boolean_and_nonfinite_rejected (test_gateway.SchemaTests.test_numeric_boolean_and_nonfinite_rejected) ... ok
+test_preserves_conditionality_negation_and_family (test_gateway.SchemaTests.test_preserves_conditionality_negation_and_family) ... ok
+test_provider_urls_server_config_only (test_gateway.SchemaTests.test_provider_urls_server_config_only) ... ok
+test_ranges_and_enums (test_gateway.SchemaTests.test_ranges_and_enums) ... ok
+test_request_limits (test_gateway.SchemaTests.test_request_limits) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.028s
+
+OK

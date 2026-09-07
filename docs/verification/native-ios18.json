@@ -1,0 +1,46 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "653F56D1-0FC8-4449-A486-118013DBECAC",
+        "deviceName" : "iPhone 16 Pro",
+        "modelName" : "iPhone 16 Pro",
+        "osBuildNumber" : "22E238",
+        "osVersion" : "18.4",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 0,
+      "passedTests" : 17,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "CareContinuity · Built with macOS 26.6.2",
+  "expectedFailures" : 0,
+  "failedTests" : 0,
+  "finishTime" : 1788806465.589,
+  "passedTests" : 17,
+  "result" : "Passed",
+  "skippedTests" : 0,
+  "startTime" : 1788806371.553,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+
+  ],
+  "title" : "Test - CareContinuity",
+  "topInsights" : [
+    {
+      "category" : "Longest Test Runs",
+      "impact" : "81% of duration",
+      "text" : "1 longest test run with outlier durations exceeding 1.53s (three standard deviations)"
+    }
+  ],
+  "totalTestCount" : 17
+}

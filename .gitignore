@@ -1,0 +1,11 @@
+.build/
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.venv/
+__pycache__/
+.env
+*.pyc
+.DS_Store
+artifacts/
