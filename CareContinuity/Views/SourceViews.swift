@@ -24,8 +24,8 @@ struct SourceRow: View {
             Image(systemName: source.kind == .voice || source.kind == .visitRecording ? "waveform" : source.kind == .photo ? "photo" : "doc.text").font(.title3).foregroundStyle(Theme.accent).frame(width: 28)
             VStack(alignment: .leading, spacing: 6) {
                 Text(source.title).font(.headline)
-                Text(source.kind.rawValue + " · " + (source.eventAt?.formatted(date: .abbreviated, time: .omitted) ?? "Event date unknown")).font(.caption).foregroundStyle(.secondary)
-                if [.needsReview, .pending, .processing, .failed, .cancelled].contains(source.state) { Badge(text: source.state.rawValue, caution: source.state == .failed) }
+                Text(source.kind.displayLabel + " · " + (source.eventAt?.formatted(date: .abbreviated, time: .omitted) ?? "Event date unknown")).font(.caption).foregroundStyle(.secondary)
+                if [.needsReview, .pending, .processing, .failed, .cancelled].contains(source.state) { Badge(text: source.state.displayLabel, caution: source.state == .failed) }
             }
         }.padding(.vertical, 5)
     }
@@ -50,7 +50,7 @@ struct SourceDetailView: View {
                     VStack(alignment: .leading, spacing: 20) {
                         CareCard {
                             Text(source.title).font(.title2.bold())
-                            HStack { Badge(text: source.kind.rawValue); if source.synthetic { Badge(text: "Synthetic demo") }; Badge(text: "Version \(source.version)") }
+                            HStack { Badge(text: source.kind.displayLabel); if source.synthetic { Badge(text: "Synthetic demo") }; Badge(text: "Version \(source.version)") }
                             metadata("Captured", source.capturedAt.formatted(date: .abbreviated, time: .shortened))
                             metadata("Event", source.eventAt?.formatted(date: .abbreviated, time: .omitted) ?? "Unknown")
                             if !source.provider.isEmpty { metadata("Provider", source.provider) }
@@ -114,7 +114,7 @@ struct SourceDetailView: View {
             .sheet(item: $reviewClaim) { ReviewEditor(claim: $0) }
             .sheet(isPresented: $edit) { if let source { SourceEditView(source: source) } }
             .sheet(item: $file) { QuickLookView(url: $0.url) }
-            .confirmationDialog("Delete this source?", isPresented: $delete, titleVisibility: .visible) { Button("Delete source, audio, and linked claims", role: .destructive) { store.deleteSource(id); dismiss() } } message: { Text("My Care, conflicts, changes, and follow-through will be rebuilt from the remaining evidence.") }
+            .confirmationDialog("Delete this source?", isPresented: $delete, titleVisibility: .visible) { Button("Delete source, audio, and linked claims", role: .destructive) { if store.deleteSource(id) { dismiss() } } } message: { Text("My Care, conflicts, changes, and follow-through will be rebuilt from the remaining evidence.") }
             .confirmationDialog("Delete audio only?", isPresented: $deleteAudio, titleVisibility: .visible) { Button("Delete audio", role: .destructive) { playback.stop(); store.deleteAudio(id) } } message: { Text("The transcript, source, and reviewed claims remain saved.") }
             .onDisappear { playback.stop(); transcription.cancelTranscription() }
     }

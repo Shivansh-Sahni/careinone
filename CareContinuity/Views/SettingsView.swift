@@ -4,8 +4,6 @@ import CareCore
 struct SettingsView: View {
     @Environment(AppStore.self) private var store
     @State private var profile = Profile()
-    @State private var endpoint = ""
-    @State private var token = ""
     @State private var erase = false
     @State private var removeDemo = false
     @State private var export: URL?
@@ -22,8 +20,7 @@ struct SettingsView: View {
                 Toggle("Allow cloud analysis", isOn: $profile.cloudConsent)
                 Text("With cloud analysis off, capture, OCR, transcription when available on this device, conservative extraction, review, care memory, and workflows stay local. With it on, source text is sent to your configured backend and its model provider. Audio, photos, and original files are not sent by this app.").font(.caption).foregroundStyle(.secondary)
                 Text("Review your model provider’s privacy and retention terms before enabling. The included backend does not store patient content. Provider behavior depends on your deployment.").font(.caption).foregroundStyle(.secondary)
-                TextField("Backend HTTPS URL", text: $endpoint).textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL)
-                SecureField("Backend access token (not a model API key)", text: $token).textInputAutocapitalization(.never).autocorrectionDisabled()
+                NavigationLink { CloudConnectionView() } label: { Label("Set up or test cloud connection", systemImage: "network") }
                 Text("Model API keys belong only in the backend environment. This iPhone stores its backend access token in Keychain.").font(.caption).foregroundStyle(.secondary)
             }
             Section("Privacy & recording") {
@@ -51,28 +48,32 @@ struct SettingsView: View {
                 Text("Synthetic examples show a medication discrepancy, follow-through, an upcoming appointment, and numeric result trends. Demo sources are visibly labeled.").font(.caption).foregroundStyle(.secondary)
             }
             Section("Your data") {
+                NavigationLink { BackupView() } label: { Label("Encrypted backup & restore", systemImage: "externaldrive.badge.checkmark") }
                 Button("Export care graph as JSON") { do { export = try ExportService.graph(store.state) } catch { store.error = error.localizedDescription } }
                 if let export { ShareLink("Share exported graph", item: export) }
                 Text("The graph export contains your saved health information and source text. Original binary files and audio are not included. Share it only with recipients you choose.").font(.caption).foregroundStyle(.secondary)
-                Button("Rebuild derived care graph") { _ = store.mutate { Reconciler.rebuild(&$0) }; store.refreshNotifications(); store.notice = "Derived views rebuilt from accepted claims." }
+                Button("Rebuild derived care graph") { if store.mutate({ Reconciler.rebuild(&$0) }) { store.refreshNotifications(); store.notice = "Derived views rebuilt from accepted claims." } }
                 Button("Delete all local data", role: .destructive) { erase = true }
             }
             Section("About this build") {
+                NavigationLink { HelpPrivacyView() } label: { Label("How it works & privacy", systemImage: "questionmark.circle") }
                 Text("CareContinuity 1.0 · iOS 18+")
                 Text("A capture-first continuity tool. It organizes reported information, preserves evidence, and helps you prepare questions. It does not diagnose or determine which conflicting instruction is correct.").font(.caption).foregroundStyle(.secondary)
                 DisclosureGroup("Local audit activity · no health content") {
                     ForEach(store.state.audit.sorted { $0.timestamp > $1.timestamp }.prefix(20)) { event in HStack { Text(event.action); Spacer(); Text(event.timestamp.formatted(date: .abbreviated, time: .shortened)) }.font(.caption) }
                 }
             }
-        }.navigationTitle("Settings").onAppear { profile = store.state.profile; let credentials = KeychainStore.backend; endpoint = credentials.endpoint; token = credentials.token }
+        }.navigationTitle("Settings").onAppear { profile = store.state.profile }
             .confirmationDialog("Erase every local record?", isPresented: $erase, titleVisibility: .visible) { Button("Permanently delete all local data", role: .destructive) { ExportService.clean(); store.eraseAll(); profile = store.state.profile } } message: { Text("Sources, audio, claims, profile, questions, and local credentials will be removed. This cannot be undone.") }
             .confirmationDialog("Remove demo sources?", isPresented: $removeDemo, titleVisibility: .visible) { Button("Remove synthetic data", role: .destructive) { store.removeDemo(); profile = store.state.profile } }
     }
     private func save() {
         Task {
             do {
-                if !endpoint.isEmpty {
-                    guard let url = URL(string: endpoint), url.scheme == "https", url.host != nil, url.user == nil, url.password == nil, url.query == nil, url.fragment == nil else { throw CareError.invalid("Use an HTTPS backend URL without embedded credentials or query parameters.") }
+                if profile.cloudConsent {
+                    let credentials = KeychainStore.backend
+                    _ = try GatewayClient.validate(endpoint: credentials.endpoint, token: credentials.token)
+                    guard profile.cloudProviderConfigurationID != nil else { throw CareError.invalid("Open Cloud connection, check the configured models, and explicitly allow them before enabling cloud analysis.") }
                 }
                 if profile.appLock && !store.state.profile.appLock {
                     authenticating = true; let allowed = await store.lock.authenticate(); authenticating = false
@@ -81,7 +82,6 @@ struct SettingsView: View {
                 if profile.notifications && !store.state.profile.notifications {
                     guard try await ReminderService.requestPermission() else { profile.notifications = false; throw CareError.invalid("Notifications were not allowed. You can enable them in iOS Settings later.") }
                 }
-                try KeychainStore.saveBackend(endpoint:endpoint,token:token)
                 if profile.cloudConsent && !store.state.profile.cloudConsent { profile.cloudConsentAt = Date() }
                 if !profile.cloudConsent { profile.cloudConsentAt = nil }
                 profile.demoLoaded = store.state.profile.demoLoaded

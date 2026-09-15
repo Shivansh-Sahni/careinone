@@ -10,7 +10,7 @@ A native, local-first iOS care continuity application. Capture evidence, review 
 2. Select the **CareContinuity** scheme and an iPhone simulator, or your connected iPhone. Minimum OS: **iOS 18**. Swift language mode: **6**.
 3. For an iPhone, set your development team under Signing & Capabilities and change the bundle identifier if needed. The target uses the Data Protection capability. Build and run.
 4. Start with one note or load the clearly labeled synthetic demo. No backend configuration is required for the local application.
-5. Optional: configure the HTTPS gateway URL and a per-installation backend access token in Settings, enable cloud analysis, and save preferences. **Never place a model-provider API key in the iOS app.**
+5. Optional: open Settings → Set up or test cloud connection. Check the gateway and disclosed models, then explicitly allow cloud analysis. **Never place a model-provider API key in the iOS app.**
 
 If Xcode reports an unavailable platform despite showing an SDK, install the matching runtime from Xcode → Settings → Components. The `xcodebuild -downloadPlatform iOS` command can also install the runtime. This workspace initially had an SDK/runtime mismatch; the verification ledger records its resolution.
 
@@ -35,13 +35,13 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r backend/requirements.lock
 ```
 
-Configure environment variables described in [backend/.env.example](backend/.env.example). The server intentionally does **not** load `.env` files automatically; use your deployment platform’s secret manager or set environment variables in your shell. Set `CARE_BACKEND_TOKENS` to comma-separated random tokens of at least 32 characters. Set the compatible provider’s base URL (normally ending in `/v1`), model name, and server-side API key. Optional fallback settings select a second provider. Mock mode requires both `CARE_PROVIDER=mock` and `CARE_ALLOW_MOCK=true`.
+For guided setup, run `.venv/bin/python -m backend.configure`, then `.venv/bin/python -m backend.run`. The first command creates an owner-only `.env` without printing keys; the second explicitly loads it without shell evaluation. OpenAI, Kimi, and generic compatible adapters have independent primary/fallback settings. Deployment platforms can supply the variables in [backend/.env.example](backend/.env.example) directly. See [docs/MODEL_SETUP.md](docs/MODEL_SETUP.md) for model selection, limits, consent, and a synthetic-only connectivity check. The direct Uvicorn command below uses environment variables and does not load `.env`.
 
 ```sh
 .venv/bin/uvicorn backend.app:create_app --factory --host 127.0.0.1 --port 8000 --no-access-log --limit-concurrency 16
 ```
 
-Deploy behind an HTTPS reverse proxy; the iPhone rejects plain HTTP and redirects. `GET /health` is content-free. `POST /v1/extract` requires bearer authentication, JSON, schema version, explicit consent, source kind, and bounded text. Responses contain proposals only. Both server and client validate them; canonical reconciliation runs only in Swift after review.
+Deploy behind an HTTPS reverse proxy; the iPhone rejects plain HTTP and redirects. `GET /health` is content-free. `POST /v1/extract` requires bearer authentication, JSON, schema version, explicit consent bound to the disclosed provider configuration, source kind, and bounded text. Authenticated `/v1/config` and `/v1/check` support setup without sending patient records. Responses contain proposals only. Both server and client validate them; canonical reconciliation runs only in Swift after review.
 
 The gateway has no patient database, content cache, uploads directory, or request-body logging. Provider requests use bounded timeouts, no redirects, no tool calls, and no evidence-specified URLs. **Provider and infrastructure retention must be assessed for your deployment.** See [docs/SECURITY.md](docs/SECURITY.md).
 
@@ -57,7 +57,7 @@ xcodebuild -project CareContinuity.xcodeproj -scheme CareContinuity \
 
 The Swift package tests the pure care engine. Xcode runs SwiftData/capture/export integration tests and UI tests that use an isolated synthetic test store. `scripts/backend_smoke.py` runs an actual localhost ASGI server using an ephemeral token and synthetic data, then writes the Swift wire-contract fixture. See [docs/VALIDATION.md](docs/VALIDATION.md) for physical validation steps and remaining release work.
 
-Verified in this workspace: **50 Swift core tests, 30 gateway tests, 14 native integration tests, and 3 UI workflows**. Simulator and unsigned iPhone Release builds pass. Native tests cover both iOS 26.5 and iOS 18.4; the validation record identifies the exact runs and physical checks still required.
+**September 15 verification:** 59 Swift core tests and 47 gateway tests pass, plus an actual HTTP smoke test. The updated app adds encrypted backup/restore, provider-specific cloud setup and recipient-bound consent, question/encounter editors, and clearer labels. Native revalidation is currently blocked by the newly installed Xcode 27 license; see [docs/RELEASE.md](docs/RELEASE.md). **Previous September 7 baseline:** 14 integration tests and 3 UI workflows passed, as did simulator and unsigned-device Release builds on Xcode 26.6. Those earlier results do not validate the September 15 UI changes.
 
 Screenshots from the running app: [Today](docs/verification/today.png), [source discrepancies](docs/verification/discrepancy.png), [medication history](docs/verification/medication-history.png), and [explicit review](docs/verification/review.png). All displayed records are synthetic.
 
@@ -74,5 +74,7 @@ Screenshots from the running app: [Today](docs/verification/today.png), [source 
 | `backend` | Stateless ASGI gateway, strict wire validation, provider adapters, routing, deployment files |
 | `Tests`, `IntegrationTests`, `UITests` | Core, native integration, and user-flow validation |
 | `docs` | Architecture, security, FHIR contract, validation checklist |
+
+Encrypted backup/restore includes the care graph and original files, with optional audio, protected by a patient-held passphrase. The bounded archive supports 40 MB of attachments; restore replaces local records only after explicit confirmation and a successful transaction.
 
 Local graph JSON export includes health information and source text, but not original binary attachments or audio. Native Files/Open In import is supported; a separate share extension is not included. There is no HealthKit, live EHR, on-device foundation-model, or RxNorm service dependency. Adapter boundaries allow those to be added later without changing canonical state ownership.

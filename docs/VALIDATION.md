@@ -1,5 +1,7 @@
 # Validation record and release checklist
 
+**September 15 update:** 59 core tests and 47 gateway tests pass. The new backup, provider consent/setup, and editor changes await native revalidation because Xcode 27 stops at its unaccepted license. Current evidence is in [verification/2026-09-15](verification/2026-09-15/README.md); the older native results below apply to the September 7 baseline. See [RELEASE.md](RELEASE.md) for the current submission packet and remaining checks.
+
 All clinical examples used by automated tests and the demo are synthetic.
 
 ## Automated checks

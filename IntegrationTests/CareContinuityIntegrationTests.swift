@@ -6,6 +6,42 @@ import CareCore
 @testable import CareContinuity
 
 @MainActor final class CareContinuityIntegrationTests: XCTestCase {
+    func testBackupRestoresOriginalsAndDoesNotTransferConsent() throws {
+        let vault = try vault(); defer { try? FileManager.default.removeItem(at: vault.root) }
+        let store = try AppStore(repository: SwiftDataRepository(root: vault.root), vault: vault)
+        let original = Data("Synthetic original PDF bytes".utf8)
+        let id = try store.capture(title: "Backup evidence", kind: .pdf, text: "Allergy: penicillin", data: original, extension: "pdf", analyze: false)
+        XCTAssertTrue(store.accept(try LocalExtractor.proposals(try XCTUnwrap(store.source(id)))))
+        var profile = store.state.profile; profile.cloudConsent = true; profile.notifications = true
+        XCTAssertTrue(store.mutate { $0.profile = profile })
+        let backup = try store.archive(includeAudio: true)
+        XCTAssertTrue(store.deleteSource(id)); XCTAssertTrue(store.state.sources.isEmpty)
+        try store.restore(backup)
+        let restored = try XCTUnwrap(store.source(id)); let filename = try XCTUnwrap(restored.originalFile)
+        XCTAssertEqual(try Data(contentsOf: vault.url(filename)), original)
+        XCTAssertFalse(store.state.profile.cloudConsent); XCTAssertFalse(store.state.profile.notifications)
+        XCTAssertEqual(store.state.claims.filter(\.canonical).count, 1)
+    }
+    func testFailedRestoreAndDeletionPreserveExistingRecordsAndFiles() throws {
+        let vault = try vault(); defer { try? FileManager.default.removeItem(at: vault.root) }
+        let repository = FailingRepository(); let store = try AppStore(repository: repository, vault: vault)
+        let id = try store.capture(title: "Kept evidence", kind: .textFile, text: "Saved evidence", data: Data("Saved evidence".utf8), analyze: false)
+        let backup = try store.archive(includeAudio: true); let prior = store.state
+        let files = try FileManager.default.contentsOfDirectory(atPath: vault.files.path)
+        repository.fail = true
+        XCTAssertThrowsError(try store.restore(backup))
+        XCTAssertEqual(store.state, prior)
+        XCTAssertEqual(try FileManager.default.contentsOfDirectory(atPath: vault.files.path), files)
+        XCTAssertFalse(store.deleteSource(id)); XCTAssertNotNil(store.source(id))
+    }
+    func testGatewayCredentialsRejectProviderKeysAndUnsafeAddresses() throws {
+        let token = String(repeating: "a", count: 40)
+        for address in ["http://gateway.example", "https://api.openai.com/v1", "https://api.moonshot.ai/v1", "https://user:password@gateway.example", "https://gateway.example?token=secret"] {
+            XCTAssertThrowsError(try GatewayClient.validate(endpoint: address, token: token))
+        }
+        XCTAssertThrowsError(try GatewayClient.validate(endpoint: "https://gateway.example", token: "short"))
+        XCTAssertEqual(try GatewayClient.validate(endpoint: "https://gateway.example/care", token: token).path, "/care")
+    }
     func vault() throws -> EvidenceVault { try EvidenceVault(root: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)) }
     func testSwiftDataRoundTripAndDerivedRecords() throws {
         let vault = try vault(); defer { try? FileManager.default.removeItem(at: vault.root) }

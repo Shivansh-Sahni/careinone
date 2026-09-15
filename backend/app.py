@@ -13,10 +13,14 @@ from .providers import Router, router_from_environment, ProviderError
 from .schema import VERSION, ValidationError, loads, validate_request, validate_envelope, chunks
 
 class Gateway:
-    def __init__(self, tokens: list[str], router: Router, rate=30, max_inflight=4):
-        if not tokens or any(len(token) < 32 for token in tokens): raise ValueError("Each backend token must contain at least 32 characters")
+    def __init__(self, tokens: list[str], router: Router, rate=30, max_inflight=4, max_source_characters=40000):
+        if not tokens or any(len(token) < 32 or len(token) > 4000 or any(ord(c) <= 32 or ord(c) >= 127 for c in token) or token.startswith('replace-with-') for token in tokens):
+            raise ValueError("Each backend token must be a generated secret of 32..4000 printable non-space ASCII characters")
         self.token_hashes = [hashlib.sha256(t.encode()).digest() for t in tokens]
         self.router = router; self.rate = rate; self.limits = {}; self.semaphore = asyncio.Semaphore(max_inflight)
+        if not 1000 <= max_source_characters <= 200000: raise ValueError("Source limit must be 1000..200000 characters")
+        self.max_source_characters = max_source_characters
+        self.configuration_id = hashlib.sha256(json.dumps(router.configuration(), sort_keys=True).encode()).hexdigest()
     def authorized(self, headers):
         raw = headers.get(b'authorization', b'')
         if not raw.startswith(b'Bearer ') or len(raw) > 4096: return None
@@ -38,13 +42,16 @@ class Gateway:
         if scope['type'] != 'http': return
         path=scope.get('path',''); method=scope.get('method','')
         if path == '/health' and method == 'GET': return await self.respond(send,200,{'status':'ok','schemaVersion':VERSION})
-        if path != '/v1/extract' or method != 'POST': return await self.respond(send,404,{'error':'Not found'})
+        if (path, method) not in {('/v1/extract', 'POST'), ('/v1/config', 'GET'), ('/v1/check', 'POST')}: return await self.respond(send,404,{'error':'Not found'})
         # Reject duplicate auth/content headers instead of accepting ambiguous proxy parsing.
         pairs=scope.get('headers',[]); headers=dict(pairs)
         if sum(k==b'authorization' for k,v in pairs)!=1: return await self.respond(send,401,{'error':'Authentication required'})
         token=self.authorized(headers)
         if token is None: return await self.respond(send,401,{'error':'Authentication required'})
         if not self.allow(token): return await self.respond(send,429,{'error':'Rate limit reached. Retry later.'})
+        if path == '/v1/config':
+            return await self.respond(send,200,{'schemaVersion':VERSION, 'configurationID':self.configuration_id, 'providers':self.router.configuration(), 'maxSourceCharacters':self.max_source_characters, 'patientContentStored':False})
+        if any(sum(k == name for k,v in pairs) > 1 for name in (b'content-type', b'content-length', b'content-encoding')): return await self.respond(send,400,{'error':'Ambiguous request headers'})
         if headers.get(b'content-type',b'').split(b';')[0] != b'application/json': return await self.respond(send,415,{'error':'Use application/json'})
         if headers.get(b'content-encoding',b'identity') != b'identity': return await self.respond(send,415,{'error':'Compressed request bodies are not accepted'})
         body=bytearray()
@@ -56,10 +63,18 @@ class Gateway:
                     body.extend(event.get('body',b''))
                     if len(body)>1_200_000: return await self.respond(send,413,{'error':'Request too large'})
                     if not event.get('more_body',False): break
-            request=validate_request(loads(body)); body.clear()
+            value=loads(body); body.clear()
+            if path == '/v1/check':
+                if value != {'schemaVersion': VERSION}: raise ValidationError('Use the fixed synthetic connection check')
+                request={}
+            else:
+                request=validate_request(value)
+                if request.get('providerConfigurationID') != self.configuration_id:
+                    return await self.respond(send,409,{'error':'Review the configured model recipients and renew cloud consent before analysis.'})
+                if len(request['text']) > self.max_source_characters: return await self.respond(send,413,{'error':'Source exceeds the configured analysis limit. Split it into smaller sources or use local analysis.'})
             async with asyncio.timeout(180):
                 async with self.semaphore:
-                    work=asyncio.create_task(self.analyze(request))
+                    work=asyncio.create_task(self.check() if path == '/v1/check' else self.analyze(request))
                     disconnect=asyncio.create_task(self.wait_disconnect(receive))
                     try:
                         done,_=await asyncio.wait([work,disconnect],return_when=asyncio.FIRST_COMPLETED)
@@ -77,6 +92,11 @@ class Gateway:
         while True:
             event=await receive()
             if event['type']=='http.disconnect': return
+    async def check(self):
+        text='Synthetic connection check: a follow-up appointment was requested.'
+        result, route = await self.router.extract_with_route(text, 'typed', None)
+        if not result['claims']: raise ProviderError('The synthetic check did not return a supported proposal')
+        return {'schemaVersion':VERSION, 'status':'ok', 'route':route, 'providers':self.router.configuration(), 'syntheticOnly':True}
     async def analyze(self,request):
         claims=[]; seen=set(); clarification_count=0
         for chunk in chunks(request['text']):
@@ -101,4 +121,4 @@ class Gateway:
 
 def create_app():
     tokens=[token.strip() for token in os.getenv('CARE_BACKEND_TOKENS','').split(',') if token.strip()]
-    return Gateway(tokens,router_from_environment())
+    return Gateway(tokens,router_from_environment(), max_source_characters=int(os.getenv('CARE_MAX_SOURCE_CHARACTERS','40000')))

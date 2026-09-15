@@ -23,7 +23,7 @@
 - HTTPS is mandatory in the iOS cloud adapter and provider adapter; redirects are rejected to prevent bearer-token forwarding.
 - Tokens are administrator-issued, random, per-installation credentials. Hash comparisons use constant-time comparison. Never embed a shared production token in source control or an app build. There is no automated account enrollment service in this initial deployment model.
 - Authenticated rate limits are bounded per configured token. Per-process in-flight concurrency is bounded; use reverse-proxy/global rate limits when scaling workers or replicas. Health is a content-free unauthenticated endpoint.
-- JSON parsing rejects duplicate keys and non-finite constants. Input is capped at 1.2 MB/200,000 text characters, extraction at 200 proposals, provider responses at 2 MB, request upload at 15 seconds, and overall analysis at 180 seconds.
+- JSON parsing rejects duplicate keys and non-finite constants. Input is capped at 1.2 MB and defaults to 40,000 text characters (configurable up to 200,000), extraction at 200 proposals, provider responses at 2 MB, request upload at 15 seconds, and overall analysis at 180 seconds.
 - Cancellation stops queued/async work. An already-started standard-library provider HTTP request may continue until its 45-second transport timeout because Python thread cancellation cannot stop a running socket operation. Its result is discarded; no patient state is changed.
 - No CORS-enabled browser client is provided. Request-specified URLs and remote-fetch tools are not supported. Provider endpoint configuration is an administrative trust boundary.
 - Access logging is disabled in supplied run/container commands. Exception responses are generic and never echo input/provider content. Infrastructure, tracing agents, proxies, crash reporting, and model-provider retention must also be configured appropriately before any real deployment.
@@ -34,3 +34,11 @@
 - Configure signing, bundle ID, privacy policy/support URLs, deployment credential enrollment/rotation, TLS, model-provider agreements/retention, and App Store privacy answers for the actual deployed system. The included privacy manifest covers the source tree; it is not a substitute for deployment-specific disclosure.
 - Validate Data Protection, backup exclusion, lock-screen/app-switcher behavior, file import permissions, consent, microphone interruptions, notifications, accessibility, and deletion on a physical iPhone using `VALIDATION.md`.
 - This implementation has automated safety-boundary tests; it has not undergone an independent penetration test, clinical usability study, regulatory assessment, or medical-device certification.
+
+## September 15 hardening
+
+- Consent binds to the disclosed primary/fallback hosts and models. A changed or missing configuration ID returns HTTP 409 before provider forwarding. Save-only connection changes disable previous consent.
+- OpenAI requests set `store: false`; that is not a promise about all provider retention. Kimi sampling is omitted to avoid incompatible fixed-temperature settings. Refused, tool-calling, and truncated responses are rejected.
+- iPhone cloud responses are bounded while streaming, rather than only after downloading. Errors never echo server or model response bodies.
+- Encrypted backups use CryptoKit AES-256-GCM and CommonCrypto PBKDF2-HMAC-SHA256 (600,000 iterations), random 32-byte salt, and a random GCM nonce. Passphrases and credentials are not archived. Input sizes, graph IDs, source links, and file references are validated before restore. New files stage under fresh names; failed persistence removes staged files and retains prior records.
+- Successful restore resets cloud consent and notifications. Backup recovery has no password reset; external copies remain the user’s responsibility. See `RELEASE.md` for exact size limits and validation steps.

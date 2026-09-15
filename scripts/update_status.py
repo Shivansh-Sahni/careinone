@@ -55,7 +55,18 @@ head='''# CareContinuity implementation status
 
 The supplied specification ends at **215: Mark clarified**. Every supplied numbered capability is listed below. `Implemented` means code is present; test/device evidence is stated separately. No claim of medical validation, App Store approval, or production certification is made.
 
-## Verification snapshot (2026-09-07)
+## Release hardening verification (2026-09-15)
+
+- Implemented OpenAI/Kimi/generic adapters, independent fallback parameters, owner-only interactive server configuration, authenticated model diagnostics, fixed synthetic connectivity checks, per-source cost bounds, and bounded streaming iPhone responses. Code: `backend/providers.py`, `backend/configure.py`, `backend/app.py`, `Services/CloudAnalysis.swift`, `Views/CloudConnectionView.swift`.
+- Gateway: **47 tests passing** including configuration security, provider wire parameters, refused/truncated output, synthetic-only checks, recipient-bound consent, and fallback reporting (`backend/tests/test_providers.py`). Real localhost HTTP extraction/configuration/consent/check smoke test passes.
+- Swift core: **59 tests passing** across four suites, including authenticated encrypted backup round trips, wrong-passphrase/tamper rejection, duplicate/missing archive records, relevant-claim retrieval, and overflow-safe intervals. The installed Command Line Tools run these tests with their optional missing Foundation cross-import overlay disabled; exact command/evidence is in `docs/verification/2026-09-15/`.
+- Added encrypted backup/restore (`Core/CareArchive.swift`, `Views/BackupView.swift`, `App/AppStore.swift`), explicit question and encounter editors (`Views/PatientEditors.swift`), readable enum labels (`Core/DisplayLabels.swift`), and in-app help/privacy (`Views/HelpPrivacyView.swift`). Backup attachment limit: 40 MB, with explicit audio exclusion. Restore replaces data only after confirmation; no passphrase recovery exists.
+- The cloud transport passes independent macOS Foundation type-checking. All native Swift files pass syntax parsing. These checks do not replace an iOS build. Three additional native integration tests cover restore, failed persistence/deletion, and gateway credential validation; execution remains pending.
+- New native changes await revalidation: Xcode was updated to **27.0** and builds currently stop at its unaccepted license. The user has been asked to review it. Earlier results below describe the September 7 build, not the new changes.
+- Live provider credentials, signing, physical-iPhone validation, and publication destination remain external release requirements.
+- `docs/MODEL_SETUP.md` provides ready-to-use setup steps; `docs/RELEASE.md` contains listing copy, review notes, and concrete remaining release checks. No external publication has occurred.
+
+## Previous verified baseline (2026-09-07)
 
 - Swift 6 core: **50 tests passing**, including medication dimensions, loop families, reminders, provenance, deletion scope, FHIR statuses and coded result linkage.
 - Python gateway: **30 tests passing** (authentication, consent, validation, fallback, disconnect, privacy, limits).

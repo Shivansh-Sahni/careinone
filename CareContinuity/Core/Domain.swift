@@ -144,6 +144,7 @@ public struct Profile: Codable, Equatable, Sendable {
     public var appLock = false; public var notifications = false; public var notifyTasks = true; public var notifyAppointments = true
     public var retainAudio = false; public var demoLoaded = false
     public var ocrLanguage: String?
+    public var cloudProviderConfigurationID: String?
     public init() {}
 }
 public struct Audit: Codable, Identifiable, Equatable, Sendable {

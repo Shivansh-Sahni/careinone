@@ -123,7 +123,7 @@ struct CaptureView: View {
         Section("Structured entry") {
             Picker("Category", selection: $kind) { ForEach(EntityKind.allCases) { Text($0.title).tag($0) } }
             TextField("Item name", text: $label)
-            Picker("Reported action", selection: $action) { ForEach(ClaimAction.allCases, id: \.self) { Text($0.rawValue).tag($0) } }
+            Picker("Reported action", selection: $action) { ForEach(ClaimAction.allCases, id: \.self) { Text($0.displayLabel).tag($0) } }
             TextField("Value or instructions", text: $value, axis: .vertical)
             TextField("Numeric value (optional)", text: $numeric).keyboardType(.decimalPad)
             TextField("Unit (optional)", text: $unit)

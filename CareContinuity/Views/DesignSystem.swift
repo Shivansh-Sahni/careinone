@@ -31,8 +31,8 @@ struct ClaimSummary: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(claim.summary).font(.headline)
             let badgeLayout = dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment:.leading)) : AnyLayout(HStackLayout())
-            badgeLayout { Badge(text: claim.certainty.rawValue, caution: [.uncertain, .conditional, .disputed].contains(claim.certainty)); if claim.provenance == .patientReported { Badge(text: "Patient reported") } }
-            Text(claim.action.rawValue + " · " + (claim.eventAt?.formatted(date: .abbreviated, time: .omitted) ?? "Event date unknown")).font(.caption).foregroundStyle(.secondary)
+            badgeLayout { Badge(text: claim.certainty.displayLabel, caution: [.uncertain, .conditional, .disputed].contains(claim.certainty)); if claim.provenance == .patientReported { Badge(text: "Patient reported") } }
+            Text(claim.action.displayLabel + " · " + (claim.eventAt?.formatted(date: .abbreviated, time: .omitted) ?? "Event date unknown")).font(.caption).foregroundStyle(.secondary)
         }
     }
 }

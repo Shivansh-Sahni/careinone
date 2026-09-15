@@ -28,7 +28,7 @@ struct TodayView: View {
                 let pending = store.state.sources.filter { [.needsReview, .pending, .failed, .cancelled].contains($0.state) }
                 if !pending.isEmpty {
                     SectionHeading(title: "Ready when you are", subtitle: "Evidence is saved. Your review makes it part of My Care.")
-                    ForEach(pending.prefix(3)) { source in NavigationLink(value: Route.source(source.id)) { CareCard { Label(source.title, systemImage: "doc.text.viewfinder").font(.headline); Text(source.state.rawValue).font(.caption).foregroundStyle(.secondary) } }.buttonStyle(.plain) }
+                    ForEach(pending.prefix(3)) { source in NavigationLink(value: Route.source(source.id)) { CareCard { Label(source.title, systemImage: "doc.text.viewfinder").font(.headline); Text(source.state.displayLabel).font(.caption).foregroundStyle(.secondary) } }.buttonStyle(.plain) }
                 }
                 section("Records to Clarify", destination: "discrepancies", route: .conflicts)
                 section("Needs Follow-through", destination: "loops", route: .loops)

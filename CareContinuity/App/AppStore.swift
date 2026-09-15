@@ -79,7 +79,7 @@ import OSLog
         let credentials = KeychainStore.backend; let backend = credentials.endpoint
         let provider: any ExtractionProvider
         if let extractionProvider { provider = extractionProvider }
-        else if useCloud, let url = URL(string: backend), !backend.isEmpty { provider = CloudExtractor(baseURL: url, token: credentials.token) }
+        else if useCloud, let url = URL(string: backend), !backend.isEmpty { provider = CloudExtractor(baseURL: url, token: credentials.token, configurationID: state.profile.cloudProviderConfigurationID) }
         else { provider = LocalExtractor() }
         let key = ContentHasher.cacheKey(source, version: provider.version)
         if !force && source.analysisVersion == key {
@@ -192,12 +192,14 @@ import OSLog
         if succeeded { refreshNotifications() }
         return succeeded
     }
-    func deleteSource(_ id: UUID) {
-        guard let source = source(id) else { return }; tasks[id]?.cancel(); tasks[id] = nil; runs[id] = nil
+    @discardableResult func deleteSource(_ id: UUID) -> Bool {
+        guard let source = source(id) else { return false }; tasks[id]?.cancel(); tasks[id] = nil; runs[id] = nil
         if mutate({ Reconciler.deleteSource(id, from: &$0) }) {
             do { try vault.remove(source.originalFile); try vault.remove(source.audioFile) } catch { self.error = "Record removed. File cleanup will retry at next launch." }
             refreshNotifications()
+            return true
         }
+        return false
     }
     func deleteAudio(_ id: UUID) {
         guard let source = source(id), let name = source.audioFile else { return }
@@ -223,6 +225,52 @@ import OSLog
         if mutate({ $0.questions.append(Question(text: text, entityID: entity, sourceID: source, encounterID: encounter)) }) { notice = "Question saved." }
     }
     func refreshNotifications() { let snapshot = state; Task { await ReminderService.reconcile(snapshot) } }
+    func archive(includeAudio: Bool) throws -> CareArchive {
+        var snapshot = state
+        if !includeAudio { for i in snapshot.sources.indices { snapshot.sources[i].audioFile = nil } }
+        var files: [String: Data] = [:]; var total = 0
+        for name in Set(snapshot.sources.flatMap { [$0.originalFile, $0.audioFile].compactMap { $0 } }) {
+            let url = try vault.url(name)
+            let size = try url.resourceValues(forKeys: [.fileSizeKey]).fileSize ?? 0
+            guard size <= ArchiveCodec.maxFileBytes - total else { throw CareError.invalid("Attached files exceed the 40 MB backup limit. Try excluding retained audio.") }
+            let data = try ArchiveCodec.readFile(url, limit: ArchiveCodec.maxFileBytes - total); total += data.count
+            guard total <= ArchiveCodec.maxFileBytes else { throw CareError.invalid("Attached files exceed the 40 MB backup limit.") }
+            files[name] = data
+        }
+        return CareArchive(state: snapshot, files: files)
+    }
+    /// Stage new files first, commit the complete state once, then remove old files.
+    /// A failed repository save leaves the existing graph and evidence intact.
+    func restore(_ archive: CareArchive) throws {
+        try archive.validate()
+        var restored = archive.state
+        var created: [String] = []
+        do {
+            var names: [String: String] = [:]
+            for (name, data) in archive.files {
+                let newName = try vault.write(data, extension: (name as NSString).pathExtension)
+                created.append(newName); names[name] = newName
+            }
+            for i in restored.sources.indices {
+                restored.sources[i].originalFile = restored.sources[i].originalFile.flatMap { names[$0] }
+                restored.sources[i].audioFile = restored.sources[i].audioFile.flatMap { names[$0] }
+                if restored.sources[i].state == .processing { restored.sources[i].state = .pending; restored.sources[i].processingMessage = "Restored source. Retry analysis when ready." }
+            }
+            // Consent and device permissions do not transfer with a backup.
+            restored.profile.cloudConsent = false; restored.profile.cloudConsentAt = nil
+            restored.profile.cloudProviderConfigurationID = nil
+            restored.profile.notifications = false; restored.profile.appLock = state.profile.appLock
+            restored.profile.onboarded = true
+            Reconciler.rebuild(&restored); restored.audit.append(Audit(action: "backup_restored", count: restored.sources.count))
+            try repository.save(restored)
+        } catch {
+            for name in created { try? vault.remove(name) }
+            throw error
+        }
+        for task in tasks.values { task.cancel() }; tasks.removeAll(); runs.removeAll()
+        state = restored; ExportService.clean(); refreshNotifications()
+        do { try vault.removeOrphans(state: restored) } catch { self.error = "Backup restored. Old-file cleanup will retry when the app next opens." }
+    }
     func loadDemo() { if mutate({ try SyntheticDemo.load(into: &$0) }) { notice = "Synthetic demo loaded. Every demo source is labeled." } }
     func removeDemo() {
         _ = mutate { state in for id in state.sources.filter(\.synthetic).map(\.id) { Reconciler.deleteSource(id, from: &state) }; state.profile.demoLoaded = false }; refreshNotifications()

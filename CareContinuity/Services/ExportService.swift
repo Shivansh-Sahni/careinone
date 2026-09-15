@@ -35,6 +35,7 @@ import CareCore
         let encoder = JSONEncoder(); encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         return try write(encoder.encode(state), name: "CareContinuity-graph.json")
     }
+    static func encryptedBackup(_ data: Data) throws -> URL { try write(data, name: "CareContinuity-\(UUID().uuidString.prefix(8)).carebackup") }
     private static func write(_ data: Data, name: String) throws -> URL {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent("CareContinuityExports", isDirectory: true)
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: [.protectionKey: FileProtectionType.complete])

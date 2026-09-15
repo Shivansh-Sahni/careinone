@@ -36,7 +36,9 @@ def date(value):
     except ValueError as exc: raise ValidationError("Invalid ISO date") from exc
 
 def validate_request(value):
-    if not isinstance(value, dict) or set(value) - {"schemaVersion", "text", "sourceKind", "eventDate", "consent"}: raise ValidationError("Unknown request fields")
+    if not isinstance(value, dict) or set(value) - {"schemaVersion", "text", "sourceKind", "eventDate", "consent", "providerConfigurationID"}: raise ValidationError("Unknown request fields")
+    identifier = value.get('providerConfigurationID')
+    if identifier is not None and (not isinstance(identifier, str) or len(identifier) != 64 or any(c not in '0123456789abcdef' for c in identifier)): raise ValidationError('Invalid provider consent configuration')
     if value.get("schemaVersion") != VERSION: raise ValidationError("Unsupported schema version")
     if value.get("consent") is not True: raise ValidationError("Explicit cloud consent required")
     text = value.get("text")

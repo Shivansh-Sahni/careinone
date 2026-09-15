@@ -58,7 +58,9 @@ class SchemaTests(unittest.TestCase):
 class GatewayTests(unittest.IsolatedAsyncioTestCase):
     async def call(self,app=None,value=None,headers=None,raw=None,path='/v1/extract',method='POST'):
         app=app or Gateway([TOKEN],Router(MockProvider()))
-        body=raw if raw is not None else json.dumps(value or request()).encode()
+        payload=dict(value or request())
+        if path == '/v1/extract': payload.setdefault('providerConfigurationID',app.configuration_id)
+        body=raw if raw is not None else json.dumps(payload).encode()
         headers=headers if headers is not None else [(b'authorization',('Bearer '+TOKEN).encode()),(b'content-type',b'application/json')]
         queue=asyncio.Queue(); await queue.put({'type':'http.request','body':body,'more_body':False})
         output=[]
@@ -116,7 +118,7 @@ class GatewayTests(unittest.IsolatedAsyncioTestCase):
                 try: await asyncio.sleep(10)
                 except asyncio.CancelledError: cancelled.set(); raise
         app=Gateway([TOKEN],Router(Slow())); queue=asyncio.Queue(); output=[]
-        await queue.put({'type':'http.request','body':json.dumps(request()).encode(),'more_body':False})
+        await queue.put({'type':'http.request','body':json.dumps({**request(),'providerConfigurationID':app.configuration_id}).encode(),'more_body':False})
         async def send(event): output.append(event)
         task=asyncio.create_task(app({'type':'http','path':'/v1/extract','method':'POST','headers':[(b'authorization',('Bearer '+TOKEN).encode()),(b'content-type',b'application/json')]},queue.get,send))
         await started.wait(); await queue.put({'type':'http.disconnect'}); await task

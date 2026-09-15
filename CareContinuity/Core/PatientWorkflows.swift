@@ -4,10 +4,17 @@ public struct SearchHit: Identifiable, Sendable {
     public var id: String; public var title: String; public var excerpt: String; public var type: String; public var sourceID: UUID?; public var entityID: UUID?; public var score: Int
 }
 public enum SearchEngine {
+    static func tokens(_ query: String) -> Set<String> {
+        Set(Normalizer.key(query).split(separator: " ").map(String.init)).subtracting(["what", "when", "the", "my", "did", "do", "is", "was", "about", "i", "a", "to", "of", "and", "am", "saved", "show", "me", "information", "care"])
+    }
+    static func score(_ text: String, tokens: Set<String>) -> Int {
+        let words = Set(Normalizer.key(text).split(separator: " ").map(String.init))
+        return tokens.filter { token in words.contains(token) || (token.count >= 3 && words.contains { $0.hasPrefix(token) }) }.count
+    }
     public static func search(_ query: String, state: CareState) -> [SearchHit] {
-        let tokens = Set(Normalizer.key(query).split(separator: " ").map(String.init)).subtracting(["what", "when", "the", "my", "did", "do", "is", "was", "about", "i", "a", "to", "of", "and", "am"])
+        let tokens = tokens(query)
         guard !tokens.isEmpty else { return [] }
-        func score(_ text: String) -> Int { let key = Normalizer.key(text); return tokens.filter { key.contains($0) }.count }
+        func score(_ text: String) -> Int { Self.score(text, tokens: tokens) }
         var hits: [SearchHit] = []
         for source in state.sources {
             let s = score(source.title + " " + source.workingText + " " + source.provider)
@@ -20,20 +27,38 @@ public enum SearchEngine {
             let s = score(entity.label + " " + entity.aliases.joined(separator: " "))
             if s > 0 { hits.append(SearchHit(id: entity.id.uuidString, title: entity.label, excerpt: state.projection(for: entity.id).rawValue, type: "My Care", entityID: entity.id, score: s + 1)) }
         }
+        for claim in state.claims where claim.canonical {
+            let s = score(claim.summary + " " + claim.quote)
+            if s > 0 { hits.append(SearchHit(id: claim.id.uuidString, title: claim.summary, excerpt: claim.quote, type: "Reviewed claim", sourceID: claim.sourceID, entityID: claim.entityID, score: s + 2)) }
+        }
         for question in state.questions where score(question.text + " " + question.answer) > 0 { hits.append(SearchHit(id: question.id.uuidString, title: question.text, excerpt: question.answer, type: "Question", sourceID: question.sourceID, entityID: question.entityID, score: score(question.text))) }
         for note in state.notes where score(note.text) > 0 { hits.append(SearchHit(id: note.id.uuidString, title: "Patient note", excerpt: note.text, type: "Note", entityID: note.entityID, score: score(note.text))) }
         return hits.sorted { $0.score == $1.score ? $0.id < $1.id : $0.score > $1.score }
     }
 }
-public struct GroundedExcerpt: Identifiable, Sendable { public var id: UUID; public var summary: String; public var quote: String; public var sourceID: UUID; public var eventAt: Date?; public var disputed: Bool }
+public struct GroundedExcerpt: Identifiable, Sendable { public var id: UUID; public var summary: String; public var quote: String; public var sourceID: UUID; public var eventAt: Date?; public var disputed: Bool; public var context: String }
 public protocol SynthesisProvider: Sendable { func answer(_ query: String, state: CareState) async throws -> [GroundedExcerpt] }
 public struct LocalGroundedSynthesis: SynthesisProvider {
     public init() {}
     public func answer(_ query: String, state: CareState) async throws -> [GroundedExcerpt] {
-        let hits = SearchEngine.search(query, state: state)
-        let sourceIDs = Set(hits.compactMap(\.sourceID)), entityIDs = Set(hits.compactMap(\.entityID))
-        return state.claims.filter { $0.canonical && (sourceIDs.contains($0.sourceID) || $0.entityID.map(entityIDs.contains) == true) }.sorted { ($0.eventAt ?? .distantPast) > ($1.eventAt ?? .distantPast) }.prefix(12).map { c in
-            GroundedExcerpt(id: c.id, summary: c.summary, quote: c.quote, sourceID: c.sourceID, eventAt: c.eventAt, disputed: state.conflicts.contains { $0.status == .unresolved && $0.claimIDs.contains(c.id) })
+        let tokens = SearchEngine.tokens(query)
+        guard !tokens.isEmpty else { return [] }
+        var ranked: [(Claim, Int)] = []
+        for claim in state.claims where claim.canonical {
+            let entity = state.entity(claim.entityID)
+            let parts = [claim.summary, claim.quote, entity?.aliases.joined(separator: " ") ?? "", state.source(claim.sourceID)?.provider ?? ""]
+            let score = SearchEngine.score(parts.joined(separator: " "), tokens: tokens)
+            if score > 0 { ranked.append((claim, score)) }
+        }
+        ranked.sort { lhs, rhs in
+            if lhs.1 != rhs.1 { return lhs.1 > rhs.1 }
+            if lhs.0.eventAt != rhs.0.eventAt { return (lhs.0.eventAt ?? .distantPast) > (rhs.0.eventAt ?? .distantPast) }
+            return lhs.0.id.uuidString < rhs.0.id.uuidString
+        }
+        let superseded = Set(state.claims.filter(\.canonical).compactMap(\.supersedesID))
+        return ranked.prefix(12).map { c, _ in
+            let context = (superseded.contains(c.id) ? "Superseded" : c.certainty.displayLabel) + " · " + c.action.displayLabel + " · " + c.provenance.displayLabel
+            return GroundedExcerpt(id: c.id, summary: c.summary, quote: c.quote, sourceID: c.sourceID, eventAt: c.eventAt, disputed: state.conflicts.contains { $0.status == .unresolved && $0.claimIDs.contains(c.id) }, context: context)
         }
     }
 }

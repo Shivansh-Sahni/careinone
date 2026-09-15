@@ -5,9 +5,6 @@ import CareCore
 struct VisitsView: View {
     @Environment(AppStore.self) private var store
     @State private var showNew = false
-    @State private var title = ""
-    @State private var provider = ""
-    @State private var date: Date?
     var body: some View {
         List {
             Section("Next appointments") {
@@ -23,13 +20,14 @@ struct VisitsView: View {
                 }
             }
         }.navigationTitle("Visits").sheet(isPresented: $showNew) {
-            NavigationStack { Form { TextField("Encounter title", text: $title); TextField("Provider", text: $provider); OptionalDateField(title: "Event date", date: $date) }.navigationTitle("New encounter").toolbar { ToolbarItem(placement: .cancellationAction) { Button("Cancel") { showNew = false } }; ToolbarItem(placement: .confirmationAction) { Button("Save") { _ = store.mutate { $0.encounters.append(EncounterRecord(title: title, date: date, provider: provider)) }; title = ""; provider = ""; date = nil; showNew = false }.disabled(title.isEmpty) } } }
+            EncounterEditor(encounter: EncounterRecord(title: ""))
         }
     }
 }
 struct PrepareView: View {
     @Environment(AppStore.self) private var store
     let encounterID: UUID?
+    @State private var editing: EncounterRecord?
     private var encounter: EncounterRecord? { store.state.encounters.first { $0.id == encounterID } }
     var body: some View {
         List {
@@ -37,6 +35,7 @@ struct PrepareView: View {
                 Text(encounter?.title ?? "Carry the context into your next visit").font(.title2.bold())
                 Text("Bring the sources, unresolved differences, and questions that matter to you.").font(.subheadline).foregroundStyle(.secondary)
                 NavigationLink(value: Route.brief) { Label("Create a Care Brief", systemImage: "doc.richtext") }
+                if let encounter { Button("Edit encounter details") { editing = encounter } }
             }
             Section("Records to clarify") {
                 ForEach(store.state.conflicts.filter { $0.status == .unresolved }) { conflict in VStack(alignment: .leading, spacing: 8) { Text(conflict.reason).font(.headline); Text(conflict.question).font(.subheadline).foregroundStyle(.secondary); Button("Save question") { store.addQuestion(conflict.question, entity: conflict.entityID, encounter: encounterID) } } }
@@ -54,6 +53,7 @@ struct PrepareView: View {
                 ForEach(store.state.sources.filter { encounterID == nil || $0.encounterID == encounterID }.sorted { $0.capturedAt > $1.capturedAt }.prefix(20)) { SourceLink(id: $0.id) }
             }
         }.navigationTitle(encounter == nil ? "Prepare" : "Encounter").navigationBarTitleDisplayMode(.inline)
+            .sheet(item: $editing) { EncounterEditor(encounter: $0) }
     }
 }
 struct SearchView: View {
@@ -92,6 +92,7 @@ struct AskView: View {
             ForEach(excerpts) { excerpt in
                 Section {
                     Text(excerpt.summary).font(.headline)
+                    Text(excerpt.context).font(.caption).foregroundStyle(.secondary)
                     if excerpt.disputed { Badge(text: "Conflicting reports saved · clarify with your care team", caution: true) }
                     Text("“\(excerpt.quote)”").font(.subheadline)
                     Text(excerpt.eventAt?.formatted(date: .abbreviated, time: .omitted) ?? "Event date unknown").font(.caption).foregroundStyle(.secondary)
@@ -107,6 +108,7 @@ struct QuestionsView: View {
     let entityID: UUID?
     @State private var text = ""
     @State private var all = false
+    @State private var editing: Question?
     var body: some View {
         List {
             Section("Capture a question") { TextField("What do you want to ask?", text: $text, axis: .vertical); Button("Save question") { store.addQuestion(text, entity: entityID); text = "" }.disabled(text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty) }
@@ -114,13 +116,14 @@ struct QuestionsView: View {
             ForEach(store.state.questions.filter { (entityID == nil || $0.entityID == entityID) && (all || !$0.answered) }) { question in
                 Section {
                     Text(question.text).font(.headline)
-                    TextField("Your saved answer or follow-up note", text: Binding(get: { store.state.questions.first { $0.id == question.id }?.answer ?? "" }, set: { value in _ = store.mutate { state in if let i = state.questions.firstIndex(where: { $0.id == question.id }) { state.questions[i].answer = value } } }), axis: .vertical)
-                    Toggle("Answered", isOn: Binding(get: { question.answered }, set: { value in _ = store.mutate { state in if let i = state.questions.firstIndex(where: { $0.id == question.id }) { state.questions[i].answered = value } } }))
+                    if !question.answer.isEmpty { Text(question.answer).font(.subheadline).textSelection(.enabled) }
+                    Badge(text: question.answered ? "Answered" : "Ready to ask")
+                    Button(question.answer.isEmpty ? "Add an answer or edit" : "Edit question and answer") { editing = question }
                     if let source = question.sourceID { SourceLink(id: source) }
                     Button("Delete question", role: .destructive) { _ = store.mutate { $0.questions.removeAll { $0.id == question.id } } }
                 }
             }
-        }.navigationTitle("Questions")
+        }.navigationTitle("Questions").sheet(item: $editing) { QuestionEditor(question: $0) }
     }
 }
 struct CareNetworkView: View {

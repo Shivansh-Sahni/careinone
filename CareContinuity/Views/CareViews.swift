@@ -32,7 +32,7 @@ struct CategoryView: View {
             if entities.isEmpty { ContentUnavailableView("Nothing saved in this category", systemImage: kind.symbol, description: Text("This does not mean there is nothing in your medical history. Capture an update whenever it is useful.")) }
             ForEach(entities) { entity in
                 NavigationLink(value: Route.entity(entity.id)) {
-                    VStack(alignment: .leading, spacing: 8) { Text(entity.label).font(.headline); Badge(text: store.state.projection(for: entity.id).rawValue, caution: store.state.projection(for: entity.id) == .conflicting); Text("\(store.state.claims(for: entity.id).count) source-linked claims").font(.caption).foregroundStyle(.secondary) }
+                    VStack(alignment: .leading, spacing: 8) { Text(entity.label).font(.headline); Badge(text: store.state.projection(for: entity.id).displayLabel, caution: store.state.projection(for: entity.id) == .conflicting); Text("\(store.state.claims(for: entity.id).count) source-linked claims").font(.caption).foregroundStyle(.secondary) }
                 }
             }
         }.navigationTitle(kind.title).searchable(text: $search, prompt: "Search \(kind.title.lowercased())")
@@ -49,7 +49,7 @@ struct EntityDetailView: View {
                 VStack(alignment: .leading, spacing: 20) {
                     CareCard {
                         Label(entity.label, systemImage: entity.kind.symbol).font(.title2.bold())
-                        Badge(text: store.state.projection(for: id).rawValue, caution: store.state.projection(for: id) == .conflicting)
+                        Badge(text: store.state.projection(for: id).displayLabel, caution: store.state.projection(for: id) == .conflicting)
                         Text("This view reflects saved reports. It does not choose which clinical instruction is correct.").font(.caption).foregroundStyle(.secondary)
                         if let code = entity.code { Text("\(entity.codeSystem ?? "Unspecified code system"): \(code)").font(.caption) }
                         if !entity.aliases.isEmpty { Text("Also saved as: " + entity.aliases.joined(separator: ", ")).font(.caption) }
@@ -72,7 +72,7 @@ struct EntityDetailView: View {
                             Text("“\(claim.quote)”").font(.subheadline).foregroundStyle(.secondary).textSelection(.enabled)
                             if let page = claim.page { Text("Page \(page)").font(.caption) }
                             if let effective = claim.effectiveAt { Text("Effective \(effective.formatted(date: .abbreviated, time: .omitted))").font(.caption) }
-                            Text("Review: \(claim.review.rawValue) · revision \(claim.revision)" + (claim.userEdited ? " · edited by you" : "")).font(.caption).foregroundStyle(.secondary)
+                            Text("Review: \(claim.review.displayLabel) · revision \(claim.revision)" + (claim.userEdited ? " · edited by you" : "")).font(.caption).foregroundStyle(.secondary)
                             SourceLink(id: claim.sourceID)
                             if claim.kind == .appointment && claim.dueAt != nil && claim.duePrecision == .exact && !superseded.contains(claim.id) && ![.historical, .superseded].contains(claim.certainty) { Button("Add to Calendar") { Task { do { try await CalendarService.addAppointment(claim); store.notice = "Appointment added to your calendar. Check the saved time and duration." } catch { store.error = error.localizedDescription } } } }
                         }
@@ -115,7 +115,7 @@ struct ChangesView: View {
                 Section(store.state.encounters.first { $0.id == key }?.title ?? store.source(key)?.title ?? "Care update") {
                     ForEach(groups[key] ?? []) { change in
                         VStack(alignment: .leading, spacing: 10) {
-                            HStack { Badge(text: change.kind.rawValue, caution: change.kind == .conflictIntroduced); Spacer(); Text(change.date.formatted(date: .abbreviated, time: .omitted)).font(.caption).foregroundStyle(.secondary) }
+                            HStack { Badge(text: change.kind.displayLabel, caution: change.kind == .conflictIntroduced); Spacer(); Text(change.date.formatted(date: .abbreviated, time: .omitted)).font(.caption).foregroundStyle(.secondary) }
                             if let before = change.before { Text("Before: " + before).font(.subheadline).foregroundStyle(.secondary) }
                             Text("After: " + change.after).font(.subheadline.weight(.medium))
                             SourceLink(id: change.sourceID)

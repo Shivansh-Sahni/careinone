@@ -111,7 +111,8 @@ public struct LocalExtractor: ExtractionProvider {
                 for f in ["twice daily", "once daily", "three times daily", "daily", "weekly", "as needed"] where lower.contains(f) { claim.frequency = f; break }
                 for r in ["oral", "topical", "intravenous", "subcutaneous"] where lower.contains(r) { claim.route = r; break }
                 for f in ["extended release", "tablet", "capsule", "liquid"] where lower.contains(f) { claim.form = f; break }
-                if let interval = match(#"(?i)\bin\s+(\d+)\s+(day|week|month)s?\b"#, quote), let number = Int(interval[1]) {
+                if let interval = match(#"(?i)\bin\s+(\d+)\s+(day|week|month)s?\b"#, quote), let number = Int(interval[1]),
+                   number <= (interval[2].lowercased() == "month" ? 1200 : interval[2].lowercased() == "week" ? 5214 : 36500) {
                     if interval[2].lowercased() != "month" { claim.intervalDays = number * (interval[2].lowercased() == "week" ? 7 : 1) }
                     if let event = source.eventAt {
                         let component: Calendar.Component = interval[2].lowercased() == "month" ? .month : .day

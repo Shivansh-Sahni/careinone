@@ -23,14 +23,26 @@ try:
             break
         except OSError: time.sleep(.05)
     else: raise RuntimeError('Gateway failed to start')
-    payload={'schemaVersion':'care-schema-1.0','text':'Synthetic note: CBC ordered.','sourceKind':'typed','consent':True}
+    config=urllib.request.Request(base+'/v1/config',headers={'Authorization':'Bearer '+token})
+    with urllib.request.urlopen(config,timeout=10) as response: configuration=json.load(response)
+    payload={'schemaVersion':'care-schema-1.0','text':'Synthetic note: CBC ordered.','sourceKind':'typed','consent':True,'providerConfigurationID':configuration['configurationID']}
     request=urllib.request.Request(base+'/v1/extract',data=json.dumps(payload).encode(),headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'},method='POST')
     with urllib.request.urlopen(request,timeout=10) as response:
         assert response.headers['Cache-Control']=='no-store'; result=json.load(response)
     assert result['claims'][0]['quote']==payload['text']; assert result['claims'][0]['subject']=='unknown'
+    config=urllib.request.Request(base+'/v1/config',headers={'Authorization':'Bearer '+token})
+    with urllib.request.urlopen(config,timeout=10) as response:
+        assert response.headers['Cache-Control']=='no-store'
+        configuration=json.load(response)
+        assert configuration['providers']['primary']['adapter']=='mock'
+        assert configuration['patientContentStored'] is False
+    check=urllib.request.Request(base+'/v1/check',data=json.dumps({'schemaVersion':'care-schema-1.0'}).encode(),headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'},method='POST')
+    with urllib.request.urlopen(check,timeout=10) as response:
+        checked=json.load(response)
+        assert checked['syntheticOnly'] is True and checked['route']=='primary'
     fixtures=ROOT/'Tests/Fixtures'; fixtures.mkdir(exist_ok=True)
     (fixtures/'gateway-mock-envelope.json').write_text(json.dumps(result,indent=2))
-    print('PASS: real HTTP health/auth/extraction/no-store; Swift contract fixture saved (synthetic only).')
+    print('PASS: real HTTP health/auth/extraction/config/synthetic-check/no-store; Swift contract fixture saved (synthetic only).')
 finally:
     process.terminate()
     try: process.wait(timeout=5)

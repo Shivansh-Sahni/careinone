@@ -11,7 +11,7 @@ struct ConflictsView: View {
             let conflicts = store.state.conflicts.filter { all || $0.status == .unresolved }.sorted { $0.createdAt > $1.createdAt }
             if conflicts.isEmpty { ContentUnavailableView("No discrepancies in this view", systemImage: "text.bubble", description: Text("This only reflects information saved here. It is not a medical all-clear.")) }
             ForEach(conflicts) { conflict in
-                Button { selected = conflict } label: { VStack(alignment: .leading, spacing: 8) { Text(conflict.reason).font(.headline); Badge(text: conflict.status.rawValue, caution: conflict.status == .unresolved); Text("Compare \(conflict.claimIDs.count) source-linked reports").font(.caption).foregroundStyle(.secondary) } }.buttonStyle(.plain)
+                Button { selected = conflict } label: { VStack(alignment: .leading, spacing: 8) { Text(conflict.reason).font(.headline); Badge(text: conflict.status.displayLabel, caution: conflict.status == .unresolved); Text("Compare \(conflict.claimIDs.count) source-linked reports").font(.caption).foregroundStyle(.secondary) } }.buttonStyle(.plain)
             }
         }.navigationTitle("Records to Clarify").sheet(item: $selected) { ConflictDetailView(conflict: $0) }
     }
@@ -51,7 +51,7 @@ struct ConflictDetailView: View {
             Text("“\(claim.quote)”").font(.subheadline).textSelection(.enabled)
             if let source = store.source(claim.sourceID) {
                 Text(source.provider.isEmpty ? "Provider not provided" : source.provider).font(.caption).foregroundStyle(.secondary)
-                Text("Captured \(source.capturedAt.formatted(date: .abbreviated, time: .omitted)) · \(source.kind.rawValue)").font(.caption).foregroundStyle(.secondary)
+                Text("Captured \(source.capturedAt.formatted(date: .abbreviated, time: .omitted)) · \(source.kind.displayLabel)").font(.caption).foregroundStyle(.secondary)
             }
             SourceLink(id: claim.sourceID)
         }
@@ -68,7 +68,7 @@ struct LoopsView: View {
             if loops.isEmpty { ContentUnavailableView("No open steps saved here", systemImage: "checklist", description: Text("Add an order, referral, or follow-up request to track it.")) }
             ForEach(loops) { loop in
                 Button { selected = loop } label: {
-                    VStack(alignment: .leading, spacing: 8) { Text(loop.title).font(.headline); HStack { Badge(text: loop.status.rawValue, caution: loop.status == .uncertain); Text(loop.stage.rawValue).font(.caption).foregroundStyle(.secondary) }; Text(loop.timing()).font(.subheadline).foregroundStyle(.secondary) }
+                    VStack(alignment: .leading, spacing: 8) { Text(loop.title).font(.headline); HStack { Badge(text: loop.status.displayLabel, caution: loop.status == .uncertain); Text(loop.stage.displayLabel).font(.caption).foregroundStyle(.secondary) }; Text(loop.timing()).font(.subheadline).foregroundStyle(.secondary) }
                 }.buttonStyle(.plain)
             }
         }.navigationTitle("Follow-through").sheet(item: $selected) { LoopDetailView(loop: $0) }
@@ -85,18 +85,18 @@ struct LoopDetailView: View {
         NavigationStack {
             Form {
                 Section {
-                    Text(loop.title).font(.title2.bold()); Badge(text: loop.stage.rawValue)
+                    Text(loop.title).font(.title2.bold()); Badge(text: loop.stage.displayLabel)
                     Text(loop.timing()).font(.subheadline).foregroundStyle(.secondary)
-                    Text("Due-date confidence: \(Int(loop.dueConfidence * 100))% · \(loop.precision.rawValue)").font(.caption).foregroundStyle(.secondary)
+                    Text("Due-date confidence: \(Int(loop.dueConfidence * 100))% · \(loop.precision.displayLabel)").font(.caption).foregroundStyle(.secondary)
                 }
                 Section("Progress through saved evidence") {
-                    ForEach(LoopEngine.states(loop.kind), id: \.self) { stage in HStack { Image(systemName: stage == loop.stage ? "circle.inset.filled" : "circle"); Text(stage.rawValue) }.foregroundStyle(stage == loop.stage ? Theme.accent : .secondary) }
+                    ForEach(LoopEngine.states(loop.kind), id: \.self) { stage in HStack { Image(systemName: stage == loop.stage ? "circle.inset.filled" : "circle"); Text(stage.displayLabel) }.foregroundStyle(stage == loop.stage ? Theme.accent : .secondary) }
                     Text("Stages only advance from accepted evidence or your explicit completion report. No completion added here does not mean it did not happen.").font(.caption).foregroundStyle(.secondary)
                 }
                 Section("Your updates") {
                     TextField("Notes", text: $note, axis: .vertical).lineLimit(3...8)
                     OptionalDateField(title: "Due date", date: $due)
-                    Picker("Precision", selection: $precision) { ForEach(DuePrecision.allCases, id: \.self) { Text($0.rawValue).tag($0) } }
+                    Picker("Precision", selection: $precision) { ForEach(DuePrecision.allCases, id: \.self) { Text($0.displayLabel).tag($0) } }
                     Button("Save notes & date") { save(nil) }
                     Button("I completed this") { save(.completed) }.buttonStyle(.borderedProminent)
                     Button("I’m unsure whether this is complete") { save(.uncertain) }

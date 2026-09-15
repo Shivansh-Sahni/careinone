@@ -16,7 +16,7 @@ struct ReviewEditor: View {
             Form {
                 Section("Supporting evidence") {
                     Text("“\(draft.quote)”").font(.subheadline).textSelection(.enabled)
-                    if let source = store.source(draft.sourceID) { Text(source.title + " · " + source.kind.rawValue).font(.caption).foregroundStyle(.secondary) }
+                    if let source = store.source(draft.sourceID) { Text(source.title + " · " + source.kind.displayLabel).font(.caption).foregroundStyle(.secondary) }
                     if let page = draft.page { Text("PDF page \(page)").font(.caption) }
                     if let seconds = draft.transcriptSeconds { Text("Transcript at \(Int(seconds)) seconds").font(.caption) }
                     Text("Model confidence: \(Int(draft.confidence * 100))% · This is not a measure of clinical correctness.").font(.caption).foregroundStyle(.secondary)
@@ -24,7 +24,7 @@ struct ReviewEditor: View {
                 Section("What was reported") {
                     Picker("Category", selection: $draft.kind) { ForEach(EntityKind.allCases) { Text($0.title).tag($0) } }
                     TextField("Label", text: $draft.label)
-                    Picker("Action", selection: $draft.action) { ForEach(ClaimAction.allCases, id: \.self) { Text($0.rawValue).tag($0) } }
+                    Picker("Action", selection: $draft.action) { ForEach(ClaimAction.allCases, id: \.self) { Text($0.displayLabel).tag($0) } }
                     TextField("Value / instruction", text: $draft.value, axis: .vertical)
                     TextField("Numeric value", text: $number).keyboardType(.decimalPad)
                     TextField("Unit", text: $draft.unit)
@@ -36,14 +36,14 @@ struct ReviewEditor: View {
                     OptionalDateField(title: "Effective", date: $draft.effectiveAt)
                     if draft.kind == .appointment { Toggle("Appointment time is known", isOn: $draft.dueTimeKnown) }
                     OptionalDateField(title: "Due / appointment", date: $draft.dueAt, time: draft.kind == .appointment && draft.dueTimeKnown)
-                    Picker("Due-date precision", selection: $draft.duePrecision) { ForEach(DuePrecision.allCases, id: \.self) { Text($0.rawValue).tag($0) } }
+                    Picker("Due-date precision", selection: $draft.duePrecision) { ForEach(DuePrecision.allCases, id: \.self) { Text($0.displayLabel).tag($0) } }
                     TextField("Follow-up interval in days", text: $interval).keyboardType(.numberPad)
                     Text("Relative dates use the medical event date. Upload time never becomes a medical event date.").font(.caption).foregroundStyle(.secondary)
                     }
                 }
                 Section("Meaning & attribution") {
-                    Picker("About", selection: $draft.subject) { ForEach(Subject.allCases, id: \.self) { Text($0 == .patient ? "Me" : $0.rawValue.capitalized).tag($0) } }
-                    Picker("State", selection: $draft.certainty) { ForEach(Certainty.allCases.filter { $0 != .superseded }, id: \.self) { Text($0.rawValue).tag($0) } }
+                    Picker("About", selection: $draft.subject) { ForEach(Subject.allCases, id: \.self) { Text($0 == .patient ? "Me" : $0.displayLabel.capitalized).tag($0) } }
+                    Picker("State", selection: $draft.certainty) { ForEach(Certainty.allCases.filter { $0 != .superseded }, id: \.self) { Text($0.displayLabel).tag($0) } }
                     DisclosureGroup("Conditionality, negation & speaker") {
                     Toggle("Conditional / only if", isOn: $draft.conditional)
                     Toggle("Negated / says this is not present", isOn: $draft.negated)
@@ -75,7 +75,7 @@ struct ReviewEditor: View {
                     if draft.relatedEntityID != nil {
                         Picker("Relationship from this item", selection: $draft.relation) {
                             Text("Not specified").tag(RelationKind?.none)
-                            ForEach(RelationKind.allCases, id: \.self) { Text($0.rawValue).tag(Optional($0)) }
+                            ForEach(RelationKind.allCases, id: \.self) { Text($0.displayLabel).tag(Optional($0)) }
                         }
                         Text("For a result, choose resultOf only when this source explicitly relates it to that test. Undated results can leave completion uncertain.").font(.caption).foregroundStyle(.secondary)
                     }

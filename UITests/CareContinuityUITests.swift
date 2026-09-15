@@ -10,7 +10,7 @@ final class CareContinuityUITests: XCTestCase {
         app.tabBars.buttons["My Care"].tap()
         XCTAssertTrue(app.staticTexts["Medications"].waitForExistence(timeout: 5)); app.staticTexts["Medications"].tap()
         XCTAssertTrue(app.staticTexts["Metoprolol succinate"].waitForExistence(timeout: 5)); app.staticTexts["Metoprolol succinate"].firstMatch.tap()
-        XCTAssertTrue(app.staticTexts["conflicting"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Conflicting reports"].waitForExistence(timeout: 5))
         snapshot(app,"Medication · conflicting source evidence")
         app.tabBars.buttons["Sources"].tap()
         XCTAssertTrue(app.staticTexts["Synthetic · My medication update"].waitForExistence(timeout: 5))
@@ -62,12 +62,12 @@ final class CareContinuityUITests: XCTestCase {
         XCTAssertTrue(app.navigationBars["Compare sources"].waitForNonExistence(timeout:5))
         let all=app.switches["Include clarified & dismissed"]
         all.coordinate(withNormalizedOffset:CGVector(dx:0.93,dy:0.5)).tap()
-        let clarified=app.staticTexts["clarified"].firstMatch
+        let clarified=app.staticTexts["Clarified"].firstMatch
         XCTAssertTrue(clarified.waitForExistence(timeout:5)); clarified.tap()
         let reopen=app.buttons["Reopen discrepancy"]
         for _ in 0..<8 where !reopen.isHittable { app.swipeUp() }
         XCTAssertTrue(reopen.exists); reopen.tap()
         XCTAssertTrue(app.navigationBars["Compare sources"].waitForNonExistence(timeout:5))
-        XCTAssertEqual(app.staticTexts.matching(identifier:"unresolved").count,2)
+        XCTAssertEqual(app.staticTexts.matching(identifier:"Unresolved").count,2)
     }
 }
