@@ -1,3 +1,6 @@
+test_conflicting_doses_must_both_survive (test_evaluation.EvaluationTests.test_conflicting_doses_must_both_survive) ... ok
+test_omission_cannot_become_a_stop (test_evaluation.EvaluationTests.test_omission_cannot_become_a_stop) ... ok
+test_schema_valid_family_misattribution_fails_quality_gate (test_evaluation.EvaluationTests.test_schema_valid_family_misattribution_fails_quality_gate) ... ok
 test_auth_required (test_gateway.GatewayTests.test_auth_required) ... ok
 test_clarification_cap (test_gateway.GatewayTests.test_clarification_cap) ... ok
 test_disconnect_cancels_work (test_gateway.GatewayTests.test_disconnect_cancels_work) ... ok
@@ -47,6 +50,6 @@ test_rejects_truncated_refused_and_tool_responses (test_providers.ProviderTests.
 test_secret_not_in_repr_or_configuration (test_providers.ProviderTests.test_secret_not_in_repr_or_configuration) ... ok
 
 ----------------------------------------------------------------------
-Ran 47 tests in 0.093s
+Ran 50 tests in 0.082s
 
 OK

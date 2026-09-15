@@ -1,12 +1,9 @@
-.git
-.venv
-.build
-build
-DerivedData
-artifacts
-**/__pycache__
-**/.env
-**/.env.*
-!backend/.env.example
-**/*.store*
-**/*.m4a
+# Only gateway runtime files enter the remote build context.
+**
+!backend/
+!backend/Dockerfile
+!backend/requirements.lock
+!backend/__init__.py
+!backend/app.py
+!backend/providers.py
+!backend/schema.py

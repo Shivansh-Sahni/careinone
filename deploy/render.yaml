@@ -1,0 +1,23 @@
+# Paid always-on beta alternative. Verify the current price before provisioning.
+services:
+  - type: web
+    name: carecontinuity
+    runtime: docker
+    plan: starter
+    region: ohio
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: CARE_PROVIDER
+        value: openai
+      - key: CARE_MODEL_NAME
+        value: gpt-4.1-mini-2025-04-14
+      - key: CARE_MODEL_API_KEY
+        sync: false
+      - key: CARE_BACKEND_TOKENS
+        sync: false
+      - key: CARE_MODEL_MAX_OUTPUT_TOKENS
+        value: "6000"
+      - key: CARE_MAX_SOURCE_CHARACTERS
+        value: "40000"

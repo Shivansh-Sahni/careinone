@@ -1,6 +1,6 @@
 # Validation record and release checklist
 
-**September 15 update:** 59 core tests and 47 gateway tests pass. The new backup, provider consent/setup, and editor changes await native revalidation because Xcode 27 stops at its unaccepted license. Current evidence is in [verification/2026-09-15](verification/2026-09-15/README.md); the older native results below apply to the September 7 baseline. See [RELEASE.md](RELEASE.md) for the current submission packet and remaining checks.
+**September 15 update:** 59 core tests and 50 gateway tests pass. Xcode 27 now passes all 17 integration and 3 UI tests on iOS 18.4, including backup restore and consent/credential boundaries, plus an unsigned iPhone Release build. Current evidence is in [verification/2026-09-15](verification/2026-09-15/README.md); the older native results below apply to the September 7 baseline. See [RELEASE.md](RELEASE.md) for the current submission packet and remaining checks.
 
 All clinical examples used by automated tests and the demo are synthetic.
 

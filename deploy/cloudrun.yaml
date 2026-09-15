@@ -1,0 +1,44 @@
+# Replace PROJECT_ID, REGION, and IMAGE_TAG before deployment.
+# Secrets contain server credentials, never patient content.
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: carecontinuity
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: "0"
+        autoscaling.knative.dev/maxScale: "3"
+        run.googleapis.com/cpu-throttling: "true"
+    spec:
+      serviceAccountName: care-gateway@PROJECT_ID.iam.gserviceaccount.com
+      containerConcurrency: 4
+      timeoutSeconds: 210
+      containers:
+        - image: REGION-docker.pkg.dev/PROJECT_ID/carecontinuity/gateway:IMAGE_TAG
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              cpu: "1"
+              memory: 512Mi
+          env:
+            - name: CARE_PROVIDER
+              value: openai
+            - name: CARE_MODEL_NAME
+              value: gpt-4.1-mini-2025-04-14
+            - name: CARE_MODEL_MAX_OUTPUT_TOKENS
+              value: "6000"
+            - name: CARE_MAX_SOURCE_CHARACTERS
+              value: "40000"
+            - name: CARE_MODEL_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: care-model-key
+                  key: latest
+            - name: CARE_BACKEND_TOKENS
+              valueFrom:
+                secretKeyRef:
+                  name: care-installation-tokens
+                  key: latest

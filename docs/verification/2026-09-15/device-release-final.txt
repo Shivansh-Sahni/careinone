@@ -1,0 +1,5 @@
+Xcode 27.0
+iPhone Release build, CODE_SIGNING_ALLOWED=NO
+Command: xcodebuild -project CareContinuity.xcodeproj -scheme CareContinuity -destination generic/platform=iOS -derivedDataPath /private/tmp/CareContinuitySep15Device -configuration Release CODE_SIGNING_ALLOWED=NO -jobs 2 build
+
+** BUILD SUCCEEDED **

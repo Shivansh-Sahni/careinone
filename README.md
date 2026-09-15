@@ -57,7 +57,7 @@ xcodebuild -project CareContinuity.xcodeproj -scheme CareContinuity \
 
 The Swift package tests the pure care engine. Xcode runs SwiftData/capture/export integration tests and UI tests that use an isolated synthetic test store. `scripts/backend_smoke.py` runs an actual localhost ASGI server using an ephemeral token and synthetic data, then writes the Swift wire-contract fixture. See [docs/VALIDATION.md](docs/VALIDATION.md) for physical validation steps and remaining release work.
 
-**September 15 verification:** 59 Swift core tests and 47 gateway tests pass, plus an actual HTTP smoke test. The updated app adds encrypted backup/restore, provider-specific cloud setup and recipient-bound consent, question/encounter editors, and clearer labels. Native revalidation is currently blocked by the newly installed Xcode 27 license; see [docs/RELEASE.md](docs/RELEASE.md). **Previous September 7 baseline:** 14 integration tests and 3 UI workflows passed, as did simulator and unsigned-device Release builds on Xcode 26.6. Those earlier results do not validate the September 15 UI changes.
+**September 15 verification:** 59 Swift core tests and 50 gateway tests pass, plus an actual HTTP smoke test. The updated app adds encrypted backup/restore, provider-specific cloud setup and recipient-bound consent, question/encounter editors, and clearer labels. Xcode 27 now passes all 17 native integration tests and 3 UI tests on iOS 18.4, plus an unsigned iPhone Release build; see [docs/RELEASE.md](docs/RELEASE.md). **Previous September 7 baseline:** 14 integration tests and 3 UI workflows passed, as did simulator and unsigned-device Release builds on Xcode 26.6. Those earlier results do not validate the September 15 UI changes.
 
 Screenshots from the running app: [Today](docs/verification/today.png), [source discrepancies](docs/verification/discrepancy.png), [medication history](docs/verification/medication-history.png), and [explicit review](docs/verification/review.png). All displayed records are synthetic.
 
@@ -78,3 +78,7 @@ Screenshots from the running app: [Today](docs/verification/today.png), [source 
 Encrypted backup/restore includes the care graph and original files, with optional audio, protected by a patient-held passphrase. The bounded archive supports 40 MB of attachments; restore replaces local records only after explicit confirmation and a successful transaction.
 
 Local graph JSON export includes health information and source text, but not original binary attachments or audio. Native Files/Open In import is supported; a separate share extension is not included. There is no HealthKit, live EHR, on-device foundation-model, or RxNorm service dependency. Adapter boundaries allow those to be added later without changing canonical state ownership.
+
+## Cost-conscious launch
+
+[Detailed low-cost launch guide](docs/LOW_COST_LAUNCH.md) explains local storage, model comparisons, concrete Cloud Run/Render setup, realistic monthly scenarios, and public enrollment requirements. Deployment templates are in `deploy/`; `python3 scripts/estimate_cost.py` calculates editable cost scenarios. `python3 -m backend.evaluate --list` lists synthetic model checks without sending any network request.

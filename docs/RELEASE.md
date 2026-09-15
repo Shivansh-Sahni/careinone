@@ -1,6 +1,6 @@
 # Release preparation
 
-This packet prepares a TestFlight beta first, followed by public distribution after device and deployment validation. No upload or publication has occurred. The September 15 changes must pass the native suite after the newly installed Xcode license is reviewed and accepted.
+This packet prepares a TestFlight beta first, followed by public distribution after device and deployment validation. No upload or publication has occurred. The September 15 changes now pass 17 integration and 3 UI tests under Xcode 27 on iOS 18.4, and the unsigned iPhone Release build succeeds.
 
 ## Store listing copy
 
@@ -41,7 +41,7 @@ Visit recording requires a per-recording agreement confirmation and system micro
 
 ## Evidence required before uploading
 
-- [ ] Accept the installed Xcode license and run all native integration/UI tests on the final code, plus an unsigned device Release build. Preserve actual `.xcresult` summaries.
+- [x] Xcode 27 license accepted; 17 native integration and 3 UI tests pass, and unsigned device Release build passes. `.xcresult` summary saved in `verification/2026-09-15/native-final.json`.
 - [ ] Configure signing team and final unique bundle identifier; archive the Release target and validate it in Xcode Organizer.
 - [ ] Complete the physical-iPhone checklist in `VALIDATION.md`, including real microphone/camera, VoiceOver, lock/app-switcher, notifications, deletion, and backup restore after reinstall.
 - [ ] Validate the chosen live primary/fallback models with synthetic cases, cancellation, quota exhaustion, consent changes, and unavailable network. Record model IDs and dates.

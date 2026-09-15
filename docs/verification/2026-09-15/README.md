@@ -1,3 +1,5 @@
+**Resolved later September 15:** Xcode 27 license accepted. The complete native test action passes 20/20 (17 integration + 3 UI), and the unsigned iPhone Release build passes. See `native-final.json` and `device-release-final.txt`. Gateway suite now has 50 passing tests including synthetic-evaluation rubric checks. The earlier license blocker below is retained as historical context.
+
 # September 15 verification
 
 These results describe the current changes separately from the September 7 simulator screenshots and results.
