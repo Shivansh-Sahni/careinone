@@ -55,6 +55,36 @@ class ConfigurationHardeningTests(unittest.TestCase):
         for token in ("sk-proj-"+"fictional"*10, "Bearer-"+"fictional"*10):
             with self.subTest(prefix=token[:7]), self.assertRaises(ValueError): Gateway([token], Router(MockProvider()))
 
+    def test_gateway_tokens_cannot_be_used_as_primary_or_fallback_model_identifiers(self):
+        for model in (TOKEN, 'model/'+TOKEN+'/pinned'):
+            for fallback in (False, True):
+                provider=self.provider(model)
+                router=Router(self.provider(),provider) if fallback else Router(provider)
+                with self.subTest(embedded=model != TOKEN,fallback=fallback),self.assertRaises(ProviderError) as caught:
+                    Gateway([TOKEN],router)
+                self.assertEqual(caught.exception.code,'provider_configuration')
+                self.assertNotIn(TOKEN,str(caught.exception))
+
+    def test_gateway_tokens_cannot_be_embedded_in_provider_url_paths_or_hosts(self):
+        for url in ('https://api.example/'+TOKEN+'/v1','https://'+TOKEN+'.example/v1'):
+            provider=CompatibleProvider(url,'unit-test-private-key','model')
+            with self.subTest(host=TOKEN+'.example' in url),self.assertRaises(ProviderError) as caught:
+                Gateway([TOKEN],Router(provider))
+            self.assertNotIn(TOKEN,str(caught.exception)); self.assertNotIn(url,str(caught.exception))
+
+    def test_gateway_credential_cannot_be_reused_as_a_provider_api_key(self):
+        for api_key in (TOKEN,'provider-'+TOKEN+'-key'):
+            provider=CompatibleProvider('https://api.example/v1',api_key,'model')
+            with self.assertRaises(ProviderError) as caught: Gateway([TOKEN],Router(provider))
+            self.assertEqual(caught.exception.code,'provider_configuration')
+            self.assertNotIn(TOKEN,str(caught.exception))
+
+    def test_token_fingerprints_do_not_retain_plaintext_gateway_credentials(self):
+        app=Gateway([TOKEN],Router(self.provider()))
+        self.assertNotIn(TOKEN,repr(vars(app)))
+        self.assertTrue(app.contains_gateway_token('model/'+TOKEN+'/pinned'))
+        self.assertFalse(app.contains_gateway_token('model/'+TOKEN[:-1]+'X/pinned'))
+
     def test_startup_integer_error_does_not_echo_accidental_secret(self):
         secret="sk-proj-fictional-misplaced-configuration-value"
         with patch.dict(os.environ, {"CARE_MAX_SOURCE_CHARACTERS":secret}, clear=True), self.assertRaises(ProviderError) as caught:
@@ -181,6 +211,15 @@ class GatewayDisclosureTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(status,503); self.assertEqual(body["errorCode"],"provider_configuration")
         self.assertNotIn("sk-proj",json.dumps(body)); self.assertNotIn("private-key",json.dumps(body))
 
+    async def test_gateway_token_mutated_into_metadata_is_rejected_without_disclosure(self):
+        for field,value in (('model','model/'+TOKEN),('base_url','https://api.example/'+TOKEN+'/v1')):
+            provider=CompatibleProvider('https://api.example/v1','unit-test-private-key','model')
+            app=Gateway([TOKEN],Router(provider))
+            object.__setattr__(provider,field,value)
+            status,body,_=await self.call(app=app,path='/v1/config',method='GET')
+            self.assertEqual(status,503); self.assertEqual(body['errorCode'],'provider_configuration')
+            self.assertNotIn(TOKEN,json.dumps(body))
+
     async def test_safe_failure_code_reaches_client_without_provider_content(self):
         class Broken:
             async def extract(self,*args): raise ProviderError("private provider response",code="provider_authentication")
@@ -279,6 +318,20 @@ class VerificationToolTests(unittest.TestCase):
             report=verify("https://gateway.example",TOKEN)
         self.assertEqual(report["configuration"]["error"],"unsafe_or_invalid_configuration")
         self.assertNotIn("sk-proj",json.dumps(report)); self.assertEqual(report["paidRequestsAttempted"],0)
+
+    def test_verification_never_echoes_its_gateway_token_in_old_model_or_host_metadata(self):
+        for model,host in ((TOKEN,'api.example'),('model/'+TOKEN+'/pinned','api.example'),('model',TOKEN+'.example')):
+            config=self.config({'adapter':'openai','model':model,'host':host,'maxOutputTokens':6000})
+            with patch('backend.verify_gateway.fetch',side_effect=[({'passed':True},{'status':'ok','schemaVersion':VERSION}),({'passed':True},config)]) as fetch:
+                report=verify('https://gateway.example',TOKEN,synthetic=True,extract=True)
+            self.assertEqual(fetch.call_count,2); self.assertEqual(report['paidRequestsAttempted'],0)
+            self.assertEqual(report['configuration']['error'],'unsafe_or_invalid_configuration')
+            self.assertNotIn(TOKEN,json.dumps(report))
+
+    def test_gateway_token_in_verification_origin_is_rejected_before_network(self):
+        with patch('backend.verify_gateway.fetch') as fetch,self.assertRaises(ValueError) as caught:
+            verify('https://'+TOKEN+'.example',TOKEN)
+        fetch.assert_not_called(); self.assertNotIn(TOKEN,str(caught.exception))
 
     def test_no_credentials_means_only_public_health_is_requested(self):
         with patch("backend.verify_gateway.fetch",return_value=({"passed":True},{"status":"ok","schemaVersion":VERSION})) as fetch:

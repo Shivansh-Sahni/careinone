@@ -29,9 +29,10 @@ from .schema import VERSION, loads, validate_envelope
 FICTIONAL_SOURCE = "Fictional verification patient Alex Example. My clinician ordered a CBC blood test today. My mother has diabetes. The clinician said to consider MRI if pain persists; no MRI was ordered."
 
 
-def safe_provider(value):
+def safe_provider(value, private_tokens=()):
     if not isinstance(value, dict) or set(value) != {"adapter", "model", "host", "maxOutputTokens"}: raise ValueError()
     adapter, model, host, output = (value[key] for key in ("adapter", "model", "host", "maxOutputTokens"))
+    if any(token in field for token in private_tokens if token for field in (model, host) if isinstance(field, str)): raise ValueError()
     if adapter == "mock":
         if (model, host, output) != ("synthetic-development", "local development", 0): raise ValueError()
     else:
@@ -45,9 +46,9 @@ def safe_provider(value):
     return {"adapter": adapter, "model": model, "host": host, "maxOutputTokens": output}
 
 
-def safe_providers(value):
+def safe_providers(value, private_tokens=()):
     if not isinstance(value, dict) or set(value) != {"primary", "fallback"}: raise ValueError()
-    return {"primary": safe_provider(value["primary"]), "fallback": safe_provider(value["fallback"]) if value["fallback"] is not None else None}
+    return {"primary": safe_provider(value["primary"], private_tokens), "fallback": safe_provider(value["fallback"], private_tokens) if value["fallback"] is not None else None}
 
 
 def fetch(base, path, token=None, payload=None, limit=32_000):
@@ -83,6 +84,7 @@ def verify(base, token, *, synthetic=False, extract=False):
     if base.rstrip('/').count('/') != 2: raise ValueError("Use the gateway HTTPS origin without an endpoint path")
     if token and (not 32 <= len(token) <= 4000 or any(ord(c) <= 32 or ord(c) >= 127 for c in token) or looks_like_credential(token)):
         raise ValueError("Use a gateway token, not a provider API key")
+    if token and token in base: raise ValueError("A gateway token cannot be used in a gateway URL")
     base = base.rstrip('/')
     report = {"checkedAtUTC": dt.datetime.now(dt.timezone.utc).isoformat(), "paidRequestsAttempted": 0, "syntheticOnly": True}
     status, health = fetch(base, "/health")
@@ -100,7 +102,7 @@ def verify(base, token, *, synthetic=False, extract=False):
             if not isinstance(identifier, str) or len(identifier) != 64 or any(c not in '0123456789abcdef' for c in identifier): raise ValueError()
             if type(config.get("maxSourceCharacters")) is not int or not 1000 <= config["maxSourceCharacters"] <= 200000: raise ValueError()
             if type(config.get("patientContentStored")) is not bool: raise ValueError()
-            status.update(providers=safe_providers(config.get("providers")), patientContentStored=config["patientContentStored"], maxSourceCharacters=config["maxSourceCharacters"])
+            status.update(providers=safe_providers(config.get("providers"), (token,)), patientContentStored=config["patientContentStored"], maxSourceCharacters=config["maxSourceCharacters"])
     except Exception:
         status = {"passed": False, "error": "unsafe_or_invalid_configuration"}
     report["configuration"] = status
@@ -112,7 +114,7 @@ def verify(base, token, *, synthetic=False, extract=False):
         try:
             if checked["passed"]:
                 if not isinstance(result, dict) or result.get("schemaVersion") != VERSION or result.get("status") != "ok" or result.get("syntheticOnly") is not True or result.get("route") not in {"primary", "fallback"}: raise ValueError()
-                providers = safe_providers(result.get("providers"))
+                providers = safe_providers(result.get("providers"), (token,))
                 if providers != status["providers"]: raise ValueError()
                 checked["route"] = result["route"]
                 report["liveInferenceVerified"] = providers[result["route"]]["adapter"] not in {"mock", "custom"}

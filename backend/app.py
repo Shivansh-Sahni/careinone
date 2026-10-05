@@ -10,7 +10,7 @@ import json
 import os
 from pathlib import Path
 import time
-from .providers import Router, router_from_environment, ProviderError, looks_like_credential
+from .providers import CompatibleProvider, Router, router_from_environment, ProviderError, looks_like_credential
 from .schema import VERSION, ValidationError, loads, validate_request, validate_envelope, chunks
 
 PUBLIC_PAGES = {'/privacy': 'privacy.html', '/support': 'support.html'}
@@ -23,10 +23,26 @@ class Gateway:
         if type(rate) is not int or not 1 <= rate <= 1000: raise ValueError("Rate must be 1..1000 requests per minute")
         if type(max_inflight) is not int or not 1 <= max_inflight <= 16: raise ValueError("Concurrency must be 1..16 requests")
         self.token_hashes = [hashlib.sha256(t.encode()).digest() for t in tokens]
+        # Retain hashes and lengths only. These also detect a gateway credential
+        # accidentally pasted into a model label or provider URL, including a
+        # substring, without retaining another plaintext copy of the token.
+        self.token_fingerprints = tuple((len(token), digest) for token, digest in zip(tokens, self.token_hashes))
         self.router = router; self.rate = rate; self.limits = {}; self.semaphore = asyncio.Semaphore(max_inflight)
         if type(max_source_characters) is not int or not 1000 <= max_source_characters <= 200000: raise ValueError("Source limit must be 1000..200000 characters")
         self.max_source_characters = max_source_characters
-        self.configuration_id = hashlib.sha256(json.dumps(router.configuration(), sort_keys=True).encode()).hexdigest()
+        self.configuration_id = hashlib.sha256(json.dumps(self.configuration(), sort_keys=True).encode()).hexdigest()
+    def contains_gateway_token(self, value):
+        for length, expected in self.token_fingerprints:
+            for start in range(len(value)-length+1):
+                digest=hashlib.sha256(value[start:start+length].encode()).digest()
+                if hmac.compare_digest(digest, expected): return True
+        return False
+    def configuration(self):
+        providers=self.router.configuration()
+        for provider in (self.router.primary, self.router.fallback):
+            if isinstance(provider, CompatibleProvider) and any(self.contains_gateway_token(value) for value in (provider.model, provider.base_url, provider.api_key)):
+                raise ProviderError("A gateway token cannot be used in provider configuration", code='provider_configuration')
+        return providers
     def authorized(self, headers):
         raw = headers.get(b'authorization', b'')
         if not raw.startswith(b'Bearer ') or len(raw) > 4096: return None
@@ -77,7 +93,7 @@ class Gateway:
         if token is None: return await self.respond(send,401,{'error':'Authentication required'})
         if not self.allow(token): return await self.respond(send,429,{'error':'Rate limit reached. Retry later.'})
         if path == '/v1/config':
-            try: providers=self.router.configuration()
+            try: providers=self.configuration()
             except Exception:
                 failure=ProviderError(code='provider_configuration')
                 return await self.respond(send,503,{'error':failure.public_message,'errorCode':failure.code})
@@ -133,7 +149,7 @@ class Gateway:
         text='Synthetic connection check: a follow-up appointment was requested.'
         result, route = await self.router.extract_with_route(text, 'typed', None)
         if not result['claims']: raise ProviderError('The synthetic check did not return a supported proposal')
-        return {'schemaVersion':VERSION, 'status':'ok', 'route':route, 'providers':self.router.configuration(), 'syntheticOnly':True}
+        return {'schemaVersion':VERSION, 'status':'ok', 'route':route, 'providers':self.configuration(), 'syntheticOnly':True}
     async def analyze(self,request):
         claims=[]; seen=set(); clarification_count=0
         for chunk in chunks(request['text']):
