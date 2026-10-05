@@ -1,0 +1,38 @@
+{
+  "checkedUTC": "2026-10-05T07:04:49.181853+00:00",
+  "packetMarkdownFiles": 18,
+  "checkedMarkdownFilenames": [
+    "docs/app-store/README.md",
+    "docs/app-store/encryption-export-worksheet.md",
+    "docs/app-store/hosting-plan.md",
+    "docs/app-store/listing.en-US.md",
+    "docs/app-store/privacy-label-worksheet.md",
+    "docs/app-store/privacy-policy.draft.md",
+    "docs/app-store/review-notes.en-US.md",
+    "docs/app-store/screenshots-plan.md",
+    "docs/app-store/submission-checklist.md",
+    "docs/app-store/support.draft.md",
+    "docs/verification/2026-10-04/release/APP_STORE_CONNECT_READINESS.md",
+    "docs/verification/2026-10-04/release/FEATURE_VERIFICATION.md",
+    "docs/verification/2026-10-04/release/FINAL_CANDIDATE_AUDIT.md",
+    "docs/verification/2026-10-04/release/IMAGE_CREDENTIAL_SCREEN.md",
+    "docs/verification/2026-10-04/release/NAVIGATION_AND_CONTROL_AUDIT.md",
+    "docs/verification/2026-10-04/release/RELEASE_HANDOFF.md",
+    "docs/verification/2026-10-04/release/SCREEN_CONTROL_INVENTORY.md",
+    "docs/verification/2026-10-04/release/UNSIGNED_RELEASE_ARCHIVE.md"
+  ],
+  "brokenLocalLinks": [],
+  "latestFacts": [
+    "Current C7 ordinary native: 129 total, 128 passed, zero failed, one explicitly gated live-cloud skip.",
+    "C7 unsigned compiled input/durable copy inspection is complete; the archive is not uploadable.",
+    "Current full C7 UI finalized 29 total, 27 passed, one Loop date/precision failure and one intended Debug screenshot skip, exit 65; 24 retained warnings (8 audio, 16 frame) and 119 unchanged inputs.",
+    "The entire focused minimum-OS Loop recovery passed one case separately, exit 0 and one frame warning; neither it nor repeated actions rewrites full-suite failure.",
+    "Existing personal simulator store preserved all 12 record-type fingerprints and one original after full UI, in-place ordinary Release installation and normal launch. These are record types, not twelve individual records.",
+    "Seven actual store assets are prepared. All 70 current Git-eligible images were recognized with zero OCR failures/pattern flags and stable scope.",
+    "Earlier ordinary Release native real-cloud review/acceptance/relaunch passed with exactly two paid requests, no retries/mock/fallback. This is not an extra XCTest or final signed certification.",
+    "Ordinary Release native iPad multiline-paste/review/accept/relaunch passed separately, zero paid requests; failed automated iPad capture remains failed. Historical source proposal-count label is disclosed.",
+    "Live 4ec91e3 existing Render health/privacy/support exact HTTP 200 response bytes and headers are confirmed.",
+    "Fresh publisher inspection was unavailable after CDP focus timeouts; last successful read was individual-only. NutriAssist approval, signing, physical-device and operator/privacy gates remain.",
+    "Final ordinary Release simulator is foreground on isolated fictional Demo via native Settings entry, no Debug flags/reset/paid request; personal fingerprints unchanged."
+  ]
+}

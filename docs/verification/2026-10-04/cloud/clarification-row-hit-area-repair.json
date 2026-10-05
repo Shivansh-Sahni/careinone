@@ -1,7 +1,7 @@
 {
   "scope": "ConflictsView only in FollowThroughViews.swift; parent-authorized exception to production freeze for a reproducible actual hit-area defect.",
   "historicalFailure": {
-    "device": "iPhone SE 3rd generation / iOS 18.5 disposable",
+    "device": "iPhone SE (3rd generation) / iOS 18.2 disposable",
     "case": "FollowThroughDraftRecoveryUITests.testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard",
     "stage": "Native center Button.tap did not open Compare sources; no note input had occurred.",
     "originalBundle": "/private/tmp/CareInOneFinalSmallPhoneAllUI.xcresult",
@@ -39,6 +39,17 @@
     "compatibility": "No identifiers, clinical policy, stored state or persistence changed. Existing visual text/layout retained.",
     "testRequirement": "The full SE dirty-note workflow must retain center Button.tap for initial/reopen entry rather than a title-only workaround."
   },
-  "verificationStatus": "Focused full workflow delegated to capture_pipeline on their disposable SE; result pending. Root separately verifies final candidate/archive and affected primary cases.",
-  "paidRequests": 0
+  "verificationStatus": "Final whole center-tap clarification workflow passed 1/1, zero failures/skips, exit 0, 104.337 seconds on iOS 18.2 SE. Separate historical entry and test-drag failures remain recorded; this does not turn the earlier full suite green.",
+  "paidRequests": 0,
+  "finalFocusedEvidence": {
+    "summary": "../capture/final-se-clarification-summary.json",
+    "log": "../capture/final-se-clarification.log",
+    "sourceManifest": "../capture/final-se-clarification-source-sha.json",
+    "screenshot": "../capture/clarification-native-draft-retained.png",
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "durationSeconds": 104.337,
+    "runtimeWarningRetained": "Invalid frame dimension (negative or non-finite)."
+  }
 }

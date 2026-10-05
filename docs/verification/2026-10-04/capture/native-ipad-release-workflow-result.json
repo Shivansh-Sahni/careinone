@@ -1,0 +1,31 @@
+{
+  "recorded_at_utc": "2026-10-05T06:36:27.913055+00:00",
+  "status": "hands_on_pass",
+  "device": "DF1B37FA-515B-46B4-918E-4BA38BD325E3",
+  "device_name": "CareInOne Release iPad 13",
+  "runtime": "iPadOS27.0",
+  "configuration": "ordinary Release without debug launch arguments",
+  "compiled_app_binary_sha256": "7a66769a819b5705522038fa72eb5a70a871bb1104f2b2f5f8ba81b2c06a9d3c",
+  "workspace": "empty personal workspace on disposable simulator",
+  "data": "fixed fictional text only",
+  "source_text": "This is fictional iPad release verification.\nAllergy: copper.",
+  "journey": [
+    "Add an update \u2192 Type/Paste",
+    "Native keyboard capture enabled, fixed multiline text pasted, exact 61-character editor value observed",
+    "Done editing text dismissed native editor; Save evidence & review available and activated",
+    "Source saved; exact Allergy: copper. quotation shown",
+    "Review & edit allergy; native form drag reveals individual-review switch",
+    "Switch changed0\u21921; Accept reviewed claim enabled and activated",
+    "Added to My Care displayed and source-linked accepted revision1 opened",
+    "Normal app terminate/relaunch, My Care \u2192 Allergies1 \u2192 copper. \u2192 exact quotation and Accepted revision1 preserved",
+    "Original Device Hub keyboard capture restored off"
+  ],
+  "paid_api_requests": 0,
+  "limitations": [
+    "This hands-on local pipeline does not change the failed automated iPad screenshot action into a pass.",
+    "Source processingMessage retained historical2-proposal count after one acceptance; accepted evidence and My Care were correct.",
+    "Hardware and physical permission-delivery checks remain separate."
+  ],
+  "screenshot": "docs/verification/2026-10-04/capture/native-ipad-release-relaunch.png",
+  "screenshot_sha256": "5f1a3d3359e565012f0c08f85b9559377e9c9971902f8bc48000afcee70b6061"
+}

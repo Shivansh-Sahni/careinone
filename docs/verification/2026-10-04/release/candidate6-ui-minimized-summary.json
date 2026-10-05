@@ -1,0 +1,39 @@
+{
+  "checkedUTC": "2026-10-05T05:57:36.169573+00:00",
+  "sourceResult": "candidate6-ui-summary.json",
+  "productionScope": "Earlier app snapshot before the two authorized C7 production repairs; final helper changes are separate.",
+  "runnerExitCode": 65,
+  "total": 29,
+  "passed": 24,
+  "failed": 4,
+  "skipped": 1,
+  "result": "Failed",
+  "warningOccurrenceCount": 21,
+  "warningCategories": {
+    "audioMainThread": 8,
+    "invalidFrame": 13
+  },
+  "failures": [
+    {
+      "case": "PatientCompanionUITests/testEmptyPatientAppointmentBriefAnswersResumeAndReview()",
+      "observedBoundary": "XCTAssertEqual failed: (\"Optional(\"0\")\") is not equal to (\"Optional(\"1\")\") - The report must be explicitly confirmed before acceptance"
+    },
+    {
+      "case": "CapturePipelineUITests/testKeyboardDoneAndClearedWorkingTextKeepOriginalEvidence()",
+      "observedBoundary": "XCTAssertEqual failed: (\"Optional(\"Allergy: late\")\") is not equal to (\"Optional(\"\")\")"
+    },
+    {
+      "case": "CareInOneUITests/testOutgoingMessageEditingInvalidatesPreviousPDF()",
+      "observedBoundary": "XCTAssertEqual failed: (\"XCTWaiterResult(rawValue: 2)\") is not equal to (\"XCTWaiterResult(rawValue: 1)\")"
+    },
+    {
+      "case": "FollowThroughDraftRecoveryUITests/testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard()",
+      "observedBoundary": "XCTAssertEqual failed: (\"Optional(\"\")\") is not equal to (\"Optional(\"Your resolution note\")\") - Discard must leave the saved note empty"
+    }
+  ],
+  "finalization": "Root reports all tests ended before terminating only the owned idle simctl diagnostic collector; exact finalization JSON is root-owned.",
+  "limits": [
+    "Separate focused actions must not be summed into one passing full suite.",
+    "Current C7 native/archive and final SE recoveries are independently scoped evidence."
+  ]
+}

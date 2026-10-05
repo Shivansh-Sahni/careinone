@@ -1,0 +1,29 @@
+{
+  "checkedUTC": "2026-10-05T07:00:22.809106+00:00",
+  "baselineFile": "candidate7-personal-before-final-ui.json",
+  "recordTypeCount": 12,
+  "originalFileCount": 1,
+  "comparisons": [
+    {
+      "filename": "candidate7-personal-after-final-ui.json",
+      "recordTypeFingerprintsEqual": true,
+      "originalFileFingerprintsEqual": true
+    },
+    {
+      "filename": "candidate7-personal-after-release-install.json",
+      "recordTypeFingerprintsEqual": true,
+      "originalFileFingerprintsEqual": true
+    },
+    {
+      "filename": "candidate7-personal-after-release-launch.json",
+      "recordTypeFingerprintsEqual": true,
+      "originalFileFingerprintsEqual": true
+    },
+    {
+      "filename": "candidate7-personal-after-demo-open.json",
+      "recordTypeFingerprintsEqual": true,
+      "originalFileFingerprintsEqual": true
+    }
+  ],
+  "scope": "Existing personal simulator store compared in place after full UI, ordinary Release install/normal launch, and recorded demo open. Fingerprint equality does not by itself prove the current foreground screen. Not a physical-device upgrade, arbitrary legacy migration, or twelve individual records. No patient-content values output."
+}

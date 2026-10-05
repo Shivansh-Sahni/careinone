@@ -1,0 +1,26 @@
+Attributes: Switch, 0x115168000, {{16.0, 584.7}, {370.0, 52.0}}, label: 'Due date is known', value: 1
+Element subtree:
+ →Switch, 0x115168000, {{16.0, 584.7}, {370.0, 52.0}}, label: 'Due date is known', value: 1
+Path to element:
+ →Application, 0x1089ee6c0, pid: 74524, label: 'CareInOne'
+  ↳Window (Main), 0x1089ef5c0, {{0.0, 0.0}, {402.0, 874.0}}
+   ↳Other, 0x1089ed7c0, {{0.0, 0.0}, {402.0, 874.0}}
+    ↳Other, 0x1089ef700, {{0.0, 62.0}, {402.0, 812.0}}
+     ↳Other, 0x1089ed2c0, {{0.0, 62.0}, {402.0, 812.0}}
+      ↳Other, 0x1089ed900, {{inf, inf}, {0.0, 0.0}}
+       ↳Other, 0x1089ee440, {{inf, inf}, {0.0, 0.0}}
+        ↳Other, 0x1089ec500, {{inf, inf}, {0.0, 0.0}}
+         ↳Other, 0x1089ee580, {{inf, inf}, {0.0, 0.0}}
+          ↳Other, 0x1089efc00, {{inf, inf}, {0.0, 0.0}}
+           ↳Other, 0x1089eef80, {{inf, inf}, {0.0, 0.0}}
+            ↳Other, 0x1089ee080, {{inf, inf}, {0.0, 0.0}}
+             ↳CollectionView, 0x1089ed180, {{inf, inf}, {0.0, 0.0}}
+              ↳Cell, 0x1089ed540, {{inf, inf}, {0.0, 0.0}}
+               ↳Other, 0x1089ecc80, {{inf, inf}, {0.0, 0.0}}
+                ↳Other, 0x1089ec280, {{inf, inf}, {0.0, 0.0}}
+                 ↳Other, 0x1089ed400, {{inf, inf}, {0.0, 0.0}}
+                  ↳Switch, 0x115168000, {{16.0, 584.7}, {370.0, 52.0}}, label: 'Due date is known', value: 1
+Query chain:
+ →Find: Target Application 'org.carecontinuity.app'
+  ↪︎Find: Descendants matching type Switch
+    ↪︎Find: Elements matching predicate '"Due date is known" IN identifiers'

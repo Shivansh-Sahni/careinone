@@ -1,0 +1,26 @@
+{
+  "result": "Failed",
+  "passedTests": 27,
+  "failedTests": 1,
+  "skippedTests": 1,
+  "totalTestCount": 29,
+  "startTime": 1791180186.473,
+  "finishTime": 1791182459.37,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"XCTWaiterResult(rawValue: 2)\") is not equal to (\"XCTWaiterResult(rawValue: 1)\")",
+      "targetName": "CareInOneUITests",
+      "testIdentifier": 23,
+      "testIdentifierString": "FollowThroughDraftRecoveryUITests/testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch()",
+      "testIdentifierURL": "test://com.apple.xcode/CareInOne/CareInOneUITests/FollowThroughDraftRecoveryUITests/testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch",
+      "testName": "testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch()"
+    }
+  ],
+  "actual_exit_code": 65,
+  "runtime_warning_occurrences": {
+    "AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.": 8,
+    "Invalid frame dimension (negative or non-finite).": 16
+  },
+  "source_inputs_unchanged": true,
+  "source_input_count": 119
+}

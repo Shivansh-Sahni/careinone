@@ -1,37 +1,25 @@
 # CareInOne App Store packet
 
-Prepared October 4, 2026 for the intended NutriAssist nonprofit release. The owner has specified a free app with no advertising, subscriptions, or in-app purchases; operating costs are paid by the developer. Organization conversion is pending. These files do not establish that Apple has approved the publisher or app.
+Prepared October 4–5, 2026 for the intended NutriAssist release. The first version is free, with no ads, subscriptions or in-app purchases; the developer pays operating costs. Organization conversion remains a publication dependency. This packet does not establish Apple approval or submission readiness.
 
-| File | Use | Status |
+| File | Use | Current scope |
 |---|---|---|
-| [listing.en-US.md](listing.en-US.md) | English listing text and field limits | Draft; reconcile against the final verified build |
-| [review-notes.en-US.md](review-notes.en-US.md) | Reviewer path and cloud access instructions | Draft; supply private access information if cloud is offered |
-| [privacy-policy.draft.md](privacy-policy.draft.md) | Public policy content grounded in current data flows | Not publishable until operator/contact/retention blanks are resolved |
-| [support.draft.md](support.draft.md) | Public support content and practical recovery | Not publishable until a monitored support contact is supplied |
-| [privacy-label-worksheet.md](privacy-label-worksheet.md) | App Privacy answers and provider-retention decisions | Operator decision required; do not blindly select Data Not Collected |
-| [submission-checklist.md](submission-checklist.md) | Remaining App Store Connect and archive steps | Checklist, not an approval claim |
-| [hosting-plan.md](hosting-plan.md) | Existing Render public-page paths and verified NutriAssist contact facts | Both pages hosted; latest Calendar wording awaits redeploy/recheck; final legal/privacy facts separate |
-| [encryption-export-worksheet.md](encryption-export-worksheet.md) | Actual Apple crypto inventory and exact submission/plist actions | Compiled Boolean false and Apple-only library inventory verified in unsigned C5 archive; signed validation and government/territory responsibilities separate |
-| [screenshots-plan.md](screenshots-plan.md) | Six evidence-grounded iPhone/iPad screenshot subjects | Final native captures and dimension/layout verification required |
+| [listing.en-US.md](listing.en-US.md) | English listing and checked field limits | Final owner/build reconciliation required |
+| [review-notes.en-US.md](review-notes.en-US.md) | Detailed fictional reviewer path | Guide, not the field text; private cloud access is separate |
+| [review-notes-for-paste.en-US.txt](review-notes-for-paste.en-US.txt) | Exact reviewer Notes field | 3,234 UTF-8 bytes against Apple's 4,000-byte limit; [check](../verification/2026-10-04/release/review-notes-byte-check.json) |
+| [privacy-policy.draft.md](privacy-policy.draft.md), [support.draft.md](support.draft.md) | Owner privacy/support decisions | Operator/contact/retention facts still require completion; publish no unresolved fields |
+| [privacy-label-worksheet.md](privacy-label-worksheet.md) | App Privacy answers | Optional model/provider processing must be disclosed accurately |
+| [submission-checklist.md](submission-checklist.md) | Remaining signing/account/metadata steps | Checklist, not approval |
+| [hosting-plan.md](hosting-plan.md) | Existing Render public URLs/contact facts | Current exact deployed bytes/headers verified at 4ec91e3; legal/operator facts remain separate |
+| [encryption-export-worksheet.md](encryption-export-worksheet.md) | Actual Apple OS cryptography and declaration | Compiled Boolean false/Apple-only library audit completed in C7; signed validation/territory responsibilities remain separate |
+| [screenshots-plan.md](screenshots-plan.md), [capture manifest](screenshots/capture-manifest.json) | Native fictional store assets | Six current C7 phone captures and one earlier Release iPad Today capture prepared; iPad's subsequent failed helper is explicitly preserved |
 
-Technical observations and source references are in [the dated release audit](../verification/2026-10-04/release/AUDIT.md). Build/test and simulator evidence belong to the root task's final verification report; this packet makes no new claim of physical-device validation.
+The latest [Candidate7 unsigned Release archive](../verification/2026-10-04/release/UNSIGNED_RELEASE_ARCHIVE.md) includes the conflict-row hit-area and visit-debrief keyboard repairs. It is built, inspected and preserved, with matching production input hashes. [Current native tests](../verification/2026-10-04/release/candidate7-native-summary.json) executed 129 cases: 128 passed, zero failed, one explicitly gated live-cloud skip. The actual full C7 UI action finalized 27 passes, one Loop date/precision failure and one intended Debug screenshot skip; the failed action and warnings remain explicit. The entire Loop case subsequently passed in a separate minimum-OS focused action, and ordinary Release installation/launch preserved all 12 existing personal record-type fingerprints plus one original exactly. These facts do not sign the archive or verify every device/cloud workflow. Candidate5/Candidate6 and historical failures remain separately documented.
 
-The [frozen Candidate5 unsigned archive](../verification/2026-10-04/release/UNSIGNED_RELEASE_ARCHIVE.md) is built and independently inspected, with unchanged source hashes. It remains an engineering artifact without signing/team/profile and cannot be uploaded. The final runtime candidate, approved publisher and signed Organizer validation remain separate gates.
+The [release handoff](../verification/2026-10-04/release/RELEASE_HANDOFF.md) maps actual artifacts and outstanding actions. The [feature ledger](../verification/2026-10-04/release/FEATURE_VERIFICATION.md) and [privacy audit](../verification/2026-10-04/release/PRIVACY_MANIFEST_AUDIT.md) distinguish native/injected service assertions, ordinary Release captures, source inspection, historic failures and hardware limitations. The [repository image screen](../verification/2026-10-04/release/IMAGE_CREDENTIAL_SCREEN.md) contains only hashes/counts, never recognized credential text.
 
-[Deeper privacy/dependency audit](../verification/2026-10-04/release/PRIVACY_MANIFEST_AUDIT.md) and [feature verification ledger](../verification/2026-10-04/release/FEATURE_VERIFICATION.md) distinguish initial passing evidence, historical checks, and unfinished candidate/device work. Public HTML lives in `backend/public/privacy.html` and `backend/public/support.html`; preceding deployed revisions matched reviewed source in the [live-page check](../verification/2026-10-04/release/public-pages-live-check.json). Latest Calendar wording needs another deploy/recheck. Remaining privacy facts must be settled before publication. [Export repair evidence](../verification/2026-10-04/release/EXPORT_AUDIT.md) records exact-copy sharing fixes and their verification status.
+Real fictional server inference and the later [native real-cloud hands-on journey](../verification/2026-10-04/cloud/native-real-cloud-workflow-result.json) passed; the native journey used an earlier normal Release simulator and exactly two paid requests, then preserved accepted quoted care after relaunch. It is not final signed certification. The earlier zero-paid missing-pair attempt remains historical. Public cloud self-service enrollment is absent. Last verified Apple account was individual-only; fresh inspection was unavailable after browser focus timeouts. NutriAssist approval, valid signing and final reviewer access remain dependencies.
 
-Do not publish any text containing an unresolved bracketed field. Do not put API keys, gateway access tokens, patient data, or private reviewer credentials into this directory.
+Public HTML lives in backend/public/privacy.html and support.html and uses the existing Render /privacy and /support routes. [Current deployed route check](../verification/2026-10-04/cloud/final-deployed-public-route-check.json) verifies 4ec91e3 current reviewed bytes and headers; operator privacy/contact decisions remain required before submission. Do not place patient data, API keys, gateway tokens, private review credentials or unresolved bracketed fields in public store material.
 
-
-Current service evidence confirms real fictional server inference, while the native pipeline is blocked at missing simulator gateway configuration; restore that pair privately and rerun before representing the app pipeline as verified. The account audit shows no NutriAssist team or CareInOne app record, and the local signing audit found no valid signing identities. These remain concrete publication dependencies, independent of local app functionality.
-
-[Release handoff](../verification/2026-10-04/release/RELEASE_HANDOFF.md) maps the durable unsigned archive, actual materials and remaining owner actions. It retains pending final UI/assets/deployment and publication gates.
-
-
-A later narrowly scoped conflict-row hit-area repair supersedes the preserved Candidate5 archive as the exact final app snapshot. The separate Candidate7 unsigned build/archive is now completed and inspected, while scoped runtime verification remains pending direct evidence. Candidate5 remains a truthful earlier engineering artifact; neither unsigned archive is uploadable.
-
-
-The [exact reviewer Notes text](review-notes-for-paste.en-US.txt) is separate from the detailed reviewer guide. Its UTF-8 byte count is recorded in [the field check](../verification/2026-10-04/release/review-notes-byte-check.json), against Apple’s 4,000-byte limit. Final private contact/access and archived-path verification remain required; the guide itself should not be pasted wholesale.
-
-
-The latest actual [Candidate7 unsigned Release artifact](../verification/2026-10-04/release/UNSIGNED_RELEASE_ARCHIVE.md) now includes both final runtime-driven UI corrections. Its compiled/source/durable-copy inspection is completed; it remains unsigned and not uploadable. Current native/scoped UI/cloud/screenshot evidence and publisher/device/legal gates remain separate. Candidate5 is retained as historical evidence.
+The [final ordinary Release simulator handoff](../verification/2026-10-04/release/candidate7-final-simulator-handoff.json) leaves the fictional Demo loaded on Today through normal Settings entry, with no Debug flags or paid requests and unchanged existing personal fingerprints.

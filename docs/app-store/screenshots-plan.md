@@ -35,11 +35,15 @@ Use the same ordered filenames in each directory:
 | `02-source-review.png` | A real pending proposal with its supporting fictional quotation visible |
 | `03-medication-reports.png` | Medication detail with competing reviewed reports clearly labeled |
 | `04-appointment-companion.png` | Selected fictional visit with opening summary/questions |
-| `05-selected-visit-packet.png` | Actual generated PDF preview from selected fictional content |
-| `06-follow-through.png` | Editable next-step assistance with no sending/authentication claim |
+| `05-selected-packet.png` | Native selected text preview with the Create selected PDF control visible |
+| `06-follow-through-helper.png` | Editable next-step assistance with no sending/authentication claim |
 
 If the final demo has no pending source proposal, import one of the packaged fictional samples and stop at its real review screen; never fake a pending state or use a failed model run. If one path remains unresolved, omit that marketing screen and record the reason; Apple requires at least one screenshot in each required group, not all six proposed screens.
 
 Record `docs/app-store/screenshots/capture-manifest.json` after capture, including app version/build, final source revision, Release configuration, simulator model, runtime, native pixel dimensions, file SHA-256, capture date, and confirmation of isolated fictional data. No device UDID, credential, real patient identifier or private account details need be recorded. A file passing pixel checks alone does not establish usable layout: visually inspect each native image before upload.
 
 Run `python3 docs/app-store/verify-screenshots.py` after capture. It validates PNG signature/IHDR, accepted device-group portrait or landscape dimensions, no alpha channel, and file hashes. A missing group is explicitly pending, not a passing release asset result. If JPG assets are selected instead, use an appropriate image inspector and record equivalent checks; this script intentionally handles only the planned PNGs.
+
+## Prepared capture evidence
+
+Six large-iPhone images from the ordinary Release C7 app are prepared and visually inspected. The one-case phone capture action passed. One earlier ordinary Release iPad Today image is prepared; its later capture-helper failure is retained and is not a passing full iPad workflow. Exact source, native dimensions, hashes and limits are in [the capture manifest](screenshots/capture-manifest.json). The selected packet image is a text preview, not an opened PDF viewer.

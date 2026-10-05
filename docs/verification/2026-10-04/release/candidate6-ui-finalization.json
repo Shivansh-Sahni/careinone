@@ -1,0 +1,22 @@
+{
+  "recorded_utc": "2026-10-05T05:56:29.679375+00:00",
+  "completed_action": "/private/tmp/CareInOneCandidate6UI.xcresult",
+  "tests_finished": "2026-10-05T05:49:42Z",
+  "test_counts": {
+    "total": 29,
+    "passed": 24,
+    "failed": 4,
+    "skipped": 1
+  },
+  "result": "Failed",
+  "xcodebuild_exit": 65,
+  "collector_intervention": {
+    "pid": 67413,
+    "parent_pid": 55652,
+    "elapsed_before_term": "04:09",
+    "cpu_percent": 0.0,
+    "scope": "Only the simctl diagnose collector with exact result path and primary simulator UDID after all test cases and suites ended. App/test runner was not interrupted.",
+    "signal": "TERM"
+  },
+  "not_claimed": "Current final C7 app whole UI pass. This action compiled earlier production and earlier helper sources."
+}

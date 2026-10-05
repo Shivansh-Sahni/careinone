@@ -1,9 +1,9 @@
 {
-  "checkedUTC": "2026-10-05T05:51:53.599095+00:00",
-  "headBeforeCommit": "9f5e88bf9e6bc7c8b743a6c69249e48c23bc13b9",
-  "indexedFileCount": 472,
-  "textFilesScreened": 417,
-  "binaryOrNonUtf8Count": 55,
+  "checkedUTC": "2026-10-05T07:05:25.538832+00:00",
+  "headBeforeCommit": "4ec91e3be0c45470743208e2fb337d30445c2234",
+  "indexedFileCount": 532,
+  "textFilesScreened": 462,
+  "binaryOrNonUtf8Count": 70,
   "credentialPatternFlags": [
     {
       "filename": "IntegrationTests/CloudSafetyIntegrationTests.swift",
@@ -297,7 +297,7 @@
   ],
   "missingC7ProductionIndexFiles": [],
   "mismatchedC7ProductionIndexFiles": [],
-  "stagedImageCount": 55,
+  "stagedImageCount": 70,
   "stagedImageOCRRows": [
     {
       "filename": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
@@ -416,11 +416,51 @@
       "matchesVisionScreenedBytes": true
     },
     {
+      "filename": "docs/verification/2026-10-04/capture/clarification-native-draft-retained.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
       "filename": "docs/verification/2026-10-04/capture/clarification-sheet-entry-prior-failure.png",
       "matchesVisionScreenedBytes": true
     },
     {
       "filename": "docs/verification/2026-10-04/capture/cleared-source.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/loop-native-date-precision.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/loop-native-draft-retained.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/loop-test-status-edge-privacy-shield.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/native-empty-working-original-retained.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/native-entire-working-text-selected.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/native-ipad-release-relaunch.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/native-select-all-menu.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/primary-c6-confirmation-below-viewport.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/primary-c7-loop-toggle-behind-keyboard.png",
       "matchesVisionScreenedBytes": true
     },
     {
@@ -480,7 +520,23 @@
       "matchesVisionScreenedBytes": true
     },
     {
+      "filename": "docs/verification/2026-10-04/cloud/final-render-live.jpg",
+      "matchesVisionScreenedBytes": true
+    },
+    {
       "filename": "docs/verification/2026-10-04/cloud/live-gateway-shell.jpg",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/native-real-cloud-accepted-fictional.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/native-real-cloud-relaunch-fictional.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/native-real-cloud-review-fictional.png",
       "matchesVisionScreenedBytes": true
     },
     {
@@ -493,6 +549,10 @@
     },
     {
       "filename": "docs/verification/2026-10-04/cloud/strict-output-fictional-check.jpg",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/release/candidate7-primary-fictional-demo.png",
       "matchesVisionScreenedBytes": true
     },
     {
@@ -521,60 +581,11 @@
     }
   ],
   "stagedImageBytesWithoutFreshOCR": [],
-  "indexVersusWorkingDifferences": [
-    "docs/verification/2026-10-04/capture/final-se-clarification.log",
-    "docs/verification/2026-10-04/release/final-eligible-text-credential-check.json"
-  ],
-  "diffCheckDiagnosticCount": 1212,
+  "indexVersusWorkingDifferences": [],
+  "diffCheckDiagnosticCount": 21,
   "diffCheckDiagnosticFilenames": [
-    "docs/verification/2026-10-04/capture/backup-build.log",
-    "docs/verification/2026-10-04/capture/backup-capture-tests.log",
-    "docs/verification/2026-10-04/capture/backup-final.log",
-    "docs/verification/2026-10-04/capture/backup-retest.log",
-    "docs/verification/2026-10-04/capture/demo-packet-native-choices.log",
-    "docs/verification/2026-10-04/capture/editor-draft-recovery-final.log",
-    "docs/verification/2026-10-04/capture/editor-draft-recovery.log",
-    "docs/verification/2026-10-04/capture/expanded-build-latest.log",
-    "docs/verification/2026-10-04/capture/expanded-build.log",
-    "docs/verification/2026-10-04/capture/final-se-all-ui.log",
-    "docs/verification/2026-10-04/capture/final-se-boundary-retest.log",
-    "docs/verification/2026-10-04/capture/final-se-clarification.log",
-    "docs/verification/2026-10-04/capture/final-se-menu-recovery.log",
-    "docs/verification/2026-10-04/capture/final-se-recovery.log",
-    "docs/verification/2026-10-04/capture/focused-tests.log",
-    "docs/verification/2026-10-04/capture/keyboard-retest.log",
-    "docs/verification/2026-10-04/capture/paste-isolation-build.log",
-    "docs/verification/2026-10-04/capture/personal-packet-native-choices.log",
-    "docs/verification/2026-10-04/capture/personal-packet-workspace-diagnosis.log",
-    "docs/verification/2026-10-04/capture/se-outgoing-message-measured.log",
-    "docs/verification/2026-10-04/capture/se-outgoing-message-stable.log",
-    "docs/verification/2026-10-04/capture/se-outgoing-message-verified.log",
-    "docs/verification/2026-10-04/capture/se-outgoing-message.log",
-    "docs/verification/2026-10-04/capture/small-phone-companion-measured.log",
-    "docs/verification/2026-10-04/capture/small-phone-companion-retest.log",
-    "docs/verification/2026-10-04/capture/small-phone-final.log",
-    "docs/verification/2026-10-04/capture/small-phone-release-checks.log",
-    "docs/verification/2026-10-04/capture/small-phone-retest.log",
-    "docs/verification/2026-10-04/capture/small-phone-tests.log",
-    "docs/verification/2026-10-04/capture/small-phone-verified.log",
-    "docs/verification/2026-10-04/capture/ui-isolation-build.log",
-    "docs/verification/2026-10-04/cloud/ask-and-source-status-native.log",
-    "docs/verification/2026-10-04/cloud/follow-through-draft-native.log",
-    "docs/verification/2026-10-04/cloud/follow-through-loop-retry-native.log",
-    "docs/verification/2026-10-04/cloud/follow-through-loop-retry2-native.log",
-    "docs/verification/2026-10-04/integration-baseline.log",
-    "docs/verification/2026-10-04/pipeline-candidate.log",
-    "docs/verification/2026-10-04/release/candidate7-native2.log",
-    "docs/verification/2026-10-04/release/editor-recovery4.log",
-    "docs/verification/2026-10-04/release/editor-recovery5.log",
-    "docs/verification/2026-10-04/release/editor-recovery6.log",
-    "docs/verification/2026-10-04/release/editor-recovery7.log",
-    "docs/verification/2026-10-04/release/editor-recovery8.log",
-    "docs/verification/2026-10-04/release/editor-release-build.log",
-    "docs/verification/2026-10-04/release/keychain-signing-test.log",
-    "docs/verification/2026-10-04/release/unsigned-candidate5-archive.log",
-    "docs/verification/2026-10-04/release/unsigned-candidate7-archive.log",
-    "docs/verification/2026-10-04/release/unsigned-release-archive.log"
+    "docs/verification/2026-10-04/capture/final-se-loop-header-recovery.log",
+    "docs/verification/2026-10-04/capture/final-se-loop-recovery.log"
   ],
   "limitations": [
     "Known-pattern scan is not exhaustive proof of secret absence. No matched values/context serialized.",

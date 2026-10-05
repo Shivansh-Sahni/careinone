@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-05T06:40:59.026511+00:00",
+  "action": "SIGTERM only owned idle post-test simctl diagnose collector",
+  "pid": 77018,
+  "parent_xcodebuild_pid": 70063,
+  "collector_elapsed": "03:45",
+  "collector_cpu_percent": 0.0,
+  "suite_completed_local": "2026-10-05 02:37:13.380 EDT",
+  "completed_cases": 29,
+  "failed_cases": 1,
+  "skipped_cases": 1,
+  "app_runner_and_xcodebuild_not_interrupted": true,
+  "result_exit_code_pending": false,
+  "actual_exit_code": 65
+}

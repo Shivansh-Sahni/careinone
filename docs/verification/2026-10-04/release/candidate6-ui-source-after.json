@@ -1,0 +1,13 @@
+{
+  "scope": "Post-action comparison: seven current source/test inputs differ from the earlier compile snapshot, including two narrow production fixes. This whole action remains evidence for its actual earlier inputs.",
+  "changed_paths": [
+    "CareInOne/Views/FollowThroughViews.swift",
+    "CareInOne/Views/VisitWorkspaceView.swift",
+    "UITests/CapturePipelineUITests.swift",
+    "UITests/CareInOneUITests.swift",
+    "UITests/FollowThroughDraftRecoveryUITests.swift",
+    "UITests/PatientCompanionUITests.swift",
+    "UITests/ReleaseScreenshotsUITests.swift"
+  ],
+  "before_path": "candidate6-ui-source-before.json"
+}

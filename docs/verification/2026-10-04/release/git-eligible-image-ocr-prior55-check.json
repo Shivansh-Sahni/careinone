@@ -1,0 +1,463 @@
+{
+  "checkedUTC": "2026-10-05T05:46:48Z",
+  "engine": "macOS Vision VNRecognizeTextRequest accurate/en-US; no language correction",
+  "failedCount": 0,
+  "flaggedCount": 0,
+  "imageCount": 55,
+  "limitations": [
+    "OCR and regex matching are imperfect; low-resolution/obscured/line-wrapped credentials can evade recognition.",
+    "Opaque token candidates are heuristic and can be false positives; only flagged pictures need visual review.",
+    "Zero pattern matches is not proof that an image contains no secret or patient content.",
+    "Only files in the Git-eligible snapshot are included; root's later store captures need their own provenance/final screen."
+  ],
+  "processedCount": 55,
+  "rows": [
+    {
+      "credentialPatternCount": 0,
+      "filename": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "patternCounts": {},
+      "sha256": "94c7d1bd1035688ffb05e46bf2c387265bade49e17a4ebfe2235a36f61309f30",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/app-store/screenshots/ipad-13/01-today.png",
+      "patternCounts": {},
+      "sha256": "ce46ab1c26267c87510c60a14ce1f32ec21cf2de4cb961baf813b6c50ca375c2",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/app-store/screenshots/iphone-6.9/01-today.png",
+      "patternCounts": {},
+      "sha256": "3fb6850f5ef765898eb513b235bf0cbfa6fe5179cbc64378563f3636f152b8af",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/app-store/screenshots/iphone-6.9/02-source-review.png",
+      "patternCounts": {},
+      "sha256": "ef4bf1df1c9c77e0e5f54863cf34ec62e44e5ec7f2c4eb14ec7c65ccde93a3ed",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/app-store/screenshots/iphone-6.9/03-medication-reports.png",
+      "patternCounts": {},
+      "sha256": "97f44739b0baef4bc0488e2cc9eb16b9424828af329c5b92b48ef431f5f555ee",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/app-store/screenshots/iphone-6.9/04-appointment-companion.png",
+      "patternCounts": {},
+      "sha256": "c87d4900b295fcd0117e4c9009e4315deb959f534d85a58a245bf0215ce3c6b2",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/app-store/screenshots/iphone-6.9/05-selected-packet.png",
+      "patternCounts": {},
+      "sha256": "0184eefe8986c7315d31245867290152ec95eccf59551c3772ddd5e1c572188c",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/app-store/screenshots/iphone-6.9/06-follow-through-helper.png",
+      "patternCounts": {},
+      "sha256": "3ff97db24f2370c8abe3c236c45d15172588106ad67ef20986854804ea0c97a9",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-20/competition/visit-packet.png",
+      "patternCounts": {},
+      "sha256": "27a4800673a687a75be02a75ae7a380ee568dc7357bccd0c569beddfc9bfbc0d",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-20/continuity/checkpoint-comparison.png",
+      "patternCounts": {},
+      "sha256": "3e913c747a7f4cb0d95d3a2cd13eb72d28b7b53b7d68c701b9cd5793e9d9b981",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-20/continuity/deletion-impact.png",
+      "patternCounts": {},
+      "sha256": "13abc3e2f3d5822d8d96d36464805bdfadf199279f727d514950e32bb84cdda7",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-20/continuity/review-impact.png",
+      "patternCounts": {},
+      "sha256": "31b919ab992a7d63bd7db054231b55c763172840a2544811b715aa9b579ea276",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-20/demo-today.png",
+      "patternCounts": {},
+      "sha256": "7cb154c4c46d4563f0c73919b38aa1cac32e63cb08a1a2556d2b81593ae1e70a",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/care-connections-accessibility.png",
+      "patternCounts": {},
+      "sha256": "c50c0ff4f027b039e216d8b65db6d65d8e01880647b65b027cbaf0d80b6e5898",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/care-connections.png",
+      "patternCounts": {},
+      "sha256": "cfae3a8692bfd46febc6afc50e5f8a01ce6fb87d9a95912622a3364fef216f23",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/combined-omission.png",
+      "patternCounts": {},
+      "sha256": "ddd4303a1bf777ece3aa5b772de69596e7697559e0afff0082a71848f1affd87",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/deletion-disclosure.png",
+      "patternCounts": {},
+      "sha256": "4fd466f53040589dea2fceaf99c9ebbb1f4df3a0c1373f8ce03e0062832ba726",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/evidence-trace.png",
+      "patternCounts": {},
+      "sha256": "900b988f946718830763b721a479fa3e57e89399aae49a163521d272e9816da8",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/exact-handoff-copy.png",
+      "patternCounts": {},
+      "sha256": "a939ed57a06881471ec36550a941a134eb281bbabc30bb63de34e9522748d4f6",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/handoff-changes.png",
+      "patternCounts": {},
+      "sha256": "0fe19805a2e4e270107f5c31b498112c2886a31a3f4d1e73a2eb5edb123d8d27",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/timeline-accessibility.png",
+      "patternCounts": {},
+      "sha256": "8b13b5d4a794c63ed7f6ce518b62be194e6b204f662c9d251905e49d6fb62c1a",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/two-date-timeline.png",
+      "patternCounts": {},
+      "sha256": "44a8ae88363378570f7e964c30bc723235c2f9130d72eb665b1670c7c05200e3",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-accessibility.png",
+      "patternCounts": {},
+      "sha256": "f7087dc8fd6fe4a073f2e2c4be7ab201dea5a608c5a694c94987d0a7d7932dd6",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-answer.png",
+      "patternCounts": {},
+      "sha256": "b646c985d6e6b2681ab9a5dd063a4a47d91d7a77f7279e19fcf1533ed809709d",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-accessibility.png",
+      "patternCounts": {},
+      "sha256": "c02185b95e5bb44483dd9512908a083f14abf92c6c897635cbc99d5df869dd79",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-next-step.png",
+      "patternCounts": {},
+      "sha256": "14c44d741ded5cca52c2573184e58c67638127dd065d2b00fd1df9a6a52ec135",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-reply.png",
+      "patternCounts": {},
+      "sha256": "871d46f43d8a394271380023aec40bb7a081cfef9fb395d5a58f67d8a265306e",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/opening-brief.png",
+      "patternCounts": {},
+      "sha256": "9801a32919066261be9f6e3dba99ba7fc880dec21e27755713996fe5ef89a59d",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/backup-created.png",
+      "patternCounts": {},
+      "sha256": "ece68dd2b8222b5e0a6c6b33df74add694fca75a39460a02f8791e9422a560b6",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/clarification-sheet-entry-prior-failure.png",
+      "patternCounts": {},
+      "sha256": "0b8c2801e6b8afb5a1d685b9dbc246aab82e3943b867cc0cf8cbc4e18c95e3b8",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/cleared-source.png",
+      "patternCounts": {},
+      "sha256": "c2de87179e19b1152acdced4cbecafaed747e3872219bfc55c3a84e49d5309c7",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/review-draft-kept.png",
+      "patternCounts": {},
+      "sha256": "34beea6a2765ee7870d47dc7cb27f69408da97c3b25cc9708e32264d339b7f61",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/small-phone-appointment-answer.png",
+      "patternCounts": {},
+      "sha256": "2b204102ba58a030908b04163bd9a7e97f905414b47738cf58df6a6d93632249",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/small-phone-appointment-brief.png",
+      "patternCounts": {},
+      "sha256": "626fd2deeafbf83838b1eb7befd61d2d2050f6da874d935badaf7b107b5d65db",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/small-phone-care-connections-accessibility.png",
+      "patternCounts": {},
+      "sha256": "72a4c7f8cedb91992a84c70e71e1401cae2818cc15ad63b852b059b6da0dd58a",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/small-phone-cleared-working-original.png",
+      "patternCounts": {},
+      "sha256": "02c075f5173aa2ecdf3d3164869f39099a038325bfe37989657372545158d597",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/small-phone-compact-demo-accessibility.png",
+      "patternCounts": {},
+      "sha256": "6dcc0ea9a0cc0853ed3c99173cb80ec871f9168b0bc781230029f14f4cdb062a",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/small-phone-native-paste-relaunch.png",
+      "patternCounts": {},
+      "sha256": "2fd6d3e4bfcfbbbef9412a43965300915ecb636f520f718e927e7163d0dbc4ad",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/small-phone-outreach-reply.png",
+      "patternCounts": {},
+      "sha256": "b035afe2e4ff945e0bb2aeb5fdf778ed082cc0170e2b7bf3b4440b2c0148ee32",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/small-phone-timeline-accessibility.png",
+      "patternCounts": {},
+      "sha256": "80dbe4918069e1e69760ecc17b10c23635d03cc5bb43020bc580ec61edc26134",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/visit-draft-reveal-prior-failure.png",
+      "patternCounts": {},
+      "sha256": "5808883bdc971bf9064c2259f3baf19193cc2bc3eda11032afaad62b688ca14e",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/capture/workspace-draft-kept.png",
+      "patternCounts": {},
+      "sha256": "cbb35e87c194c3ef8c40debc632c13d3b129566beaf4d391a231b87b29bb57a1",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/cloud/duplicate-release-notice-fictional.png",
+      "patternCounts": {},
+      "sha256": "69b1c22d6e2dbddd6df14190e62c74c2b69e752aee76f6642e97d0a55934fbab",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/cloud/duplicate-release-recovered-review-after-relaunch-fictional.png",
+      "patternCounts": {},
+      "sha256": "b810f09ce59dc49f515cd3d38312969f4a8680e944658550b59a28aa83e1323c",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/cloud/duplicate-release-returned-today-fictional.png",
+      "patternCounts": {},
+      "sha256": "8ac9eaee1f9b864f70e03fdc21683965ba5e1b87a2ca1acb0a901ebcfeeb327a",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/cloud/live-gateway-shell.jpg",
+      "patternCounts": {},
+      "sha256": "14a994ecac55874d6e649353360b1316cc4e1291477cfe85820ca5c0ecf7e6be",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/cloud/ordinary-release-saved-source-fictional.png",
+      "patternCounts": {},
+      "sha256": "4bc32504652ed13995d8fef3c88243651800bcbaf84519ccbe66c759f34c7006",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/cloud/strict-output-deploy-live.jpg",
+      "patternCounts": {},
+      "sha256": "f317f8a9d5314bf62dd1ab2685979e3c4d0de5efa4e1afcc1e056e5a8eb81d52",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/2026-10-04/cloud/strict-output-fictional-check.jpg",
+      "patternCounts": {},
+      "sha256": "6e28e987bf2692c8fe54f293a8db70724f8730278e0c0672543209f00c06d339",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/discrepancy.png",
+      "patternCounts": {},
+      "sha256": "b806f84aee4cdf7e46d89bb21bf9cffae1a9e9e2e807e7f4bf9175d857e290d0",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/medication-dark-large-text.png",
+      "patternCounts": {},
+      "sha256": "9b1fa44cb2de7cd3ea9d0b07a83d3ebc952b0b04095635604bad2640c7eb0cb5",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/medication-history.png",
+      "patternCounts": {},
+      "sha256": "16a61f94561896ce58de59adab10f888254f40dff8754c0de190cf062c179928",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/review.png",
+      "patternCounts": {},
+      "sha256": "575c43776873c992b0f60c89939fbb5d6fa812d598144506dcefa105ea1deb12",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/today-dark-large-text.png",
+      "patternCounts": {},
+      "sha256": "de47423d44902ec37e357c4da9bea03c3637d31474c48fde0b3568e3d4adf057",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    },
+    {
+      "credentialPatternCount": 0,
+      "filename": "docs/verification/today.png",
+      "patternCounts": {},
+      "sha256": "2e0f9d078c3fa8d8003ed79f7104eb4a9e008e45eccbef3a4417c6fb90ae6514",
+      "status": "recognized",
+      "unchangedDuringRecognition": true
+    }
+  ],
+  "scope": "Git-eligible PNG/JPG snapshot only; no user attachment paths or ignored raw screenshots/result/archive bundles; no recognized content or matching values serialized",
+  "postScanScopeCheck": {
+    "checkedUTC": "2026-10-05T05:53:42.861309+00:00",
+    "newEligibleImageFilenames": [],
+    "missingOrChangedImageFilenames": [],
+    "sameSnapshot": true
+  }
+}

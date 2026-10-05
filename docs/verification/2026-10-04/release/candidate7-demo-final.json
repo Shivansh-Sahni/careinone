@@ -1,0 +1,53 @@
+{
+  "records": {
+    "ZEVIDENCESOURCE": {
+      "count": 19,
+      "sha256": "0566a903d55d3eb2d162f0da8873130e07ecc2051926d6a6c4673f9de82a7316"
+    },
+    "ZENCOUNTER": {
+      "count": 3,
+      "sha256": "b7482bf47e82d7e62a8461ee2d93ff08d9fda1c97b64b966f037ca13ceb41a98"
+    },
+    "ZCAREENTITY": {
+      "count": 14,
+      "sha256": "b5b5027e104d50d5461fe987f63c15e92b22752453191271c22e7534bb791f34"
+    },
+    "ZCARECLAIM": {
+      "count": 19,
+      "sha256": "b375aa964ceee81fa41e0c8337ca04e433ed7428a67d604616215eb55f2d07ea"
+    },
+    "ZCLAIMRELATION": {
+      "count": 22,
+      "sha256": "b2210ce7a0d4fe1fd1c59c3bee523de3eb6a232be6788bb44b1cf68db1c64b5e"
+    },
+    "ZCONFLICTRECORD": {
+      "count": 2,
+      "sha256": "da546a67afdfb1660150dc938d03bfe808809ee8f25bcf5210676cea0d49bfe1"
+    },
+    "ZOPENLOOP": {
+      "count": 7,
+      "sha256": "4b44cf785705f8e46e1f2afbeca87cf179951d564c391ab535f00b93afc7489c"
+    },
+    "ZCHANGERECORD": {
+      "count": 29,
+      "sha256": "7d41a4085cc3469dad43bc2b2fa3a4d0e5afd729ae35fb5ee9067e6fe819c851"
+    },
+    "ZSAVEDQUESTION": {
+      "count": 1,
+      "sha256": "20a7bd0e4c9d3573a2bb20daf1419eeeeaf7c3c791cc937fb90834669be2509e"
+    },
+    "ZPATIENTNOTE": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ZPATIENTPROFILE": {
+      "count": 1,
+      "sha256": "e3c3a57512a5a6c783982a2202270cda3bbf5dac7735c3036ac4c3581a3ea69c"
+    },
+    "ZAUDITEVENT": {
+      "count": 19,
+      "sha256": "63f3497f531d1b30c102054ea73ed40b96ffda46ffa58413213ffd0baa838cf1"
+    }
+  },
+  "evidence": {}
+}

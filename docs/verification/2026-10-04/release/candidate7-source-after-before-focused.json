@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-10-05T05:57:27.046811+00:00",
+  "scope": "Final candidate production/native build inputs following two grounded UI repairs",
+  "changed": [
+    {
+      "path": "UITests/CapturePipelineUITests.swift",
+      "before": "0cf00ca621c986cbc19f30d562e82d21b4003e580df327bd464b98721a9654fe",
+      "after": "c7ac9033e87e5ad2d7765c01c5a7d43b851770848c835fdacc167cfbec36a3fd"
+    },
+    {
+      "path": "UITests/CareInOneUITests.swift",
+      "before": "3bc662eaffcc36eaf3d66b5aa494ca2da3b3fccca11cfe4c3b8f2305be20bf71",
+      "after": "5d7d8cf93e0dd02237d3db944b1c5312e149218a6c0ce9b88cc3b478b1489501"
+    },
+    {
+      "path": "UITests/FollowThroughDraftRecoveryUITests.swift",
+      "before": "d4067970d375058a2ca38353bd955067f441cb05dcbe78fd8c15e82e9198bea9",
+      "after": "b3b9a69d8333c4044d3b4b71d3817e59f1bc1b9848d3d7a45d30d276b136a793"
+    }
+  ]
+}

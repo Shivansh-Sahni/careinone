@@ -1,0 +1,8 @@
+{
+  "checkedUTC": "2026-10-05T06:03:15.718911+00:00",
+  "committedCodeRevision": "4ec91e3be0c45470743208e2fb337d30445c2234",
+  "C7ProductionInputs": 64,
+  "changedComparedWithArchive": [],
+  "privateArchiveTracked": false,
+  "meaning": "Committed production source matches independently audited unsigned C7 artifact inputs. Later evidence/test-helper changes do not establish new app runtime results; root owns push/deployment status."
+}

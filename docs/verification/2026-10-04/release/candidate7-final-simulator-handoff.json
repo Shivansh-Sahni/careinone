@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "device": "E80CF6B8-76BE-4160-8BA8-E0E63C19E0BF",
+  "configuration": "ordinary Release",
+  "bundle_id": "org.carecontinuity.app",
+  "version": "1.0",
+  "build": "1",
+  "launch_pid": 78135,
+  "debug_launch_flags": false,
+  "entry_path": [
+    "Settings",
+    "Explore the fictional demo"
+  ],
+  "final_screen": "Today with Fictional demo banner and Return to my care",
+  "personal_record_type_fingerprints": 12,
+  "personal_original_files": 1,
+  "personal_unchanged": true,
+  "personal_comparison": "candidate7-personal-after-demo-open.json",
+  "fictional_fingerprints": "candidate7-demo-final.json",
+  "screenshot": "candidate7-primary-fictional-demo.png",
+  "binary_sha256": "7a66769a819b5705522038fa72eb5a70a871bb1104f2b2f5f8ba81b2c06a9d3c",
+  "paid_requests_for_final_demo_launch": 0,
+  "scope": "Normal Release was installed in place and normally launched. Native entry opened the isolated fictional workspace; no personal reset/uninstall, cloud-consent edit or personal submission occurred."
+}

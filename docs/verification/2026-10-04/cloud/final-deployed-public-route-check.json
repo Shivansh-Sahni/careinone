@@ -1,0 +1,35 @@
+{
+  "checked_at_utc": "2026-10-05T06:20:56.370848+00:00",
+  "deployed_revision": "4ec91e3be0c45470743208e2fb337d30445c2234",
+  "deployment": "dep-db1k2hk9v7es73fup6t0",
+  "configuration_and_costs_changed": false,
+  "routes": {
+    "/health": {
+      "status": 200,
+      "bytes": 49,
+      "sha256": "9c9fd7491c51592b63e8faf05829a24131a9286df244459575d8a6e734376728",
+      "content_type": "application/json",
+      "cache_control": "no-store",
+      "x_content_type_options": "nosniff",
+      "health_status": "ok"
+    },
+    "/privacy": {
+      "status": 200,
+      "bytes": 14270,
+      "sha256": "177a012f25fbe8a99fd71ccf901efe7be593bcf5f9b55a05df7d5412a034fc62",
+      "content_type": "text/html; charset=utf-8",
+      "cache_control": "no-store",
+      "x_content_type_options": "nosniff",
+      "matches_current_repository_bytes": true
+    },
+    "/support": {
+      "status": 200,
+      "bytes": 11162,
+      "sha256": "ecd7b0d2ec118b8fc94d1e52231e90d40d45cd5eafdf852c5965b014985683cd",
+      "content_type": "text/html; charset=utf-8",
+      "cache_control": "no-store",
+      "x_content_type_options": "nosniff",
+      "matches_current_repository_bytes": true
+    }
+  }
+}

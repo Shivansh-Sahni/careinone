@@ -79,5 +79,12 @@
   "observed_limits": [
     "Selected packet screenshot shows native text preview with Create selected PDF, not an opened PDF viewer.",
     "Seven authentic screenshots prepared. Device workflows and signing remain separate release gates."
-  ]
+  ],
+  "app_version": "1.0",
+  "build": "1",
+  "source_commit": "4ec91e3be0c45470743208e2fb337d30445c2234",
+  "iphone_model": "iPhone16ProMax",
+  "ipad_model": "iPadPro13M5",
+  "runtime": "iOS27.0",
+  "phone_configuration": "ordinary Release"
 }

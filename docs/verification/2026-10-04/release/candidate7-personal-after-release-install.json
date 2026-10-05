@@ -1,0 +1,55 @@
+{
+  "records": {
+    "ZEVIDENCESOURCE": {
+      "count": 2,
+      "sha256": "e6c00f1ea1b41fa0f493c63f88a335815592fd78c59a94abaf40d0aec761fcd9"
+    },
+    "ZENCOUNTER": {
+      "count": 1,
+      "sha256": "440b8542daaf3c50d6282f122ae6d7001875559a527a6696863561e1ef2a88ff"
+    },
+    "ZCAREENTITY": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ZCARECLAIM": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ZCLAIMRELATION": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ZCONFLICTRECORD": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ZOPENLOOP": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ZCHANGERECORD": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ZSAVEDQUESTION": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ZPATIENTNOTE": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ZPATIENTPROFILE": {
+      "count": 1,
+      "sha256": "b58bef5ea78b84d091150d91bbde48aaaaa24adfc206ef4b53d3891a9e1cd316"
+    },
+    "ZAUDITEVENT": {
+      "count": 10,
+      "sha256": "e55b182f81b012a646a1940dc1b35144020d6698b5e9ede9a322cefa6901a8ef"
+    }
+  },
+  "evidence": {
+    "5e77f0840c1a450509e12e37b331465b438f3328daed55e26660ff928923fb33": "8b2f536562e0f33460b61179191c9a750052a61988ef394dd1f11671631deb02"
+  }
+}

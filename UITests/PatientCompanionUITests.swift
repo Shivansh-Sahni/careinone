@@ -33,8 +33,35 @@ final class PatientCompanionUITests: XCTestCase {
         tap(app.buttons["companion-capture-answers"], in: app)
         tap(app.buttons["Review & edit"].firstMatch, in: app)
         let confirm = app.switches["This accurately reflects what was reported"]
-        reveal(confirm, in: app)
-        confirm.coordinate(withNormalizedOffset: CGVector(dx: 0.93, dy: 0.5)).tap()
+        // A Form row can report hittable after one drag while the native
+        // switch is still below the sheet. Require the entire actual control
+        // to be visible before measuring its knob and waiting for on-state.
+        let reviewBar = app.navigationBars["Review claim"]
+        XCTAssertTrue(reviewBar.waitForExistence(timeout: 10))
+        for _ in 0..<12 {
+            guard confirm.exists else { scrollContent(in: app, direction: .up); continue }
+            let frame = confirm.frame
+            let bottom = app.frame.maxY - 24
+            if confirm.isHittable && frame.minY > reviewBar.frame.maxY + 4 && frame.maxY < bottom { break }
+            scrollContent(in: app, direction: frame.maxY >= bottom ? .up : .down)
+        }
+        XCTAssertTrue(confirm.isHittable)
+        XCTAssertGreaterThan(confirm.frame.minY, reviewBar.frame.maxY + 4)
+        XCTAssertLessThan(confirm.frame.maxY, app.frame.maxY - 24)
+        var previousFrame: CGRect?
+        let stableConfirmation = XCTNSPredicateExpectation(predicate: NSPredicate { element, _ in
+            guard let element = element as? XCUIElement, element.exists, element.isHittable else { return false }
+            let frame = element.frame
+            defer { previousFrame = frame }
+            return previousFrame == frame
+        }, object: confirm)
+        XCTAssertEqual(XCTWaiter.wait(for: [stableConfirmation], timeout: 20), .completed)
+        if confirm.value as? String == "0" {
+            let frame = confirm.frame, bounds = app.frame
+            app.coordinate(withNormalizedOffset: .zero).withOffset(CGVector(dx: frame.maxX - 40 - bounds.minX, dy: frame.midY - bounds.minY)).tap()
+        }
+        let confirmed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value == '1'"), object: confirm)
+        XCTAssertEqual(XCTWaiter.wait(for: [confirmed], timeout: 5), .completed)
         XCTAssertEqual(confirm.value as? String, "1", "The report must be explicitly confirmed before acceptance")
         let accept = app.buttons["accept-claim"]
         reveal(accept, in: app)

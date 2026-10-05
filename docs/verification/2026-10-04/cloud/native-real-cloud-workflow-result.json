@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "verificationKind": "Hands-on native UI journey; not an additional XCTest case",
+  "dateUTC": "2026-10-05",
+  "windowUTC": "05:46–06:15",
+  "device": "BEFFC231-C67F-4FFC-9F41-53789BF05F78; disposable iPhone 18 Pro / iOS 27.0",
+  "configuration": "Ordinary Release; normal simulator signing; no Debug launch arguments",
+  "appProvenance": {
+    "privateSnapshot": "/private/tmp/CareInOneReleaseCaptureDiagnosticSource",
+    "derivedData": "/private/tmp/CareInOneReleaseCaptureDiagnosis",
+    "executableSHA256": "eed8097c5132ffd9280d38f1fc821d967144bd0233ed13ec8d6a68b937aacb25",
+    "productionSourceManifest": "ordinary-release-capture-diagnosis.json",
+    "limitation": "This earlier Release snapshot predates the final clarification row hit-area repair and final candidate-only changes. This journey is cloud-pipeline evidence, not certification of the final archive."
+  },
+  "gateway": {
+    "publicURL": "https://careinone-api.onrender.com",
+    "primaryModel": "gpt-4.1-mini-2025-04-14",
+    "providerHost": "api.openai.com",
+    "maxOutputTokens": 6000,
+    "maxSourceCharacters": 40000,
+    "deploymentRevision": "9f5e88bf9e6bc7c8b743a6c69249e48c23bc13b9",
+    "revisionEvidence": "Confirmed by parent root from deployment observations; no Render deployment occurred during this native journey."
+  },
+  "paidRequestBudget": {
+    "maximumAuthorized": 2,
+    "requestsInitiated": 2,
+    "connectionCheck": 1,
+    "sourceExtraction": 1,
+    "retries": 0,
+    "mockOrLocalSubstitution": false,
+    "spendingLimitsOrServicesChanged": false
+  },
+  "credentialHandling": {
+    "existingGatewayTokenUsed": true,
+    "newTokenCreated": false,
+    "apiKeyTransferredToDevice": false,
+    "credentialValuesPrintedOrWrittenToArtifacts": false,
+    "dashboardImmediatelyRemasked": true,
+    "nativeSecureFieldMasked": true,
+    "nativeAppKeychainSaveConfirmed": true,
+    "optionalPasswordsAutofillSaveDeclined": true,
+    "privateREPLTokenCleared": true,
+    "separateRenderTabClosed": true,
+    "rootRenderTabUntouched": true
+  },
+  "fixture": {
+    "workspace": "This disposable simulator's initially empty personal workspace, containing only invented verification data. The separate fictional demo intentionally disables cloud analysis.",
+    "sourceTitle": "Fictional native cloud verification",
+    "sourceText": "This is fictional verification information. Allergy: nickel.",
+    "exactSupportingQuotation": "Allergy: nickel.",
+    "realPatientDataTransmitted": false
+  },
+  "verified": [
+    "Native HTTPS gateway authentication and safe public model metadata",
+    "Fixed synthetic connection check passed using the primary model",
+    "Existing app gateway token saved to app Keychain; saving alone left cloud analysis off",
+    "Explicit configured-model consent then enabled cloud analysis",
+    "Native ordinary text entry retained the complete fixed fictional passage",
+    "Saving created the source and visibly started configured cloud provider analysis",
+    "Exactly one real extraction proposal returned with exact evidence quotation",
+    "No Re-analyze, local fallback, or mock substitution was invoked",
+    "Review displayed exact quotation and extraction-confidence qualification",
+    "Individual reported-meaning confirmation enabled acceptance",
+    "Accepted Nickel allergy appeared in source-linked care item history as Accepted revision 1",
+    "Ordinary terminate/relaunch retained source title, same accepted claim identity, and exact supporting quotation",
+    "Device Hub selection restored to CareInOne Release iPad 13 after the private batch"
+  ],
+  "screenshotsVisuallyReviewed": [
+    "native-real-cloud-review-fictional.png",
+    "native-real-cloud-accepted-fictional.png",
+    "native-real-cloud-relaunch-fictional.png"
+  ],
+  "remainingLimitations": [
+    "The final signed device archive must be validated separately; this was a simulator Release build.",
+    "Keychain save was confirmed in the native UI, but a second post-relaunch inference was deliberately not sent beyond the two-request budget.",
+    "SourceViews.swift:100 currently renders historical source.processingMessage verbatim after review. On the native journey, it retained 1 proposals ready after acceptance while the same claim correctly appeared under Added to My Care. AppStore.swift:179 sets this count during analysis, but review does not refresh it. Parent explicitly retained this presentation limitation during the frozen final action; no data loss or failed acceptance occurred.",
+    "The historical native zero-paid missing-Keychain attempt remains a separate truthful result; this successful private restoration does not rewrite it.",
+    "Organization approval and publisher/signing readiness remain independent publication dependencies."
+  ],
+  "screenshotHashes": {
+    "native-real-cloud-review-fictional.png": "68326bdd5c5759d6b27a97e1c5bf6bf2a81a78d75f727bbfec1fc00d53f8246d",
+    "native-real-cloud-accepted-fictional.png": "3c4bb908d13a8c3818e1ac57259d2251db5997b2fd2b8d39207f0a4d3afa7bc2",
+    "native-real-cloud-relaunch-fictional.png": "a5d087d5acaf5375ed8dfde68ea2523462efec5fa71fa7bffa386807c2e9383b"
+  }
+}

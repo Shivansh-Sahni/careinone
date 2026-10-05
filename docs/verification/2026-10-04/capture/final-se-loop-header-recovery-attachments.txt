@@ -1,0 +1,5 @@
+Exported 2 attachments for: FollowThroughDraftRecoveryUITests/testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch():
+File: 0543C5AA-43E2-4059-825C-E36B52C46489.png, suggested name: "CareInOne · follow-through edits kept after cancelled dismissal_0_A3BFD022-9317-47F1-BA3F-D70E1EA3C87A.png"
+File: 9FBFDEB5-2E6D-48C5-8BFF-89013C02A3EF.png, suggested name: "CareInOne · fictional precision after menu selection_0_B8EAB6FD-EDA7-476C-9082-171E6AFB5A87.png"
+
+Generated manifest file with attachment details: /private/tmp/CareInOneSmallPhoneLoopRecoveryFinalAttachments/manifest.json

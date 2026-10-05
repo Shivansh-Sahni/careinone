@@ -54,19 +54,43 @@ final class FollowThroughDraftRecoveryUITests: XCTestCase {
         tap(cbc, in: app)
         let note = app.textFields["loop-update-note"]
         tap(note, in: app); note.typeText("Fictional draft scheduling note")
-        app.buttons["loop-update-note-done"].tap()
+        finishLoopNoteEditing(app)
         let due = app.switches["Due date is known"]
         XCTAssertTrue(due.waitForExistence(timeout: 5)); XCTAssertEqual(due.value as? String, "1")
-        // SwiftUI exposes the full labelled row as the Switch; its center can hit the label.
-        due.coordinate(withNormalizedOffset: CGVector(dx: 0.93, dy: 0.5)).tap()
+        let detailBar = app.navigationBars["Follow-through detail"]
+        for _ in 0..<12 {
+            let frame = due.frame, bounds = app.frame
+            let top = detailBar.frame.maxY + 4, bottom = bounds.maxY - 24
+            if due.isHittable && frame.minY > top && frame.maxY < bottom { break }
+            let origin = app.coordinate(withNormalizedOffset: .zero)
+            let visibleTop = top + 20, visibleBottom = bottom - 20
+            let startY = frame.maxY >= bottom ? visibleBottom : visibleTop
+            let endY = frame.maxY >= bottom ? visibleTop : visibleBottom
+            origin.withOffset(CGVector(dx: 12, dy: startY - bounds.minY)).press(forDuration: 0.2, thenDragTo: origin.withOffset(CGVector(dx: 12, dy: endY - bounds.minY)))
+        }
+        XCTAssertTrue(due.isHittable)
+        XCTAssertGreaterThan(due.frame.minY, detailBar.frame.maxY + 4)
+        XCTAssertLessThan(due.frame.maxY, app.frame.maxY - 24)
+        waitForStableFrame(due)
+        // Measure the actual visible knob after the keyboard is gone. A stale
+        // labelled-row coordinate can instead hit a software keyboard key.
+        let dueFrame = due.frame, bounds = app.frame
+        app.coordinate(withNormalizedOffset: .zero).withOffset(CGVector(dx: dueFrame.maxX - 40 - bounds.minX, dy: dueFrame.midY - bounds.minY)).tap()
         let turnedOff = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value == '0'"), object: due)
         XCTAssertEqual(XCTWaiter.wait(for: [turnedOff], timeout: 5), .completed)
         let precision = app.buttons["loop-update-precision"]
         tap(precision, in: app); tap(app.buttons["Approximate"], in: app)
         snapshot(app, "CareInOne · fictional precision after menu selection")
         XCTAssertTrue(pickerSelection(precision).localizedCaseInsensitiveContains("approximate"))
-        app.navigationBars["Follow-through detail"].swipeDown()
+        let header = detailBar.frame, appBounds = app.frame
+        let origin = app.coordinate(withNormalizedOffset: .zero)
+        let dismissalStart = origin.withOffset(CGVector(dx: header.midX - appBounds.minX, dy: header.maxY - 8 - appBounds.minY))
+        let dismissalEnd = origin.withOffset(CGVector(dx: header.midX - appBounds.minX, dy: min(appBounds.maxY - 100, header.maxY + 180) - appBounds.minY))
+        dismissalStart.press(forDuration: 0.05, thenDragTo: dismissalEnd)
+        XCTAssertEqual(app.state, .runningForeground, "The real sheet gesture must remain inside the app, away from the system status edge")
         XCTAssertTrue(app.navigationBars["Follow-through detail"].exists)
+        XCTAssertEqual(note.value as? String, "Fictional draft scheduling note")
+        XCTAssertEqual(due.value as? String, "0")
         app.buttons["Done"].tap(); app.alerts.buttons["Keep editing"].tap()
         XCTAssertEqual(note.value as? String, "Fictional draft scheduling note")
         XCTAssertEqual(due.value as? String, "0")
@@ -75,18 +99,20 @@ final class FollowThroughDraftRecoveryUITests: XCTestCase {
         app.buttons["Done"].tap(); app.alerts.buttons["Discard changes"].tap()
         XCTAssertTrue(app.navigationBars["Follow-through detail"].waitForNonExistence(timeout: 5))
         tap(cbc, in: app); tap(note, in: app)
-        XCTAssertEqual(note.value as? String, "Notes")
-        app.buttons["loop-update-note-done"].tap()
+        let restoredNote = try XCTUnwrap(note.value as? String)
+        XCTAssertEqual(note.placeholderValue, "Notes")
+        XCTAssertTrue(restoredNote.isEmpty || restoredNote == note.placeholderValue, "Discard must restore an empty saved note, represented as empty value or its native placeholder")
+        finishLoopNoteEditing(app)
         XCTAssertEqual(due.value as? String, "1")
         XCTAssertTrue(pickerSelection(precision).localizedCaseInsensitiveContains("exact"))
         tap(note, in: app); note.typeText("Fictional saved scheduling note")
-        app.buttons["loop-update-note-done"].tap(); tap(app.buttons["loop-update-save"], in: app)
+        finishLoopNoteEditing(app); tap(app.buttons["loop-update-save"], in: app)
         XCTAssertTrue(app.navigationBars["Follow-through detail"].waitForNonExistence(timeout: 5))
         app.terminate(); app.launchArguments = ["--uitesting", "--demo"]; app.launch()
         XCTAssertTrue(app.tabBars.buttons["Today"].waitForExistence(timeout: 20)); app.tabBars.buttons["My Care"].tap()
         tap(app.buttons["Follow-through"], in: app); tap(cbc, in: app); tap(note, in: app)
         XCTAssertEqual(note.value as? String, "Fictional saved scheduling note")
-        app.buttons["loop-update-note-done"].tap()
+        finishLoopNoteEditing(app)
         XCTAssertEqual(due.value as? String, "1")
         XCTAssertTrue(pickerSelection(precision).localizedCaseInsensitiveContains("exact"))
         app.buttons["Done"].tap()
@@ -129,6 +155,25 @@ final class FollowThroughDraftRecoveryUITests: XCTestCase {
     }
     @MainActor private func pickerSelection(_ picker: XCUIElement) -> String {
         picker.label + " " + (picker.value as? String ?? "") + " " + picker.staticTexts.allElementsBoundByIndex.map(\.label).joined(separator: " ")
+    }
+    @MainActor private func finishLoopNoteEditing(_ app: XCUIApplication) {
+        let done = app.buttons["loop-update-note-done"]
+        XCTAssertTrue(done.waitForExistence(timeout: 5)); XCTAssertTrue(done.isHittable)
+        waitForStableFrame(done)
+        let frame = done.frame, bounds = app.frame
+        XCTAssertGreaterThan(frame.width, 0); XCTAssertGreaterThan(frame.height, 0)
+        app.coordinate(withNormalizedOffset: .zero).withOffset(CGVector(dx: frame.midX - bounds.minX, dy: frame.midY - bounds.minY)).tap()
+        XCTAssertTrue(app.keyboards.firstMatch.waitForNonExistence(timeout: 10), "Native Done must dismiss the actual keyboard before date controls are used")
+    }
+    @MainActor private func waitForStableFrame(_ element: XCUIElement) {
+        var previousFrame: CGRect?
+        let stable = XCTNSPredicateExpectation(predicate: NSPredicate { candidate, _ in
+            guard let candidate = candidate as? XCUIElement, candidate.exists, candidate.isHittable else { return false }
+            let frame = candidate.frame
+            defer { previousFrame = frame }
+            return previousFrame == frame
+        }, object: element)
+        XCTAssertEqual(XCTWaiter.wait(for: [stable], timeout: 20), .completed)
     }
     @MainActor private func snapshot(_ app: XCUIApplication, _ name: String) {
         let attachment = XCTAttachment(screenshot: app.screenshot()); attachment.name = name; attachment.lifetime = .keepAlways; add(attachment)
