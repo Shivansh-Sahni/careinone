@@ -1,5 +1,5 @@
 [project]
-name = "carecontinuity-gateway"
+name = "careinone-gateway"
 version = "1.0.0"
 requires-python = ">=3.11"
 dependencies = ["uvicorn>=0.35,<1"]

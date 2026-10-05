@@ -16,6 +16,11 @@ FIELDS = {
 }
 class ValidationError(ValueError): pass
 
+def has_unpaired_surrogate(value):
+    # Escaped lone UTF-16 surrogates are accepted by json.loads but cannot be
+    # encoded as UTF-8 for provider requests or app responses.
+    return any(0xD800 <= ord(character) <= 0xDFFF for character in value)
+
 def loads(raw: bytes | str):
     def unique(pairs):
         result = {}
@@ -24,8 +29,25 @@ def loads(raw: bytes | str):
             result[key] = value
         return result
     def invalid_constant(value): raise ValidationError("Non-finite JSON number")
-    try: return json.loads(raw, object_pairs_hook=unique, parse_constant=invalid_constant)
-    except (ValueError, UnicodeError) as exc: raise ValidationError("Invalid JSON") from exc
+    try:
+        if isinstance(raw, (bytes, bytearray)): raw = raw.decode('utf-8-sig')
+        if not isinstance(raw, str): raise ValidationError("Invalid JSON")
+        # A wire envelope needs only a few levels. Bound nesting before the JSON
+        # decoder allocates deep structures; brackets inside evidence strings do
+        # not count, including escaped quotes and backslashes.
+        depth=0; in_string=False; escaped=False
+        for character in raw:
+            if in_string:
+                if escaped: escaped=False
+                elif character == '\\': escaped=True
+                elif character == '"': in_string=False
+            elif character == '"': in_string=True
+            elif character in '[{':
+                depth+=1
+                if depth>64: raise ValidationError("JSON nesting exceeds the supported limit")
+            elif character in ']}': depth-=1
+        return json.loads(raw, object_pairs_hook=unique, parse_constant=invalid_constant)
+    except (ValueError, UnicodeError, RecursionError) as exc: raise ValidationError("Invalid JSON") from exc
 
 def date(value):
     if value is None: return
@@ -42,25 +64,28 @@ def validate_request(value):
     if value.get("schemaVersion") != VERSION: raise ValidationError("Unsupported schema version")
     if value.get("consent") is not True: raise ValidationError("Explicit cloud consent required")
     text = value.get("text")
-    if not isinstance(text, str) or not text.strip() or len(text) > 200_000: raise ValidationError("Text must contain 1–200,000 characters")
-    if value.get("sourceKind") not in {"voice", "visitRecording", "typed", "photo", "pdf", "textFile", "fhir", "manual"}: raise ValidationError("Unsupported source kind")
+    if not isinstance(text, str) or not text.strip() or len(text) > 200_000 or has_unpaired_surrogate(text): raise ValidationError("Text must contain 1–200,000 valid Unicode characters")
+    if not isinstance(value.get("sourceKind"), str) or value["sourceKind"] not in {"voice", "visitRecording", "typed", "photo", "pdf", "textFile", "fhir", "manual"}: raise ValidationError("Unsupported source kind")
     date(value.get("eventDate")); return value
 
 def validate_claim(claim, text):
     if not isinstance(claim, dict) or set(claim) - FIELDS: raise ValidationError("Unknown proposal fields")
-    if claim.get("kind") not in KINDS: raise ValidationError("Unsupported entity kind")
+    if not isinstance(claim.get("kind"), str) or claim["kind"] not in KINDS: raise ValidationError("Unsupported entity kind")
     for key, limit in [("label",200),("quote",6000)]:
-        if not isinstance(claim.get(key), str) or not claim[key].strip() or len(claim[key]) > limit: raise ValidationError("Missing or oversized required field")
+        if not isinstance(claim.get(key), str) or not claim[key].strip() or len(claim[key]) > limit or has_unpaired_surrogate(claim[key]): raise ValidationError("Missing or oversized required field")
     if claim["quote"] not in text: raise ValidationError("Supporting quote not found exactly")
     for key, limit in [("value",4000),("unit",80),("route",200),("frequency",200),("form",200),("speaker",200),("clarification",500),("code",200),("codeSystem",500)]:
-        if claim.get(key) is not None and (not isinstance(claim[key], str) or len(claim[key]) > limit): raise ValidationError("Invalid text field")
+        if claim.get(key) is not None and (not isinstance(claim[key], str) or len(claim[key]) > limit or has_unpaired_surrogate(claim[key])): raise ValidationError("Invalid text field")
     for key, allowed in [("action",ACTIONS),("certainty",CERTAINTIES),("subject",SUBJECTS),("duePrecision",PRECISIONS)]:
-        if claim.get(key) is not None and claim[key] not in allowed: raise ValidationError("Invalid enumeration")
+        if claim.get(key) is not None and (not isinstance(claim[key], str) or claim[key] not in allowed): raise ValidationError("Invalid enumeration")
     for key in ["negated", "conditional", "speakerUncertain"]:
         if claim.get(key) is not None and type(claim[key]) is not bool: raise ValidationError("Expected boolean")
     for key in ["numericValue", "confidence", "transcriptSeconds"]:
         v = claim.get(key)
-        if v is not None and (type(v) not in (int,float) or not math.isfinite(v)): raise ValidationError("Expected finite numeric value")
+        if v is not None:
+            try: finite = type(v) in (int,float) and math.isfinite(v)
+            except OverflowError: finite = False
+            if not finite: raise ValidationError("Expected finite numeric value")
     if claim.get("confidence") is not None and not 0 <= claim["confidence"] <= 1: raise ValidationError("Confidence outside range")
     if claim.get("transcriptSeconds") is not None and claim["transcriptSeconds"] < 0: raise ValidationError("Invalid timestamp")
     for key, low, high in [("page",1,200),("intervalDays",0,36500)]:
@@ -69,7 +94,9 @@ def validate_claim(claim, text):
     for key in ["eventDate", "effectiveDate", "dueDate"]: date(claim.get(key))
     if claim.get("duePrecision") in {"exact","approximate"} and not claim.get("dueDate") and claim.get("intervalDays") is None: raise ValidationError("Due precision requires a date")
     # Absence of attribution/confidence always becomes explicit uncertainty.
-    clean = {**claim}; clean.setdefault("subject", "unknown"); clean.setdefault("confidence", 0); clean.setdefault("certainty", "uncertain"); clean.setdefault("speakerUncertain", True)
+    clean = {**claim}
+    for key, default in (("subject", "unknown"), ("confidence", 0), ("certainty", "uncertain"), ("speakerUncertain", True)):
+        if clean.get(key) is None: clean[key] = default
     return clean
 
 def validate_envelope(value, text):

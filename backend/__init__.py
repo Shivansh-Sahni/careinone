@@ -1,1 +1,1 @@
-"""CareContinuity's stateless, optional analysis gateway."""
+"""CareInOne's stateless, optional analysis gateway."""

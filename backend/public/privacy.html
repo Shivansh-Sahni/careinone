@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How CareInOne handles local care records, optional cloud analysis, sharing, backups, and deletion.">
+  <title>Privacy · CareInOne</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#f5f8f7; --surface:#fff; --text:#142d2b; --muted:#485c5a; --line:#d8e4e0; --accent:#006e65; --notice:#edf6f3; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#101c1b; --surface:#182825; --text:#e5f1ed; --muted:#b5c8c1; --line:#37504a; --accent:#83dfcf; --notice:#203c35; } }
+    * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--text); font:1.05rem/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--accent); text-underline-offset:.2em; } a:hover { text-decoration-thickness:2px; } a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; border-radius:2px; }
+    .skip { position:absolute; top:-6rem; left:1rem; padding:.6rem; background:var(--surface); } .skip:focus { top:1rem; }
+    header,main,footer { max-width:52rem; margin:auto; padding:1.4rem clamp(1rem,4vw,2rem); } header { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; border-bottom:1px solid var(--line); }
+    .brand { font-size:1.3rem; font-weight:760; text-decoration:none; letter-spacing:-.02em; } nav { margin-left:auto; display:flex; flex-wrap:wrap; gap:1.2rem; }
+    main { padding-top:2.2rem; padding-bottom:3rem; } h1 { margin:.2rem 0 .4rem; font-size:clamp(2rem,6vw,3rem); line-height:1.15; letter-spacing:-.04em; } h2 { margin:2.3rem 0 .5rem; font-size:1.35rem; line-height:1.35; } p { margin:.7rem 0; } li { margin:.45rem 0; } ul { padding-left:1.4rem; }
+    .date,.muted { color:var(--muted); } .notice { padding:1rem 1.2rem; margin:1.5rem 0; border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:.75rem; background:var(--notice); } .notice p:first-child { margin-top:0; } .notice p:last-child { margin-bottom:0; }
+    .toc { padding:1rem 1.2rem; background:var(--surface); border:1px solid var(--line); border-radius:.75rem; } .toc ul { margin:.4rem 0; }
+    footer { border-top:1px solid var(--line); color:var(--muted); font-size:.95rem; } code { font-size:.95em; overflow-wrap:anywhere; } @media (max-width:26rem) { nav { margin-left:0; width:100%; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to privacy information</a>
+  <header>
+    <a class="brand" href="/support">CareInOne</a>
+    <nav aria-label="CareInOne information"><a href="/support">Support</a><a href="/privacy" aria-current="page">Privacy</a></nav>
+  </header>
+  <main id="main">
+    <h1>Your care information,<br>your choices.</h1>
+    <p class="date">Privacy information · Last updated October 4, 2026</p>
+    <div class="notice">
+      <p><strong>Release status:</strong> CareInOne is being prepared for a free App Store release with NutriAssist as its intended publisher. Organization-account approval is pending. This page describes the current app and gateway; it does not claim App Store approval or a completed organization conversion.</p>
+      <p>There are no advertisements, subscriptions, or in-app purchases in this build. The developer plans to pay operating costs. CareInOne organizes information you provide; it does not diagnose, prescribe, or monitor emergencies.</p>
+    </div>
+    <section class="toc" aria-label="Privacy contents">
+      <strong>On this page</strong>
+      <ul>
+        <li><a href="#local">Information on your device</a></li>
+        <li><a href="#permissions">Photos, files, recordings, and permissions</a></li>
+        <li><a href="#cloud">Optional cloud analysis and provider retention</a></li>
+        <li><a href="#sharing">Sharing and backups</a></li>
+        <li><a href="#deletion">Deletion and withdrawal</a></li>
+        <li><a href="#contact">Support and privacy contact</a></li>
+      </ul>
+    </section>
+    <h2 id="local">Information on your device</h2>
+    <p>No app account is required. Your optional profile, sources and working text, retained original files and recordings, reviewed care details, questions, notes, visit companions, and follow-through plans are saved locally. A limited local operation history contains operation names, times, and counts rather than clinical text.</p>
+    <p>Capture, text recognition, conservative local extraction, review, search, appointment preparation, and saved care remain available with cloud analysis off. Local extraction has limits: it can miss information, and you should compare proposals with their sources.</p>
+    <p>iOS Data Protection protects the app’s care files. You can enable app lock with device authentication, and the app covers its contents when inactive. These protections do not prevent someone with access to an unlocked or compromised device from accessing information.</p>
+    <p>CareInOne does not synchronize records through iCloud or CloudKit. Its care-storage directory is excluded from device backup. Keep an encrypted backup somewhere you control if you need a recoverable copy after reinstalling or moving devices. Local records remain until you delete or replace them, remove the app, or lose the device.</p>
+    <h2 id="permissions">Photos, files, recordings, and permissions</h2>
+    <ul>
+      <li><strong>Photos and files:</strong> You choose individual items through system pickers. CareInOne does not require access to your entire photo library. Camera access is used when you choose to capture an image.</li>
+      <li><strong>Recordings:</strong> Microphone access is used only when you choose to record. Confirm that everyone present agrees before recording a visit. Recording is visible and pauses outside the foreground.</li>
+      <li><strong>Transcription:</strong> Speech recognition is requested on device. It may be unavailable for a device or language. This build does not send audio to a cloud transcription service. You can keep audio for recovery and type a recap.</li>
+      <li><strong>Audio retention:</strong> You choose whether to keep audio after successful transcription. Failed transcription can leave a locally saved recording for recovery. Delete audio independently when you no longer need it.</li>
+      <li><strong>Reminders:</strong> Local notifications use generic text without patient names or clinical labels. They are not emergency monitoring.</li>
+      <li><strong>Calendar:</strong> Calendar write access is requested when you choose to add an appointment. A calendar provider may synchronize that event separately. An added event is not recalled when you later delete app records.</li>
+    </ul>
+    <h2 id="cloud">Optional cloud analysis</h2>
+    <p>Cloud analysis requires a gateway connection and your permission for its displayed provider configuration. When you request it, CareInOne sends the source’s working text, source type, and event date, if supplied, over HTTPS to that gateway. The gateway forwards the text to its primary model provider and may use a displayed fallback provider if configured.</p>
+    <p><strong>Working text can contain health information, names, and other personal details.</strong> Review what you are sending. Original photos, PDFs, binary attachments, and audio are not uploaded by this app’s analysis request. Model output is proposed information, supported by quotations and subject to your review; a model response is not medical advice.</p>
+    <p>The included CareInOne gateway runs on Render. Its application processes content for the request and has no patient-content database or saved-file repository. Application request-access logging is disabled, and application errors are designed to avoid source text, model output, or secrets. The gateway does not intentionally retain source text or output after processing completes. Cancelling a request may not stop a provider request already transmitted. Hosting infrastructure and model providers have separate operational and security handling; lack of a gateway database does not mean that every recipient retains nothing.</p>
+    <p>For OpenAI, the gateway uses Chat Completions with <code>store: false</code>. Under OpenAI’s standard API controls, abuse-monitoring logs may retain content for up to 30 days, with stated exceptions. This setting does not establish Zero Data Retention, and no special retention approval is claimed here. Review <a href="https://developers.openai.com/api/docs/guides/your-data" rel="noopener noreferrer">OpenAI’s API data controls</a> and <a href="https://render.com/privacy" rel="noopener noreferrer">Render’s privacy information</a>.</p>
+    <p>The included gateway’s Render service is currently configured in Ohio (US East), as checked in its deployment settings on October 4, 2026. This identifies the gateway’s hosting region, not every location in which a provider or its infrastructure may process information. No specific Render infrastructure-log retention period has been verified here. Before sending sensitive information, confirm the current operator’s retention and provider controls. If you configure a different gateway or provider, its operator and terms apply; the app’s displayed host/model identifier is not a complete legal privacy disclosure.</p>
+    <p>The app requires renewed permission if the provider configuration changes. A connection test sends a fixed fictional sentence, not your saved patient information. Network services receive connection information needed to process requests; their operational retention is separate from the app’s local storage.</p>
+    <p>Gateway credentials are kept in the device Keychain. Model-provider API keys belong only on the server. Do not enter a provider key into the app’s gateway-token field or include any credentials in screenshots.</p>
+    <h2 id="sharing">Sharing and backups</h2>
+    <p>You decide what to share through the system share sheet. A care brief, PDF, selected visit packet, or graph export can contain health information. Graph JSON export includes saved source text, but not original binary files or audio. Recipients and services you select control their copies; sharing is not automatic delivery to a clinic.</p>
+    <p>Passphrase-encrypted backups can include care records and originals within the supported size limits, with optional retained audio. Encryption and decryption happen on your device. Gateway credentials and the passphrase are not included. Keep the passphrase separately: there is no operator recovery key.</p>
+    <p>Restore previews a backup and replaces the active local records after confirmation. It does not silently merge patient histories. Back up existing records before replacing them. Restored records require renewed cloud permission.</p>
+    <p>The fictional demo uses a separate local database and evidence directory. Its practice changes do not merge into personal care. Return to your care using the demo’s top control, and reset practice records within the demo’s Settings.</p>
+    <h2 id="deletion">Deletion and withdrawal</h2>
+    <p>Delete individual sources or retained audio from the app, or use <strong>Settings → Delete all local data</strong> to erase local records and gateway credentials. Source deletion removes its linked care information and rebuilds derived views. Outgoing handoff snapshots containing that source are invalidated.</p>
+    <p>To stop future cloud analysis, turn it off in Settings and save the preference. A request already transmitted remains subject to the provider’s processing and retention. Local deletion cannot recall provider-held content, previously shared files, backups, or calendar events. Remove those copies in their destinations or contact their operators about deletion.</p>
+    <p>CareInOne’s operator cannot access or recover your locally saved records or a forgotten backup passphrase. For questions about information held outside your device, use the contact below and identify the service involved without attaching health records.</p>
+    <h2 id="contact">Support and privacy contact</h2>
+    <p>The verified public NutriAssist general contact is <a href="mailto:shivika@nutriassist.org">shivika@nutriassist.org</a>. You can also visit <a href="https://nutriassist.org/contact/" rel="noopener noreferrer">NutriAssist’s contact page</a>. No particular response hours or response time are promised.</p>
+    <p><strong>Do not email patient documents, recordings, passwords, API keys, gateway tokens, or backup passphrases.</strong> Describe a technical problem with your app/iOS version and a redacted screenshot if useful. Support is not a medical or emergency channel.</p>
+    <p>If you contact NutriAssist, your email address, message, and voluntarily included attachments are handled by its email service and people responding. Ask the contact above about a support message’s retention or deletion. A CareInOne-specific mailbox retention schedule and legal-operator details remain release checks; this page does not invent them.</p>
+    <p>CareInOne is not marketed as a Kids Category app. Save and share another person’s information only when authorized. Release age-audience and consent decisions must match the final store listing. We do not sell care information or use it for advertising, and this build includes no analytics or cross-app tracking SDK.</p>
+    <p>Privacy information will be updated when data handling changes. Check the dated page and the publisher identified in the released app’s App Store listing.</p>
+  </main>
+  <footer><p>CareInOne · <a href="/support">Support</a> · <a href="https://nutriassist.org/contact/" rel="noopener noreferrer">NutriAssist contact</a></p></footer>
+</body>
+</html>

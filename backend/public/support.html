@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help with CareInOne capture, review, reminders, sharing, encrypted backups, and optional cloud analysis.">
+  <title>Support · CareInOne</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#f5f8f7; --surface:#fff; --text:#142d2b; --muted:#485c5a; --line:#d8e4e0; --accent:#006e65; --notice:#edf6f3; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#101c1b; --surface:#182825; --text:#e5f1ed; --muted:#b5c8c1; --line:#37504a; --accent:#83dfcf; --notice:#203c35; } }
+    * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--text); font:1.05rem/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--accent); text-underline-offset:.2em; } a:hover { text-decoration-thickness:2px; } a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; border-radius:2px; }
+    .skip { position:absolute; top:-6rem; left:1rem; padding:.6rem; background:var(--surface); } .skip:focus { top:1rem; }
+    header,main,footer { max-width:52rem; margin:auto; padding:1.4rem clamp(1rem,4vw,2rem); } header { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; border-bottom:1px solid var(--line); }
+    .brand { font-size:1.3rem; font-weight:760; text-decoration:none; letter-spacing:-.02em; } nav { margin-left:auto; display:flex; flex-wrap:wrap; gap:1.2rem; }
+    main { padding-top:2.2rem; padding-bottom:3rem; } h1 { margin:.2rem 0 .4rem; font-size:clamp(2rem,6vw,3rem); line-height:1.15; letter-spacing:-.04em; } h2 { margin:2.3rem 0 .5rem; font-size:1.35rem; line-height:1.35; } p { margin:.7rem 0; } li { margin:.45rem 0; } ul { padding-left:1.4rem; }
+    .date,.muted { color:var(--muted); } .notice { padding:1rem 1.2rem; margin:1.5rem 0; border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:.75rem; background:var(--notice); } .notice p:first-child { margin-top:0; } .notice p:last-child { margin-bottom:0; }
+    details { margin:.8rem 0; border:1px solid var(--line); border-radius:.75rem; background:var(--surface); padding:1rem 1.2rem; } summary { cursor:pointer; font-weight:700; } summary:focus-visible { outline:3px solid var(--accent); outline-offset:4px; } details p:last-child { margin-bottom:0; }
+    footer { border-top:1px solid var(--line); color:var(--muted); font-size:.95rem; } @media (max-width:26rem) { nav { margin-left:0; width:100%; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to support information</a>
+  <header>
+    <a class="brand" href="/support">CareInOne</a>
+    <nav aria-label="CareInOne information"><a href="/support" aria-current="page">Support</a><a href="/privacy">Privacy</a></nav>
+  </header>
+  <main id="main">
+    <h1>A clear next step<br>when something goes wrong.</h1>
+    <p class="date">CareInOne support · Last updated October 4, 2026</p>
+    <div class="notice">
+      <p><strong>Release status:</strong> CareInOne is being prepared for a free App Store release with NutriAssist as its intended publisher. Organization approval is pending; this page does not claim the app is already approved or published.</p>
+      <p>CareInOne organizes reported information. It does not diagnose, prescribe, or monitor emergencies. Contact your care team about medical decisions and your local emergency service when needed.</p>
+    </div>
+    <h2>Contact</h2>
+    <p>NutriAssist’s verified public general contact is <a href="mailto:shivika@nutriassist.org">shivika@nutriassist.org</a>. You can also use <a href="https://nutriassist.org/contact/" rel="noopener noreferrer">NutriAssist’s contact page</a>. Describe what you tried, what happened, and your app/iOS version. No support response hours or deadline are promised.</p>
+    <p><strong>Do not send patient documents, recordings, passwords, API keys, gateway tokens, or backup passphrases.</strong> Remove personal details from any screenshot. Support cannot access your local care records or recover a forgotten backup passphrase.</p>
+    <p><a href="/privacy">Read CareInOne’s privacy information</a> for local storage, optional model processing, retention, sharing, and deletion.</p>
+    <h2>Common tasks and recovery</h2>
+    <details open>
+      <summary>Add or paste a note</summary>
+      <p>Choose <strong>Add an update → Type/Paste</strong>. Type text or use the system paste control. Keep meaningful line breaks. Add an event date only if you know it, then save. Saving preserves a source; reviewing proposed details makes accepted information part of My Care.</p>
+      <p>If an input does not go through, keep your text somewhere you control and retry without deleting existing records. Report which field failed and whether the copied material was plain text, a photo, or a file. Do not report patient text itself.</p>
+    </details>
+    <details>
+      <summary>Import a photo, PDF, file, or FHIR record</summary>
+      <p>Select an individual photo or a supported PDF, image, plain-text, or FHIR JSON file. A file must be available locally and within the displayed size limits. Download a cloud-provider file before retrying. Unlock a protected PDF before importing it.</p>
+      <p>Original evidence can remain saved when text recognition is incomplete. Compare recognized text with the original and add an editable recap when needed. FHIR import accepts supported records and does not connect automatically to a hospital portal.</p>
+    </details>
+    <details>
+      <summary>Analysis failed or a detail is missing</summary>
+      <p>Open the saved source in <strong>Sources</strong>. Retry when a service is available, use local analysis, or enter a structured detail manually. Review supporting quotations before accepting consequential information.</p>
+      <p>Check whether a source still needs review: proposed information is not reviewed care until you accept it. Conflicting reports can remain separate. Ask your care team which instruction applies rather than assuming the app resolved a conflict.</p>
+    </details>
+    <details>
+      <summary>Connect optional cloud analysis</summary>
+      <p>Use <strong>Settings → Set up or test cloud connection</strong>. The gateway requires an authorized access token. OpenAI or other model API keys belong on the server and must never be pasted into the app’s gateway-token field.</p>
+      <p>Check the displayed model/provider configuration, run the fictional synthetic test, and explicitly allow the displayed providers before enabling cloud analysis. A changed provider needs renewed permission. A failed test is not successful real inference. Cloud access is optional and may be unavailable; local capture, review, and saved care remain accessible.</p>
+    </details>
+    <details>
+      <summary>Prepare a visit and follow through afterward</summary>
+      <p>Open an appointment’s companion to organize your opening summary and questions. Record answers or add a recap after the visit, then review captured details before accepting them.</p>
+      <p>Follow-through helps you draft a message, choose a helper, and track a check-back. Drafts are not automatically sent. Mark a message sent only after you actually send it, and bring a reported reply back through source review. The app cannot verify that a clinic received or acknowledged a message.</p>
+    </details>
+    <details>
+      <summary>Reminders or calendar actions do not appear</summary>
+      <p>Enable local reminders in Settings, allow notifications, and save preferences. Only explicit dates generate reminders. If you denied a system permission, review CareInOne’s permissions in iOS Settings.</p>
+      <p>Adding an appointment to Calendar is separate. Confirm its date before adding it. An added event remains in the selected calendar until you remove it there. Reminders do not provide emergency monitoring.</p>
+    </details>
+    <details>
+      <summary>Record a visit or recover a transcript</summary>
+      <p>Confirm that everyone present agrees before recording. Recording pauses when the app leaves the foreground. On-device transcription may be unavailable for a device or language. Keep locally captured audio for recovery or type a recap.</p>
+      <p>You choose whether to keep audio after successful transcription. A failed attempt can preserve a local recording for recovery. Review a transcript against what was actually said before accepting consequential information.</p>
+    </details>
+    <details>
+      <summary>Share selected context or protect a recoverable copy</summary>
+      <p>Use <strong>Care Brief → Choose what to include</strong> to create a selected text or PDF packet. Review it before sharing. Recipients control their copies; sharing does not provide live caregiver accounts or automatic clinic delivery.</p>
+      <p>Use <strong>Settings → Encrypted backup &amp; restore</strong> to create a passphrase-protected backup. Save it somewhere you control and keep the passphrase separately. CareInOne does not automatically synchronize records through iCloud.</p>
+      <p>Restore previews a backup and replaces the active local records after confirmation; it does not merge histories. Back up current records first. Restored cloud permission and notifications are off until you review them again.</p>
+    </details>
+    <details>
+      <summary>Delete information or stop cloud analysis</summary>
+      <p>Delete a source from its detail screen, delete retained audio separately, or choose <strong>Settings → Delete all local data</strong>. To stop future cloud analysis, turn it off and save preferences.</p>
+      <p>Local deletion does not recall content already shared, exported, backed up, added to Calendar, or processed by a cloud provider. See <a href="/privacy#deletion">deletion and withdrawal information</a> for those limits.</p>
+    </details>
+    <details>
+      <summary>Try the fictional example safely</summary>
+      <p>Choose <strong>Explore the fictional demo</strong> at first launch or in Settings. The demo has a separate database and files, so its practice changes do not merge into personal care. Use <strong>Return to my care</strong> at the top to leave it, or <strong>Reset fictional demo</strong> in its Settings to start practicing again. Practice text, PDF, photo, and FHIR materials let you learn import and review without real patient data.</p>
+      <p>Review the original source, accept a proposal, prepare the example appointment, and create a selected packet to explore the flow. Fictional examples are demonstrations, not recommendations for your care.</p>
+    </details>
+  </main>
+  <footer><p>CareInOne · <a href="/privacy">Privacy</a> · <a href="https://nutriassist.org/contact/" rel="noopener noreferrer">NutriAssist contact</a></p></footer>
+</body>
+</html>

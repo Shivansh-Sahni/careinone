@@ -4,10 +4,14 @@ from dataclasses import dataclass, field
 import json
 import math
 import os
+import re
+import threading
+import time
 from typing import Protocol
 import urllib.request
 import urllib.parse
-from .schema import VERSION, KINDS, ACTIONS, CERTAINTIES, FIELDS, loads, validate_envelope
+import urllib.error
+from .schema import VERSION, KINDS, ACTIONS, CERTAINTIES, FIELDS, ValidationError, loads, validate_envelope
 
 SYSTEM_PROMPT = f"""You extract proposals from patient-owned healthcare evidence. Return JSON only:
 {{"schemaVersion":"{VERSION}","claims":[...]}}.
@@ -27,7 +31,63 @@ Extract at most 30 concise proposals per chunk. Use confidence 0..1 and at most 
 Use action mentioned when an order is not explicit. Do not supply result-follow-up requests unless explicitly requested.
 """
 
-class ProviderError(RuntimeError): pass
+PROVIDER_ERROR_MESSAGES = {
+    "provider_configuration": "The gateway model configuration is invalid. Ask the gateway operator to check model IDs and endpoint settings.",
+    "provider_authentication": "The model provider did not accept the server-side API key. Ask the gateway operator to check it.",
+    "provider_permission": "The server-side API key lacks permission for this model or endpoint. Ask the gateway operator to check it.",
+    "provider_model": "The configured model or provider endpoint is unavailable. Ask the gateway operator to check the model ID and API base URL.",
+    "provider_quota": "The model provider reports insufficient API credits or quota. Check provider billing and spending limits before retrying.",
+    "provider_rate_limit": "The model provider is temporarily rate limited. Wait before retrying; local analysis remains available.",
+    "provider_response_invalid": "The model response could not be safely validated. Evidence remains on your device; retry or use local analysis.",
+    "provider_unavailable": "Analysis unavailable. Use local analysis or retry.",
+}
+
+# Cancelling an asyncio future cannot stop a standard-library HTTP worker.
+# Hold these process-wide slots inside the worker until its socket finishes so
+# repeated cancellations cannot create an unbounded number of billed requests.
+_PROVIDER_TRANSPORT_SLOTS = threading.BoundedSemaphore(4)
+
+def _run_bounded_transport(operation, cancelled, timeout):
+    slots = _PROVIDER_TRANSPORT_SLOTS
+    deadline = time.monotonic() + timeout
+    while not cancelled.is_set():
+        remaining = deadline - time.monotonic()
+        if remaining <= 0: raise ProviderError(code="provider_unavailable")
+        if slots.acquire(timeout=min(0.1, remaining)): break
+    else:
+        raise ProviderError(code="provider_unavailable")
+    try:
+        if cancelled.is_set(): raise ProviderError(code="provider_unavailable")
+        return operation()
+    finally:
+        slots.release()
+
+class ProviderError(RuntimeError):
+    def __init__(self, message="Analysis unavailable", *, code="provider_unavailable"):
+        super().__init__(message)
+        self.code = code if code in PROVIDER_ERROR_MESSAGES else "provider_unavailable"
+
+    @property
+    def public_message(self):
+        # Exception text is never trusted for a client response or log.
+        return PROVIDER_ERROR_MESSAGES[self.code]
+
+def looks_like_credential(value: str) -> bool:
+    """Recognize common credential prefixes without logging or returning the value.
+
+    Configuration labels are disclosed to the app. A provider secret accidentally
+    pasted into a model or gateway-token field must fail before that disclosure.
+    This is a guard against operator mistakes, not a general secret classifier.
+    """
+    return bool(re.match(r"(?:sk[-_]|gh[pousr]_|github_pat_|AIza|AKIA|ASIA|xox[baprs]-|Bearer\b|eyJ[A-Za-z0-9_-]*\.)", value, re.IGNORECASE))
+
+def validate_model_identifier(model: str, api_key: str):
+    if (not isinstance(model, str)
+            or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._:/-]{0,199}", model)
+            or looks_like_credential(model)
+            or (len(api_key) >= 8 and api_key in model)):
+        raise ProviderError("Model ID must be a model identifier, not an API key. Check CARE_MODEL_NAME or CARE_FALLBACK_MODEL.")
+
 class Provider(Protocol):
     async def extract(self, text: str, source_kind: str, event_date: str | None) -> dict: ...
 
@@ -36,9 +96,9 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 @dataclass(frozen=True)
 class CompatibleProvider:
-    base_url: str
+    base_url: str = field(repr=False)
     api_key: str = field(repr=False)
-    model: str
+    model: str = field(repr=False)
     timeout: float = 45
     adapter: str = "compatible"
     max_output_tokens: int = 6000
@@ -46,15 +106,28 @@ class CompatibleProvider:
     thinking: str | None = None
     reasoning_effort: str | None = None
     def __post_init__(self):
-        url = urllib.parse.urlsplit(self.base_url)
-        if url.scheme != "https" or not url.hostname or url.username or url.password or url.query or url.fragment: raise ProviderError("Provider base URL must be configured HTTPS")
-        if not self.model or not self.api_key: raise ProviderError("Provider model and server-side key are required")
+        if not isinstance(self.api_key, str) or not self.api_key or any(ord(c) <= 32 or ord(c) >= 127 for c in self.api_key):
+            raise ProviderError("Server-side API key is required and must contain printable non-space ASCII characters")
+        validate_model_identifier(self.model, self.api_key)
+        try:
+            if not isinstance(self.base_url, str) or any(ord(c) <= 32 or ord(c) >= 127 or c in '\"\'`<>\\' for c in self.base_url): raise ValueError()
+            url = urllib.parse.urlsplit(self.base_url)
+            port = url.port
+        except ValueError:
+            raise ProviderError("Provider base URL must be configured HTTPS without spaces, quotes or credentials") from None
+        if (url.scheme != "https" or not url.hostname or url.username or url.password or url.query or url.fragment
+                or looks_like_credential(url.hostname)
+                or (len(self.api_key) >= 8 and self.api_key in self.base_url)
+                or (port is not None and not 1 <= port <= 65535)):
+            raise ProviderError("Provider base URL must be configured HTTPS without spaces, quotes or credentials")
+        if url.path.rstrip('/').endswith('/chat/completions'):
+            raise ProviderError("Provider base URL must end at the API base path, such as /v1, not /chat/completions")
         if self.adapter not in {"compatible", "openai", "kimi"}: raise ProviderError("Unsupported provider adapter")
-        if not 256 <= self.max_output_tokens <= 16000: raise ProviderError("Output token limit must be 256..16000")
+        if type(self.max_output_tokens) is not int or not 256 <= self.max_output_tokens <= 16000: raise ProviderError("Output token limit must be 256..16000")
+        if type(self.timeout) not in (int, float) or not math.isfinite(self.timeout) or not 1 <= self.timeout <= 120: raise ProviderError("Provider timeout must be 1..120 seconds")
         if self.temperature is not None and (not math.isfinite(self.temperature) or not 0 <= self.temperature <= 2): raise ProviderError("Temperature must be 0..2 or omitted")
         if self.thinking not in {None, "enabled", "disabled"}: raise ProviderError("Invalid thinking mode")
         if self.reasoning_effort not in {None, "none", "minimal", "low", "medium", "high"}: raise ProviderError("Invalid reasoning effort")
-        if any(ord(c) < 32 for c in self.api_key + self.model): raise ProviderError("Invalid provider configuration")
     def request_body(self, text, source_kind, event_date):
         body = {"model": self.model, "response_format": {"type": "json_object"}, "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
@@ -70,6 +143,7 @@ class CompatibleProvider:
     async def extract(self, text, source_kind, event_date):
         # No per-request URLs, remote files, or tools are accepted. No SSRF via evidence.
         request_body = self.request_body(text, source_kind, event_date)
+        cancelled = threading.Event()
         def send():
             request = urllib.request.Request(self.base_url.rstrip('/')+'/chat/completions', data=json.dumps(request_body).encode(), headers={"Authorization":"Bearer "+self.api_key,"Content-Type":"application/json"}, method="POST")
             try:
@@ -85,10 +159,32 @@ class CompatibleProvider:
                 content = message["content"]
                 if not isinstance(content, str): raise ProviderError("Missing model output")
                 return validate_envelope(loads(content), text)
-            except Exception as exc:
+            except urllib.error.HTTPError as exc:
+                code = {401: "provider_authentication", 403: "provider_permission", 404: "provider_model", 429: "provider_rate_limit"}.get(exc.code, "provider_unavailable")
+                if exc.code == 429:
+                    # Inspect only a bounded provider error code, never echo its
+                    # message/body or include it in exception chaining.
+                    try:
+                        error = loads(exc.read(64_001))
+                        if isinstance(error, dict) and isinstance(error.get("error"), dict) and error["error"].get("code") == "insufficient_quota":
+                            code = "provider_quota"
+                    except Exception: pass
+                exc.close()
+                raise ProviderError(code=code) from None
+            except (ValidationError, KeyError, TypeError, IndexError):
+                raise ProviderError(code="provider_response_invalid") from None
+            except ProviderError:
+                raise ProviderError(code="provider_response_invalid") from None
+            except Exception:
                 # Never include provider response bodies, URLs, requests, or keys in errors/logs.
                 raise ProviderError("Model request or validation failed") from None
-        return await asyncio.to_thread(send)
+        try:
+            return await asyncio.to_thread(_run_bounded_transport, send, cancelled, self.timeout)
+        except asyncio.CancelledError:
+            # A waiting worker exits without opening a socket. A request already
+            # transmitted keeps its slot until the bounded transport finishes.
+            cancelled.set()
+            raise
 
 class MockProvider:
     """Explicit development adapter. Produces source-linked proposals, never fictitious facts."""
@@ -107,7 +203,11 @@ class Router:
     def configuration(self):
         def describe(provider):
             if isinstance(provider, MockProvider): return {"adapter": "mock", "model": "synthetic-development", "host": "local development", "maxOutputTokens": 0}
-            if isinstance(provider, CompatibleProvider): return {"adapter": provider.adapter, "model": provider.model, "host": urllib.parse.urlsplit(provider.base_url).netloc, "maxOutputTokens": provider.max_output_tokens}
+            if isinstance(provider, CompatibleProvider):
+                # Validate again at disclosure: no credential-like identifier can
+                # escape through /v1/config or /v1/check, even after unsafe mutation.
+                provider.__post_init__()
+                return {"adapter": provider.adapter, "model": provider.model, "host": urllib.parse.urlsplit(provider.base_url).netloc, "maxOutputTokens": provider.max_output_tokens}
             return {"adapter": "custom", "model": "configured", "host": "custom adapter", "maxOutputTokens": 0}
         return {"primary": describe(self.primary), "fallback": describe(self.fallback) if self.fallback else None}
     async def extract(self, text, source_kind, event_date):
@@ -116,11 +216,11 @@ class Router:
     async def extract_with_route(self, text, source_kind, event_date):
         try: return validate_envelope(await self.primary.extract(text,source_kind,event_date),text), "primary"
         except asyncio.CancelledError: raise
-        except Exception:
-            if self.fallback is None: raise ProviderError("Analysis unavailable") from None
+        except Exception as exc:
+            if self.fallback is None: raise ProviderError(code=exc.code if isinstance(exc, ProviderError) else "provider_unavailable") from None
             try: return validate_envelope(await self.fallback.extract(text,source_kind,event_date),text), "fallback"
             except asyncio.CancelledError: raise
-            except Exception: raise ProviderError("Analysis unavailable") from None
+            except Exception as fallback_error: raise ProviderError(code=fallback_error.code if isinstance(fallback_error, ProviderError) else "provider_unavailable") from None
 
 def configured_provider(prefix, adapter):
     defaults = {"openai": "https://api.openai.com/v1", "kimi": "https://api.moonshot.ai/v1"}

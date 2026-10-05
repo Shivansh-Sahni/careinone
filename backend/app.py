@@ -8,17 +8,23 @@ import hashlib
 import hmac
 import json
 import os
+from pathlib import Path
 import time
-from .providers import Router, router_from_environment, ProviderError
+from .providers import Router, router_from_environment, ProviderError, looks_like_credential
 from .schema import VERSION, ValidationError, loads, validate_request, validate_envelope, chunks
+
+PUBLIC_PAGES = {'/privacy': 'privacy.html', '/support': 'support.html'}
+PUBLIC_DIRECTORY = Path(__file__).with_name('public')
 
 class Gateway:
     def __init__(self, tokens: list[str], router: Router, rate=30, max_inflight=4, max_source_characters=40000):
-        if not tokens or any(len(token) < 32 or len(token) > 4000 or any(ord(c) <= 32 or ord(c) >= 127 for c in token) or token.startswith('replace-with-') for token in tokens):
+        if not tokens or any(not isinstance(token, str) or len(token) < 32 or len(token) > 4000 or any(ord(c) <= 32 or ord(c) >= 127 for c in token) or token.startswith('replace-with-') or looks_like_credential(token) for token in tokens):
             raise ValueError("Each backend token must be a generated secret of 32..4000 printable non-space ASCII characters")
+        if type(rate) is not int or not 1 <= rate <= 1000: raise ValueError("Rate must be 1..1000 requests per minute")
+        if type(max_inflight) is not int or not 1 <= max_inflight <= 16: raise ValueError("Concurrency must be 1..16 requests")
         self.token_hashes = [hashlib.sha256(t.encode()).digest() for t in tokens]
         self.router = router; self.rate = rate; self.limits = {}; self.semaphore = asyncio.Semaphore(max_inflight)
-        if not 1000 <= max_source_characters <= 200000: raise ValueError("Source limit must be 1000..200000 characters")
+        if type(max_source_characters) is not int or not 1000 <= max_source_characters <= 200000: raise ValueError("Source limit must be 1000..200000 characters")
         self.max_source_characters = max_source_characters
         self.configuration_id = hashlib.sha256(json.dumps(router.configuration(), sort_keys=True).encode()).hexdigest()
     def authorized(self, headers):
@@ -41,6 +47,27 @@ class Gateway:
                 elif event['type']=='lifespan.shutdown': await send({'type':'lifespan.shutdown.complete'}); return
         if scope['type'] != 'http': return
         path=scope.get('path',''); method=scope.get('method','')
+        if path in PUBLIC_PAGES:
+            if method not in {'GET', 'HEAD'}:
+                return await self.respond(send,405,{'error':'Method not allowed'},extra_headers=[(b'allow',b'GET, HEAD')])
+            # Only fixed, reviewed public documents can be read. Request paths,
+            # query strings, headers and body content never choose a file or
+            # interpolate into the document.
+            try:
+                content=(PUBLIC_DIRECTORY / PUBLIC_PAGES[path]).read_bytes()
+                if len(content)>200_000: raise ValueError()
+                content.decode('utf-8')
+            except (OSError, ValueError):
+                return await self.respond(send,503,{'error':'Public information is temporarily unavailable'})
+            await send({'type':'http.response.start','status':200,'headers':[
+                (b'content-type',b'text/html; charset=utf-8'),
+                (b'cache-control',b'no-store'),
+                (b'x-content-type-options',b'nosniff'),
+                (b'referrer-policy',b'no-referrer'),
+                (b'x-frame-options',b'DENY'),
+                (b'content-security-policy',b"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"),
+                (b'content-length',str(len(content)).encode())]})
+            return await send({'type':'http.response.body','body':b'' if method=='HEAD' else content})
         if path == '/health' and method == 'GET': return await self.respond(send,200,{'status':'ok','schemaVersion':VERSION})
         if (path, method) not in {('/v1/extract', 'POST'), ('/v1/config', 'GET'), ('/v1/check', 'POST')}: return await self.respond(send,404,{'error':'Not found'})
         # Reject duplicate auth/content headers instead of accepting ambiguous proxy parsing.
@@ -50,7 +77,11 @@ class Gateway:
         if token is None: return await self.respond(send,401,{'error':'Authentication required'})
         if not self.allow(token): return await self.respond(send,429,{'error':'Rate limit reached. Retry later.'})
         if path == '/v1/config':
-            return await self.respond(send,200,{'schemaVersion':VERSION, 'configurationID':self.configuration_id, 'providers':self.router.configuration(), 'maxSourceCharacters':self.max_source_characters, 'patientContentStored':False})
+            try: providers=self.router.configuration()
+            except Exception:
+                failure=ProviderError(code='provider_configuration')
+                return await self.respond(send,503,{'error':failure.public_message,'errorCode':failure.code})
+            return await self.respond(send,200,{'schemaVersion':VERSION, 'configurationID':self.configuration_id, 'providers':providers, 'maxSourceCharacters':self.max_source_characters, 'patientContentStored':False})
         if any(sum(k == name for k,v in pairs) > 1 for name in (b'content-type', b'content-length', b'content-encoding')): return await self.respond(send,400,{'error':'Ambiguous request headers'})
         if headers.get(b'content-type',b'').split(b';')[0] != b'application/json': return await self.respond(send,415,{'error':'Use application/json'})
         if headers.get(b'content-encoding',b'identity') != b'identity': return await self.respond(send,415,{'error':'Compressed request bodies are not accepted'})
@@ -73,18 +104,24 @@ class Gateway:
                     return await self.respond(send,409,{'error':'Review the configured model recipients and renew cloud consent before analysis.'})
                 if len(request['text']) > self.max_source_characters: return await self.respond(send,413,{'error':'Source exceeds the configured analysis limit. Split it into smaller sources or use local analysis.'})
             async with asyncio.timeout(180):
-                async with self.semaphore:
-                    work=asyncio.create_task(self.check() if path == '/v1/check' else self.analyze(request))
-                    disconnect=asyncio.create_task(self.wait_disconnect(receive))
-                    try:
-                        done,_=await asyncio.wait([work,disconnect],return_when=asyncio.FIRST_COMPLETED)
-                        if disconnect in done: work.cancel(); await asyncio.gather(work,return_exceptions=True); return
-                        result=await work
-                    finally:
-                        work.cancel(); disconnect.cancel(); await asyncio.gather(work,disconnect,return_exceptions=True)
+                # Monitor disconnection while waiting for capacity, rather than
+                # starting a billed model request for an already-cancelled upload.
+                disconnect=asyncio.create_task(self.wait_disconnect(receive))
+                async def process():
+                    async with self.semaphore:
+                        if disconnect.done(): return None
+                        return await (self.check() if path == '/v1/check' else self.analyze(request))
+                work=asyncio.create_task(process())
+                try:
+                    done,_=await asyncio.wait([work,disconnect],return_when=asyncio.FIRST_COMPLETED)
+                    if disconnect in done: work.cancel(); await asyncio.gather(work,return_exceptions=True); return
+                    result=await work
+                finally:
+                    work.cancel(); disconnect.cancel(); await asyncio.gather(work,disconnect,return_exceptions=True)
             return await self.respond(send,200,result)
         except ValidationError: return await self.respond(send,422,{'error':'Invalid request or unsupported extraction schema'})
         except TimeoutError: return await self.respond(send,504,{'error':'Analysis timed out. Evidence remains on your device.'})
+        except ProviderError as exc: return await self.respond(send,503,{'error':exc.public_message,'errorCode':exc.code})
         except asyncio.CancelledError: raise
         except Exception: return await self.respond(send,503,{'error':'Analysis unavailable. Use local analysis or retry.'})
         finally: body.clear()
@@ -114,11 +151,15 @@ class Gateway:
                 if len(claims)>200: raise ValidationError('Too many claims; split the source')
         return validate_envelope({'schemaVersion':VERSION,'claims':claims},request['text'])
     @staticmethod
-    async def respond(send,status,value):
+    async def respond(send,status,value,extra_headers=()):
         data=json.dumps(value,ensure_ascii=False,allow_nan=False,separators=(',',':')).encode()
-        await send({'type':'http.response.start','status':status,'headers':[(b'content-type',b'application/json'),(b'cache-control',b'no-store'),(b'pragma',b'no-cache'),(b'x-content-type-options',b'nosniff'),(b'content-length',str(len(data)).encode())]})
+        await send({'type':'http.response.start','status':status,'headers':[(b'content-type',b'application/json'),(b'cache-control',b'no-store'),(b'pragma',b'no-cache'),(b'x-content-type-options',b'nosniff'),(b'content-length',str(len(data)).encode()),*extra_headers]})
         await send({'type':'http.response.body','body':data})
 
 def create_app():
     tokens=[token.strip() for token in os.getenv('CARE_BACKEND_TOKENS','').split(',') if token.strip()]
-    return Gateway(tokens,router_from_environment(), max_source_characters=int(os.getenv('CARE_MAX_SOURCE_CHARACTERS','40000')))
+    try:
+        max_source_characters=int(os.getenv('CARE_MAX_SOURCE_CHARACTERS','40000'))
+    except (ValueError, TypeError):
+        raise ProviderError("CARE_MAX_SOURCE_CHARACTERS must be an integer from 1000 to 200000") from None
+    return Gateway(tokens,router_from_environment(), max_source_characters=max_source_characters)

@@ -17,7 +17,7 @@ def write_configuration(path: Path, values: dict[str, str]):
     # Never overwrite a deployment's working keys; exclusive creation also rejects symlinks.
     fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
     with os.fdopen(fd, 'w') as stream:
-        stream.write('# CareContinuity server secrets. Do not commit or share this file.\n')
+        stream.write('# CareInOne server secrets. Do not commit or share this file.\n')
         for key, value in values.items():
             stream.write(key + '=' + json.dumps(value) + '\n')
 
