@@ -1,0 +1,666 @@
+{
+  "checkedUTC": "2026-10-05T09:14:01.514735+00:00",
+  "headBeforeCommit": "860ea895449fee93c3cc53411b3b3182fdf0a1f7",
+  "indexedFileCount": 627,
+  "textFilesScreened": 549,
+  "binaryOrNonUtf8Count": 78,
+  "credentialPatternFlags": [
+    {
+      "filename": "IntegrationTests/CloudSafetyIntegrationTests.swift",
+      "matchCount": 1,
+      "patterns": {
+        "provider_prefix": 1
+      },
+      "verifiedSecurityFixture": true,
+      "verifiedExamplePlaceholder": false
+    },
+    {
+      "filename": "backend/.env.example",
+      "matchCount": 1,
+      "patterns": {
+        "named_gateway_assignment": 1
+      },
+      "verifiedSecurityFixture": false,
+      "verifiedExamplePlaceholder": true
+    },
+    {
+      "filename": "backend/tests/test_cloud_hardening.py",
+      "matchCount": 7,
+      "patterns": {
+        "provider_prefix": 7
+      },
+      "verifiedSecurityFixture": true,
+      "verifiedExamplePlaceholder": false
+    }
+  ],
+  "unresolvedCredentialFilenames": [],
+  "privateOrArtifactFilenameFlags": [],
+  "unmergedIndexEntries": [],
+  "C8ProductionInputCount": 66,
+  "C8ProductionIndexRows": [
+    {
+      "filename": "CareInOne/App/AppStore.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/App/CareInOneApp.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/App/FollowThroughAssistStore.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/App/VisitCompanionStore.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/AppointmentCalendar.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/CareArchive.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/CareHandoff.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/ContinuityComparison.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/ContinuityMemory.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/DisplayLabels.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/Domain.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/EntityAliasPolicy.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/EvidenceGraph.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/EvidenceTimeline.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/Extraction.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/FHIRImporter.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/FollowThroughAssist.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/LoopEngine.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/NumericTrends.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/PatientHome.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/PatientWorkflows.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/Reconciliation.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/SourceReviewStatus.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/SyntheticDemo.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/VisitCompanion.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/VisitPacket.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Core/VisitReadiness.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Resources/Assets.xcassets/AccentColor.colorset/Contents.json",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Resources/Assets.xcassets/Contents.json",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Resources/CareInOne.entitlements",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Resources/Info.plist",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Resources/PrivacyInfo.xcprivacy",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Services/BackupWorkflow.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Services/CaptureServices.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Services/CloudAnalysis.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Services/ExportService.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Services/Persistence.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Services/ReminderService.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Services/SecurityServices.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/BackupView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/CaptureView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/CareViews.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/CloudConnectionView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/ContinuityViews.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/DemoWorkspaceView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/DesignSystem.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/EvidenceImpactView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/EvidenceIntelligenceViews.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/FollowThroughAssistView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/FollowThroughViews.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/HandoffViews.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/HelpPrivacyView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/OnboardingView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/PatientEditors.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/PatientWorkflowViews.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/ReviewEditor.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/SampleEvidenceView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/SettingsView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/SourceViews.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/TodayView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/VisitCompanionViews.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/VisitPacketView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "CareInOne/Views/VisitWorkspaceView.swift",
+      "matchesC8ArchiveInput": true
+    },
+    {
+      "filename": "Package.swift",
+      "matchesC8ArchiveInput": true
+    }
+  ],
+  "missingC8ProductionIndexFiles": [],
+  "mismatchedC8ProductionIndexFiles": [],
+  "stagedImageCount": 78,
+  "stagedImageOCRRows": [
+    {
+      "filename": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/app-store/screenshots/ipad-13/01-today.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/app-store/screenshots/iphone-6.9/01-today.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/app-store/screenshots/iphone-6.9/02-source-review.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/app-store/screenshots/iphone-6.9/03-medication-reports.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/app-store/screenshots/iphone-6.9/04-appointment-companion.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/app-store/screenshots/iphone-6.9/05-selected-packet.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/app-store/screenshots/iphone-6.9/06-follow-through-helper.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-20/competition/visit-packet.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-20/continuity/checkpoint-comparison.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-20/continuity/deletion-impact.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-20/continuity/review-impact.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-20/demo-today.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/care-connections-accessibility.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/care-connections.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/combined-omission.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/deletion-disclosure.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/evidence-trace.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/exact-handoff-copy.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/handoff-changes.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/timeline-accessibility.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/evidence-intelligence/two-date-timeline.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-accessibility.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-answer.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-accessibility.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-next-step.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-reply.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-09-21/patient-companions/screenshots/opening-brief.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/backup-created.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/clarification-native-draft-retained.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/clarification-sheet-entry-prior-failure.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/cleared-source.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/loop-native-date-precision.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/loop-native-draft-retained.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/loop-test-status-edge-privacy-shield.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/native-empty-working-original-retained.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/native-entire-working-text-selected.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/native-ipad-release-relaunch.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/native-select-all-menu.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/primary-c6-confirmation-below-viewport.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/primary-c7-loop-toggle-behind-keyboard.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/review-draft-kept.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/small-phone-appointment-answer.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/small-phone-appointment-brief.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/small-phone-care-connections-accessibility.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/small-phone-cleared-working-original.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/small-phone-compact-demo-accessibility.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/small-phone-native-paste-relaunch.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/small-phone-outreach-reply.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/small-phone-timeline-accessibility.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/visit-draft-reveal-prior-failure.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/capture/workspace-draft-kept.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/duplicate-release-notice-fictional.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/duplicate-release-recovered-review-after-relaunch-fictional.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/duplicate-release-returned-today-fictional.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/final-render-live.jpg",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/live-gateway-shell.jpg",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/native-real-cloud-accepted-fictional.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/native-real-cloud-relaunch-fictional.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/native-real-cloud-review-fictional.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/ordinary-release-saved-source-fictional.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/strict-output-deploy-live.jpg",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/cloud/strict-output-fictional-check.jpg",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-04/release/candidate7-primary-fictional-demo.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/accessibility-triage/c8-helper-largest-text.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/accessibility-triage/c8-live-question-largest-text.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/accessibility-triage/c8-start-live-clipped.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/accessibility-triage/c8-start-live-fully-visible.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/backup-triage/c8-backup-original-after-done.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/backup-triage/c8-backup-original-before-done.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/backup-triage/c8-encrypted-backup-focused.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/candidate8-demo-handoff.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/discrepancy.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/medication-dark-large-text.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/medication-history.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/review.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/today-dark-large-text.png",
+      "matchesVisionScreenedBytes": true
+    },
+    {
+      "filename": "docs/verification/today.png",
+      "matchesVisionScreenedBytes": true
+    }
+  ],
+  "stagedImageBytesWithoutFreshOCR": [],
+  "indexVersusWorkingDifferences": [],
+  "diffCheckDiagnosticCount": 337,
+  "diffCheckDiagnosticFilenames": [
+    "docs/verification/2026-10-05/candidate8-accessibility-focused.log",
+    "docs/verification/2026-10-05/candidate8-all-ui-final.log",
+    "docs/verification/2026-10-05/candidate8-all-ui.log",
+    "docs/verification/2026-10-05/candidate8-backup-focused-original.log",
+    "docs/verification/2026-10-05/candidate8-loop-focused-final.log",
+    "docs/verification/2026-10-05/candidate8-min-os-native.log",
+    "docs/verification/2026-10-05/candidate8-native.log",
+    "docs/verification/2026-10-05/candidate8-phone-screens.log",
+    "docs/verification/2026-10-05/candidate8-preserved-demo-handoff.log",
+    "docs/verification/2026-10-05/candidate8-release-simulator-build.log",
+    "docs/verification/2026-10-05/candidate8-unsigned-archive.log"
+  ],
+  "limitations": [
+    "Known-pattern scan is not exhaustive proof of secret absence. No matched values/context serialized.",
+    "Native/current UI/cloud/device gates remain separate. Changing partial evidence logs must be restaged after finalization.",
+    "Images were locally OCR-screened, not text-decoded; only matching scanned bytes are certified in this scope."
+  ],
+  "finalMetadataResyncUTC": "2026-10-05T09:16:19.770776+00:00",
+  "finalMetadataResyncRows": [
+    {
+      "filename": "docs/app-store/screenshots/capture-manifest.json",
+      "staged_sha256": "bb45fec43e014a36f61cff9802ae86621e144083979685f43534e3b5511d1682",
+      "working_sha256": "bb45fec43e014a36f61cff9802ae86621e144083979685f43534e3b5511d1682",
+      "equal": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/continuation/release/CANDIDATE8_IMAGE_REVIEW.md",
+      "staged_sha256": "8a21e38e9ea87f91de521336d18c8391d7db4453f9a48b8f806fe43fbe5ac3e8",
+      "working_sha256": "8a21e38e9ea87f91de521336d18c8391d7db4453f9a48b8f806fe43fbe5ac3e8",
+      "equal": true
+    },
+    {
+      "filename": "docs/verification/2026-10-05/continuation/release/candidate8-git-eligible-image-ocr-check.json",
+      "staged_sha256": "32857790391fbcc17b1b78a69fdf327fd0c3a8d63cf3ec50d3ebd7c273c67881",
+      "working_sha256": "32857790391fbcc17b1b78a69fdf327fd0c3a8d63cf3ec50d3ebd7c273c67881",
+      "equal": true
+    }
+  ],
+  "scopeAfterResync": "The three known late image-audit metadata files were restaged by root and their exact index blobs rechecked against working bytes. All previously audited production/image/text inputs are unchanged. This report is created after the627-file audit and is not included in its own snapshot."
+}

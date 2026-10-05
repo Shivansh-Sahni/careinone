@@ -290,7 +290,8 @@ private struct VisitCompanionBriefView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     let companionID: UUID
-    @State private var speaker = AVSpeechSynthesizer()
+    @State private var speaker = AudioReadAloud()
+    @State private var speechTask: Task<Void, Never>?
     @State private var pdf: PreparedTextExport?
     @State private var issue: String?
     private var session: VisitCompanion? { store.state.visitCompanions?.sessions.first { $0.id == companionID } }
@@ -306,8 +307,12 @@ private struct VisitCompanionBriefView: View {
                         let speechLayout = dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout())
                         speechLayout {
                             Button("Read aloud", systemImage: "speaker.wave.2") {
-                                speaker.stopSpeaking(at: .immediate); issue = nil
-                                do { try AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio, options: .duckOthers); try AVAudioSession.sharedInstance().setActive(true); speaker.speak(AVSpeechUtterance(string: text)) } catch { issue = "Read aloud is unavailable. Your brief is still available on screen." }
+                                stop(); issue = nil
+                                speechTask = Task {
+                                    do { try await speaker.speak(text) }
+                                    catch is CancellationError { }
+                                    catch { issue = "Read aloud is unavailable. Your brief is still available on screen." }
+                                }
                             }.accessibilityIdentifier("companion-read-aloud")
                             Button("Stop", systemImage: "stop.fill") { stop() }
                         }.buttonStyle(.bordered)
@@ -328,7 +333,7 @@ private struct VisitCompanionBriefView: View {
                 .onChange(of: session) { _, _ in pdf?.discard(); pdf = nil; issue = nil; stop() }
         }
     }
-    private func stop() { speaker.stopSpeaking(at: .immediate); try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation) }
+    private func stop() { speechTask?.cancel(); speechTask = nil; speaker.stop() }
 }
 
 private struct VisitCompanionLiveView: View {

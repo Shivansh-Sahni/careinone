@@ -1,0 +1,37 @@
+{
+  "checkedUTC" : "2026-10-05T09:12:53Z",
+  "engine" : "macOS Vision VNRecognizeTextRequest accurate\/en-US; no language correction",
+  "failedCount" : 0,
+  "flaggedCount" : 0,
+  "imageCount" : 2,
+  "limitations" : [
+    "OCR and regex matching are imperfect; low-resolution\/obscured\/line-wrapped credentials can evade recognition.",
+    "Opaque token candidates are heuristic and can be false positives; only flagged pictures need visual review.",
+    "Zero pattern matches is not proof that an image contains no secret or patient content.",
+    "Only files in the Git-eligible snapshot are included; root's later store captures need their own provenance\/final screen."
+  ],
+  "processedCount" : 2,
+  "rows" : [
+    {
+      "credentialPatternCount" : 0,
+      "filename" : "docs\/verification\/2026-10-05\/backup-triage\/c8-backup-original-before-done.png",
+      "patternCounts" : {
+
+      },
+      "sha256" : "815106eef1ca32da57675a4a1c7e6876d94ec6dd5476ba3809b4e55dde7cb68f",
+      "status" : "recognized",
+      "unchangedDuringRecognition" : true
+    },
+    {
+      "credentialPatternCount" : 0,
+      "filename" : "docs\/verification\/2026-10-05\/backup-triage\/c8-backup-original-after-done.png",
+      "patternCounts" : {
+
+      },
+      "sha256" : "c53d7de538a85db171427ad31845c58ff7b3f614e105548f67f609ae94e5c813",
+      "status" : "recognized",
+      "unchangedDuringRecognition" : true
+    }
+  ],
+  "scope" : "Git-eligible PNG\/JPG snapshot only; no user attachment paths or ignored raw screenshots\/result\/archive bundles; no recognized content or matching values serialized"
+}

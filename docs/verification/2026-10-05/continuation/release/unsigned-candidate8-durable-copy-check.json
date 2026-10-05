@@ -1,0 +1,59 @@
+{
+  "checked_utc": "2026-10-05T07:52:39.137767+00:00",
+  "source": "/private/tmp/CareInOneUnsignedReleaseCandidate8.xcarchive",
+  "durable_workspace_path": "artifacts/release/CareInOneUnsignedCandidate8.xcarchive",
+  "regular_file_count": 11,
+  "total_bytes": 24740921,
+  "identical": true,
+  "files": {
+    "Info.plist": {
+      "bytes": 867,
+      "sha256": "b32760f3f64dfde171c3b8a60346538e9a8e0b8d9fee8f53cbb9c516f5b92753"
+    },
+    "Products/Applications/CareInOne.app/AppIcon60x60@2x.png": {
+      "bytes": 5644,
+      "sha256": "ef0474e4d49e123d86f23dce6d5cb3ce519d00a5703851d0bebd505f014fa7d5"
+    },
+    "Products/Applications/CareInOne.app/AppIcon76x76@2x~ipad.png": {
+      "bytes": 7001,
+      "sha256": "feb5ac48eca85e642244f805727fad4aa384dcb93edac7c261e909cb5e2b4fee"
+    },
+    "Products/Applications/CareInOne.app/Assets.car": {
+      "bytes": 49464,
+      "sha256": "a3ab9150b876549484c7ee976162e6dfe8fe4875a38c07aabd716da387cd371b"
+    },
+    "Products/Applications/CareInOne.app/CareInOne": {
+      "bytes": 5347696,
+      "sha256": "0cee61af8213e8487fed0a1598c197d6042e8f03293db78012fae7a2c98d637f"
+    },
+    "Products/Applications/CareInOne.app/Info.plist": {
+      "bytes": 2225,
+      "sha256": "6cc915caa5680cdc33c15a3ad886b4d854eedc4acad826a606f0ae1bff26933f"
+    },
+    "Products/Applications/CareInOne.app/PkgInfo": {
+      "bytes": 8,
+      "sha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+    },
+    "Products/Applications/CareInOne.app/PrivacyInfo.xcprivacy": {
+      "bytes": 1413,
+      "sha256": "66adb62b5fcba3d6e7feb3e922b752f8604ac17f7c78c62ae9cc0bc3c05a27ae"
+    },
+    "dSYMs/CareInOne.app.dSYM/Contents/Info.plist": {
+      "bytes": 651,
+      "sha256": "7f069fa33d9747dea705225fae1665c830469ac900575dba909197919127da08"
+    },
+    "dSYMs/CareInOne.app.dSYM/Contents/Resources/DWARF/CareInOne": {
+      "bytes": 19325704,
+      "sha256": "7ed4adbece94da3d5c77f00e5957047bf2469a5bc592facde8f2e302c233bbc3"
+    },
+    "dSYMs/CareInOne.app.dSYM/Contents/Resources/Relocations/aarch64/CareInOne.yml": {
+      "bytes": 248,
+      "sha256": "e3ae01a838d5585ed4cff67bbe60fc41153377acc2003f20b2428b8e0b191768"
+    }
+  },
+  "source_symlinks": 0,
+  "destination_symlinks": 0,
+  "git_ignored": true,
+  "uploadable": false,
+  "note": "Copy only; signing/publisher/hardware status unchanged."
+}

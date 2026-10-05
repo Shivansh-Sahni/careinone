@@ -1,0 +1,100 @@
+{
+  "result": "Failed",
+  "totalTestCount": 29,
+  "passedTests": 26,
+  "failedTests": 2,
+  "skippedTests": 1,
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"1\") is not equal to (\"0\")",
+      "targetName": "CareInOneUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "BackupWorkflowUITests/testBackupCreationAndAudioChangeInvalidateOldShare()",
+      "testIdentifierURL": "test://com.apple.xcode/CareInOne/CareInOneUITests/BackupWorkflowUITests/testBackupCreationAndAudioChangeInvalidateOldShare",
+      "testName": "testBackupCreationAndAudioChangeInvalidateOldShare()"
+    },
+    {
+      "failureText": "XCTAssertTrue failed",
+      "targetName": "CareInOneUITests",
+      "testIdentifier": 23,
+      "testIdentifierString": "FollowThroughDraftRecoveryUITests/testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch()",
+      "testIdentifierURL": "test://com.apple.xcode/CareInOne/CareInOneUITests/FollowThroughDraftRecoveryUITests/testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch",
+      "testName": "testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch()"
+    }
+  ],
+  "startTime": 1791188988.715,
+  "finishTime": 1791190981.973,
+  "scope": "Independent normalization of root final UI xcresult summary; first failed C8 action and focused cases remain separate. Runner/source finalization recorded by root.",
+  "checked_utc": "2026-10-05T09:05:37.696745+00:00",
+  "runtime_warning_counts": {
+    "total": 16,
+    "audio": 0,
+    "frame": 16
+  }
+}

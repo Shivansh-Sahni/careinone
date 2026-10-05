@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-05T09:04:07.248767+00:00",
+  "personal_payloads_unchanged": true,
+  "record_types": 12,
+  "original_evidence_files": 1,
+  "comparison": "all twelve record tables and original evidence hashes",
+  "foreground": "ordinary Release, fictional demo, Today",
+  "demonstration_entry": "normal Settings > Explore the fictional demo",
+  "test_launch_arguments": false,
+  "reset_or_uninstall": false,
+  "picture_sha256": "2e636c5814ac9a85a80b755022075b9fec0aa6829bb157332a2bef99e9e90c5d"
+}

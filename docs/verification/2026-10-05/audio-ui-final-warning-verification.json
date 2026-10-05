@@ -1,0 +1,33 @@
+{
+  "recordedUTC": "2026-10-05T09:10:20.677659+00:00",
+  "summary": "docs/verification/2026-10-05/candidate8-all-ui-final-summary.json",
+  "result": "/private/tmp/CareInOneCandidate8AllUIFinal.xcresult",
+  "actualRunnerExit": 65,
+  "totalTests": 29,
+  "passed": 26,
+  "failed": 2,
+  "skipped": 1,
+  "audioRuntimeWarnings": 0,
+  "frameRuntimeWarnings": 16,
+  "testFailures": [
+    {
+      "failureText": "XCTAssertEqual failed: (\"1\") is not equal to (\"0\")",
+      "targetName": "CareInOneUITests",
+      "testIdentifier": 2,
+      "testIdentifierString": "BackupWorkflowUITests/testBackupCreationAndAudioChangeInvalidateOldShare()",
+      "testIdentifierURL": "test://com.apple.xcode/CareInOne/CareInOneUITests/BackupWorkflowUITests/testBackupCreationAndAudioChangeInvalidateOldShare",
+      "testName": "testBackupCreationAndAudioChangeInvalidateOldShare()"
+    },
+    {
+      "failureText": "XCTAssertTrue failed",
+      "targetName": "CareInOneUITests",
+      "testIdentifier": 23,
+      "testIdentifierString": "FollowThroughDraftRecoveryUITests/testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch()",
+      "testIdentifierURL": "test://com.apple.xcode/CareInOne/CareInOneUITests/FollowThroughDraftRecoveryUITests/testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch",
+      "testName": "testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch()"
+    }
+  ],
+  "productionChangedAfterFreeze": false,
+  "collectionLimitation": "Only verified idle optional simctl diagnostics collector6215/PPID989 was terminated after all29 cases completed. Parent confirmed actual xcodebuild exit65. Native movies, events, summary, and log remain preserved.",
+  "limitation": "No physical microphone, speaker, Bluetooth, or device speech-recognition claim. Frame warnings remain unattributed."
+}

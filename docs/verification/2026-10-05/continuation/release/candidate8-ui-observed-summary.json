@@ -1,0 +1,94 @@
+{
+  "title": "Test - CareInOne",
+  "result": "Failed",
+  "totalTestCount": 29,
+  "passedTests": 27,
+  "failedTests": 1,
+  "skippedTests": 1,
+  "startTime": 1791186325.067,
+  "finishTime": 1791188189.379,
+  "runtimeWarnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "testFailures": [
+    {
+      "failureText": "XCTAssertTrue failed",
+      "targetName": "CareInOneUITests",
+      "testIdentifier": 25,
+      "testIdentifierString": "PatientCompanionUITests/testAppointmentCompanionAtAccessibilityTextSize()",
+      "testIdentifierURL": "test://com.apple.xcode/CareInOne/CareInOneUITests/PatientCompanionUITests/testAppointmentCompanionAtAccessibilityTextSize",
+      "testName": "testAppointmentCompanionAtAccessibilityTextSize()"
+    }
+  ],
+  "checked_utc": "2026-10-05T08:22:00.647474+00:00",
+  "bundle": "/private/tmp/CareInOneCandidate8AllUI.xcresult",
+  "scope": "Read-only independent normalized xcresult observation; root owns actual xcodebuild runner exit and source-finalization evidence. Separate focused reruns are not added to counts.",
+  "runtime_warning_counts": {
+    "total": 16,
+    "audio": 0,
+    "frame": 16
+  }
+}

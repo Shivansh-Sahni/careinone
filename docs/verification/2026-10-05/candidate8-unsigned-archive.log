@@ -1,0 +1,818 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild archive -project CareInOne.xcodeproj -scheme CareInOne -configuration Release -destination generic/platform=iOS -derivedDataPath /private/tmp/CareInOneReleaseScreenshots -archivePath /private/tmp/CareInOneUnsignedReleaseCandidate8.xcarchive -jobs 2 CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+    CODE_SIGNING_REQUIRED = NO
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  CareInOne: /Users/shivanshsahni/Downloads/Personal/CAC 2026 @ local
+
+Build Preparation
+Build task concurrency set to 2 via user default IDEBuildOperationMaxNumberOfConcurrentCompileTasks
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'CareInOne' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore-product' in project 'CareInOne'
+    Target 'CareCore-product' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore' in project 'CareInOne'
+    Target 'CareCore' in project 'CareInOne' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne/Resources/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: e9c24854497782570beac055ed885b2e
+Build description path: /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/XCBuildData/e9c24854497782570beac055ed885b2e.xcbuilddata
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/CompilationCache.noindex
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/CompilationCache.noindex
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/PrecompiledHeaders
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/PrecompiledHeaders
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/SwiftExplicitPrecompiledModules
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/SwiftExplicitPrecompiledModules
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphoneos/all-product-headers.yaml
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphoneos/all-product-headers.yaml
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/ExplicitPrecompiledModules
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/ExplicitPrecompiledModules
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/EagerLinkingTBDs/Release-iphoneos
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/EagerLinkingTBDs/Release-iphoneos
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk /tmp/CareInOneReleaseScreenshots/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -o /tmp/CareInOneReleaseScreenshots/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache
+
+CreateBuildDirectory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/PackageFrameworks
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-create-build-directory /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/PackageFrameworks
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne_const_extract_protocols.json (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne_const_extract_protocols.json
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftConstValuesFileList (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.LinkFileList (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.LinkFileList
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne-OutputFileMap.json (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne-OutputFileMap.json
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne.hmap (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne.hmap
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne.DependencyStaticMetadataFileList (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne.DependencyMetadataFileList (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne.DependencyMetadataFileList
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-project-headers.hmap (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-project-headers.hmap
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-own-target-headers.hmap (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-own-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-generated-files.hmap (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-generated-files.hmap
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-all-target-headers.hmap (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-all-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-all-non-framework-target-headers.hmap (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore_const_extract_protocols.json (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore_const_extract_protocols.json
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.SwiftFileList (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.SwiftFileList
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.SwiftConstValuesFileList (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.LinkFileList (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.LinkFileList
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-OutputFileMap.json (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-OutputFileMap.json
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.modulemap (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.modulemap
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.DependencyStaticMetadataFileList (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.DependencyMetadataFileList (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.DependencyMetadataFileList
+
+Copy /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/GeneratedModuleMaps-iphoneos/CareCore.modulemap /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.modulemap (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.modulemap /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/GeneratedModuleMaps-iphoneos
+
+SymLink /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareInOne.app ../../InstallationBuildProductsLocation/Applications/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /bin/ln -sfh ../../InstallationBuildProductsLocation/Applications/CareInOne.app /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareInOne.app
+
+MkDir /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /bin/mkdir -p /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app
+
+SymLink /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareCore.o ../../IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.o (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /bin/ln -sfh ../../IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.o /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareCore.o
+
+SwiftDriver CareCore normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name CareCore -O -whole-module-optimization @/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.SwiftFileList -DSWIFT_PACKAGE -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -target arm64-apple-ios18.0 -g -module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 6 -I /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk/Developer/Library/Frameworks -c -num-threads 8 -Xcc -ivfsstatcache -Xcc /tmp/CareInOneReleaseScreenshots/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -output-file-map /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name cac_2026 -emit-const-values -const-gather-protocols-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore_const_extract_protocols.json -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/include -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -emit-objc-header -emit-objc-header-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj -no-emit-module-separately-wmo
+
+SwiftDriver\ Compilation CareCore normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name CareCore -O -whole-module-optimization @/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.SwiftFileList -DSWIFT_PACKAGE -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -target arm64-apple-ios18.0 -g -module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 6 -I /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk/Developer/Library/Frameworks -c -num-threads 8 -Xcc -ivfsstatcache -Xcc /tmp/CareInOneReleaseScreenshots/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -output-file-map /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name cac_2026 -emit-const-values -const-gather-protocols-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore_const_extract_protocols.json -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/include -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -emit-objc-header -emit-objc-header-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj -no-emit-module-separately-wmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stddef-N2AZK13LHAMF2V6F0AV4HSIV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdbool-80CGAEI2D6O90IPMY24V10GYU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-HFRYT6CH412G6H4ESGDL7SVH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdarg-DO9NDIZ00IS9P0Z5WLB7D668Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ptrcheck-E5ROHMZQ25XHLNE61MOP0R2OX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ptrauth-BBP5RS4YS5EMAVE292PFFAZQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_float-6LR2LUIGHXW3A6VZ52M7AOHXJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_AvailabilityInternal-5AEBJPPKOLOX7EJAHDRAPTYF9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/SwiftShims-CQF93X7K3TF76LIZVTTKVRDD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_DarwinFoundation1-9S1KZ531IT16C0GWXCXDSO36S.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_DarwinFoundation2-98X70GGN7FNZ1HOZL3JCO4NGX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_limits-C00F8IYNGSAQSPDPFB9H9YG0C.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/sys_types-8M0CG6RRG3LFWOH8PU97LP5P3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/string_h-AR1ESB5TG0OKKUAF1HPANIG61.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdint-B41D8XJ1HBT8K41SFSMCYJGO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_DarwinFoundation3-97PRJR4Y7GQZ0P0IMZ97O9HHA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_inttypes-4XU1D15K5JW8A740869V7PMC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CommonCrypto-9W3VQXS7LYDHMB6DB83LXQZYJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Darwin-11N23NNHLIXS4KZ9QCRZ1UQUB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ObjectiveC-F5D1ZV9648VEYL3KW8FHRLFVT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/os_object-4KLTMLZEGESWT4MMD8ZI9NH6I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/os_workgroup-BXP0MGCGSZLO5SLSVVDOBE0YB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Dispatch-8NZ96S2NLRBJICCNHDLJSFTO5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/XPC-F247WWTH4C3X9N1XZ89S6OGCQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreFoundation-6YYIO869VGGGH0022QZVRHWPN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CFNetwork-D7H2NGPMTH8VD7OEM4M03S3QW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Security-DOVU68HX5Y3DU5FS2RWHGR0YO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Foundation-BOLVVIWWT07WPEM0R9BS7ORB3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/LocalAuthentication-EUYAT506M1KF2WY8IB1CEQFOG.pcm
+
+SwiftCompile normal arm64 Compiling\ AppointmentCalendar.swift,\ CareArchive.swift,\ CareHandoff.swift,\ ContinuityComparison.swift,\ ContinuityMemory.swift,\ DisplayLabels.swift,\ Domain.swift,\ EntityAliasPolicy.swift,\ EvidenceGraph.swift,\ EvidenceTimeline.swift,\ Extraction.swift,\ FHIRImporter.swift,\ FollowThroughAssist.swift,\ LoopEngine.swift,\ NumericTrends.swift,\ PatientHome.swift,\ PatientWorkflows.swift,\ Reconciliation.swift,\ SourceReviewStatus.swift,\ SyntheticDemo.swift,\ VisitCompanion.swift,\ VisitPacket.swift,\ VisitReadiness.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/AppointmentCalendar.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/CareArchive.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/CareHandoff.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/ContinuityComparison.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/ContinuityMemory.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/DisplayLabels.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/Domain.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/EntityAliasPolicy.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/EvidenceGraph.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/EvidenceTimeline.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/Extraction.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/FHIRImporter.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/FollowThroughAssist.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/LoopEngine.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/NumericTrends.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/PatientHome.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/PatientWorkflows.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/Reconciliation.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/SourceReviewStatus.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/SyntheticDemo.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/VisitCompanion.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/VisitPacket.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Core/VisitReadiness.swift /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/Foundation.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/_DarwinFoundation3.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/LocalAuthentication.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/CoreFoundation.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/Observation.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/ObjectiveC.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/_Concurrency.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/Darwin.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/System.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/_Builtin_float.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/_StringProcessing.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/Dispatch.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/Combine.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/CryptoKit.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/XPC.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/_DarwinFoundation1.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/_DarwinFoundation2.swiftmodule/arm64e-apple-ios.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/27.0/Swift.swiftmodule/arm64e-apple-ios.swiftmodule /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_float-6LR2LUIGHXW3A6VZ52M7AOHXJ.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/LocalAuthentication-EUYAT506M1KF2WY8IB1CEQFOG.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stddef-N2AZK13LHAMF2V6F0AV4HSIV.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ptrcheck-E5ROHMZQ25XHLNE61MOP0R2OX.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/os_object-4KLTMLZEGESWT4MMD8ZI9NH6I.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreFoundation-6YYIO869VGGGH0022QZVRHWPN.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdbool-80CGAEI2D6O90IPMY24V10GYU.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Security-DOVU68HX5Y3DU5FS2RWHGR0YO.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_DarwinFoundation3-97PRJR4Y7GQZ0P0IMZ97O9HHA.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_DarwinFoundation1-9S1KZ531IT16C0GWXCXDSO36S.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-HFRYT6CH412G6H4ESGDL7SVH.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/os_workgroup-BXP0MGCGSZLO5SLSVVDOBE0YB.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_inttypes-4XU1D15K5JW8A740869V7PMC.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_DarwinFoundation2-98X70GGN7FNZ1HOZL3JCO4NGX.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Foundation-BOLVVIWWT07WPEM0R9BS7ORB3.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/string_h-AR1ESB5TG0OKKUAF1HPANIG61.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/XPC-F247WWTH4C3X9N1XZ89S6OGCQ.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Darwin-11N23NNHLIXS4KZ9QCRZ1UQUB.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CommonCrypto-9W3VQXS7LYDHMB6DB83LXQZYJ.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/SwiftShims-CQF93X7K3TF76LIZVTTKVRDD.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdint-B41D8XJ1HBT8K41SFSMCYJGO.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ptrauth-BBP5RS4YS5EMAVE292PFFAZQ.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ObjectiveC-F5D1ZV9648VEYL3KW8FHRLFVT.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Dispatch-8NZ96S2NLRBJICCNHDLJSFTO5.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_limits-C00F8IYNGSAQSPDPFB9H9YG0C.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/sys_types-8M0CG6RRG3LFWOH8PU97LP5P3.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdarg-DO9NDIZ00IS9P0Z5WLB7D668Z.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CFNetwork-D7H2NGPMTH8VD7OEM4M03S3QW.pcm /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_AvailabilityInternal-5AEBJPPKOLOX7EJAHDRAPTYF9.pcm /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-dependencies-1.json (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+
+SwiftCompile normal arm64 (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling AppointmentCalendar.swift, CareArchive.swift, CareHandoff.swift, ContinuityComparison.swift, ContinuityMemory.swift, DisplayLabels.swift, Domain.swift, EntityAliasPolicy.swift, EvidenceGraph.swift, EvidenceTimeline.swift, Extraction.swift, FHIRImporter.swift, FollowThroughAssist.swift, LoopEngine.swift, NumericTrends.swift, PatientHome.swift, PatientWorkflows.swift, Reconciliation.swift, SourceReviewStatus.swift, SyntheticDemo.swift, VisitCompanion.swift, VisitPacket.swift, VisitReadiness.swift (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+
+SwiftDriver\ Compilation\ Requirements CareCore normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name CareCore -O -whole-module-optimization @/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.SwiftFileList -DSWIFT_PACKAGE -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -target arm64-apple-ios18.0 -g -module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 6 -I /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk/Developer/Library/Frameworks -c -num-threads 8 -Xcc -ivfsstatcache -Xcc /tmp/CareInOneReleaseScreenshots/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -output-file-map /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name cac_2026 -emit-const-values -const-gather-protocols-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore_const_extract_protocols.json -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/include -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -emit-objc-header -emit-objc-header-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj -no-emit-module-separately-wmo
+
+SwiftMergeGeneratedHeaders /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/GeneratedModuleMaps-iphoneos/CareCore-Swift.h /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-Swift.h (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-swiftHeaderTool -arch arm64 /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore-Swift.h -o /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/GeneratedModuleMaps-iphoneos/CareCore-Swift.h
+
+Copy /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareCore.swiftmodule/arm64-apple-ios.swiftmodule /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.swiftmodule (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.swiftmodule /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareCore.swiftmodule/arm64-apple-ios.swiftmodule
+
+Copy /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareCore.swiftmodule/arm64-apple-ios.swiftdoc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.swiftdoc (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.swiftdoc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareCore.swiftmodule/arm64-apple-ios.swiftdoc
+
+Copy /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareCore.swiftmodule/arm64-apple-ios.abi.json /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.abi.json (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.abi.json /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareCore.swiftmodule/arm64-apple-ios.abi.json
+
+Ld /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.o normal (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0 -r -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -F/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/EagerLinkingTBDs/Release-iphoneos -F/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk/Developer/Library/Frameworks -filelist /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.LinkFileList -nostdlib -Xlinker -object_path_lto -Xlinker /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore_lto.o -Xlinker -dependency_info -Xlinker /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.swiftmodule -o /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.o
+
+MkDir /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/unthinned (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /bin/mkdir -p /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/unthinned
+
+MkDir /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/thinned (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /bin/mkdir -p /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/thinned
+
+GenerateAssetSymbols /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets --compile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_dependencies --output-partial-info-plist /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_generated_info.plist --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 18.0 --platform iphoneos --bundle-identifier org.carecontinuity.app --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/GeneratedAssetSymbols.h
+/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CompileAssetCatalogVariant thinned /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets --compile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_dependencies_thinned --output-partial-info-plist /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 18.0 --platform iphoneos
+/* com.apple.actool.compilation-results */
+/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_generated_info.plist_thinned
+/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver CareInOne normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareContinuity -O @/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -target arm64-apple-ios18.0 -g -module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 6 -I /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -F /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/PackageFrameworks -F /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneReleaseScreenshots/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -output-file-map /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-generated-files.hmap -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-own-target-headers.hmap -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphoneos/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-project-headers.hmap -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/include -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+ExtractAppIntentsMetadata (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name CareCore --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier cac-2026.CareCore --output /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.appintents --target-triple arm64-apple-ios18.0 --binary-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.o --dependency-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore_dependency_info.dat --stringsdata-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.SwiftFileList --metadata-file-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.DependencyMetadataFileList --static-metadata-file-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/CareCore.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareCore-t.build/Objects-normal/arm64/CareCore.SwiftConstValuesFileList --force --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-05 03:46:55.368 appintentsmetadataprocessor[91545:31306705] Starting appintentsmetadataprocessor export
+2026-10-05 03:46:55.462 appintentsmetadataprocessor[91545:31306705] Extracted no relevant App Intents symbols, skipping writing output
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/SwiftShims-CRQAF0MELMDUFHV3TP5H9BUWY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_float-8FYVBWKQSKCRE3EPXVL0VDEIC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_AvailabilityInternal-2AVP3UWLOABH4Z0AXOU66MSDR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/DeveloperToolsSupport-5GOGM36OYUIBYZVQJPADYD134.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ptrauth-76WG7H72QD71WGXUVO65DQC8X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stddef-NXTU6R7TLUAO05RIQFZ1PNFL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdarg-2WE3H10AVZP7N6LSNVWJBBB5X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdbool-79YF2T4EF8QSR95PGD26YM58J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-6WAURQGUQEQKUG50LOP4Y9JU6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ptrcheck-28YQV4VHF0E4ITCMMMDM4VBQU.pcm
+
+LinkAssetCatalog /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-linkAssetCatalog --thinned /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/thinned --thinned-dependencies /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_generated_info.plist_thinned --unthinned /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_output/unthinned --unthinned-dependencies /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_generated_info.plist_unthinned --output /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app --plist-output /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_generated_info.plist
+note: Emplaced /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/AppIcon60x60@2x.png (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+note: Emplaced /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/Assets.car (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+note: Emplaced /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/AppIcon76x76@2x~ipad.png (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SetOwnerAndGroup shivanshsahni:staff /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.o (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /usr/sbin/chown -RH shivanshsahni:staff /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.o
+
+SetMode u+w,go-w,a+rX /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.o (in target 'CareCore' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /bin/chmod -RH u+w,go-w,a+rX /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/CareCore.o
+
+ProcessInfoPlistFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/Info.plist /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Info.plist (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-infoPlistUtility /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Info.plist -producttype com.apple.product-type.application -genpkginfo /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -additionalcontentfile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/assetcatalog_generated_info.plist -requiredArchitecture arm64 -o /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/Info.plist
+
+CpResource /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/PrivacyInfo.xcprivacy /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/PrivacyInfo.xcprivacy (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/PrivacyInfo.xcprivacy /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_DarwinFoundation1-18UXAGGA97JWEX9WNZXZTS0IH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ExtensionFoundation-8DLN5OB5Q5T7QFN5BS04KVD96.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_limits-6R92PD6J5YB020014C3E3Y5HN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_DarwinFoundation2-A1R8FMH6VYBWJXBJBI6MUHA9J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/string_h-2AX22QD7B400ZLLL346L6WH2I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdint-7IGOANDDJ0ABHEH6IGH7W0RP3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/sys_types-5ZOFLTCXL16F8KMZW0DLX50AD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_tgmath-DW0L6ZKWYLHWE6DHHNRRGCGE9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_intrinsics-1FQZT4VC4MCQUC66H7OY1SF0C.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_DarwinFoundation3-48WMGC21H9CS6JS0WU2KKH2Y9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_stdatomic-BDF2IAT911GB3OWYCGPDORJVL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CommonCrypto-C62LQOKG2VVZ62WJ0URWMLD4U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_Builtin_inttypes-3JA9TL9HIO54QRSQGWH6234LC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/simd-BT7QDRWP7UMX7X71AO7HLRYHP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Darwin-BQQVP9W4ZS2R427E8ERX6EJLL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ObjectiveC-6H2QN7E5AZTAUQA1SU9GGNRAD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Compression-2MIWVK71SSH27HK8NNDS32V9O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Spatial-858VDDBM99XE2E5Q1TAXF9QPI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/os_object-6LJUGFS09UMO2GNSM64WD0WYO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/MachO-AXIJASCTL6N5W5SIYZNNQDSXK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/os_workgroup-7LMJMEQBARPU98VFT8WNY7QXA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Dispatch-9ITO9PAHAOYM741OZNXPA6KPJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreFoundation-DZ5AYH0ACRUN4LR5LM32MVD5Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/dnssd-2ORCDVW1KI79KX7IR6X6M3MFA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/XPC-3Q1QYKGWUU1TK1T6FNY7NW2KT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CFNetwork-DS4WK3VELRRFJCMQ9JCSEDN9S.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreAudioTypes-4PN3MGFQ8JV6KUOC4J3VZ5L4I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Security-DD2RJ0E4QBQ94DCW55U4LOTNO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/AddressBook-B40844FGIE6MOPI4ONNCHMPRE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreAudio-F12SJ8LU8GB195EZTZ1RI3GWM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/os-2B18Y93OGC4B8JKQCKQUGBC0V.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Foundation-BNESV5QEDSEJWUGRIBVXO4OXC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreGraphics-CJ5107S0C0440L7MKTLAOVCP0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ImageIO-9WR50SV6AWHR47109ZX7R70CP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreText-AK2AOBHU9XJFKNLUBRA6NKPUY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreMIDI-4P1OGA8DJDLMR6YE0MNEMRO6F.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Accessibility-EWSZXDC4AFMNEBD4FMMYCU7F9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/AppIntents-8NE1QNQHGL0G280VTHTUGAWM4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Network-EJV76LEF1W0VJ0H1UVFQL6NGQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/AppIntentsTypeSupport-7GKZPQ3NKPES1AXTUHL1L3R0V.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-6Z6E0CERBUPV4MMD6K43TWYL2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/UIUtilities-663567NN152NM7ERGC7XMQ2GD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/AudioToolbox-3KTUK3QXVJDD9NUNIKNNMKOOQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Symbols-25876MPWU3UOT4VL8IVG4TEWV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreSpotlight-7P9PRLCCCSF2B91BGJ1VBEPF4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/QuickLookThumbnailing-8O7W244RQD6T0S4K948CQ6Z7J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/_LocationEssentials-6DA75UE8LB1WEZUJJ1OFA23FB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/AVRouting-6BL7X9QTZMFXIRJZA431O4AFO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/OSLog-C3RVHBB4ZO3P98GTOYL184B46.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreLocation-9TLYD6ITSCLC69KX89YYPGZ0Y.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/UserNotifications-98TLRA0OLKWLA0X965KGFCSSM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/LocalAuthentication-2YLB133J03GZFJFV383HFVQ3X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CloudKit-48P1NCE75OM6KVXW3JBVQ6EKB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreMotion-2NR6BL214Y2VM3SZ4ZM076RU3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/IOSurface-950DV2NMURYR4H6FN00MGBG93.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/FileProvider-4F0MS2OMWXUPT59II37KJ4HRI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/EventKit-4F6HVMCRJWKE5GJBYOKIZQRXV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Metal-CRDO4AJ1J4FLXT9H91U3NWZBQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreData-9VJQIU88RJ8BD4RDHA0ZM31HU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/RelevanceKit-6U88C85JG6L9SM5XRYJK8Y1XN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/OpenGLES-SKWYROVFKGOP5OL63Z38UIWJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreTransferable-933GPB2Q1WZSQUNCR2KYP8BRM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/DataDetection-DBUOT07E8LRJ6J4858JC973E6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreVideo-478LH3N0P5BX7MBTO1P3SP0LB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreImage-DW188RY47NDN7EXYQISZ88YTK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/QuartzCore-8JM4PY6N0JSSBBIIC3LE54E7W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Accelerate-52ZCU0QSSQ5EQQ5494AUBQ4GZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/SwiftUICore-BLQD8BRMR2TNYY0336D0369S9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/UIKit-C1D0S2TU09MM919P5M3FY9Y2S.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreMedia-BZGQ0VKQ1SGG891ZF8X3FFB6E.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/CoreML-7ZKW241VTNAMRTZJ6B3PQ3TU1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/AVFAudio-CR4UO4HQUPIHN68E94VZUMF99.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Vision-6S2M5GESNST6YOYXFL3ND2L8Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/VideoToolbox-EDGEY5QRTU9Z7VAZB45B570ER.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/SwiftUI-EODZP57878SJCB8N7UM1X9L7F.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/ExtensionKit-3A3CUNSQWEXNKZUWLDP2A3IS1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/PDFKit-82MQA08130V8775LQCG7J5GW3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/MediaToolbox-CS58SLNNJLCDTGZ8SLCCE4UXF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/AVFoundation-4RIHB6V4YJIGN3EWGD2R2LXG7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/QuickLook-E5JFGITDXAJ9WJNV50FATXZE8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Speech-2CPDB65F4YD27G3RX93C7UFMF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/Photos-3BFH3VS91RFD6YRPHCMQ95JWW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules/PhotosUI-5INRMFRGAXVHRE7OKWSEYJGPI.pcm
+
+SwiftCompile normal arm64 Compiling\ VisitCompanionViews.swift,\ VisitPacketView.swift,\ VisitWorkspaceView.swift,\ GeneratedAssetSymbols.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/VisitCompanionViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/VisitPacketView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/VisitWorkspaceView.swift /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/VisitCompanionViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile VisitCompanionViews.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/VisitPacketView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile VisitPacketView.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/VisitWorkspaceView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile VisitWorkspaceView.swift
+
+SwiftCompile normal arm64 /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile GeneratedAssetSymbols.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ CareContinuity (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+
+SwiftCompile normal arm64 Compiling\ OnboardingView.swift,\ PatientEditors.swift,\ PatientWorkflowViews.swift,\ ReviewEditor.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/OnboardingView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/PatientEditors.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/PatientWorkflowViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/ReviewEditor.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/OnboardingView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile OnboardingView.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/PatientEditors.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile PatientEditors.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/PatientWorkflowViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile PatientWorkflowViews.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/ReviewEditor.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile ReviewEditor.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for CareContinuity (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriverJobDiscovery normal arm64 Compiling VisitCompanionViews.swift, VisitPacketView.swift, VisitWorkspaceView.swift, GeneratedAssetSymbols.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation\ Requirements CareInOne normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareContinuity -O @/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -target arm64-apple-ios18.0 -g -module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 6 -I /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -F /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/PackageFrameworks -F /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneReleaseScreenshots/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -output-file-map /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-generated-files.hmap -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-own-target-headers.hmap -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphoneos/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-project-headers.hmap -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/include -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ SampleEvidenceView.swift,\ SettingsView.swift,\ SourceViews.swift,\ TodayView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/SampleEvidenceView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/SettingsView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/SourceViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/TodayView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/SampleEvidenceView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile SampleEvidenceView.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/SettingsView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile SettingsView.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/SourceViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile SourceViews.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/TodayView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile TodayView.swift
+
+SwiftMergeGeneratedHeaders /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/CareContinuity-Swift.h /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity-Swift.h (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-swiftHeaderTool -arch arm64 /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity-Swift.h -o /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/CareContinuity-Swift.h
+
+SwiftDriverJobDiscovery normal arm64 Compiling OnboardingView.swift, PatientEditors.swift, PatientWorkflowViews.swift, ReviewEditor.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+Copy /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareContinuity.swiftmodule/arm64-apple-ios.swiftmodule /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareContinuity.swiftmodule/arm64-apple-ios.swiftmodule
+
+Copy /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareContinuity.swiftmodule/arm64-apple-ios.swiftdoc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftdoc (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftdoc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareContinuity.swiftmodule/arm64-apple-ios.swiftdoc
+
+Copy /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareContinuity.swiftmodule/arm64-apple-ios.abi.json /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.abi.json (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.abi.json /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareContinuity.swiftmodule/arm64-apple-ios.abi.json
+
+SwiftCompile normal arm64 Compiling\ CaptureServices.swift,\ CloudAnalysis.swift,\ ExportService.swift,\ Persistence.swift,\ ReminderService.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/CaptureServices.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/CloudAnalysis.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/ExportService.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/Persistence.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/ReminderService.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/CaptureServices.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile CaptureServices.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/CloudAnalysis.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile CloudAnalysis.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/ExportService.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile ExportService.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/Persistence.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile Persistence.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/ReminderService.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile ReminderService.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling SampleEvidenceView.swift, SettingsView.swift, SourceViews.swift, TodayView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 Compiling\ SecurityServices.swift,\ BackupView.swift,\ CaptureView.swift,\ CareViews.swift,\ CloudConnectionView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/SecurityServices.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/BackupView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/CaptureView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/CareViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/CloudConnectionView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/SecurityServices.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile SecurityServices.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/BackupView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile BackupView.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/CaptureView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile CaptureView.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/CareViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile CareViews.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/CloudConnectionView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile CloudConnectionView.swift
+
+SwiftCompile normal arm64 Compiling\ FollowThroughAssistView.swift,\ FollowThroughViews.swift,\ HandoffViews.swift,\ HelpPrivacyView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/FollowThroughAssistView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/FollowThroughViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/HandoffViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/HelpPrivacyView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/FollowThroughAssistView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile FollowThroughAssistView.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/FollowThroughViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile FollowThroughViews.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/HandoffViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile HandoffViews.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/HelpPrivacyView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile HelpPrivacyView.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling CaptureServices.swift, CloudAnalysis.swift, ExportService.swift, Persistence.swift, ReminderService.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 Compiling\ AppStore.swift,\ CareInOneApp.swift,\ FollowThroughAssistStore.swift,\ VisitCompanionStore.swift,\ BackupWorkflow.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/AppStore.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/CareInOneApp.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/FollowThroughAssistStore.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/VisitCompanionStore.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/BackupWorkflow.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/AppStore.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile AppStore.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/CareInOneApp.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile CareInOneApp.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/FollowThroughAssistStore.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile FollowThroughAssistStore.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/VisitCompanionStore.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile VisitCompanionStore.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Services/BackupWorkflow.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile BackupWorkflow.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling SecurityServices.swift, BackupView.swift, CaptureView.swift, CareViews.swift, CloudConnectionView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 Compiling\ ContinuityViews.swift,\ DemoWorkspaceView.swift,\ DesignSystem.swift,\ EvidenceImpactView.swift,\ EvidenceIntelligenceViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/ContinuityViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/DemoWorkspaceView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/DesignSystem.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/EvidenceImpactView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/EvidenceIntelligenceViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/ContinuityViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile ContinuityViews.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/DemoWorkspaceView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile DemoWorkspaceView.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/DesignSystem.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile DesignSystem.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/EvidenceImpactView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile EvidenceImpactView.swift
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/EvidenceIntelligenceViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile EvidenceIntelligenceViews.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling FollowThroughAssistView.swift, FollowThroughViews.swift, HandoffViews.swift, HelpPrivacyView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriverJobDiscovery normal arm64 Compiling AppStore.swift, CareInOneApp.swift, FollowThroughAssistStore.swift, VisitCompanionStore.swift, BackupWorkflow.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ContinuityViews.swift, DemoWorkspaceView.swift, DesignSystem.swift, EvidenceImpactView.swift, EvidenceIntelligenceViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation CareInOne normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareContinuity -O @/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -target arm64-apple-ios18.0 -g -module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 6 -I /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -F /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/PackageFrameworks -F /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneReleaseScreenshots/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -output-file-map /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneReleaseScreenshots/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-generated-files.hmap -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-own-target-headers.hmap -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphoneos/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne-project-headers.hmap -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/include -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/CareInOne normal (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/EagerLinkingTBDs/Release-iphoneos -L/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -F/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/EagerLinkingTBDs/Release-iphoneos -F/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/PackageFrameworks -F/tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos -filelist /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne_lto.o -Xlinker -final_output -Xlinker /Applications/CareInOne.app/CareInOne -Xlinker -dependency_info -Xlinker /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule -o /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/CareInOne
+
+ExtractAppIntentsMetadata (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name CareContinuity --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier org.carecontinuity.app --output /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app --target-triple arm64-apple-ios18.0 --binary-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/CareInOne --dependency-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne_dependency_info.dat --stringsdata-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList --metadata-file-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne.DependencyMetadataFileList --static-metadata-file-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-05 03:47:33.079 appintentsmetadataprocessor[91797:31308719] Starting appintentsmetadataprocessor export
+2026-10-05 03:47:33.153 appintentsmetadataprocessor[91797:31308719] Extracted no relevant App Intents symbols, skipping writing output
+
+GenerateDSYMFile /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareInOne.app.dSYM /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/CareInOne (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    export PATH\=/Applications/Xcode.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/shivanshsahni/.antigravity/antigravity/bin:/Users/shivanshsahni/.bun/bin:/Users/shivanshsahni/.nvm/versions/node/v20.19.0/bin:/opt/homebrew/bin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Users/shivanshsahni/.codex/tmp/arg0/codex-arg0gRtA1R:/Users/shivanshsahni/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/opt/homebrew/Caskroom/miniconda/base/bin:/opt/homebrew/Caskroom/miniconda/base/condabin:/Users/shivanshsahni/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/CareInOne -o /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/Release-iphoneos/CareInOne.app.dSYM
+
+CopySwiftLibs /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/CareInOne --scan-folder /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/Frameworks --scan-folder /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/PlugIns --scan-folder /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/SystemExtensions --scan-folder /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/Extensions --platform iphoneos --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/Frameworks --unsigned-destination /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/BuildProductsPath/SwiftSupport --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+AppIntentsSSUTraining (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/Info.plist --temp-dir-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/ssu --bundle-id org.carecontinuity.app --product-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app --extracted-metadata-path /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/Metadata.appintents --deployment-postprocessing --metadata-file-list /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/CareInOne.build/Release-iphoneos/CareInOne.build/CareInOne.DependencyMetadataFileList --source-file /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/Info.plist --archive-ssu-assets
+2026-10-05 03:47:33.278 appintentsnltrainingprocessor[91802:31308733] Parsing options for appintentsnltrainingprocessor
+2026-10-05 03:47:33.278 appintentsnltrainingprocessor[91802:31308733] Starting AppIntents SSU YAML Generation
+2026-10-05 03:47:33.281 appintentsnltrainingprocessor[91802:31308733] No AppShortcuts found - Skipping.
+
+Strip /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/CareInOne (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -D /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app/CareInOne
+
+SetOwnerAndGroup shivanshsahni:staff /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /usr/sbin/chown -RH shivanshsahni:staff /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app
+
+SetMode u+w,go-w,a+rX /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /bin/chmod -RH u+w,go-w,a+rX /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app
+
+RegisterExecutionPolicyException /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-RegisterExecutionPolicyException /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app
+
+Validate /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-validationUtility /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /usr/bin/touch -c /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/InstallationBuildProductsLocation/Applications/CareInOne.app
+
+PruneExplicitPrecompiledModules /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneReleaseScreenshots/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneReleaseScreenshots/Build/Intermediates.noindex/ArchiveIntermediates/CareInOne/IntermediateBuildFilesPath/ExplicitPrecompiledModules
+
+** ARCHIVE SUCCEEDED **
+

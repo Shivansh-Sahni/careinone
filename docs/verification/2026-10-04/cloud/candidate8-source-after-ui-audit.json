@@ -1,0 +1,14 @@
+{
+  "manifest": "docs/verification/2026-10-05/candidate8-source-before.json",
+  "checkedInputs": 108,
+  "changedInputs": [
+    {
+      "path": "UITests/PatientCompanionUITests.swift",
+      "expected": "f387a7d68c96d58dc90446e5b749eebbbded59ed7e479ad01b4677210c74bd22",
+      "actual": "869de51bf2a53b1b2c710e6ab84c5a9abdcf135d508bbd6e8e969158a233bc52"
+    }
+  ],
+  "unsupportedPathsNotRead": [],
+  "result": "requires_review",
+  "scope": "Read-only hashes of explicit compiled source/config/test/asset manifest inputs; no credentials or patient containers."
+}

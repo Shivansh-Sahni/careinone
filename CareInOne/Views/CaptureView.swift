@@ -352,7 +352,7 @@ struct RecordingCaptureView: View {
             }
             if audio.recording {
                 HStack { Image(systemName: "record.circle.fill").foregroundStyle(.red); Text(audio.paused ? "Recording paused" : "Recording · microphone on").font(.headline); Spacer(); Text(Duration.seconds(audio.elapsed).formatted(.time(pattern: .minuteSecond))).monospacedDigit() }.accessibilityIdentifier("recording-indicator")
-                HStack { Button(audio.paused ? "Resume" : "Pause") { if audio.paused { audio.resume() } else { audio.pause() } }; Spacer(); Button("Stop & transcribe") { stop() }.buttonStyle(.borderedProminent) }
+                HStack { Button(audio.paused ? "Resume" : "Pause") { if audio.paused { Task { await audio.resume() } } else { audio.pause() } }; Spacer(); Button("Stop & transcribe") { stop() }.buttonStyle(.borderedProminent) }
                 Text("Recording pauses when the app leaves the foreground. Keep this screen visible.").font(.caption).foregroundStyle(.secondary)
             }
             if audio.transcribing { ProgressView("Transcribing on this device…"); Button("Cancel transcription") { task?.cancel(); audio.cancelTranscription() } }

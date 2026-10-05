@@ -1,0 +1,46 @@
+{
+  "result": "/private/tmp/CareInOneCandidate8Native.xcresult",
+  "log": "docs/verification/2026-10-05/candidate8-native.log",
+  "summary": "docs/verification/2026-10-05/candidate8-native-summary.json",
+  "actualRunnerExit": 0,
+  "fullIntegration": {
+    "total": 146,
+    "passed": 145,
+    "failed": 0,
+    "skipped": 1,
+    "durationSeconds": 11.824
+  },
+  "audioLifecycle": {
+    "total": 21,
+    "passed": 21,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 0.433
+  },
+  "runtimeWarnings": [],
+  "device": "36A9D3D3-365D-422E-8E9D-135DEB8BB063",
+  "os": "iOS27.0 24A434",
+  "credentialsRead": false,
+  "realMicrophoneOrPaidInferenceRequested": false,
+  "productionFrozen": true,
+  "limitations": [
+    "Physical microphone/speaker/Bluetooth/speech recognition hardware not exercised.",
+    "C8 user-interface warning and journey verification belongs to the separately executed full UI action.",
+    "Unattributed C7 frame warnings preserved; no guessed geometry change."
+  ],
+  "minimumOS": {
+    "result": "/private/tmp/CareInOneCandidate8MinOSNative.xcresult",
+    "log": "docs/verification/2026-10-05/candidate8-min-os-native.log",
+    "summary": "docs/verification/2026-10-05/candidate8-min-os-native-summary.json",
+    "actualRunnerExit": 0,
+    "total": 24,
+    "passed": 24,
+    "failed": 0,
+    "skipped": 0,
+    "audioLifecyclePassed": 21,
+    "sourceReviewStatusPassed": 3,
+    "runtimeWarnings": [],
+    "device": "iPhoneSE3 iOS18.2 22C150",
+    "rawLogNote": "New isolated SwiftData status fixture root did not yet exist; native CoreData recovered missing-directory initialization successfully. Exact raw messages retained; no personal store involved."
+  }
+}

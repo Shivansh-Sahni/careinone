@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-10-05T08:36:46.914822+00:00",
+  "method": "Read-only public HTTPS GET; no credentials or patient text transmitted.",
+  "routes": [
+    {
+      "path": "/health",
+      "status": 200,
+      "bytes": 49,
+      "sha256": "9c9fd7491c51592b63e8faf05829a24131a9286df244459575d8a6e734376728",
+      "cache_control": "no-store",
+      "x_content_type_options": "nosniff",
+      "local_source_matches": null
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "bytes": 14270,
+      "sha256": "177a012f25fbe8a99fd71ccf901efe7be593bcf5f9b55a05df7d5412a034fc62",
+      "cache_control": "no-store",
+      "x_content_type_options": "nosniff",
+      "local_source_matches": true
+    },
+    {
+      "path": "/support",
+      "status": 200,
+      "bytes": 11162,
+      "sha256": "ecd7b0d2ec118b8fc94d1e52231e90d40d45cd5eafdf852c5965b014985683cd",
+      "cache_control": "no-store",
+      "x_content_type_options": "nosniff",
+      "local_source_matches": true
+    }
+  ]
+}

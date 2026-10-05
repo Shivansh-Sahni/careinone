@@ -1,6 +1,6 @@
 # App Privacy worksheet
 
-Prepared October 4, 2026. This worksheet is a deployment decision aid, not a submitted App Privacy label. It must match the final release, hosting configuration, support practices, and all configured model providers.
+Prepared October 4–5, 2026. This worksheet is a deployment decision aid, not a submitted App Privacy label. It must match the final release, hosting configuration, support practices, and all configured model providers.
 
 Apple distinguishes device-only processing from data transmitted and retained beyond servicing a request. Optional cloud collection still matters. The privacy manifest and the App Store Connect questionnaire are separate disclosures. [Apple App Privacy details](https://developer.apple.com/app-store/app-privacy-details/)
 
@@ -12,7 +12,7 @@ Apple distinguishes device-only processing from data transmitted and retained be
 | Capture and OCR | Source text, photos, PDFs, files | Device | Original preserved locally; Vision/PDF extraction local | Device-only capture is not itself collected |
 | Audio and transcription | Voice recording and transcript | Device | Speech request requires on-device recognition | Do not declare remote audio collection unless the final implementation adds it |
 | Optional model extraction | Working source text, source type, event date | Gateway → primary/fallback model provider | Explicit configuration-bound consent; JSON schema/quote validation | Health and Other User Content are likely applicable for normal retained provider processing |
-| Gateway authorization | Per-installation access credential | Gateway | Bearer token checked against hashed configured values | Review persistence, linkage, and any operational record of the credential; do not treat an identity-linked credential as automatically anonymous |
+| Gateway authorization | Operator-issued gateway access token; not necessarily unique per installation | Gateway | Bearer token checked against hashed configured values; separate installation tokens require operator provisioning | Review persistence, linkage, and any operational record of the credential; do not treat an identity-linked credential as automatically anonymous |
 | Connection metadata | IP address and HTTP connection details | Hosting/model infrastructure | App access logs disabled; infrastructure handling unverified | Declare retained types according to actual use; do not infer region/device tracking solely from a transient network request |
 | Local reminders | Generic reminder content | Device notifications | No clinical labels or names in notification body | No app-operated remote notification collection in current code |
 | Calendar addition | Appointment title and selected date | User-selected calendar | Write-only permission and explicit action | Explain user's calendar provider may synchronize separately |
@@ -45,14 +45,14 @@ The initial baseline had an empty collected-data array and no direct UserDefault
 
 | Question | Required evidence | Final answer |
 |---|---|---|
-| Which public cloud path is offered? | Final build and enrollment/support path | Unresolved |
+| Which public cloud path is offered? | Final build and enrollment/support path | Current implementation is operator-configured with no self-service enrollment; final public rollout/reviewer access decision remains unresolved |
 | Which hosts and legal operators receive text? | Authenticated gateway config plus legal provider accounts | Unresolved |
 | Is a fallback enabled? | Final provider configuration | Unresolved |
 | How long does Render retain network/security logs? | Actual plan/region/settings/contracts | Unresolved |
 | Is OpenAI Zero Data Retention actually approved and enabled? | Actual organization/project data-control evidence | Unresolved; not assumed |
 | What support data is retained and for how long? | Monitored mailbox and written policy | Unresolved |
 | Which label answers were saved? | App Store Connect review of final answers | Not submitted |
-| Does the in-app policy link match the live public policy? | Final build + HTTPS page check | Unresolved |
+| Does the in-app policy link match the live public policy? | Final build + HTTPS page check | C8 compiled/source policy links match the reviewed implementation; unchanged deployed HTML bytes verified at 4ec91e3. Reconcile the final signed release and any later deployment. |
 
 ## Exact App Store Connect actions
 

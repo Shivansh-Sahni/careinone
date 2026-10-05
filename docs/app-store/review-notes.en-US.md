@@ -1,6 +1,10 @@
 # Reviewer notes draft
 
-Re-run this path on the exact archived build before pasting it into App Store Connect. No patient content or private credential belongs in this file. This is the detailed preparation guide, not a single paste field. Use the separately prepared [Notes text](review-notes-for-paste.en-US.txt) after final verification; it is checked against Apple’s 4,000-byte Notes limit. Private contact and gateway access must be entered separately. [Apple field specification](https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information/)
+Re-run this path on the exact signed build intended for submission before pasting it into App Store Connect. No patient content or private credential belongs in this file. This is the detailed preparation guide, not a single paste field. Use the separately prepared [Notes text](review-notes-for-paste.en-US.txt) after final verification; it is checked against Apple’s 4,000-byte Notes limit. Private contact and gateway access must be entered separately. [Apple field specification](https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information/)
+
+## Current engineering verification — not part of the paste field
+
+[Candidate8](../verification/2026-10-05/continuation/release/CANDIDATE8_RELEASE_VERIFICATION.md) completed145 native passes/one gated paid-cloud skip, minimum-OS24 passes and an unsigned archive audit. Its final whole UI action is29 total/26 passes/two failures/one intended screenshot skip, exit65,16 frame warnings and zero audio-session warnings. The backup keyboard and Loop failures remain explicit; focused recoveries are separate. Source-status/accessibility passed. Six fresh ordinary Release phone pictures passed format/visual/OCR review. Current ordinary Release leaves the fictional Demo on Today and preserves all12 personal record-type payloads and one original fingerprint. These facts do not close valid signing, NutriAssist approval, physical-device checks, operator privacy/support facts or public cloud enrollment. Fresh account inspection still sees Individual only and zero local identities/profiles.
 
 ## Notes for Review
 

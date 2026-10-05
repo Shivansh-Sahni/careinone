@@ -1,0 +1,27 @@
+{
+  "checkedUTC" : "2026-10-05T08:45:43Z",
+  "engine" : "macOS Vision VNRecognizeTextRequest accurate\/en-US; no language correction",
+  "failedCount" : 0,
+  "flaggedCount" : 0,
+  "imageCount" : 1,
+  "limitations" : [
+    "OCR and regex matching are imperfect; low-resolution\/obscured\/line-wrapped credentials can evade recognition.",
+    "Opaque token candidates are heuristic and can be false positives; only flagged pictures need visual review.",
+    "Zero pattern matches is not proof that an image contains no secret or patient content.",
+    "Only files in the Git-eligible snapshot are included; root's later store captures need their own provenance\/final screen."
+  ],
+  "processedCount" : 1,
+  "rows" : [
+    {
+      "credentialPatternCount" : 0,
+      "filename" : "docs\/verification\/2026-10-05\/backup-triage\/c8-encrypted-backup-focused.png",
+      "patternCounts" : {
+
+      },
+      "sha256" : "d376537a0d73772c4972f4f8f6d7a6a54ccd7b3e8280ab47ccf1467ca8760f77",
+      "status" : "recognized",
+      "unchangedDuringRecognition" : true
+    }
+  ],
+  "scope" : "Git-eligible PNG\/JPG snapshot only; no user attachment paths or ignored raw screenshots\/result\/archive bundles; no recognized content or matching values serialized"
+}

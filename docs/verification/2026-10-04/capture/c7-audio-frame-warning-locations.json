@@ -1,0 +1,255 @@
+{
+  "result": "/private/tmp/CareInOneCandidate7AllUI.xcresult",
+  "warnings": [
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "AskPrivacyUITests.testAskQueryChangesAndSourceDeletionRemoveCachedExactQuote()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "BackupWorkflowUITests.testBackupCreationAndAudioChangeInvalidateOldShare()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CapturePipelineUITests.testKeyboardDoneAndClearedWorkingTextKeepOriginalEvidence()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CapturePipelineUITests.testSystemPasteLongMultilineTextSavesAndSurvivesRelaunch()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testCaptureReviewPersistsAcrossLaunch()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testDiscrepancyClarificationAndReopening()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "CareInOneUITests.testEmptyPatientHandoffPDFDraftRelaunchAndReplyReview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testEmptyPatientVisitDebriefReviewImpactAndCheckpoint()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "CareInOneUITests.testEmptyPatientVisitDebriefReviewImpactAndCheckpoint()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "CareInOneUITests.testFinishedHandoffFlagsNewReviewedEvidenceAndReopens()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testOutgoingMessageEditingInvalidatesPreviousPDF()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testPersonalNoteCreatePersistAndDelete()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testVisitDraftPersistsAcrossRelaunchAndDeletionHasImpactPreview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "EditorDraftRecoveryUITests.testReviewedPassageDirtyCancelAndSwipePreserveDraftUntilExplicitDiscard()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "EditorRecoveryUITests.testEncounterDiscardLeavesExistingGroupingAndCleanCancelCloses()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "EditorRecoveryUITests.testPersonalNoteDiscardPreservesSavedMultilineContentAfterRelaunch()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "EditorRecoveryUITests.testQuestionAnswerSwipeAndCancelKeepInputThenDiscardWithoutSaving()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "FollowThroughDraftRecoveryUITests.testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "FollowThroughDraftRecoveryUITests.testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "FollowThroughDraftRecoveryUITests.testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "PatientCompanionUITests.testEmptyPatientAppointmentBriefAnswersResumeAndReview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "PatientCompanionUITests.testFollowThroughMessageOutreachReplyPersistsAndNeedsReview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "PatientCompanionUITests.testFollowThroughMessageOutreachReplyPersistsAndNeedsReview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "PatientCompanionUITests.testVisitSourceContextOpensInsideTheConversationAndRetainsAnswer()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "AskPrivacyUITests.testAskQueryChangesAndSourceDeletionRemoveCachedExactQuote()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "BackupWorkflowUITests.testBackupCreationAndAudioChangeInvalidateOldShare()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CapturePipelineUITests.testKeyboardDoneAndClearedWorkingTextKeepOriginalEvidence()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CapturePipelineUITests.testSystemPasteLongMultilineTextSavesAndSurvivesRelaunch()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testCaptureReviewPersistsAcrossLaunch()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testDiscrepancyClarificationAndReopening()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "CareInOneUITests.testEmptyPatientHandoffPDFDraftRelaunchAndReplyReview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testEmptyPatientVisitDebriefReviewImpactAndCheckpoint()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "CareInOneUITests.testEmptyPatientVisitDebriefReviewImpactAndCheckpoint()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "CareInOneUITests.testFinishedHandoffFlagsNewReviewedEvidenceAndReopens()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testOutgoingMessageEditingInvalidatesPreviousPDF()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testPersonalNoteCreatePersistAndDelete()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "CareInOneUITests.testVisitDraftPersistsAcrossRelaunchAndDeletionHasImpactPreview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "EditorDraftRecoveryUITests.testReviewedPassageDirtyCancelAndSwipePreserveDraftUntilExplicitDiscard()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "EditorRecoveryUITests.testEncounterDiscardLeavesExistingGroupingAndCleanCancelCloses()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "EditorRecoveryUITests.testPersonalNoteDiscardPreservesSavedMultilineContentAfterRelaunch()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "EditorRecoveryUITests.testQuestionAnswerSwipeAndCancelKeepInputThenDiscardWithoutSaving()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "FollowThroughDraftRecoveryUITests.testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "FollowThroughDraftRecoveryUITests.testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "FollowThroughDraftRecoveryUITests.testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "PatientCompanionUITests.testEmptyPatientAppointmentBriefAnswersResumeAndReview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "Invalid frame dimension (negative or non-finite).",
+      "test": "PatientCompanionUITests.testFollowThroughMessageOutreachReplyPersistsAndNeedsReview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "PatientCompanionUITests.testFollowThroughMessageOutreachReplyPersistsAndNeedsReview()",
+      "sourceURL": ""
+    },
+    {
+      "message": "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+      "test": "PatientCompanionUITests.testVisitSourceContextOpensInsideTheConversationAndRetainsAnswer()",
+      "sourceURL": ""
+    }
+  ],
+  "interpretation": "All exported warning source URLs are empty. No application frame arithmetic cause or source stack is established; no frame view was changed.",
+  "legacyRawRows": {
+    "audio": 16,
+    "frame": 32
+  },
+  "canonicalMinimizedSummaryOccurrences": {
+    "audio": 8,
+    "frame": 16
+  },
+  "warning": "Legacy export repeats each warning row twice. Raw rows are retained, not substituted for canonical occurrence counts."
+}

@@ -1,0 +1,131 @@
+{
+  "recordedUTC": "2026-10-05T09:03:15.388257+00:00",
+  "audit": "Final read-only Candidate8 production and focused regression audit",
+  "head": "860ea895449fee93c3cc53411b3b3182fdf0a1f7",
+  "scope": [
+    "CareInOne/Core/SourceReviewStatus.swift",
+    "CareInOne/Services/CaptureServices.swift",
+    "CareInOne/Views/CaptureView.swift",
+    "CareInOne/Views/SourceViews.swift",
+    "CareInOne/Views/VisitCompanionViews.swift",
+    "IntegrationTests/AudioLifecycleIntegrationTests.swift",
+    "IntegrationTests/SourceReviewStatusIntegrationTests.swift",
+    "Tests/CareCoreTests/SourceReviewStatusTests.swift",
+    "UITests/PatientCompanionUITests.swift",
+    "UITests/FollowThroughDraftRecoveryUITests.swift",
+    "CareInOne.xcodeproj/project.pbxproj"
+  ],
+  "sourceHashes": {
+    "CareInOne/Core/SourceReviewStatus.swift": "ed2bb118d844eeec1d923f5b33eb17f3eae241956aec27ace4f271efc047b8b5",
+    "CareInOne/Services/CaptureServices.swift": "0a0fa2c0b9ceaa06a502130697aff3ebeb64fc4c641b31b994ee043361a6e833",
+    "CareInOne/Views/CaptureView.swift": "d834295c6803953399d3c35ce87afc9056615282fe0dabd3c879669c60cc30d8",
+    "CareInOne/Views/SourceViews.swift": "8347d8819fe254b42ac5d30c1ba28fc3b744f70981cc25ed17589e8531ea11e1",
+    "CareInOne/Views/VisitCompanionViews.swift": "26e5fba794b706b14f46ece8788458563fe2fa058160446a94f5813a3181f3c2",
+    "IntegrationTests/AudioLifecycleIntegrationTests.swift": "efbba2966d8586307b579d5429ef44458dd6cb8da870af897ea2c57c83e1d572",
+    "IntegrationTests/SourceReviewStatusIntegrationTests.swift": "ea9838439eb514cdfc4ec98aca480633b0eefda1f17af8a0d25d0b840db23edc",
+    "Tests/CareCoreTests/SourceReviewStatusTests.swift": "16d8ff42f7614022ee535e697546bd4dcb9c8622c727d9b3f68efaf3d3abf8e3",
+    "UITests/PatientCompanionUITests.swift": "869de51bf2a53b1b2c710e6ab84c5a9abdcf135d508bbd6e8e969158a233bc52",
+    "UITests/FollowThroughDraftRecoveryUITests.swift": "e983e9d03a66c62e2fe08d221f791fcdfabbedab4fff3df929f039362b4cb01d",
+    "CareInOne.xcodeproj/project.pbxproj": "0fd1017a98ff10393879cc002b5f7a5a0c078ae77757e5a23bca8269453d11ac"
+  },
+  "finalUICompileManifest": "docs/verification/2026-10-05/candidate8-final-test-inputs.json",
+  "manifestCheckedInputs": 108,
+  "changedAfterFinalUICompile": [
+    {
+      "path": "UITests/FollowThroughDraftRecoveryUITests.swift",
+      "expected": "4c0c4b3c85169c0a8273ce4d412b77bf31fb693f824f68f2b92f148a45bb74d0",
+      "actual": "e983e9d03a66c62e2fe08d221f791fcdfabbedab4fff3df929f039362b4cb01d"
+    }
+  ],
+  "gitDiffCheckExit": 0,
+  "materialFindings": [],
+  "reviewConclusions": [
+    "Source review progress derives from current source-scoped claims and the same canonical predicate as Added to My Care; no persisted source, original binary evidence, claim state, audit history, or model configuration is rewritten.",
+    "Failed, cancelled, interrupted, saved and edited-evidence recovery messages remain visible; successful analysis counts are replaced while analysis-limit and unsupported-FHIR disclosures are preserved.",
+    "Audio activation and release are serialized off the UI thread; obsolete activation, dismissal, cancellation, recording resume and delegate callbacks cannot start or stop a replacement run through the reviewed ownership guards.",
+    "Read-aloud cancellation and scene/session changes stop the owned speech request, and failure messages remain fixed recovery text rather than underlying audio errors.",
+    "Accessibility companion helper requires a complete visible native hit region; Loop helper moves the existing bounded stable-frame wait before its immediate hit assertion. Neither helper bypasses persistence or keyboard assertions.",
+    "BackupView Done only clears FocusState; there is no observer or task that deliberately forces SecureField focus back on. The remaining observed keyboard assertion failure has no production cause established from this source review."
+  ],
+  "verifiedFocusedEvidence": {
+    "core": {
+      "swiftTestingPassed": 178,
+      "separatePatientHomeXCTestPassed": 6,
+      "newStatusCorePassed": 5,
+      "log": "docs/verification/2026-10-04/cloud/source-review-status-core-tests.log"
+    },
+    "nativeIOS27": {
+      "summary": "docs/verification/2026-10-05/candidate8-native-summary.json",
+      "total": 146,
+      "passed": 145,
+      "failed": 0,
+      "paidLiveSkipped": 1,
+      "statusCasesPassed": 3,
+      "audioCasesPassed": 21,
+      "runtimeWarningCount": 0
+    },
+    "nativeIOS18_2": {
+      "summary": "docs/verification/2026-10-05/candidate8-min-os-native-summary.json",
+      "total": 24,
+      "passed": 24,
+      "failed": 0,
+      "skipped": 0,
+      "statusCasesPassed": 3,
+      "audioCasesPassed": 21,
+      "runtimeWarningCount": 0
+    },
+    "sourceStatusUI": {
+      "case": "PatientCompanionUITests.testEmptyPatientAppointmentBriefAnswersResumeAndReview",
+      "originalC8PassedSeconds": 98.587,
+      "finalActionPassedSeconds": 99.784,
+      "checks": [
+        "Actual source-review-status element exists",
+        "No proposals waiting for review",
+        "1 reviewed report is saved in My Care",
+        "Historical proposals ready absent",
+        "Accepted allergy appears in My Care"
+      ]
+    },
+    "accessibilityHelper": {
+      "summary": "docs/verification/2026-10-05/candidate8-accessibility-focused-summary.json",
+      "passed": 1,
+      "failed": 0,
+      "finalActionObservedPassSeconds": 90.329
+    }
+  },
+  "fullFinalUIObserved": {
+    "log": "docs/verification/2026-10-05/candidate8-all-ui-final.log",
+    "caseExecutionEnded": true,
+    "resultFinalizationConfirmedByThisAudit": false,
+    "total": 29,
+    "passed": 26,
+    "failed": 2,
+    "gatedReleaseScreenshotsSkipped": 1,
+    "failures": [
+      "BackupWorkflowUITests.testBackupCreationAndAudioChangeInvalidateOldShare: immediate keyboard count remained1 after native Done",
+      "FollowThroughDraftRecoveryUITests.testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch: pre-stability immediate isHittable assertion"
+    ]
+  },
+  "credentialReview": {
+    "independentReleaseAgentReport": "docs/verification/2026-10-05/continuation/release/candidate8-eligible-text-credential-check.json",
+    "gitEligibleInputs": 607,
+    "utf8Files": 532,
+    "imageBinaryFilesExcluded": 75,
+    "exactNonworkingFixtureOrExampleMatches": 9,
+    "unresolvedCredentialFlags": 0,
+    "ignoredEnvironmentOrCredentialStoresRead": false,
+    "matchingValuesPrinted": false,
+    "imagesSeparateOCRCovered": 75,
+    "imageOCRRecognizedFlags": 0
+  },
+  "limitations": [
+    "This audit did not build, run simulators, mutate services, read credentials, or make paid API requests.",
+    "No claim that the complete final UI action passed: two actual case failures remain independently recorded; subsequent focused results must remain separately scoped.",
+    "Physical microphone, speaker, Bluetooth, native speech-recognition permissions and real hardware audio interruptions remain untested by injected simulator regressions.",
+    "Invalid-frame runtime warnings from earlier UI actions do not provide a symbolized app call stack; no ungrounded geometry repair or benign attribution is justified.",
+    "Pattern scanning and OCR cannot prove the absence of all possible secrets in binary/image artifacts.",
+    "App Store organization approval, signing/distribution identity and publication remain parent-owned release dependencies."
+  ],
+  "productionEditedByAudit": false,
+  "sourceFrozen": true
+}

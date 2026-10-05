@@ -1,0 +1,90 @@
+{
+  "recorded_utc": "2026-10-05T05:45:04.561805+00:00",
+  "ordinary_release": true,
+  "debug_launch_switches": false,
+  "synthetic_demo_via_normal_settings": true,
+  "production_candidate": "Phone C7 production source; iPad earlier normal Release capture of unchanged Today UI, not final full-workflow verification.",
+  "files": [
+    {
+      "path": "docs/app-store/screenshots/ipad-13/01-today.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "ce46ab1c26267c87510c60a14ce1f32ec21cf2de4cb961baf813b6c50ca375c2",
+      "fictional_demo": true,
+      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
+      "provenance": "/private/tmp/CareInOneReleasePadScreens5.xcresult",
+      "action_result": "Failed:1/1 capture helper could not reveal Save; this Today screenshot preceded failure and is valid. Not evidence that all iPad workflows passed."
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/01-today.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "3fb6850f5ef765898eb513b235bf0cbfa6fe5179cbc64378563f3636f152b8af",
+      "fictional_demo": true,
+      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
+      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
+      "action_result": "Passed:1/1 and six screenshots"
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/02-source-review.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "ef4bf1df1c9c77e0e5f54863cf34ec62e44e5ec7f2c4eb14ec7c65ccde93a3ed",
+      "fictional_demo": true,
+      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
+      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
+      "action_result": "Passed:1/1 and six screenshots"
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/03-medication-reports.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "97f44739b0baef4bc0488e2cc9eb16b9424828af329c5b92b48ef431f5f555ee",
+      "fictional_demo": true,
+      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
+      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
+      "action_result": "Passed:1/1 and six screenshots"
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/04-appointment-companion.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "c87d4900b295fcd0117e4c9009e4315deb959f534d85a58a245bf0215ce3c6b2",
+      "fictional_demo": true,
+      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
+      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
+      "action_result": "Passed:1/1 and six screenshots"
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/05-selected-packet.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "0184eefe8986c7315d31245867290152ec95eccf59551c3772ddd5e1c572188c",
+      "fictional_demo": true,
+      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
+      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
+      "action_result": "Passed:1/1 and six screenshots"
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/06-follow-through-helper.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "3ff97db24f2370c8abe3c236c45d15172588106ad67ef20986854804ea0c97a9",
+      "fictional_demo": true,
+      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
+      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
+      "action_result": "Passed:1/1 and six screenshots"
+    }
+  ],
+  "observed_limits": [
+    "Selected packet screenshot shows native text preview with Create selected PDF, not an opened PDF viewer.",
+    "Seven authentic screenshots prepared. Device workflows and signing remain separate release gates."
+  ],
+  "app_version": "1.0",
+  "build": "1",
+  "source_commit": "4ec91e3be0c45470743208e2fb337d30445c2234",
+  "iphone_model": "iPhone16ProMax",
+  "ipad_model": "iPadPro13M5",
+  "runtime": "iOS27.0",
+  "phone_configuration": "ordinary Release"
+}

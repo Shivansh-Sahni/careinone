@@ -69,6 +69,11 @@ final class PatientCompanionUITests: XCTestCase {
         scrollContent(in: app, direction: .up)
         XCTAssertTrue(accept.isEnabled); accept.tap()
         XCTAssertTrue(app.buttons["accept-claim"].waitForNonExistence(timeout: 5))
+        let sourceStatus = app.staticTexts["source-review-status"]
+        XCTAssertTrue(sourceStatus.waitForExistence(timeout: 5))
+        XCTAssertTrue(sourceStatus.label.contains("No proposals waiting for review."))
+        XCTAssertTrue(sourceStatus.label.contains("1 reviewed report is saved in My Care."))
+        XCTAssertFalse(sourceStatus.label.contains("proposals ready"))
         app.tabBars.buttons["My Care"].tap(); app.staticTexts["Allergies"].tap()
         XCTAssertTrue(app.staticTexts["latex"].waitForExistence(timeout: 5))
     }
@@ -131,7 +136,7 @@ final class PatientCompanionUITests: XCTestCase {
         continueAfterFailure = false
         let app = launch(demo: true, accessibility: true)
         tap(app.buttons["today-companion"], in: app)
-        tap(app.buttons["companion-start-live"], in: app)
+        tapFullyVisible(app.buttons["companion-start-live"], in: app)
         XCTAssertTrue(app.staticTexts["companion-live-question"].waitForExistence(timeout: 5))
         snapshot(app, "CareInOne · appointment question at accessibility size")
         tap(app.buttons["companion-pause"], in: app, direction: .down)
@@ -230,6 +235,28 @@ final class PatientCompanionUITests: XCTestCase {
         let start = origin.withOffset(CGVector(dx: x - appFrame.minX, dy: startY - appFrame.minY))
         let end = origin.withOffset(CGVector(dx: x - appFrame.minX, dy: endY - appFrame.minY))
         start.press(forDuration: 0.01, thenDragTo: end)
+    }
+    @MainActor private func tapFullyVisible(_ element: XCUIElement, in app: XCUIApplication) {
+        // At the largest text size XCTest can report the live-visit button
+        // hittable when only its top 2.7 points are above the tab bar. Its
+        // default center then lies outside the viewport; scroll the whole
+        // control into view before performing the ordinary native tap.
+        func visible() -> Bool {
+            guard element.exists, element.isHittable else { return false }
+            let frame = element.frame
+            let appFrame = app.frame
+            let navigationBottom = app.navigationBars.allElementsBoundByIndex.filter(\.isHittable).map { $0.frame.maxY }.max() ?? appFrame.minY
+            let demoBottom = app.buttons["exit-demo"].exists ? app.buttons["exit-demo"].frame.maxY : appFrame.minY
+            let tabTop = app.tabBars.allElementsBoundByIndex.filter(\.isHittable).map { $0.frame.minY }.min() ?? appFrame.maxY
+            let keyboardTop = app.keyboards.firstMatch.exists ? app.keyboards.firstMatch.frame.minY : appFrame.maxY
+            return frame.width > 0 && frame.height > 0 && frame.minX >= appFrame.minX && frame.maxX <= appFrame.maxX
+                && frame.minY > max(navigationBottom, demoBottom) + 4 && frame.maxY < min(tabTop, keyboardTop) - 4
+        }
+        for _ in 0..<16 where !visible() { scrollContent(in: app, direction: .up) }
+        XCTAssertTrue(element.waitForExistence(timeout: 10))
+        XCTAssertTrue(visible(), "The complete appointment button must be above the tab bar before its native center tap")
+        snapshot(app, "CareInOne · fully visible appointment start at accessibility size")
+        element.tap()
     }
     @MainActor private func tap(_ element: XCUIElement, in app: XCUIApplication, direction: Direction = .up) { reveal(element, in: app, direction: direction); element.tap() }
     @MainActor private func snapshot(_ app: XCUIApplication, _ name: String) {

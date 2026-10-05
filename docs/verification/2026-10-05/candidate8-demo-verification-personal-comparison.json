@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-05T08:38:18.139478+00:00",
+  "personal_fingerprint_exactly_equal": true,
+  "record_type_count": 12,
+  "original_file_count": 1,
+  "scope": "Complete personal decoded record payloads and original Evidence file hashes, not raw database bookkeeping bytes; separate demo modified by ordinary Release test.",
+  "test_exit_code": 0,
+  "diagnostic_collector": "Only idle owned simctl diagnose PID1922/parent1391 stopped with TERM after one UI case passed and >3minutes0CPU; app/test runner untouched; xcodebuild then finalized with actual exit0."
+}

@@ -134,6 +134,43 @@ enum DocumentProcessor {
     }
 }
 
+// AVAudioSession activation may block. Serialize it away from UI work, and release
+// only the run that owns the session so delayed cancellation cannot stop new audio.
+enum AudioSessionMode: Sendable { case recording, playback, spoken }
+final class AudioSessionCoordinator: @unchecked Sendable {
+    static let shared = AudioSessionCoordinator()
+    private let queue = DispatchQueue(label: "org.careinone.audio-session")
+    private var owner: UUID?
+    private let activate: @Sendable (AudioSessionMode) throws -> Void
+    private let deactivate: @Sendable () -> Void
+    init(activate: @escaping @Sendable (AudioSessionMode) throws -> Void = { mode in
+        let session = AVAudioSession.sharedInstance()
+        if mode == .recording { try session.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .allowBluetoothHFP]) }
+        else if mode == .spoken { try session.setCategory(.playback, mode: .spokenAudio, options: .duckOthers) }
+        else { try session.setCategory(.playback) }
+        try session.setActive(true)
+    }, deactivate: @escaping @Sendable () -> Void = {
+        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+    }) { self.activate = activate; self.deactivate = deactivate }
+    func acquire(_ run: UUID, mode: AudioSessionMode) async throws {
+        try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
+            queue.async { [self] in
+                do { try activate(mode); owner = run; continuation.resume() }
+                catch { if owner == nil { deactivate() }; continuation.resume(throwing: error) }
+            }
+        }
+    }
+    func release(_ run: UUID) {
+        queue.async { [self] in
+            guard owner == run else { return }
+            owner = nil; deactivate()
+        }
+    }
+    func waitUntilIdle() async {
+        await withCheckedContinuation { continuation in queue.async { continuation.resume() } }
+    }
+}
+
 @MainActor protocol AudioRecordingDevice: AnyObject {
     var currentTime: TimeInterval { get }
     var delegate: (any AVAudioRecorderDelegate)? { get set }
@@ -149,8 +186,11 @@ extension AVAudioRecorder: AudioRecordingDevice { }
     private var recorder: (any AudioRecordingDevice)?; private var clockTask: Task<Void, Never>?
     private let makeRecorder: (URL) throws -> any AudioRecordingDevice
     private let recordPermission: () async -> Bool
-    private let activateSession: () throws -> Void
-    private let deactivateSession: () -> Void
+    private let activateSession: (UUID) async throws -> Void
+    private let deactivateSession: (UUID) -> Void
+    private var startingID: UUID?
+    private var resumingID: UUID?
+    private var sessionID: UUID?
     private var speechTask: SFSpeechRecognitionTask?
     private var interruption: NSObjectProtocol?
     private var recognitionContinuation: CheckedContinuation<String, Error>?
@@ -158,20 +198,26 @@ extension AVAudioRecorder: AudioRecordingDevice { }
     private var recognitionTimeout: Task<Void, Never>?
     init(makeRecorder: @escaping (URL) throws -> any AudioRecordingDevice = { url in
         try AVAudioRecorder(url: url, settings: [AVFormatIDKey: kAudioFormatMPEG4AAC, AVSampleRateKey: 44100, AVNumberOfChannelsKey: 1, AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue])
-    }, recordPermission: @escaping () async -> Bool = { await AVAudioApplication.requestRecordPermission() }, activateSession: @escaping () throws -> Void = {
-        let session = AVAudioSession.sharedInstance(); try session.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .allowBluetoothHFP]); try session.setActive(true)
-    }, deactivateSession: @escaping () -> Void = { try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation) }) {
-        self.makeRecorder = makeRecorder; self.recordPermission = recordPermission; self.activateSession = activateSession; self.deactivateSession = deactivateSession
+    }, recordPermission: @escaping () async -> Bool = { await AVAudioApplication.requestRecordPermission() }, activateSession: (() async throws -> Void)? = nil, deactivateSession: (() -> Void)? = nil) {
+        self.makeRecorder = makeRecorder; self.recordPermission = recordPermission
+        self.activateSession = { run in if let activateSession { try await activateSession() } else { try await AudioSessionCoordinator.shared.acquire(run, mode: .recording) } }
+        self.deactivateSession = { run in if let deactivateSession { deactivateSession() } else { AudioSessionCoordinator.shared.release(run) } }
         super.init()
     }
     func start(url: URL) async throws {
-        guard !recording else { throw CareError.invalid("A recording is already in progress.") }
+        guard !recording, startingID == nil else { throw CareError.invalid("A recording is already in progress.") }
+        let run = UUID(); startingID = run
+        defer { if startingID == run { startingID = nil } }
+        try Task.checkCancellation()
         let allowed = await recordPermission()
         try Task.checkCancellation()
+        guard startingID == run else { throw CancellationError() }
         guard allowed else { throw CareError.invalid("Microphone access is disabled. Enable it in iOS Settings or type your recap.") }
         transcript = ""; segments = []; message = ""
         do {
-        try activateSession()
+        try await activateSession(run)
+        guard startingID == run, !Task.isCancelled else { deactivateSession(run); throw CancellationError() }
+        sessionID = run
         recorder = try makeRecorder(url)
         recorder?.delegate = self
         guard recorder?.record() == true else { throw CareError.invalid("Recording could not start.") }
@@ -187,18 +233,30 @@ extension AVAudioRecorder: AudioRecordingDevice { }
                 if self.elapsed >= 7200 { self.pause(); self.message = "Two-hour limit reached. Stop and save this recording." }
             }
         }
-        } catch { stop(); throw error }
+        } catch { if startingID == run || sessionID == run { stop() }; throw error }
     }
     func pause() { guard recording else { return }; recorder?.pause(); paused = true }
-    func resume() {
-        guard recording, paused else { return }
+    func resume() async {
+        guard recording, paused, let session = sessionID, resumingID == nil else { return }
         guard elapsed < 7200 else { message = "Two-hour limit reached. Stop and save this recording."; return }
-        do { try activateSession() }
-        catch { message = "The microphone could not resume. The recording remains saved. Stop to review it or retry when audio access is available."; return }
+        let run = UUID(); resumingID = run
+        defer { if resumingID == run { resumingID = nil } }
+        do { try await activateSession(session) }
+        catch {
+            guard recording, sessionID == session else { return }
+            message = "The microphone could not resume. The recording remains saved. Stop to review it or retry when audio access is available."; return
+        }
+        guard recording, sessionID == session, resumingID == run, !Task.isCancelled else { deactivateSession(session); return }
         if recorder?.record() == true { paused = false; message = "" }
         else { message = "Recording did not resume. The captured audio remains saved. Try again or stop to review it." }
     }
-    func stop() { elapsed = recorder?.currentTime ?? elapsed; recorder?.stop(); recording = false; paused = false; clockTask?.cancel(); clockTask = nil; if let interruption { NotificationCenter.default.removeObserver(interruption); self.interruption = nil }; deactivateSession() }
+    func stop() {
+        startingID = nil; resumingID = nil
+        elapsed = recorder?.currentTime ?? elapsed; recorder?.stop(); recorder = nil
+        recording = false; paused = false; clockTask?.cancel(); clockTask = nil
+        if let interruption { NotificationCenter.default.removeObserver(interruption); self.interruption = nil }
+        if let session = sessionID { sessionID = nil; deactivateSession(session) }
+    }
     func transcribe(_ url: URL) async throws -> String {
         cancelTranscription()
         let run = UUID(); recognitionID = run
@@ -258,17 +316,108 @@ extension AVAudioRecorder: AudioRecordingDevice { }
     }
 }
 
+@MainActor protocol AudioPlayingDevice: AnyObject {
+    var delegate: (any AVAudioPlayerDelegate)? { get set }
+    func play() -> Bool
+    func stop()
+}
+extension AVAudioPlayer: AudioPlayingDevice { }
+
 @MainActor @Observable final class AudioPlayback: NSObject, AVAudioPlayerDelegate {
-    var playing = false; private var player: AVAudioPlayer?
-    func toggle(_ url: URL) throws {
-        if playing { stop(); return }
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback); try AVAudioSession.sharedInstance().setActive(true)
-            player = try AVAudioPlayer(contentsOf: url); player?.delegate = self; playing = player?.play() == true
-            guard playing else { throw CareError.invalid("This saved audio could not be played.") }
-        } catch { stop(); throw CareError.invalid("This saved audio could not be played. The source is still saved; review its transcript or retry with audio access available.") }
+    var playing = false
+    private var player: (any AudioPlayingDevice)?
+    private var startingID: UUID?
+    private var sessionID: UUID?
+    private let makePlayer: (URL) throws -> any AudioPlayingDevice
+    private let activateSession: (UUID) async throws -> Void
+    private let deactivateSession: (UUID) -> Void
+    init(makePlayer: @escaping (URL) throws -> any AudioPlayingDevice = { try AVAudioPlayer(contentsOf: $0) }, activateSession: (() async throws -> Void)? = nil, deactivateSession: (() -> Void)? = nil) {
+        self.makePlayer = makePlayer
+        self.activateSession = { run in if let activateSession { try await activateSession() } else { try await AudioSessionCoordinator.shared.acquire(run, mode: .playback) } }
+        self.deactivateSession = { run in if let deactivateSession { deactivateSession() } else { AudioSessionCoordinator.shared.release(run) } }
+        super.init()
     }
-    func stop() { player?.stop(); playing = false; try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation) }
-    nonisolated func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) { Task { @MainActor [weak self] in self?.stop() } }
-    nonisolated func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: (any Error)?) { Task { @MainActor [weak self] in self?.stop() } }
+    func toggle(_ url: URL) async throws {
+        try Task.checkCancellation()
+        if playing || startingID != nil { stop(); return }
+        let run = UUID(); startingID = run
+        defer { if startingID == run { startingID = nil } }
+        do {
+            try await activateSession(run)
+            guard startingID == run, !Task.isCancelled else { deactivateSession(run); throw CancellationError() }
+            sessionID = run
+            player = try makePlayer(url); player?.delegate = self
+            playing = player?.play() == true
+            guard playing else { throw CareError.invalid("This saved audio could not be played.") }
+        } catch is CancellationError { if sessionID == run || startingID == run { stop() }; throw CancellationError() }
+        catch {
+            if sessionID == run || startingID == run { stop() }
+            throw CareError.invalid("This saved audio could not be played. The source is still saved; review its transcript or retry with audio access available.")
+        }
+    }
+    func stop() {
+        startingID = nil; player?.stop(); player = nil; playing = false
+        if let session = sessionID { sessionID = nil; deactivateSession(session) }
+    }
+    func playbackEnded(playerID: ObjectIdentifier) {
+        guard player.map(ObjectIdentifier.init) == playerID else { return }
+        stop()
+    }
+    nonisolated func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        let identifier = ObjectIdentifier(player)
+        Task { @MainActor [weak self] in self?.playbackEnded(playerID: identifier) }
+    }
+    nonisolated func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: (any Error)?) {
+        let identifier = ObjectIdentifier(player)
+        Task { @MainActor [weak self] in self?.playbackEnded(playerID: identifier) }
+    }
+}
+
+@MainActor protocol AudioSpeakingDevice: AnyObject {
+    var delegate: (any AVSpeechSynthesizerDelegate)? { get set }
+    func speak(_ utterance: AVSpeechUtterance)
+    @discardableResult func stopSpeaking(at boundary: AVSpeechBoundary) -> Bool
+}
+extension AVSpeechSynthesizer: AudioSpeakingDevice { }
+
+@MainActor @Observable final class AudioReadAloud: NSObject, AVSpeechSynthesizerDelegate {
+    private let speaker: any AudioSpeakingDevice
+    private let activateSession: (UUID) async throws -> Void
+    private let deactivateSession: (UUID) -> Void
+    private var runID: UUID?
+    private var sessionID: UUID?
+    private var utteranceID: ObjectIdentifier?
+    init(speaker: any AudioSpeakingDevice = AVSpeechSynthesizer(), activateSession: (() async throws -> Void)? = nil, deactivateSession: (() -> Void)? = nil) {
+        self.speaker = speaker
+        self.activateSession = { run in if let activateSession { try await activateSession() } else { try await AudioSessionCoordinator.shared.acquire(run, mode: .spoken) } }
+        self.deactivateSession = { run in if let deactivateSession { deactivateSession() } else { AudioSessionCoordinator.shared.release(run) } }
+        super.init(); self.speaker.delegate = self
+    }
+    func speak(_ text: String) async throws {
+        try Task.checkCancellation()
+        stop(); let run = UUID(); runID = run
+        do {
+            try await activateSession(run)
+            guard runID == run, !Task.isCancelled else { deactivateSession(run); throw CancellationError() }
+            sessionID = run
+            let utterance = AVSpeechUtterance(string: text); utteranceID = ObjectIdentifier(utterance)
+            speaker.speak(utterance)
+        } catch { if runID == run { stop() }; throw error }
+    }
+    func stop() {
+        runID = nil; utteranceID = nil; speaker.stopSpeaking(at: .immediate)
+        if let session = sessionID { sessionID = nil; deactivateSession(session) }
+    }
+    func utteranceEnded(_ identifier: ObjectIdentifier) {
+        guard utteranceID == identifier else { return }
+        stop()
+    }
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        let identifier = ObjectIdentifier(utterance)
+        Task { @MainActor [weak self] in self?.utteranceEnded(identifier) }
+    }
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        let identifier = ObjectIdentifier(utterance)
+        Task { @MainActor [weak self] in self?.utteranceEnded(identifier) }
+    }
 }

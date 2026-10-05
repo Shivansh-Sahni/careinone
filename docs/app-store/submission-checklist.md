@@ -22,7 +22,7 @@ This checklist separates software work from decisions that cannot be inferred fr
 
 Current upload requirements are documented in [Apple upload-build guidance](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds). Encryption disclosure should follow [Apple export-compliance guidance](https://developer.apple.com/help/app-store-connect/manage-app-information/overview-of-export-compliance).
 
-The [October 4 requirements check](../verification/2026-10-04/release/APPLE_UPLOAD_REQUIREMENTS.md) records the current Xcode 26+/iOS 26 SDK+ and iOS 13+ target thresholds, and the announced April 2027 SDK 27+/iOS 15+ thresholds. The [read-only App Store Connect check](../verification/2026-10-04/release/APP_STORE_CONNECT_READINESS.md) confirms an active individual Free Apps Agreement and Account Holder/Admin access, with no visible NutriAssist team or CareInOne app record. Neither observation closes the organization publisher or signed-archive gate.
+The [October 4 requirements check](../verification/2026-10-04/release/APPLE_UPLOAD_REQUIREMENTS.md) records the current Xcode 26+/iOS 26 SDK+ and iOS 13+ target thresholds, and the announced April 2027 SDK 27+/iOS 15+ thresholds. The [fresh October 5 read-only account recheck](../verification/2026-10-05/continuation/release/PUBLISHER_READINESS_RECHECK.md) still confirms Individual membership with an active Free Apps Agreement, no visible NutriAssist team/CareInOne record/registered bundle, zero local signing identities/profiles and no physical device in the completed local inventory. The earlier App Store Connect observation remains historical. Neither observation closes the organization publisher or signed-archive gate.
 
 ## Cloud rollout
 
@@ -59,4 +59,4 @@ The [October 4 requirements check](../verification/2026-10-04/release/APPLE_UPLO
 
 ## Unsigned engineering artifact
 
-The [unsigned generic iOS Release archive audit](../verification/2026-10-04/release/UNSIGNED_RELEASE_ARCHIVE.md) records an actual successful arm64 archive with compiled version/manifest/encryption checks. It is not uploadable: identity/team/profile/signature are absent and no valid local signing identity is available. Rebuild and validate the final signed artifact only after the intended NutriAssist team and bundle registration are available.
+The [Candidate8 unsigned generic iOS Release archive audit](../verification/2026-10-05/continuation/release/UNSIGNED_CANDIDATE8_ARCHIVE.md) records an actual successful arm64 archive with compiled version/manifest/encryption checks. It is not uploadable: identity/team/profile/signature are absent and no valid local signing identity is available. Rebuild and validate the final signed artifact only after the intended NutriAssist team and bundle registration are available.

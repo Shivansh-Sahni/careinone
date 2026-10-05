@@ -1,0 +1,16 @@
+{
+  "recordedUTC": "2026-10-05T08:42:22.622746+00:00",
+  "baselineInputs": 108,
+  "changed": [
+    {
+      "path": "UITests/PatientCompanionUITests.swift",
+      "baseline": "f387a7d68c96d58dc90446e5b749eebbbded59ed7e479ad01b4677210c74bd22",
+      "current": "869de51bf2a53b1b2c710e6ab84c5a9abdcf135d508bbd6e8e969158a233bc52"
+    }
+  ],
+  "missing": [],
+  "productionInputs": 65,
+  "productionInputsMatching": 65,
+  "testOnlyKnownHelper": "UITests/PatientCompanionUITests.swift",
+  "scope": "Before finalizing unchanged focused backup workflow; baseline is frozen C8."
+}

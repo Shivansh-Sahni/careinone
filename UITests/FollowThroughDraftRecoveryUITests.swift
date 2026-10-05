@@ -158,8 +158,9 @@ final class FollowThroughDraftRecoveryUITests: XCTestCase {
     }
     @MainActor private func finishLoopNoteEditing(_ app: XCUIApplication) {
         let done = app.buttons["loop-update-note-done"]
-        XCTAssertTrue(done.waitForExistence(timeout: 5)); XCTAssertTrue(done.isHittable)
+        XCTAssertTrue(done.waitForExistence(timeout: 5))
         waitForStableFrame(done)
+        XCTAssertTrue(done.isHittable)
         let frame = done.frame, bounds = app.frame
         XCTAssertGreaterThan(frame.width, 0); XCTAssertGreaterThan(frame.height, 0)
         app.coordinate(withNormalizedOffset: .zero).withOffset(CGVector(dx: frame.midX - bounds.minX, dy: frame.midY - bounds.minY)).tap()

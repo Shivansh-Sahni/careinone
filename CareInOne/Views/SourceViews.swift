@@ -74,7 +74,7 @@ struct SourceDetailView: View {
                                 if let textExport, FileManager.default.isReadableFile(atPath: textExport.path) { ShareLink("Save or share original text", item: textExport) }
                             }
                             if let name = source.audioFile {
-                                Button(playback.playing ? "Stop audio" : "Play saved audio", systemImage: playback.playing ? "stop.fill" : "play.fill") { do { try playback.toggle(store.vault.url(name)) } catch { store.error = error.localizedDescription } }
+                                Button(playback.playing ? "Stop audio" : "Play saved audio", systemImage: playback.playing ? "stop.fill" : "play.fill") { Task { do { try await playback.toggle(store.vault.url(name)) } catch is CancellationError { } catch { if store.source(id) != nil { store.error = error.localizedDescription } } } }
                                 if let url = try? store.vault.url(name) { ShareLink("Export saved audio", item: url) }
                                 Button("Delete audio only", role: .destructive) { deleteAudio = true }
                                 if source.workingText.isEmpty {
@@ -97,7 +97,8 @@ struct SourceDetailView: View {
                         } else {
                             CareCard {
                                 if source.state == .processing { Text("Processing is no longer running, or its result could not be saved. Your original evidence is preserved. Retry extraction or analysis to finish.").font(.subheadline).foregroundStyle(Theme.warning) }
-                                Text(source.processingMessage.isEmpty ? "Your source is preserved on this device." : source.processingMessage).font(.subheadline)
+                                Text(SourceReviewStatus(source: source, claims: store.state.claims).message)
+                                    .font(.subheadline).accessibilityIdentifier("source-review-status")
                                 if source.workingText.isEmpty && source.originalFile != nil && source.kind != .fhir { Button("Retry text extraction from original") { store.extractOriginal(id) } }
                                 if !source.workingText.isEmpty || source.kind == .fhir {
                                     HStack { Button(source.state == .failed ? "Retry analysis" : "Re-analyze") { store.analyze(id, force: true) }; Spacer(); Button("Use local analysis") { store.analyze(id, force: true, localOnly: true) } }.font(.subheadline)

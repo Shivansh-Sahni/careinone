@@ -1,0 +1,983 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test -project CareInOne.xcodeproj -scheme CareInOne -configuration Debug -destination "platform=iOS Simulator,id=36A9D3D3-365D-422E-8E9D-135DEB8BB063" -derivedDataPath /private/tmp/CareInOneCandidate8Accessibility -resultBundlePath /private/tmp/CareInOneCandidate8LoopFocusedFinal.xcresult -parallel-testing-enabled NO -jobs 2 "-only-testing:CareInOneUITests/FollowThroughDraftRecoveryUITests/testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch"
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  CareInOne: /Users/shivanshsahni/Downloads/Personal/CAC 2026 @ local
+
+Writing result bundle at path:
+	/private/tmp/CareInOneCandidate8LoopFocusedFinal.xcresult
+
+Build Preparation
+Build task concurrency set to 2 via user default IDEBuildOperationMaxNumberOfConcurrentCompileTasks
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (5 targets)
+    Target 'CareInOneIntegrationTests' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareInOne' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore-product' in project 'CareInOne'
+    Target 'CareInOneUITests' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareInOne' in project 'CareInOne'
+    Target 'CareInOne' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore-product' in project 'CareInOne'
+    Target 'CareCore-product' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore' in project 'CareInOne'
+    Target 'CareCore' in project 'CareInOne' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /tmp/CareInOneCandidate8Accessibility/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /tmp/CareInOneCandidate8Accessibility/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache
+
+SwiftDriver CareInOneUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneUITests -Onone @/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList -DDEBUG -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneCandidate8Accessibility/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneCandidate8Accessibility/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneCandidate8Accessibility/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneCandidate8Accessibility/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneCandidate8Accessibility/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneCandidate8Accessibility/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-generated-files.hmap -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-own-target-headers.hmap -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-project-headers.hmap -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+CodeSign /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne.debug.dylib (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne.debug.dylib
+/tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne.debug.dylib: replacing existing signature
+
+CodeSign /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app/__preview.dylib (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app/__preview.dylib
+/tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app/__preview.dylib: replacing existing signature
+
+CodeSign /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --entitlements /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne.app.xcent --timestamp\=none --generate-entitlement-der /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app
+/tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app: replacing existing signature
+
+Validate /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-validationUtility /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOne.app -shallow-bundle -infoplist-subpath Info.plist
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ CareInOneUITests (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+
+SwiftCompile normal arm64 Compiling\ FollowThroughDraftRecoveryUITests.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/FollowThroughDraftRecoveryUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/FollowThroughDraftRecoveryUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile FollowThroughDraftRecoveryUITests.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling FollowThroughDraftRecoveryUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation CareInOneUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneUITests -Onone @/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList -DDEBUG -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneCandidate8Accessibility/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneCandidate8Accessibility/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneCandidate8Accessibility/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneCandidate8Accessibility/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneCandidate8Accessibility/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneCandidate8Accessibility/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-generated-files.hmap -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-own-target-headers.hmap -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-project-headers.hmap -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for CareInOneUITests (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation\ Requirements CareInOneUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneUITests -Onone @/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList -DDEBUG -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneCandidate8Accessibility/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneCandidate8Accessibility/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneCandidate8Accessibility/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneCandidate8Accessibility/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneCandidate8Accessibility/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneCandidate8Accessibility/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-generated-files.hmap -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-own-target-headers.hmap -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-project-headers.hmap -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+Copy /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.abi.json (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.abi.json /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftsourceinfo (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftsourceinfo /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+Ld /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests normal (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -filelist /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_lto.o -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.xctest-Simulated.xcent -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __ents_der -Xlinker /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.xctest-Simulated.xcent.der -Xlinker -no_adhoc_codesign -o /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests
+
+ExtractAppIntentsMetadata (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name CareInOneUITests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier org.carecontinuity.uitests --output /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest --target-triple arm64-apple-ios18.0-simulator --binary-file /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests --dependency-file /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_dependency_info.dat --stringsdata-file /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList --metadata-file-list /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.DependencyMetadataFileList --static-metadata-file-list /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-05 04:58:19.261 appintentsmetadataprocessor[5980:31499244] Starting appintentsmetadataprocessor export
+2026-10-05 04:58:19.270 appintentsmetadataprocessor[5980:31499244] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CopySwiftLibs /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests --scan-folder /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Frameworks --scan-folder /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/PlugIns --scan-folder /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/SystemExtensions --scan-folder /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Extensions --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+CodeSign /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest
+
+CodeSign /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app
+/tmp/CareInOneCandidate8Accessibility/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app: replacing existing signature
+
+PruneExplicitPrecompiledModules /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneCandidate8Accessibility/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneCandidate8Accessibility/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+2026-10-05 04:58:27.703358-0400 CareInOneUITests-Runner[6001:31499856] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-10-05 04:58:34.613.
+Test Suite 'CareInOneUITests.xctest' started at 2026-10-05 04:58:34.615.
+Test Suite 'FollowThroughDraftRecoveryUITests' started at 2026-10-05 04:58:34.615.
+Test Case '-[CareInOneUITests.FollowThroughDraftRecoveryUITests testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch]' started.
+    t =     0.04s Start Test at 2026-10-05 04:58:34.651
+    t =     0.13s Set Up
+    t =     0.14s Open org.carecontinuity.app
+    t =     0.15s     Launch org.carecontinuity.app
+2026-10-05 04:58:35.132 xcodebuild[5957:31498988] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-05 04:58:35.132 xcodebuild[5957:31498988] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     2.15s         Setting up automation session
+objc[6001]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.434.0.MSFl2k/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x107b8c398) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.434.0.MSFl2k/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x1080dc310). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     7.00s         Wait for org.carecontinuity.app to idle
+    t =    10.82s Waiting 20.0s for "Today" Button to exist
+    t =    11.86s     Checking `Expect predicate `existsNoRetry == 1` for object "Today" Button`
+    t =    11.86s         Checking existence of `"Today" Button`
+    t =    12.15s Checking existence of `"OK" Button`
+    t =    12.22s Tap "Today" Button
+    t =    12.22s     Wait for org.carecontinuity.app to idle
+    t =    12.22s     Find the "Today" Button
+    t =    12.29s     Check for interrupting elements affecting "Today" Button
+    t =    12.36s     Synthesize event
+    t =    12.72s     Wait for org.carecontinuity.app to idle
+    t =    14.38s Tap "My Care" Button
+    t =    14.38s     Wait for org.carecontinuity.app to idle
+    t =    14.39s     Find the "My Care" Button
+    t =    14.48s     Check for interrupting elements affecting "heart.text.clipboard" Button
+    t =    14.57s     Synthesize event
+    t =    14.89s     Wait for org.carecontinuity.app to idle
+    t =    16.93s Checking existence of `"Compare sources" NavigationBar`
+    t =    17.03s Find the "Follow-through" Button
+    t =    18.08s     Find the "Follow-through" Button (retry 1)
+    t =    19.14s     Find the "Follow-through" Button (retry 2)
+    t =    19.23s Find the Target Application 'org.carecontinuity.app'
+    t =    19.27s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    19.33s Checking existence of `NavigationBar (Element at index 0)`
+    t =    19.38s Find the NavigationBar (Element at index 0)
+    t =    19.44s Get all elements bound by index for: Descendants matching type TabBar
+    t =    19.49s Checking existence of `TabBar (Element at index 0)`
+    t =    19.54s Find the TabBar (Element at index 0)
+    t =    19.60s Checking existence of `Keyboard (First Match)`
+    t =    19.87s Checking existence of `"Compare sources" NavigationBar`
+    t =    20.06s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 677.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 359.5) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    20.06s     Wait for org.carecontinuity.app to idle
+    t =    20.08s     Find the Target Application 'org.carecontinuity.app'
+    t =    20.16s     Check for interrupting elements affecting "CareInOne" Application
+    t =    20.24s     Synthesize event
+    t =    20.26s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.31s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.38s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.43s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.48s         Find the Target Application 'org.carecontinuity.app'
+    t =    21.63s     Wait for org.carecontinuity.app to idle
+    t =    21.64s Find the "Follow-through" Button
+    t =    22.77s     Find the "Follow-through" Button (retry 1)
+    t =    23.85s     Find the "Follow-through" Button (retry 2)
+    t =    23.92s Find the Target Application 'org.carecontinuity.app'
+    t =    23.95s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    23.99s Checking existence of `NavigationBar (Element at index 0)`
+    t =    24.04s Find the NavigationBar (Element at index 0)
+    t =    24.08s Get all elements bound by index for: Descendants matching type TabBar
+    t =    24.13s Checking existence of `TabBar (Element at index 0)`
+    t =    24.17s Find the TabBar (Element at index 0)
+    t =    24.21s Checking existence of `Keyboard (First Match)`
+    t =    24.47s Checking existence of `"Compare sources" NavigationBar`
+    t =    24.52s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 670.0) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 315.3) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    24.52s     Wait for org.carecontinuity.app to idle
+    t =    24.53s     Find the Target Application 'org.carecontinuity.app'
+    t =    24.58s     Check for interrupting elements affecting "CareInOne" Application
+    t =    24.65s     Synthesize event
+    t =    24.65s         Find the Target Application 'org.carecontinuity.app'
+    t =    24.71s         Find the Target Application 'org.carecontinuity.app'
+    t =    24.77s         Find the Target Application 'org.carecontinuity.app'
+    t =    24.83s         Find the Target Application 'org.carecontinuity.app'
+    t =    24.89s         Find the Target Application 'org.carecontinuity.app'
+    t =    26.09s     Wait for org.carecontinuity.app to idle
+    t =    27.63s Find the "Follow-through" Button
+    t =    27.82s Find the "Follow-through" Button
+    t =    27.95s Find the "Follow-through" Button
+    t =    28.10s Find the "Follow-through" Button
+    t =    28.20s Find the "Follow-through" Button
+    t =    28.31s Find the "Follow-through" Button
+    t =    28.43s Find the "Follow-through" Button
+    t =    28.58s Find the "Follow-through" Button
+    t =    28.74s Find the "Follow-through" Button
+    t =    29.02s Find the "Follow-through" Button
+    t =    29.45s Find the "Follow-through" Button
+    t =    29.83s Find the "Follow-through" Button
+    t =    29.99s Find the "Follow-through" Button
+    t =    30.08s Find the "Follow-through" Button
+    t =    30.17s Find the "Follow-through" Button
+    t =    30.26s Find the "Follow-through" Button
+    t =    30.35s Waiting 5.0s for "Follow-through" Button to exist
+    t =    31.38s     Checking `Expect predicate `existsNoRetry == 1` for object "Follow-through" Button`
+    t =    31.39s         Checking existence of `"Follow-through" Button`
+    t =    31.50s Find the "Follow-through" Button
+    t =    31.60s Tap "Follow-through" Button
+    t =    31.60s     Wait for org.carecontinuity.app to idle
+    t =    31.61s     Find the "Follow-through" Button
+    t =    31.70s     Check for interrupting elements affecting "Follow-through" Button
+    t =    31.76s     Synthesize event
+    t =    32.07s     Wait for org.carecontinuity.app to idle
+    t =    32.25s Checking existence of `"Compare sources" NavigationBar`
+    t =    32.36s Find the Button (First Match)
+    t =    32.88s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    33.04s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    33.17s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    33.31s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    33.42s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    33.57s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    33.74s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    33.89s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    34.04s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    34.14s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    34.24s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    34.34s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    34.44s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    34.55s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    34.66s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    34.78s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    34.89s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    35.03s Waiting 5.0s for "CBC, Open, Ordered, Due Oct 7, 2026" Button to exist
+    t =    36.07s     Checking `Expect predicate `existsNoRetry == 1` for object "CBC, Open, Ordered, Due Oct 7, 2026" Button`
+    t =    36.07s         Checking existence of `"CBC, Open, Ordered, Due Oct 7, 2026" Button`
+    t =    36.18s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    36.34s Tap "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    36.34s     Wait for org.carecontinuity.app to idle
+    t =    36.34s     Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    36.47s     Check for interrupting elements affecting "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    36.51s     Synthesize event
+    t =    36.83s     Wait for org.carecontinuity.app to idle
+    t =    37.08s Checking existence of `"Compare sources" NavigationBar`
+    t =    37.20s Find the "loop-update-note" TextField
+    t =    38.32s     Find the "loop-update-note" TextField (retry 1)
+    t =    39.40s     Find the "loop-update-note" TextField (retry 2)
+    t =    39.47s Find the Target Application 'org.carecontinuity.app'
+    t =    39.52s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    39.63s Checking existence of `NavigationBar (Element at index 0)`
+    t =    39.70s Checking existence of `NavigationBar (Element at index 1)`
+    t =    39.76s Find the NavigationBar (Element at index 0)
+    t =    39.82s Find the NavigationBar (Element at index 1)
+    t =    39.88s Get all elements bound by index for: Descendants matching type TabBar
+    t =    39.93s Checking existence of `TabBar (Element at index 0)`
+    t =    39.98s Find the TabBar (Element at index 0)
+    t =    40.04s Checking existence of `Keyboard (First Match)`
+    t =    40.29s Checking existence of `"Compare sources" NavigationBar`
+    t =    40.36s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 677.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 359.5) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    40.36s     Wait for org.carecontinuity.app to idle
+    t =    40.37s     Find the Target Application 'org.carecontinuity.app'
+    t =    40.42s     Check for interrupting elements affecting "CareInOne" Application
+    t =    40.49s     Synthesize event
+    t =    40.50s         Find the Target Application 'org.carecontinuity.app'
+    t =    40.55s         Find the Target Application 'org.carecontinuity.app'
+    t =    40.60s         Find the Target Application 'org.carecontinuity.app'
+    t =    40.65s         Find the Target Application 'org.carecontinuity.app'
+    t =    40.71s         Find the Target Application 'org.carecontinuity.app'
+    t =    41.88s     Wait for org.carecontinuity.app to idle
+    t =    41.89s Find the "loop-update-note" TextField
+    t =    42.05s Find the "loop-update-note" TextField
+    t =    42.17s Find the "loop-update-note" TextField
+    t =    42.27s Find the "loop-update-note" TextField
+    t =    42.37s Find the "loop-update-note" TextField
+    t =    42.47s Find the "loop-update-note" TextField
+    t =    42.57s Find the "loop-update-note" TextField
+    t =    42.67s Find the "loop-update-note" TextField
+    t =    42.77s Find the "loop-update-note" TextField
+    t =    42.87s Find the "loop-update-note" TextField
+    t =    42.97s Find the "loop-update-note" TextField
+    t =    43.07s Find the "loop-update-note" TextField
+    t =    43.17s Find the "loop-update-note" TextField
+    t =    43.27s Find the "loop-update-note" TextField
+    t =    43.37s Find the "loop-update-note" TextField
+    t =    43.47s Find the "loop-update-note" TextField
+    t =    43.57s Find the "loop-update-note" TextField
+    t =    43.67s Waiting 5.0s for "loop-update-note" TextField to exist
+    t =    44.71s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-note" TextField`
+    t =    44.71s         Checking existence of `"loop-update-note" TextField`
+    t =    44.82s Find the "loop-update-note" TextField
+    t =    45.00s Tap "loop-update-note" TextField
+    t =    45.00s     Wait for org.carecontinuity.app to idle
+    t =    45.01s     Find the "loop-update-note" TextField
+    t =    45.12s     Check for interrupting elements affecting "loop-update-note" TextField
+    t =    45.20s     Synthesize event
+    t =    45.54s     Wait for org.carecontinuity.app to idle
+<unknown>:0: warning: -[CareInOneUITests.FollowThroughDraftRecoveryUITests testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch] : Invalid frame dimension (negative or non-finite).
+    t =    46.27s Type 'Fictional draft sc...' into "loop-update-note" TextField
+    t =    46.27s     Wait for org.carecontinuity.app to idle
+    t =    46.55s     Find the "loop-update-note" TextField
+    t =    46.83s     Check for interrupting elements affecting "loop-update-note" TextField
+    t =    46.95s     Synthesize event
+    t =    47.70s     Wait for org.carecontinuity.app to idle
+    t =    47.71s Waiting 5.0s for "loop-update-note-done" Button to exist
+    t =    48.75s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-note-done" Button`
+    t =    48.75s         Checking existence of `"loop-update-note-done" Button`
+    t =    50.17s Checking `Expect predicate `BLOCKPREDICATE(0x112c9a850)` for object "loop-update-note-done" Button`
+    t =    50.17s     Checking existence of `"loop-update-note-done" Button`
+    t =    50.48s     Find the "loop-update-note-done" Button
+    t =    50.71s     Find the "loop-update-note-done" Button
+    t =    50.88s     Capturing element debug description
+    t =    51.36s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =    51.55s         Find: Descendants matching type Button
+    t =    51.55s         Find: Elements matching predicate '"loop-update-note-done" IN identifiers'
+    t =    51.56s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =    51.70s         Find: Descendants matching type Button
+    t =    51.70s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =    52.14s Checking `Expect predicate `BLOCKPREDICATE(0x112c9a850)` for object "loop-update-note-done" Button`
+    t =    52.14s     Checking existence of `"loop-update-note-done" Button`
+    t =    52.27s     Find the "loop-update-note-done" Button
+    t =    52.43s     Find the "loop-update-note-done" Button
+    t =    52.55s Find the "loop-update-note-done" Button
+    t =    52.67s Find the "loop-update-note-done" Button
+    t =    52.77s Find the Target Application 'org.carecontinuity.app'
+    t =    52.83s Tap Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (244.5, 522.0)
+    t =    52.83s     Wait for org.carecontinuity.app to idle
+    t =    52.83s     Find the Target Application 'org.carecontinuity.app'
+    t =    52.89s     Check for interrupting elements affecting "CareInOne" Application
+    t =    52.96s     Synthesize event
+    t =    52.97s         Find the Target Application 'org.carecontinuity.app'
+    t =    53.02s         Find the Target Application 'org.carecontinuity.app'
+    t =    53.09s         Find the Target Application 'org.carecontinuity.app'
+    t =    53.44s     Wait for org.carecontinuity.app to idle
+    t =    53.73s Waiting 10.0s for Keyboard (First Match) to not exist
+    t =    54.75s     Checking `Expect predicate `existsNoRetry == 0` for object Keyboard (First Match)`
+    t =    54.75s         Checking existence of `Keyboard (First Match)`
+    t =    55.20s Waiting 5.0s for "Due date is known" Switch to exist
+    t =    56.23s     Checking `Expect predicate `existsNoRetry == 1` for object "Due date is known" Switch`
+    t =    56.23s         Checking existence of `"Due date is known" Switch`
+    t =    56.31s Find the "Due date is known" Switch
+    t =    56.38s Find the "Due date is known" Switch
+    t =    56.45s Find the Target Application 'org.carecontinuity.app'
+    t =    56.50s Find the "Follow-through detail" NavigationBar
+    t =    56.57s Find the "Due date is known" Switch
+    t =    56.66s Find the "Due date is known" Switch
+    t =    56.76s Find the "Due date is known" Switch
+    t =    56.84s Find the "Follow-through detail" NavigationBar
+    t =    56.92s Find the "Due date is known" Switch
+    t =    57.00s Find the Target Application 'org.carecontinuity.app'
+Resolve Package Graph
+
+    t =    58.09s Checking `Expect predicate `BLOCKPREDICATE(0x107eb6970)` for object "Due date is known" Switch`
+    t =    58.09s     Checking existence of `"Due date is known" Switch`
+    t =    58.18s     Find the "Due date is known" Switch
+    t =    58.27s     Find the "Due date is known" Switch
+    t =    58.35s     Capturing element debug description
+    t =    58.52s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =    58.63s         Find: Descendants matching type Switch
+    t =    58.64s         Find: Elements matching predicate '"Due date is known" IN identifiers'
+    t =    58.64s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =    58.74s         Find: Descendants matching type Switch
+    t =    58.74s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =    59.07s Checking `Expect predicate `BLOCKPREDICATE(0x107eb6970)` for object "Due date is known" Switch`
+    t =    59.07s     Checking existence of `"Due date is known" Switch`
+    t =    59.16s     Find the "Due date is known" Switch
+    t =    59.28s     Find the "Due date is known" Switch
+    t =    59.39s Find the "Due date is known" Switch
+    t =    59.53s Find the Target Application 'org.carecontinuity.app'
+    t =    59.60s Tap Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (346.0, 610.7)
+    t =    59.60s     Wait for org.carecontinuity.app to idle
+    t =    59.61s     Find the Target Application 'org.carecontinuity.app'
+    t =    59.71s     Check for interrupting elements affecting "CareInOne" Application
+    t =    59.85s     Synthesize event
+    t =    59.85s         Find the Target Application 'org.carecontinuity.app'
+    t =    59.93s         Find the Target Application 'org.carecontinuity.app'
+    t =    60.00s         Find the Target Application 'org.carecontinuity.app'
+    t =    60.37s     Wait for org.carecontinuity.app to idle
+    t =    62.69s Checking `Expect predicate `value == "0"` for object "Due date is known" Switch`
+    t =    62.69s     Find the "Due date is known" Switch
+    t =    62.80s Checking existence of `"Compare sources" NavigationBar`
+    t =    62.88s Find the "loop-update-precision" Button
+    t =    62.98s Find the "loop-update-precision" Button
+    t =    63.09s Find the "loop-update-precision" Button
+    t =    63.20s Find the "loop-update-precision" Button
+    t =    63.30s Find the "loop-update-precision" Button
+    t =    63.39s Find the "loop-update-precision" Button
+    t =    63.49s Find the "loop-update-precision" Button
+    t =    63.58s Find the "loop-update-precision" Button
+    t =    63.66s Find the "loop-update-precision" Button
+    t =    63.74s Find the "loop-update-precision" Button
+    t =    63.83s Find the "loop-update-precision" Button
+    t =    63.92s Find the "loop-update-precision" Button
+    t =    64.01s Find the "loop-update-precision" Button
+    t =    64.09s Find the "loop-update-precision" Button
+    t =    64.17s Find the "loop-update-precision" Button
+    t =    64.26s Find the "loop-update-precision" Button
+    t =    64.34s Find the "loop-update-precision" Button
+    t =    64.43s Find the "loop-update-precision" Button
+    t =    64.53s Waiting 5.0s for "loop-update-precision" Button to exist
+    t =    65.54s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-precision" Button`
+    t =    65.54s         Checking existence of `"loop-update-precision" Button`
+    t =    65.74s Find the "loop-update-precision" Button
+    t =    65.89s Tap "loop-update-precision" Button
+    t =    65.89s     Wait for org.carecontinuity.app to idle
+    t =    65.90s     Find the "loop-update-precision" Button
+    t =    66.09s     Check for interrupting elements affecting "loop-update-precision" Button
+    t =    66.21s     Synthesize event
+    t =    66.55s     Wait for org.carecontinuity.app to idle
+    t =    66.69s Checking existence of `"Compare sources" NavigationBar`
+    t =    66.91s Find the "Approximate" Button
+    t =    67.13s Find the "Approximate" Button
+    t =    67.49s Find the "Approximate" Button
+    t =    67.87s Find the "Approximate" Button
+    t =    68.30s Find the "Approximate" Button
+    t =    68.48s Find the "Approximate" Button
+    t =    68.65s Find the "Approximate" Button
+    t =    68.96s Find the "Approximate" Button
+    t =    69.07s Find the "Approximate" Button
+    t =    69.17s Find the "Approximate" Button
+    t =    69.26s Find the "Approximate" Button
+    t =    69.35s Find the "Approximate" Button
+    t =    69.45s Find the "Approximate" Button
+    t =    69.54s Find the "Approximate" Button
+    t =    69.66s Find the "Approximate" Button
+    t =    69.79s Find the "Approximate" Button
+    t =    69.89s Find the "Approximate" Button
+    t =    69.99s Find the "Approximate" Button
+    t =    70.10s Waiting 5.0s for "Approximate" Button to exist
+    t =    71.11s     Checking `Expect predicate `existsNoRetry == 1` for object "Approximate" Button`
+    t =    71.11s         Checking existence of `"Approximate" Button`
+    t =    71.21s Find the "Approximate" Button
+    t =    71.32s Tap "Approximate" Button
+    t =    71.32s     Wait for org.carecontinuity.app to idle
+    t =    71.32s     Find the "Approximate" Button
+    t =    71.41s     Check for interrupting elements affecting "Approximate" Button
+    t =    71.58s     Synthesize event
+    t =    71.94s     Wait for org.carecontinuity.app to idle
+    t =    73.59s Find the Target Application 'org.carecontinuity.app'
+    t =    73.82s Added attachment named 'CareInOne · fictional precision after menu selection'
+    t =    73.83s Find the "loop-update-precision" Button
+    t =    73.94s Find the "loop-update-precision" Button
+    t =    74.03s Get all elements bound by index for: Descendants matching type StaticText
+    t =    74.12s Find the StaticText (Element at index 0)
+    t =    74.23s Find the "Follow-through detail" NavigationBar
+    t =    74.34s Find the Target Application 'org.carecontinuity.app'
+    t =    74.41s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 124.0) for 0.1 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 312.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    74.41s     Wait for org.carecontinuity.app to idle
+    t =    74.42s     Find the Target Application 'org.carecontinuity.app'
+    t =    74.49s     Check for interrupting elements affecting "CareInOne" Application
+    t =    74.59s     Synthesize event
+    t =    74.59s         Find the Target Application 'org.carecontinuity.app'
+    t =    74.67s         Find the Target Application 'org.carecontinuity.app'
+    t =    74.74s         Find the Target Application 'org.carecontinuity.app'
+    t =    74.79s         Find the Target Application 'org.carecontinuity.app'
+    t =    74.86s         Find the Target Application 'org.carecontinuity.app'
+    t =    75.61s     Wait for org.carecontinuity.app to idle
+    t =    75.95s Checking existence of `"Follow-through detail" NavigationBar`
+    t =    76.14s Find the "loop-update-note" TextField
+    t =    76.22s Find the "Due date is known" Switch
+    t =    76.31s Tap "Done" Button
+    t =    76.31s     Wait for org.carecontinuity.app to idle
+    t =    76.32s     Find the "Done" Button
+    t =    76.39s     Check for interrupting elements affecting "Done" Button
+    t =    76.47s     Synthesize event
+    t =    76.79s     Wait for org.carecontinuity.app to idle
+    t =    77.76s Tap "Keep editing" Button
+    t =    77.76s     Wait for org.carecontinuity.app to idle
+    t =    77.77s     Find the "Keep editing" Button
+    t =    77.88s     Check for interrupting elements affecting "Keep editing" Button
+    t =    77.98s     Synthesize event
+    t =    78.29s     Wait for org.carecontinuity.app to idle
+    t =    78.56s Find the "loop-update-note" TextField
+    t =    78.66s Find the "Due date is known" Switch
+    t =    78.75s Find the "loop-update-precision" Button
+    t =    78.83s Find the "loop-update-precision" Button
+    t =    78.93s Get all elements bound by index for: Descendants matching type StaticText
+    t =    79.03s Find the StaticText (Element at index 0)
+    t =    79.11s Find the Target Application 'org.carecontinuity.app'
+    t =    79.27s Added attachment named 'CareInOne · follow-through edits kept after cancelled dismissal'
+    t =    79.27s Tap "Done" Button
+    t =    79.27s     Wait for org.carecontinuity.app to idle
+    t =    79.27s     Find the "Done" Button
+    t =    79.35s     Check for interrupting elements affecting "Done" Button
+    t =    79.42s     Synthesize event
+    t =    79.74s     Wait for org.carecontinuity.app to idle
+    t =    80.44s Tap "Discard changes" Button
+    t =    80.44s     Wait for org.carecontinuity.app to idle
+    t =    80.45s     Find the "Discard changes" Button
+    t =    80.53s     Check for interrupting elements affecting "Discard changes" Button
+    t =    80.63s     Synthesize event
+    t =    80.95s     Wait for org.carecontinuity.app to idle
+    t =    81.21s Waiting 5.0s for "Follow-through detail" NavigationBar to not exist
+    t =    82.24s     Checking `Expect predicate `existsNoRetry == 0` for object "Follow-through detail" NavigationBar`
+    t =    82.24s         Checking existence of `"Follow-through detail" NavigationBar`
+    t =    82.29s Checking existence of `"Compare sources" NavigationBar`
+    t =    82.32s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    82.50s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    82.64s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    82.78s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    82.91s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    83.04s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    83.19s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    83.35s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    83.51s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    83.70s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    83.86s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    83.97s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    84.08s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    84.19s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    84.31s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    84.44s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    84.58s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    84.73s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    84.92s Waiting 5.0s for "CBC, Open, Ordered, Due Oct 7, 2026" Button to exist
+    t =    85.95s     Checking `Expect predicate `existsNoRetry == 1` for object "CBC, Open, Ordered, Due Oct 7, 2026" Button`
+    t =    85.95s         Checking existence of `"CBC, Open, Ordered, Due Oct 7, 2026" Button`
+    t =    86.08s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    86.19s Tap "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    86.19s     Wait for org.carecontinuity.app to idle
+    t =    86.19s     Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    86.28s     Check for interrupting elements affecting "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =    86.32s     Synthesize event
+    t =    86.62s     Wait for org.carecontinuity.app to idle
+    t =    86.86s Checking existence of `"Compare sources" NavigationBar`
+    t =    86.96s Find the "loop-update-note" TextField
+    t =    88.04s     Find the "loop-update-note" TextField (retry 1)
+    t =    89.12s     Find the "loop-update-note" TextField (retry 2)
+    t =    89.20s Find the Target Application 'org.carecontinuity.app'
+    t =    89.26s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    89.32s Checking existence of `NavigationBar (Element at index 0)`
+    t =    89.39s Checking existence of `NavigationBar (Element at index 1)`
+    t =    89.47s Find the NavigationBar (Element at index 0)
+    t =    89.54s Find the NavigationBar (Element at index 1)
+    t =    89.61s Get all elements bound by index for: Descendants matching type TabBar
+    t =    89.67s Checking existence of `TabBar (Element at index 0)`
+    t =    89.74s Find the TabBar (Element at index 0)
+    t =    89.80s Checking existence of `Keyboard (First Match)`
+    t =    90.05s Checking existence of `"Compare sources" NavigationBar`
+    t =    90.12s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 677.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 359.5) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    90.12s     Wait for org.carecontinuity.app to idle
+    t =    90.12s     Find the Target Application 'org.carecontinuity.app'
+    t =    90.17s     Check for interrupting elements affecting "CareInOne" Application
+    t =    90.25s     Synthesize event
+    t =    90.25s         Find the Target Application 'org.carecontinuity.app'
+    t =    90.32s         Find the Target Application 'org.carecontinuity.app'
+    t =    90.39s         Find the Target Application 'org.carecontinuity.app'
+    t =    90.45s         Find the Target Application 'org.carecontinuity.app'
+    t =    90.52s         Find the Target Application 'org.carecontinuity.app'
+    t =    91.70s     Wait for org.carecontinuity.app to idle
+    t =    91.71s Find the "loop-update-note" TextField
+    t =    91.82s Find the "loop-update-note" TextField
+    t =    91.91s Find the "loop-update-note" TextField
+    t =    92.01s Find the "loop-update-note" TextField
+    t =    92.11s Find the "loop-update-note" TextField
+    t =    92.39s Find the "loop-update-note" TextField
+    t =    92.52s Find the "loop-update-note" TextField
+    t =    92.68s Find the "loop-update-note" TextField
+    t =    92.78s Find the "loop-update-note" TextField
+    t =    92.87s Find the "loop-update-note" TextField
+    t =    92.96s Find the "loop-update-note" TextField
+    t =    93.05s Find the "loop-update-note" TextField
+    t =    93.15s Find the "loop-update-note" TextField
+    t =    93.23s Find the "loop-update-note" TextField
+    t =    93.32s Find the "loop-update-note" TextField
+    t =    93.41s Find the "loop-update-note" TextField
+    t =    93.50s Find the "loop-update-note" TextField
+    t =    93.59s Waiting 5.0s for "loop-update-note" TextField to exist
+    t =    94.60s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-note" TextField`
+    t =    94.60s         Checking existence of `"loop-update-note" TextField`
+    t =    94.68s Find the "loop-update-note" TextField
+    t =    94.76s Tap "loop-update-note" TextField
+    t =    94.76s     Wait for org.carecontinuity.app to idle
+    t =    94.77s     Find the "loop-update-note" TextField
+    t =    94.84s     Check for interrupting elements affecting "loop-update-note" TextField
+    t =    94.91s     Synthesize event
+    t =    95.21s     Wait for org.carecontinuity.app to idle
+    t =    95.60s Find the "loop-update-note" TextField
+    t =    95.73s Find the "loop-update-note" TextField
+    t =    95.87s Find the "loop-update-note" TextField
+    t =    96.01s Waiting 5.0s for "loop-update-note-done" Button to exist
+    t =    97.02s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-note-done" Button`
+    t =    97.02s         Checking existence of `"loop-update-note-done" Button`
+    t =    98.14s Checking `Expect predicate `BLOCKPREDICATE(0x114fd5ec0)` for object "loop-update-note-done" Button`
+    t =    98.14s     Checking existence of `"loop-update-note-done" Button`
+    t =    98.24s     Find the "loop-update-note-done" Button
+    t =    98.35s     Find the "loop-update-note-done" Button
+    t =    98.46s     Capturing element debug description
+    t =    98.62s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =    98.74s         Find: Descendants matching type Button
+    t =    98.75s         Find: Elements matching predicate '"loop-update-note-done" IN identifiers'
+    t =    98.75s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =    98.87s         Find: Descendants matching type Button
+    t =    98.87s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =   100.13s Checking `Expect predicate `BLOCKPREDICATE(0x114fd5ec0)` for object "loop-update-note-done" Button`
+    t =   100.13s     Checking existence of `"loop-update-note-done" Button`
+    t =   100.23s     Find the "loop-update-note-done" Button
+    t =   100.34s     Find the "loop-update-note-done" Button
+    t =   100.44s Find the "loop-update-note-done" Button
+    t =   100.54s Find the "loop-update-note-done" Button
+    t =   100.63s Find the Target Application 'org.carecontinuity.app'
+    t =   100.70s Tap Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (244.5, 522.0)
+    t =   100.70s     Wait for org.carecontinuity.app to idle
+    t =   100.70s     Find the Target Application 'org.carecontinuity.app'
+    t =   100.78s     Check for interrupting elements affecting "CareInOne" Application
+    t =   100.86s     Synthesize event
+    t =   100.86s         Find the Target Application 'org.carecontinuity.app'
+    t =   100.92s         Find the Target Application 'org.carecontinuity.app'
+    t =   100.99s         Find the Target Application 'org.carecontinuity.app'
+    t =   101.35s     Wait for org.carecontinuity.app to idle
+    t =   101.66s Waiting 10.0s for Keyboard (First Match) to not exist
+    t =   102.68s     Checking `Expect predicate `existsNoRetry == 0` for object Keyboard (First Match)`
+    t =   102.68s         Checking existence of `Keyboard (First Match)`
+    t =   103.20s Find the "Due date is known" Switch
+    t =   103.28s Find the "loop-update-precision" Button
+    t =   103.36s Find the "loop-update-precision" Button
+    t =   103.44s Get all elements bound by index for: Descendants matching type StaticText
+    t =   103.52s Find the StaticText (Element at index 0)
+    t =   103.59s Checking existence of `"Compare sources" NavigationBar`
+    t =   103.67s Find the "loop-update-note" TextField
+    t =   103.77s Find the "loop-update-note" TextField
+    t =   103.85s Find the "loop-update-note" TextField
+    t =   103.95s Find the "loop-update-note" TextField
+    t =   104.04s Find the "loop-update-note" TextField
+    t =   104.14s Find the "loop-update-note" TextField
+    t =   104.24s Find the "loop-update-note" TextField
+    t =   104.33s Find the "loop-update-note" TextField
+    t =   104.42s Find the "loop-update-note" TextField
+    t =   104.51s Find the "loop-update-note" TextField
+    t =   104.59s Find the "loop-update-note" TextField
+    t =   104.68s Find the "loop-update-note" TextField
+    t =   104.76s Find the "loop-update-note" TextField
+    t =   104.85s Find the "loop-update-note" TextField
+    t =   104.93s Find the "loop-update-note" TextField
+    t =   105.02s Find the "loop-update-note" TextField
+    t =   105.10s Find the "loop-update-note" TextField
+    t =   105.18s Find the "loop-update-note" TextField
+    t =   105.27s Waiting 5.0s for "loop-update-note" TextField to exist
+    t =   106.29s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-note" TextField`
+    t =   106.29s         Checking existence of `"loop-update-note" TextField`
+    t =   106.37s Find the "loop-update-note" TextField
+    t =   106.47s Tap "loop-update-note" TextField
+    t =   106.47s     Wait for org.carecontinuity.app to idle
+    t =   106.47s     Find the "loop-update-note" TextField
+    t =   106.55s     Check for interrupting elements affecting "loop-update-note" TextField
+    t =   106.62s     Synthesize event
+    t =   106.96s     Wait for org.carecontinuity.app to idle
+    t =   107.35s Type 'Fictional saved sc...' into "loop-update-note" TextField
+    t =   107.35s     Wait for org.carecontinuity.app to idle
+    t =   107.36s     Find the "loop-update-note" TextField
+    t =   107.48s     Check for interrupting elements affecting "loop-update-note" TextField
+    t =   107.57s     Synthesize event
+    t =   108.31s     Wait for org.carecontinuity.app to idle
+    t =   108.31s Waiting 5.0s for "loop-update-note-done" Button to exist
+    t =   109.32s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-note-done" Button`
+    t =   109.32s         Checking existence of `"loop-update-note-done" Button`
+    t =   110.49s Checking `Expect predicate `BLOCKPREDICATE(0x1157b5710)` for object "loop-update-note-done" Button`
+    t =   110.49s     Checking existence of `"loop-update-note-done" Button`
+    t =   110.58s     Find the "loop-update-note-done" Button
+    t =   110.68s     Find the "loop-update-note-done" Button
+    t =   110.78s     Capturing element debug description
+    t =   110.94s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =   111.06s         Find: Descendants matching type Button
+    t =   111.07s         Find: Elements matching predicate '"loop-update-note-done" IN identifiers'
+    t =   111.07s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =   111.19s         Find: Descendants matching type Button
+    t =   111.20s         Requesting snapshot of accessibility hierarchy for app with pid 6044
+    t =   112.51s Checking `Expect predicate `BLOCKPREDICATE(0x1157b5710)` for object "loop-update-note-done" Button`
+    t =   112.51s     Checking existence of `"loop-update-note-done" Button`
+    t =   112.60s     Find the "loop-update-note-done" Button
+    t =   112.72s     Find the "loop-update-note-done" Button
+    t =   112.86s Find the "loop-update-note-done" Button
+    t =   113.02s Find the "loop-update-note-done" Button
+    t =   113.14s Find the Target Application 'org.carecontinuity.app'
+    t =   113.22s Tap Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (244.5, 522.0)
+    t =   113.22s     Wait for org.carecontinuity.app to idle
+    t =   113.23s     Find the Target Application 'org.carecontinuity.app'
+    t =   113.30s     Check for interrupting elements affecting "CareInOne" Application
+    t =   113.38s     Synthesize event
+    t =   113.39s         Find the Target Application 'org.carecontinuity.app'
+    t =   113.46s         Find the Target Application 'org.carecontinuity.app'
+    t =   113.53s         Find the Target Application 'org.carecontinuity.app'
+    t =   113.89s     Wait for org.carecontinuity.app to idle
+    t =   114.17s Waiting 10.0s for Keyboard (First Match) to not exist
+    t =   115.18s     Checking `Expect predicate `existsNoRetry == 0` for object Keyboard (First Match)`
+    t =   115.18s         Checking existence of `Keyboard (First Match)`
+    t =   115.40s Checking existence of `"Compare sources" NavigationBar`
+    t =   115.47s Find the "loop-update-save" Button
+    t =   115.56s Find the "loop-update-save" Button
+    t =   115.64s Find the "loop-update-save" Button
+    t =   115.73s Find the "loop-update-save" Button
+    t =   115.82s Find the "loop-update-save" Button
+    t =   115.91s Find the "loop-update-save" Button
+    t =   115.99s Find the "loop-update-save" Button
+    t =   116.08s Find the "loop-update-save" Button
+    t =   116.16s Find the "loop-update-save" Button
+    t =   116.24s Find the "loop-update-save" Button
+    t =   116.33s Find the "loop-update-save" Button
+    t =   116.41s Find the "loop-update-save" Button
+    t =   116.50s Find the "loop-update-save" Button
+    t =   116.58s Find the "loop-update-save" Button
+    t =   116.67s Find the "loop-update-save" Button
+    t =   116.75s Find the "loop-update-save" Button
+    t =   116.85s Find the "loop-update-save" Button
+    t =   116.94s Find the "loop-update-save" Button
+    t =   117.03s Waiting 5.0s for "loop-update-save" Button to exist
+    t =   118.04s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-save" Button`
+    t =   118.04s         Checking existence of `"loop-update-save" Button`
+    t =   118.12s Find the "loop-update-save" Button
+    t =   118.21s Tap "loop-update-save" Button
+    t =   118.21s     Wait for org.carecontinuity.app to idle
+    t =   118.21s     Find the "loop-update-save" Button
+    t =   118.28s     Check for interrupting elements affecting "loop-update-save" Button
+    t =   118.34s     Synthesize event
+    t =   118.65s     Wait for org.carecontinuity.app to idle
+    t =   118.74s Waiting 5.0s for "Follow-through detail" NavigationBar to not exist
+    t =   119.77s     Checking `Expect predicate `existsNoRetry == 0` for object "Follow-through detail" NavigationBar`
+    t =   119.77s         Checking existence of `"Follow-through detail" NavigationBar`
+    t =   119.82s Terminate org.carecontinuity.app:6044
+    t =   120.85s Open org.carecontinuity.app
+    t =   120.85s     Launch org.carecontinuity.app
+2026-10-05 05:00:35.481 xcodebuild[5957:31498988] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-05 05:00:35.481 xcodebuild[5957:31498988] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =   121.12s         Setting up automation session
+    t =   126.37s         Wait for org.carecontinuity.app to idle
+    t =   130.28s Waiting 20.0s for "Today" Button to exist
+    t =   131.29s     Checking `Expect predicate `existsNoRetry == 1` for object "Today" Button`
+    t =   131.29s         Checking existence of `"Today" Button`
+    t =   131.59s Tap "My Care" Button
+    t =   131.59s     Wait for org.carecontinuity.app to idle
+    t =   131.60s     Find the "My Care" Button
+    t =   131.72s     Check for interrupting elements affecting "My Care" Button
+    t =   131.82s     Synthesize event
+    t =   132.21s     Wait for org.carecontinuity.app to idle
+    t =   134.23s Checking existence of `"Compare sources" NavigationBar`
+    t =   134.53s Find the "Follow-through" Button
+    t =   135.62s     Find the "Follow-through" Button (retry 1)
+    t =   136.69s     Find the "Follow-through" Button (retry 2)
+    t =   136.75s Find the Target Application 'org.carecontinuity.app'
+    t =   136.78s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =   136.82s Checking existence of `NavigationBar (Element at index 0)`
+    t =   136.87s Find the NavigationBar (Element at index 0)
+    t =   136.92s Get all elements bound by index for: Descendants matching type TabBar
+    t =   136.97s Checking existence of `TabBar (Element at index 0)`
+    t =   137.02s Find the TabBar (Element at index 0)
+    t =   137.08s Checking existence of `Keyboard (First Match)`
+    t =   137.27s Checking existence of `"Compare sources" NavigationBar`
+    t =   137.32s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 677.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 359.5) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =   137.32s     Wait for org.carecontinuity.app to idle
+    t =   137.32s     Find the Target Application 'org.carecontinuity.app'
+    t =   137.37s     Check for interrupting elements affecting "CareInOne" Application
+    t =   137.41s     Synthesize event
+    t =   137.42s         Find the Target Application 'org.carecontinuity.app'
+    t =   137.46s         Find the Target Application 'org.carecontinuity.app'
+    t =   137.50s         Find the Target Application 'org.carecontinuity.app'
+    t =   137.53s         Find the Target Application 'org.carecontinuity.app'
+    t =   137.57s         Find the Target Application 'org.carecontinuity.app'
+    t =   138.71s     Wait for org.carecontinuity.app to idle
+    t =   140.29s Find the "Follow-through" Button
+    t =   140.39s Find the "Follow-through" Button
+    t =   140.47s Find the "Follow-through" Button
+    t =   140.54s Find the "Follow-through" Button
+    t =   140.62s Find the "Follow-through" Button
+    t =   140.77s Find the "Follow-through" Button
+    t =   140.86s Find the "Follow-through" Button
+    t =   140.94s Find the "Follow-through" Button
+    t =   141.03s Find the "Follow-through" Button
+    t =   141.10s Find the "Follow-through" Button
+    t =   141.18s Find the "Follow-through" Button
+    t =   141.26s Find the "Follow-through" Button
+    t =   141.33s Find the "Follow-through" Button
+    t =   141.41s Find the "Follow-through" Button
+    t =   141.48s Find the "Follow-through" Button
+    t =   141.56s Find the "Follow-through" Button
+    t =   141.65s Find the "Follow-through" Button
+    t =   141.72s Waiting 5.0s for "Follow-through" Button to exist
+    t =   142.75s     Checking `Expect predicate `existsNoRetry == 1` for object "Follow-through" Button`
+    t =   142.76s         Checking existence of `"Follow-through" Button`
+    t =   142.82s Find the "Follow-through" Button
+    t =   142.90s Tap "Follow-through" Button
+    t =   142.90s     Wait for org.carecontinuity.app to idle
+    t =   142.90s     Find the "Follow-through" Button
+    t =   142.96s     Check for interrupting elements affecting "Follow-through" Button
+    t =   143.02s     Synthesize event
+    t =   143.33s     Wait for org.carecontinuity.app to idle
+    t =   143.54s Checking existence of `"Compare sources" NavigationBar`
+    t =   143.65s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   144.36s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   144.64s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   144.95s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   145.13s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   145.31s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   146.49s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   146.82s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   146.94s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   147.06s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   147.19s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   147.34s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   147.49s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   147.60s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   147.72s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   147.84s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   147.97s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   148.10s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   148.23s Waiting 5.0s for "CBC, Open, Ordered, Due Oct 7, 2026" Button to exist
+    t =   149.24s     Checking `Expect predicate `existsNoRetry == 1` for object "CBC, Open, Ordered, Due Oct 7, 2026" Button`
+    t =   149.24s         Checking existence of `"CBC, Open, Ordered, Due Oct 7, 2026" Button`
+    t =   149.34s Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   149.45s Tap "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   149.45s     Wait for org.carecontinuity.app to idle
+    t =   149.46s     Find the "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   149.55s     Check for interrupting elements affecting "CBC, Open, Ordered, Due Oct 7, 2026" Button
+    t =   149.72s     Synthesize event
+    t =   150.03s     Wait for org.carecontinuity.app to idle
+    t =   150.95s Checking existence of `"Compare sources" NavigationBar`
+    t =   151.07s Find the "loop-update-note" TextField
+    t =   152.15s     Find the "loop-update-note" TextField (retry 1)
+    t =   153.23s     Find the "loop-update-note" TextField (retry 2)
+    t =   153.30s Find the Target Application 'org.carecontinuity.app'
+    t =   153.34s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =   153.39s Checking existence of `NavigationBar (Element at index 0)`
+    t =   153.44s Checking existence of `NavigationBar (Element at index 1)`
+    t =   153.49s Find the NavigationBar (Element at index 0)
+    t =   153.54s Find the NavigationBar (Element at index 1)
+    t =   153.60s Get all elements bound by index for: Descendants matching type TabBar
+    t =   153.65s Checking existence of `TabBar (Element at index 0)`
+    t =   153.70s Find the TabBar (Element at index 0)
+    t =   153.75s Checking existence of `Keyboard (First Match)`
+    t =   153.95s Checking existence of `"Compare sources" NavigationBar`
+    t =   154.02s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 677.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 359.5) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =   154.02s     Wait for org.carecontinuity.app to idle
+    t =   154.02s     Find the Target Application 'org.carecontinuity.app'
+    t =   154.09s     Check for interrupting elements affecting "CareInOne" Application
+    t =   154.16s     Synthesize event
+    t =   154.17s         Find the Target Application 'org.carecontinuity.app'
+    t =   154.25s         Find the Target Application 'org.carecontinuity.app'
+    t =   154.33s         Find the Target Application 'org.carecontinuity.app'
+    t =   154.39s         Find the Target Application 'org.carecontinuity.app'
+    t =   154.47s         Find the Target Application 'org.carecontinuity.app'
+    t =   155.70s     Wait for org.carecontinuity.app to idle
+    t =   155.71s Find the "loop-update-note" TextField
+    t =   155.87s Find the "loop-update-note" TextField
+    t =   155.97s Find the "loop-update-note" TextField
+    t =   156.04s Find the "loop-update-note" TextField
+    t =   156.13s Find the "loop-update-note" TextField
+    t =   156.21s Find the "loop-update-note" TextField
+    t =   156.30s Find the "loop-update-note" TextField
+    t =   156.39s Find the "loop-update-note" TextField
+    t =   156.50s Find the "loop-update-note" TextField
+    t =   156.60s Find the "loop-update-note" TextField
+    t =   156.73s Find the "loop-update-note" TextField
+    t =   156.85s Find the "loop-update-note" TextField
+    t =   156.95s Find the "loop-update-note" TextField
+    t =   157.05s Find the "loop-update-note" TextField
+    t =   157.14s Find the "loop-update-note" TextField
+    t =   157.25s Find the "loop-update-note" TextField
+    t =   157.35s Find the "loop-update-note" TextField
+    t =   157.45s Waiting 5.0s for "loop-update-note" TextField to exist
+    t =   158.46s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-note" TextField`
+    t =   158.46s         Checking existence of `"loop-update-note" TextField`
+    t =   158.58s Find the "loop-update-note" TextField
+    t =   158.70s Tap "loop-update-note" TextField
+    t =   158.70s     Wait for org.carecontinuity.app to idle
+    t =   158.70s     Find the "loop-update-note" TextField
+    t =   158.78s     Check for interrupting elements affecting "loop-update-note" TextField
+    t =   158.84s     Synthesize event
+    t =   159.15s     Wait for org.carecontinuity.app to idle
+    t =   160.23s Find the "loop-update-note" TextField
+    t =   160.44s Waiting 5.0s for "loop-update-note-done" Button to exist
+    t =   161.48s     Checking `Expect predicate `existsNoRetry == 1` for object "loop-update-note-done" Button`
+    t =   161.48s         Checking existence of `"loop-update-note-done" Button`
+    t =   162.59s Checking `Expect predicate `BLOCKPREDICATE(0x1166f1c50)` for object "loop-update-note-done" Button`
+    t =   162.59s     Checking existence of `"loop-update-note-done" Button`
+    t =   162.69s     Find the "loop-update-note-done" Button
+    t =   162.83s     Find the "loop-update-note-done" Button
+    t =   162.93s     Capturing element debug description
+    t =   163.11s         Requesting snapshot of accessibility hierarchy for app with pid 6496
+    t =   163.25s         Find: Descendants matching type Button
+    t =   163.26s         Find: Elements matching predicate '"loop-update-note-done" IN identifiers'
+    t =   163.26s         Requesting snapshot of accessibility hierarchy for app with pid 6496
+    t =   163.39s         Find: Descendants matching type Button
+    t =   163.39s         Requesting snapshot of accessibility hierarchy for app with pid 6496
+    t =   164.58s Checking `Expect predicate `BLOCKPREDICATE(0x1166f1c50)` for object "loop-update-note-done" Button`
+    t =   164.58s     Checking existence of `"loop-update-note-done" Button`
+    t =   164.69s     Find the "loop-update-note-done" Button
+    t =   164.84s     Find the "loop-update-note-done" Button
+    t =   165.04s Find the "loop-update-note-done" Button
+    t =   165.18s Find the "loop-update-note-done" Button
+    t =   165.33s Find the Target Application 'org.carecontinuity.app'
+    t =   165.40s Tap Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (244.5, 522.0)
+    t =   165.40s     Wait for org.carecontinuity.app to idle
+    t =   165.41s     Find the Target Application 'org.carecontinuity.app'
+    t =   165.48s     Check for interrupting elements affecting "CareInOne" Application
+    t =   165.56s     Synthesize event
+    t =   165.56s         Find the Target Application 'org.carecontinuity.app'
+    t =   165.63s         Find the Target Application 'org.carecontinuity.app'
+    t =   165.70s         Find the Target Application 'org.carecontinuity.app'
+    t =   166.07s     Wait for org.carecontinuity.app to idle
+    t =   166.39s Waiting 10.0s for Keyboard (First Match) to not exist
+    t =   167.41s     Checking `Expect predicate `existsNoRetry == 0` for object Keyboard (First Match)`
+    t =   167.41s         Checking existence of `Keyboard (First Match)`
+    t =   167.68s Find the "Due date is known" Switch
+    t =   167.75s Find the "loop-update-precision" Button
+    t =   167.83s Find the "loop-update-precision" Button
+    t =   167.91s Get all elements bound by index for: Descendants matching type StaticText
+    t =   167.98s Find the StaticText (Element at index 0)
+    t =   168.06s Tap "Done" Button
+    t =   168.06s     Wait for org.carecontinuity.app to idle
+    t =   168.07s     Find the "Done" Button
+    t =   168.14s     Check for interrupting elements affecting "Done" Button
+    t =   168.21s     Synthesize event
+    t =   168.52s     Wait for org.carecontinuity.app to idle
+    t =   169.00s Waiting 5.0s for "Follow-through detail" NavigationBar to not exist
+    t =   170.01s     Checking `Expect predicate `existsNoRetry == 0` for object "Follow-through detail" NavigationBar`
+    t =   170.01s         Checking existence of `"Follow-through detail" NavigationBar`
+    t =   170.06s Checking existence of `"Discard changes" Button`
+    t =   170.12s Tear Down
+Test Case '-[CareInOneUITests.FollowThroughDraftRecoveryUITests testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch]' passed (170.489 seconds).
+Test Suite 'FollowThroughDraftRecoveryUITests' passed at 2026-10-05 05:01:25.139.
+	 Executed 1 test, with 0 failures (0 unexpected) in 170.489 (170.524) seconds
+Test Suite 'CareInOneUITests.xctest' passed at 2026-10-05 05:01:25.142.
+	 Executed 1 test, with 0 failures (0 unexpected) in 170.489 (170.527) seconds
+Test Suite 'Selected tests' passed at 2026-10-05 05:01:25.143.
+	 Executed 1 test, with 0 failures (0 unexpected) in 170.489 (170.530) seconds
+Resolve Package Graph
+
+Resolve Package Graph
+
+Resolve Package Graph
+
+Resolve Package Graph
+
+Resolve Package Graph
+
+Resolve Package Graph
+
+Resolve Package Graph
+
+2026-10-05 05:06:02.719 xcodebuild[5957:31498988] [MT] IDETestOperationsObserverDebug: 463.283 elapsed -- Testing started completed.
+2026-10-05 05:06:02.719 xcodebuild[5957:31498988] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-05 05:06:02.719 xcodebuild[5957:31498988] [MT] IDETestOperationsObserverDebug: 463.283 sec, +463.283 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/CareInOneCandidate8LoopFocusedFinal.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

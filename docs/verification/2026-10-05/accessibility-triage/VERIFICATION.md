@@ -1,0 +1,9 @@
+# C8 accessibility appointment verification
+
+The full C8 UI action preserved actual exit65:29 total,27 passed,1 failed accessibility appointment case and1 intentional ReleaseScreenshots Debug skip. Native failure movie and accessibility hierarchy show companion-start-live at x38,y870.3,width364,height201.3; the tab bar starts at873 and app ends at956. XCTest reported the tiny visible fragment as hittable. Its ordinary default center, y970.95, lay outside the viewport. The screenshot still shows My appointment: the visit was never started, rather than a failed live-navigation transition.
+
+The only repair is test interaction: this case scrolls the complete real button between measured navigation/demo and tab/keyboard bounds, verifies full visibility and performs its ordinary native tap. The live question, Pause, Today return, Follow-through, helper and Replies/progress assertions remain intact. All production inputs remain exactly frozen; the helper is deliberately used only in this case to preserve other action scope.
+
+The complete focused native journey then passed with actual exit0/TEST SUCCEEDED,1 passed,0 failed,0 skipped in124.279 seconds on allocated isolated iOS27.0 build24A434 simulator36A9. Its canonical summary contains no runtime warnings. Three retained screenshots show the fully visible button, live question and helper at the largest text size. These are fictional practice records only.
+
+This focused success is separate evidence and does not retroactively change the failed full C8 action. The parent’s full final UI retry uses the frozen corrected helper; its result must be recorded independently when complete. No production archive or signing change was made for this test repair. SHA and baseline differences are in diagnosis.json and candidate8-source-after-accessibility-focused.json.

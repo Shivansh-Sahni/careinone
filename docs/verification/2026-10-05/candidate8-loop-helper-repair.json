@@ -1,0 +1,25 @@
+{
+  "recordedUTC": "2026-10-05T08:58:08.073140+00:00",
+  "path": "UITests/FollowThroughDraftRecoveryUITests.swift",
+  "beforeSHA256": "4c0c4b3c85169c0a8273ce4d412b77bf31fb693f824f68f2b92f148a45bb74d0",
+  "afterSHA256": "e983e9d03a66c62e2fe08d221f791fcdfabbedab4fff3df929f039362b4cb01d",
+  "scope": "Move existing bounded stable/hittable wait before immediate isHittable assertion; preserve single native Done tap, exact bounds, keyboard absence and full persisted Loop workflow assertions. Production unchanged.",
+  "originalFullAction": "/private/tmp/CareInOneCandidate8AllUIFinal.xcresult",
+  "originalFullActionCompiledBeforePatch": true,
+  "focusedVerification": {
+    "result": "/private/tmp/CareInOneCandidate8LoopFocusedFinal.xcresult",
+    "actualRunnerExit": 0,
+    "durationSeconds": 170.489,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "runtimeWarnings": [
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      }
+    ],
+    "assertions": "Complete note keep/discard, single native keyboard Done, date-known/unknown and precision, saved state and relaunch persistence remain asserted."
+  },
+  "collectionLimitation": "Only verified own idle optional simctl diagnose6645/PPID5957 ended after4min and after the single whole workflow passed; xcodebuild finalized naturally with exit0."
+}

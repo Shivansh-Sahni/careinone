@@ -1,0 +1,26 @@
+{
+  "summary": "docs/verification/2026-10-05/candidate8-all-ui-summary.json",
+  "summarySHA256": "e2604f3e96acd6bd805b75deb198b85c542bc4b0579fa14be02c0928b5278089",
+  "result": "/private/tmp/CareInOneCandidate8AllUI.xcresult",
+  "actualRunnerExit": 65,
+  "totalTests": 29,
+  "passed": 27,
+  "failed": 1,
+  "skipped": 1,
+  "audioRuntimeWarnings": 0,
+  "frameRuntimeWarnings": 16,
+  "failedJourney": "PatientCompanionUITests.testAppointmentCompanionAtAccessibilityTextSize",
+  "failureDiagnosis": "Native accessibility snapshot shows live-visit Button frame {38,870.3,364,201.3}; TabBar begins873, app ends956. Default button center is outside viewport although XCTest reports partial clipping hittable. A test-only measured full-visibility guard passed the complete focused native largest-text journey. No production navigation defect demonstrated.",
+  "productionChangedAfterFreeze": false,
+  "uiAuditLimitation": "Native hardware audio was not exercised. Audio warning removal is verified for ordinary tested source/brief journeys; unrelated frame warnings retained.",
+  "focusedAccessibilityRepair": {
+    "result": "/private/tmp/CareInOneCandidate8AccessibilityFocused.xcresult",
+    "actualRunnerExit": 0,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 124.279,
+    "audioRuntimeWarnings": 0,
+    "productionChanged": false
+  }
+}

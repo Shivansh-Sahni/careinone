@@ -1,0 +1,49 @@
+{
+  "recordedUTC": "2026-10-05T08:44:34.270785+00:00",
+  "originalFullAction": "/private/tmp/CareInOneCandidate8AllUIFinal.xcresult",
+  "originalFullActionStatus": "Finalized actual exit65,29total26passed2failed1intendedDebugScreenshotSkip; backup failed immediate exact keyboard count assertion.",
+  "focusedUnchangedWholeCase": {
+    "result": "/private/tmp/CareInOneCandidate8BackupFocusedOriginal.xcresult",
+    "actualRunnerExit": 0,
+    "durationSeconds": 62.985,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "runtimeWarnings": [
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      }
+    ]
+  },
+  "confirmedAssertions": [
+    "Native keyboard Done and exact keyboard count zero",
+    "Encrypted backup created successfully and share file offered",
+    "Include-audio selection changes and invalidates previous share file",
+    "Truthful create-a-new-backup recovery message"
+  ],
+  "sourceEdits": [],
+  "failureCause": "Unresolved intermittent native keyboard-dismissal failure. Source review shows no refocus after FocusState nil. Unchanged complete focused workflow passed. Do not infer a fixed production defect or classify the failed action as green.",
+  "dataIsolation": "--uitesting --reset uses only isolated fictional fixture; no physical patient data or credentials included",
+  "resultCollection": "Only own verified idle simctl diagnose PID3061 / PPID2864 was stopped after all one test case ended; xcodebuild finalized naturally with actual exit0.",
+  "productionFingerprint": "65/65 inputs match frozen C8; only previously known test-only accessibility helper differs.",
+  "originalFailureEvidence": {
+    "movie": "/private/tmp/CareInOneC8BackupTriage/0E7A3C91-26A9-4ACA-910C-5B62AB4538A3.mp4",
+    "nativeTapEvent": "/private/tmp/CareInOneC8BackupTriage/FD40CFCA-E2C4-4834-8BF8-11FBE4B1FBA0",
+    "tapPointLogical": {
+      "x": 383.83333333333326,
+      "y": 585.0
+    },
+    "logicalWindow": {
+      "width": 440,
+      "height": 956
+    },
+    "nativeEventTimeSeconds": 41.47,
+    "keyboardCountTimeSeconds": 42.57,
+    "movieFramesSeconds": [
+      41,
+      42
+    ],
+    "observation": "Software keyboard and Done remain visibly present around the native tap and failed count. The recorded tap point appears inside visible Done in movie; no clipped-hitpoint or delayed-dismissal cause is established. Native AX snapshots only contain app root, so button bounds/focus details are unavailable."
+  }
+}

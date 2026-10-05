@@ -1,9 +1,9 @@
 {
-  "recorded_utc": "2026-10-05T05:45:04.561805+00:00",
+  "recorded_utc": "2026-10-05T08:26:01.321029+00:00",
   "ordinary_release": true,
   "debug_launch_switches": false,
   "synthetic_demo_via_normal_settings": true,
-  "production_candidate": "Phone C7 production source; iPad earlier normal Release capture of unchanged Today UI, not final full-workflow verification.",
+  "production_candidate": "Phone Candidate8 frozen production source; iPad earlier ordinary Release Today capture of unchanged screen, not final full-workflow verification.",
   "files": [
     {
       "path": "docs/app-store/screenshots/ipad-13/01-today.png",
@@ -19,61 +19,103 @@
       "path": "docs/app-store/screenshots/iphone-6.9/01-today.png",
       "width": 1320,
       "height": 2868,
-      "sha256": "3fb6850f5ef765898eb513b235bf0cbfa6fe5179cbc64378563f3636f152b8af",
+      "sha256": "17731bc968ff6e06b7e590fc1805b953bc279d886b25223a9396c339c1543912",
       "fictional_demo": true,
-      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
-      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
-      "action_result": "Passed:1/1 and six screenshots"
+      "visual_review": "Reviewed fresh Candidate8 ordinary Release capture: readable native interface, explicit fictional/demo or synthetic evidence qualification, no visible credentials or real patient content observed. Normal scroll continuation at viewport edge is not a complete-content snapshot.",
+      "provenance": "/private/tmp/CareInOneCandidate8PhoneScreens.xcresult",
+      "action_result": "Passed:1/1 and six screenshots; actual process exit 0",
+      "capture_timestamp": 1791188544.539,
+      "credential_screen": {
+        "engine": "macOS Vision accurate OCR / known-prefix and opaque-token patterns",
+        "credential_pattern_count": 0,
+        "sha256": "17731bc968ff6e06b7e590fc1805b953bc279d886b25223a9396c339c1543912",
+        "report": "docs/verification/2026-10-05/continuation/release/candidate8-git-eligible-image-ocr-check.json"
+      }
     },
     {
       "path": "docs/app-store/screenshots/iphone-6.9/02-source-review.png",
       "width": 1320,
       "height": 2868,
-      "sha256": "ef4bf1df1c9c77e0e5f54863cf34ec62e44e5ec7f2c4eb14ec7c65ccde93a3ed",
+      "sha256": "86d96cb4281e771f4872f4eab2e795b794f53eb44076d9bd9bb2c3093cd204db",
       "fictional_demo": true,
-      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
-      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
-      "action_result": "Passed:1/1 and six screenshots"
+      "visual_review": "Reviewed fresh Candidate8 ordinary Release capture: readable native interface, explicit fictional/demo or synthetic evidence qualification, no visible credentials or real patient content observed. Normal scroll continuation at viewport edge is not a complete-content snapshot.",
+      "provenance": "/private/tmp/CareInOneCandidate8PhoneScreens.xcresult",
+      "action_result": "Passed:1/1 and six screenshots; actual process exit 0",
+      "capture_timestamp": 1791188564.692,
+      "credential_screen": {
+        "engine": "macOS Vision accurate OCR / known-prefix and opaque-token patterns",
+        "credential_pattern_count": 0,
+        "sha256": "86d96cb4281e771f4872f4eab2e795b794f53eb44076d9bd9bb2c3093cd204db",
+        "report": "docs/verification/2026-10-05/continuation/release/candidate8-git-eligible-image-ocr-check.json"
+      }
     },
     {
       "path": "docs/app-store/screenshots/iphone-6.9/03-medication-reports.png",
       "width": 1320,
       "height": 2868,
-      "sha256": "97f44739b0baef4bc0488e2cc9eb16b9424828af329c5b92b48ef431f5f555ee",
+      "sha256": "04cdf223f9a19491a6482c7dbd7bcda49e1d175bfe6e22deb6b9ba0398646474",
       "fictional_demo": true,
-      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
-      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
-      "action_result": "Passed:1/1 and six screenshots"
+      "visual_review": "Reviewed fresh Candidate8 ordinary Release capture: readable native interface, explicit fictional/demo or synthetic evidence qualification, no visible credentials or real patient content observed. Normal scroll continuation at viewport edge is not a complete-content snapshot.",
+      "provenance": "/private/tmp/CareInOneCandidate8PhoneScreens.xcresult",
+      "action_result": "Passed:1/1 and six screenshots; actual process exit 0",
+      "capture_timestamp": 1791188576.343,
+      "credential_screen": {
+        "engine": "macOS Vision accurate OCR / known-prefix and opaque-token patterns",
+        "credential_pattern_count": 0,
+        "sha256": "04cdf223f9a19491a6482c7dbd7bcda49e1d175bfe6e22deb6b9ba0398646474",
+        "report": "docs/verification/2026-10-05/continuation/release/candidate8-git-eligible-image-ocr-check.json"
+      }
     },
     {
       "path": "docs/app-store/screenshots/iphone-6.9/04-appointment-companion.png",
       "width": 1320,
       "height": 2868,
-      "sha256": "c87d4900b295fcd0117e4c9009e4315deb959f534d85a58a245bf0215ce3c6b2",
+      "sha256": "195110e1ebabb7afd65b55428cd5852805648b5dcbaee0741481e9cd2c1b335a",
       "fictional_demo": true,
-      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
-      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
-      "action_result": "Passed:1/1 and six screenshots"
+      "visual_review": "Reviewed fresh Candidate8 ordinary Release capture: readable native interface, explicit fictional/demo or synthetic evidence qualification, no visible credentials or real patient content observed. Normal scroll continuation at viewport edge is not a complete-content snapshot.",
+      "provenance": "/private/tmp/CareInOneCandidate8PhoneScreens.xcresult",
+      "action_result": "Passed:1/1 and six screenshots; actual process exit 0",
+      "capture_timestamp": 1791188581.819,
+      "credential_screen": {
+        "engine": "macOS Vision accurate OCR / known-prefix and opaque-token patterns",
+        "credential_pattern_count": 0,
+        "sha256": "195110e1ebabb7afd65b55428cd5852805648b5dcbaee0741481e9cd2c1b335a",
+        "report": "docs/verification/2026-10-05/continuation/release/candidate8-git-eligible-image-ocr-check.json"
+      }
     },
     {
       "path": "docs/app-store/screenshots/iphone-6.9/05-selected-packet.png",
       "width": 1320,
       "height": 2868,
-      "sha256": "0184eefe8986c7315d31245867290152ec95eccf59551c3772ddd5e1c572188c",
+      "sha256": "78b7da47db13c02719c3f71676cfb140b4a6fd3924d59774f6ca48af5279856a",
       "fictional_demo": true,
-      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
-      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
-      "action_result": "Passed:1/1 and six screenshots"
+      "visual_review": "Reviewed fresh Candidate8 ordinary Release capture: readable native interface, explicit fictional/demo or synthetic evidence qualification, no visible credentials or real patient content observed. Normal scroll continuation at viewport edge is not a complete-content snapshot.",
+      "provenance": "/private/tmp/CareInOneCandidate8PhoneScreens.xcresult",
+      "action_result": "Passed:1/1 and six screenshots; actual process exit 0",
+      "capture_timestamp": 1791188589.702,
+      "credential_screen": {
+        "engine": "macOS Vision accurate OCR / known-prefix and opaque-token patterns",
+        "credential_pattern_count": 0,
+        "sha256": "78b7da47db13c02719c3f71676cfb140b4a6fd3924d59774f6ca48af5279856a",
+        "report": "docs/verification/2026-10-05/continuation/release/candidate8-git-eligible-image-ocr-check.json"
+      }
     },
     {
       "path": "docs/app-store/screenshots/iphone-6.9/06-follow-through-helper.png",
       "width": 1320,
       "height": 2868,
-      "sha256": "3ff97db24f2370c8abe3c236c45d15172588106ad67ef20986854804ea0c97a9",
+      "sha256": "a426b972bab8b4810114cc376c8d38415ce2f713a2d6faf0de9be70a7f3c60eb",
       "fictional_demo": true,
-      "visual_review": "Readable actual UI, explicit fictional demo/proposal/report qualifications; no credential or real patient content observed.",
-      "provenance": "/private/tmp/CareInOneReleasePhoneScreens7.xcresult",
-      "action_result": "Passed:1/1 and six screenshots"
+      "visual_review": "Reviewed fresh Candidate8 ordinary Release capture: readable native interface, explicit fictional/demo or synthetic evidence qualification, no visible credentials or real patient content observed. Normal scroll continuation at viewport edge is not a complete-content snapshot.",
+      "provenance": "/private/tmp/CareInOneCandidate8PhoneScreens.xcresult",
+      "action_result": "Passed:1/1 and six screenshots; actual process exit 0",
+      "capture_timestamp": 1791188598.299,
+      "credential_screen": {
+        "engine": "macOS Vision accurate OCR / known-prefix and opaque-token patterns",
+        "credential_pattern_count": 0,
+        "sha256": "a426b972bab8b4810114cc376c8d38415ce2f713a2d6faf0de9be70a7f3c60eb",
+        "report": "docs/verification/2026-10-05/continuation/release/candidate8-git-eligible-image-ocr-check.json"
+      }
     }
   ],
   "observed_limits": [
@@ -82,9 +124,12 @@
   ],
   "app_version": "1.0",
   "build": "1",
-  "source_commit": "4ec91e3be0c45470743208e2fb337d30445c2234",
+  "source_commit": "Uncommitted Candidate8 at capture; production hashes in docs/verification/2026-10-05/candidate8-source-before.json",
   "iphone_model": "iPhone16ProMax",
   "ipad_model": "iPadPro13M5",
   "runtime": "iOS27.0",
-  "phone_configuration": "ordinary Release"
+  "phone_configuration": "ordinary Release",
+  "visual_review_completed_utc": "2026-10-05T08:33:52.553528+00:00",
+  "format_report": "docs/verification/2026-10-05/continuation/release/candidate8-store-format-check.json",
+  "credential_screen_scope": "78 repository-eligible PNG/JPG images at this audit, including six current phone pictures and four accessibility failure/recovery images and one later fictional encrypted-backup proof and the final fictional Demo Today handoff and two original fictional before/after Done failure frames. OCR is imperfect; zero matches does not certify universal absence of secrets or patient content. No image bytes edited."
 }

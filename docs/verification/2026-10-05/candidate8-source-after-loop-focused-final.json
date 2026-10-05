@@ -1,0 +1,19 @@
+{
+  "recordedUTC": "2026-10-05T09:10:20.677659+00:00",
+  "baselineInputs": 108,
+  "productionInputs": 65,
+  "productionInputsMatching": 65,
+  "changed": [
+    {
+      "path": "UITests/FollowThroughDraftRecoveryUITests.swift",
+      "baseline": "4c0c4b3c85169c0a8273ce4d412b77bf31fb693f824f68f2b92f148a45bb74d0",
+      "current": "e983e9d03a66c62e2fe08d221f791fcdfabbedab4fff3df929f039362b4cb01d"
+    },
+    {
+      "path": "UITests/PatientCompanionUITests.swift",
+      "baseline": "f387a7d68c96d58dc90446e5b749eebbbded59ed7e479ad01b4677210c74bd22",
+      "current": "869de51bf2a53b1b2c710e6ab84c5a9abdcf135d508bbd6e8e969158a233bc52"
+    }
+  ],
+  "scope": "After all current full/focused native actions; only two bounded native UI test readiness helpers changed, production frozen."
+}

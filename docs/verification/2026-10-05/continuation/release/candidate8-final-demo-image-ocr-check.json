@@ -1,0 +1,27 @@
+{
+  "checkedUTC" : "2026-10-05T09:04:49Z",
+  "engine" : "macOS Vision VNRecognizeTextRequest accurate\/en-US; no language correction",
+  "failedCount" : 0,
+  "flaggedCount" : 0,
+  "imageCount" : 1,
+  "limitations" : [
+    "OCR and regex matching are imperfect; low-resolution\/obscured\/line-wrapped credentials can evade recognition.",
+    "Opaque token candidates are heuristic and can be false positives; only flagged pictures need visual review.",
+    "Zero pattern matches is not proof that an image contains no secret or patient content.",
+    "Only files in the Git-eligible snapshot are included; root's later store captures need their own provenance\/final screen."
+  ],
+  "processedCount" : 1,
+  "rows" : [
+    {
+      "credentialPatternCount" : 0,
+      "filename" : "docs\/verification\/2026-10-05\/candidate8-demo-handoff.png",
+      "patternCounts" : {
+
+      },
+      "sha256" : "2e636c5814ac9a85a80b755022075b9fec0aa6829bb157332a2bef99e9e90c5d",
+      "status" : "recognized",
+      "unchangedDuringRecognition" : true
+    }
+  ],
+  "scope" : "Git-eligible PNG\/JPG snapshot only; no user attachment paths or ignored raw screenshots\/result\/archive bundles; no recognized content or matching values serialized"
+}

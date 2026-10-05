@@ -46,4 +46,4 @@ Run `python3 docs/app-store/verify-screenshots.py` after capture. It validates P
 
 ## Prepared capture evidence
 
-Six large-iPhone images from the ordinary Release C7 app are prepared and visually inspected. The one-case phone capture action passed. One earlier ordinary Release iPad Today image is prepared; its later capture-helper failure is retained and is not a passing full iPad workflow. Exact source, native dimensions, hashes and limits are in [the capture manifest](screenshots/capture-manifest.json). The selected packet image is a text preview, not an opened PDF viewer.
+Six large-iPhone images from the ordinary Release C8 app are prepared and visually inspected. The one-case phone capture action passed, then all six passed dimension/RGB/no-alpha and known-pattern OCR checks. One earlier ordinary Release iPad Today image is prepared; its later capture-helper failure is retained and is not a passing full iPad workflow. Exact source, native dimensions, hashes and limits are in [the capture manifest](screenshots/capture-manifest.json). The selected packet image is a text preview, not an opened PDF viewer.

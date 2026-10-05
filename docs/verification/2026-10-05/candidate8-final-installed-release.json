@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-10-05T09:05:27.786333+00:00",
+  "installed_sha256": "fda94824b77e1f1e01e14771867780b6b9203cda44f11f8518c94ff44b719c4c",
+  "expected_release_sha256": "76fa64b54c89394598923574558ad48182502d75f4341337bb0428705b1956ee",
+  "same_binary": false,
+  "ordinary_release_demo_foreground": true,
+  "current_release_build_sha256": "fda94824b77e1f1e01e14771867780b6b9203cda44f11f8518c94ff44b719c4c",
+  "same_current_release_binary": true,
+  "earlier_binary_note": "The ordinary Release screenshot/handoff UI action rebuilt the simulator executable after the initial installation; production source hashes remained unchanged.",
+  "bundle_identifier": "org.carecontinuity.app",
+  "version": "1.0",
+  "build": "1"
+}

@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-05T07:59:17.551052+00:00",
+  "build_sha256": "76fa64b54c89394598923574558ad48182502d75f4341337bb0428705b1956ee",
+  "installed_sha256": "76fa64b54c89394598923574558ad48182502d75f4341337bb0428705b1956ee",
+  "same_binary": true,
+  "test_launch_arguments": false,
+  "install_exit_code": 0,
+  "launch_pid": 93512
+}

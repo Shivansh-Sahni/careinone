@@ -1,0 +1,49 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "36A9D3D3-365D-422E-8E9D-135DEB8BB063",
+        "deviceName" : "CareInOne isolated editor verification",
+        "modelName" : "iPhone 18 Pro",
+        "osBuildNumber" : "24A434",
+        "osVersion" : "27.0",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 0,
+      "passedTests" : 145,
+      "skippedTests" : 1,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "CareInOne · Built with macOS 26.6.2",
+  "expectedFailures" : 0,
+  "failedTests" : 0,
+  "finishTime" : 1791186403.164,
+  "passedTests" : 145,
+  "result" : "Passed",
+  "runtimeWarnings" : [
+
+  ],
+  "skippedTests" : 1,
+  "startTime" : 1791186339.863,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+
+  ],
+  "title" : "Test - CareInOne",
+  "topInsights" : [
+    {
+      "category" : "Longest Test Runs",
+      "impact" : "39% of duration",
+      "text" : "3 longest test runs with outlier durations exceeding 0.78s (three standard deviations)"
+    }
+  ],
+  "totalTestCount" : 146
+}

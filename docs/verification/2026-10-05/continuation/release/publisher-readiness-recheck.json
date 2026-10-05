@@ -1,0 +1,53 @@
+{
+  "checkedUTC": "2026-10-05T07:35:08.212833+00:00",
+  "scope": "Read-only continuation publication readiness, separate from the completed C7 eight-hour record. No sensitive contacts/addresses/device identifiers retained.",
+  "appleDeveloper": {
+    "authenticatedExistingSession": true,
+    "enrolledAs": "Individual",
+    "renewalDate": "2027-10-04",
+    "NutriAssistApprovalVisible": false,
+    "registeredCareInOneBundleVisible": false,
+    "registeredIdentifierCountVisible": 1
+  },
+  "appStoreConnect": {
+    "authenticatedViaVisibleDeveloperAppsLink": true,
+    "directInitialAccessRequiredSignin": true,
+    "availableAccountMenuCount": 1,
+    "NutriAssistTeamVisible": false,
+    "CareInOneAppVisible": false,
+    "existingAppCountVisible": 1,
+    "freeAppsAgreement": "Active",
+    "freeAppsEffectiveDate": "2026-10-04",
+    "freeAppsEndDate": "2027-10-04",
+    "paidAppsAgreement": "New",
+    "agreementsAcceptedDuringAudit": false
+  },
+  "localSigning": {
+    "validCodeSigningIdentityCount": 0,
+    "legacyProvisioningProfileCount": 0,
+    "xcodeUserDataProfilesDirectoryExists": false
+  },
+  "localDeviceInventory": {
+    "sandboxedAttempt": "CoreDeviceService initialization timeout",
+    "readOnlyUnsandboxedAttempt": "Completed",
+    "listedDeviceCount": 8,
+    "simulatedDeviceCount": 8,
+    "physicalDeviceCount": 0,
+    "pairingOrPermissionMutation": false
+  },
+  "mutations": {
+    "credentials": false,
+    "agreements": false,
+    "publisherRecords": false,
+    "costs": false,
+    "paidAPIRequests": 0,
+    "productionCode": false,
+    "simulatorOperations": false
+  },
+  "limitations": [
+    "Only currently accessible account/team/identifier lists were read; no organization-approval inference from prior user belief.",
+    "Zero local signing material does not establish remotely issued certificate/profile absence.",
+    "No currently listed physical device does not establish absence elsewhere.",
+    "C8 production changes and final tests/archive will need their own later evidence."
+  ]
+}

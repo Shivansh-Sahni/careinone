@@ -1,0 +1,25 @@
+{
+  "bundle": "/private/tmp/CareInOneFinalPhoneLoop.xcresult",
+  "result": "Passed",
+  "test": "FollowThroughDraftRecoveryUITests.testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch",
+  "counts": {
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "durationSeconds": 153.80023503303528,
+  "deviceModel": "iPhone 16 Pro Max",
+  "osVersion": "27.0",
+  "warning": "Invalid frame dimension (negative or non-finite).",
+  "legacyIssueType": "Runtime Issue",
+  "sourceFileAvailable": false,
+  "callStack": {
+    "frameCount": 64,
+    "addressesAllZero": true,
+    "symbolNamesAvailable": false
+  },
+  "warningAttachmentCount": 0,
+  "observedTiming": "After focus tap on loop-update-note TextField and before first typeText, between XCTest relative t37.45 and t39.59.",
+  "cause": "Unresolved. Exported issue has no source filename/symbol/nonzero address. Keyboard-focus timing suggests a layout transition but does not establish app or framework responsibility.",
+  "scope": "Read-only xcresult legacy objects/test summary/log metadata; no simulator actions, diagnostic-container exports or production edits."
+}

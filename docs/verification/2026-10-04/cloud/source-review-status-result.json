@@ -1,0 +1,189 @@
+{
+  "status": "core_native_and_focused_ui_passed_whole_ui_failed_independently",
+  "core": {
+    "tests": 178,
+    "suites": 20,
+    "passed": 178,
+    "failed": 0,
+    "new_status_tests": 5,
+    "exit_code": 0,
+    "log": "docs/verification/2026-10-04/cloud/source-review-status-core-tests.log",
+    "framework": "Swift Testing",
+    "additional_xctest": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "suite": "PatientHomeTests"
+    },
+    "warnings": [
+      "SwiftPM user configuration/security cache unavailable under sandbox; separate /private/tmp caches used.",
+      "Existing WorkflowHardeningTests.swift:131 redundant #require(DateParser.parse(...)) warning; no new source-status warnings."
+    ]
+  },
+  "native": {
+    "new_integration_cases": 3,
+    "status": "passed",
+    "independently_verified": true,
+    "bundle": "/private/tmp/CareInOneCandidate8Native.xcresult",
+    "whole_result": "Passed",
+    "whole_counts": {
+      "totalTestCount": 146,
+      "passedTests": 145,
+      "failedTests": 0,
+      "skippedTests": 1
+    },
+    "runtime_warnings": [],
+    "cases": [
+      {
+        "name": "testAllRejectedAndReviewedAgainDoNotKeepInitialProposalCount()",
+        "nodeIdentifier": "SourceReviewStatusIntegrationTests/testAllRejectedAndReviewedAgainDoNotKeepInitialProposalCount()",
+        "result": "Passed",
+        "durationInSeconds": 0.0022499561309814453
+      },
+      {
+        "name": "testFailedReviewSaveRetainsPendingStatusAndOtherSourceDoesNotContribute()",
+        "nodeIdentifier": "SourceReviewStatusIntegrationTests/testFailedReviewSaveRetainsPendingStatusAndOtherSourceDoesNotContribute()",
+        "result": "Passed",
+        "durationInSeconds": 0.0023690462112426758
+      },
+      {
+        "name": "testPartialAcceptanceFinalRejectionAndRelaunchShowCurrentReviewCounts()",
+        "nodeIdentifier": "SourceReviewStatusIntegrationTests/testPartialAcceptanceFinalRejectionAndRelaunchShowCurrentReviewCounts()",
+        "result": "Passed",
+        "durationInSeconds": 0.04851698875427246
+      }
+    ]
+  },
+  "ui": {
+    "existing_case_augmented": "PatientCompanionUITests.testEmptyPatientAppointmentBriefAnswersResumeAndReview",
+    "status": "passed",
+    "assessment": "Independently confirmed finalized C8 test-details result.",
+    "duration_seconds": 98.587,
+    "log": "docs/verification/2026-10-05/candidate8-all-ui.log",
+    "lookup_proof": [
+      "    t =    92.84s Waiting 5.0s for \"source-review-status\" StaticText to exist",
+      "    t =    93.85s     Checking `Expect predicate `existsNoRetry == 1` for object \"source-review-status\" StaticText`",
+      "    t =    93.85s         Checking existence of `\"source-review-status\" StaticText`",
+      "    t =    93.90s Find the \"source-review-status\" StaticText",
+      "    t =    93.93s Find the \"source-review-status\" StaticText",
+      "    t =    93.97s Find the \"source-review-status\" StaticText"
+    ],
+    "assertions": [
+      "source-review-status exists",
+      "No proposals waiting for review.",
+      "1 reviewed report is saved in My Care.",
+      "No historical proposals ready phrase",
+      "Accepted latex report then accessible in My Care"
+    ],
+    "whole_action_status": "Failed",
+    "bundle": "/private/tmp/CareInOneCandidate8AllUI.xcresult",
+    "whole_counts": {
+      "totalTestCount": 29,
+      "passedTests": 27,
+      "failedTests": 1,
+      "skippedTests": 1
+    },
+    "whole_runtime_warnings": [
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      },
+      {
+        "issueType": "Runtime Warning",
+        "message": "Invalid frame dimension (negative or non-finite)."
+      }
+    ],
+    "finalized_case_details": {
+      "testIdentifier": "PatientCompanionUITests/testEmptyPatientAppointmentBriefAnswersResumeAndReview()",
+      "testName": "testEmptyPatientAppointmentBriefAnswersResumeAndReview()",
+      "testResult": "Passed",
+      "durationInSeconds": 98.58743894100189
+    },
+    "focused_runtime_warnings": []
+  },
+  "scope": "Derived presentation only. Existing processing messages, original evidence, working history, claim IDs and Keychain unchanged. Failure/cancellation/recovery instructions preserved. Known historical extraction count prefixes replaced while warnings retained.",
+  "files": [
+    {
+      "path": "CareInOne/Core/SourceReviewStatus.swift",
+      "sha256": "ed2bb118d844eeec1d923f5b33eb17f3eae241956aec27ace4f271efc047b8b5"
+    },
+    {
+      "path": "CareInOne/Views/SourceViews.swift",
+      "sha256": "8347d8819fe254b42ac5d30c1ba28fc3b744f70981cc25ed17589e8531ea11e1"
+    },
+    {
+      "path": "Tests/CareCoreTests/SourceReviewStatusTests.swift",
+      "sha256": "16d8ff42f7614022ee535e697546bd4dcb9c8622c727d9b3f68efaf3d3abf8e3"
+    },
+    {
+      "path": "IntegrationTests/SourceReviewStatusIntegrationTests.swift",
+      "sha256": "ea9838439eb514cdfc4ec98aca480633b0eefda1f17af8a0d25d0b840db23edc"
+    },
+    {
+      "path": "UITests/PatientCompanionUITests.swift",
+      "sha256": "f387a7d68c96d58dc90446e5b749eebbbded59ed7e479ad01b4677210c74bd22"
+    }
+  ],
+  "source_provenance": {
+    "before_manifest": "docs/verification/2026-10-05/candidate8-source-before.json",
+    "after_native_manifest": "docs/verification/2026-10-05/candidate8-source-after-native.json",
+    "after_ui_audit": "docs/verification/2026-10-04/cloud/candidate8-source-after-ui-audit.json",
+    "all_108_manifest_inputs_unchanged": false
+  }
+}

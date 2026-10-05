@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-10-05T09:11:17.684087+00:00",
+  "checked_documents": 13,
+  "local_links_checked": 263,
+  "missing_local_links": [],
+  "review_field_utf8_bytes": 3234,
+  "review_field_limit": 4000,
+  "review_field_sha256": "eeef0dfca6db5ba4f19108d4745ab9165b77696306f6aeb4287351138197d6ec",
+  "review_field_status": "within_limit",
+  "scope": "Actual local packet links and Notes-field bytes only; publisher/signing/privacy/physical gates remain separate."
+}

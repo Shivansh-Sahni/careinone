@@ -1,0 +1,30 @@
+{
+  "originalFailedResult": "/private/tmp/CareInOneCandidate8AllUI.xcresult",
+  "nativeMovie": "/private/tmp/CareInOneC8AccessibilityTriage/0047B994-D51D-4A92-B7B2-41E9E980C4E1.mp4",
+  "movieTimeSeconds": 32,
+  "liveButtonFrame": {
+    "x": 38,
+    "y": 870.3,
+    "width": 364,
+    "height": 201.3
+  },
+  "tabBarMinY": 873,
+  "appMaxY": 956,
+  "defaultButtonCenterY": 970.95,
+  "wholeButtonAboveTabBar": false,
+  "testSHA256": "869de51bf2a53b1b2c710e6ab84c5a9abdcf135d508bbd6e8e969158a233bc52",
+  "repairScope": "Only testAppointmentCompanionAtAccessibilityTextSize start-live invocation and its new private tapFullyVisible helper; no production change.",
+  "focusedVerification": {
+    "result": "/private/tmp/CareInOneCandidate8AccessibilityFocused.xcresult",
+    "actualExit": 0,
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 124.279,
+    "device": "36A9D3D3-365D-422E-8E9D-135DEB8BB063",
+    "os": "iOS27.0 24A434",
+    "runtimeWarnings": [],
+    "journey": "Largest Dynamic Type fictional demo appointment \u2192 fully visible native live button \u2192 question \u2192 Pause \u2192 Today \u2192 Follow-through \u2192 helper \u2192 Replies/progress. All original assertions preserved."
+  }
+}

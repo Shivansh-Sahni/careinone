@@ -1,6 +1,6 @@
 # Encryption export worksheet
 
-Prepared October 4, 2026 from the current source and official Apple guidance. This is an implementation inventory and submission decision worksheet. No encryption declaration, territory choice, or classification has been submitted.
+Prepared October 4–5, 2026 from the audited source and official Apple guidance. This is an implementation inventory and submission decision worksheet. No encryption declaration, territory choice, or classification has been submitted.
 
 ## What the app actually uses
 
@@ -44,7 +44,7 @@ The parent has now added actual Boolean `false` to source `Info.plist`; this rel
 
 | Final record | Status |
 |---|---|
-| Archive/build inspected | [Unsigned arm64 iOS Release archive](../verification/2026-10-04/release/UNSIGNED_RELEASE_ARCHIVE.md), CareInOne 1.0 (1), Xcode 27 / SDK 27; final signed artifact remains separate |
+| Archive/build inspected | [Candidate8 unsigned arm64 iOS Release archive](../verification/2026-10-05/continuation/release/UNSIGNED_CANDIDATE8_ARCHIVE.md), CareInOne 1.0 (1), Xcode 27 / SDK 27; final signed artifact remains separate |
 | Linked encryption dependencies match inventory | Unsigned archive loads only Apple system/Swift libraries, no embedded frameworks; CryptoKit AES-GCM, CommonCrypto PBKDF2 and Security symbols confirmed |
 | App Store Connect determination | Not completed |
 | Intended territories | Owner/publisher decision not recorded here |

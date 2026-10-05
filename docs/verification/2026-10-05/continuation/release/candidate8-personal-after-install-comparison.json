@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-10-05T08:15:06.933568+00:00",
+  "before": "candidate8-personal-before.json",
+  "after": "candidate8-personal-after-install-launch.json",
+  "record_type_count": 12,
+  "original_evidence_file_count": 1,
+  "record_fingerprints_equal": true,
+  "evidence_fingerprints_equal": true,
+  "exact_complete_fingerprint_equal": true,
+  "scope": "Existing primary simulator personal store after in-place ordinary C8 Release installation/launch. Record-type count is not an individual-record count. Demo handoff and arbitrary physical-device migration remain separate."
+}
