@@ -1,4 +1,5 @@
 import asyncio
+import contextlib
 import io
 import json
 import os
@@ -12,7 +13,7 @@ from backend.providers import CompatibleProvider, MockProvider, NoRedirect, Prov
 from backend.schema import VERSION, ValidationError, loads, validate_envelope, validate_request
 from backend.tests import test_gateway
 from backend.tests.test_gateway import TOKEN, envelope
-from backend.verify_gateway import FICTIONAL_SOURCE, safe_provider, verify
+from backend.verify_gateway import FICTIONAL_SOURCE, main as verify_main, safe_provider, verify
 
 
 class ConfigurationHardeningTests(unittest.TestCase):
@@ -300,3 +301,22 @@ class VerificationToolTests(unittest.TestCase):
     def test_compatible_host_ports_and_explicit_mock_are_valid(self):
         safe_provider({"adapter":"compatible","model":"Qwen/model","host":"api.example:8443","maxOutputTokens":6000})
         safe_provider(Router(MockProvider()).configuration()["primary"])
+
+    def test_server_environment_requires_opt_in_and_never_makes_paid_calls_by_default(self):
+        second_token='second-unit-test-token-'+('x'*40)
+        output=io.StringIO()
+        with patch.dict(os.environ,{'CARE_BACKEND_TOKENS':TOKEN+','+second_token},clear=True),patch('sys.argv',['verify_gateway','--server-environment']),patch('sys.stdin.read',side_effect=AssertionError('Server verification must not copy credentials through stdin')),patch('backend.verify_gateway.fetch',side_effect=[({'passed':True},{'status':'ok','schemaVersion':VERSION}),({'passed':True},self.config())]) as fetch,contextlib.redirect_stdout(output):
+            verify_main()
+        self.assertEqual(fetch.call_count,2)
+        self.assertEqual(fetch.call_args_list[1].args,('https://careinone-api.onrender.com','/v1/config',TOKEN))
+        report=json.loads(output.getvalue()); self.assertEqual(report['paidRequestsAttempted'],0)
+        self.assertNotIn(TOKEN,output.getvalue()); self.assertNotIn(second_token,output.getvalue())
+
+    def test_server_tokens_are_not_implicitly_used_without_server_environment_flag(self):
+        output=io.StringIO()
+        with patch.dict(os.environ,{'CARE_BACKEND_TOKENS':TOKEN},clear=True),patch('sys.argv',['verify_gateway']),patch('backend.verify_gateway.fetch',return_value=({'passed':True},{'status':'ok','schemaVersion':VERSION})) as fetch,contextlib.redirect_stdout(output),self.assertRaises(SystemExit) as caught:
+            verify_main()
+        self.assertEqual(caught.exception.code,1); self.assertEqual(fetch.call_count,1)
+        report=json.loads(output.getvalue()); self.assertEqual(report['paidRequestsAttempted'],0)
+        self.assertEqual(report['configuration']['error'],'gateway_token_unavailable')
+        self.assertNotIn(TOKEN,output.getvalue())

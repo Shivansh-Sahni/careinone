@@ -3,6 +3,7 @@ WORKDIR /app
 COPY backend/requirements.lock /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt && useradd --create-home --uid 10001 care
 COPY backend/app.py backend/schema.py backend/providers.py backend/__init__.py /app/backend/
+COPY backend/verify_gateway.py /app/backend/
 COPY backend/public/privacy.html backend/public/support.html /app/backend/public/
 USER 10001
 EXPOSE 8000

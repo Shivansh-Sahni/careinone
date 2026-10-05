@@ -2,8 +2,10 @@
 
     python -m backend.verify_gateway --token-stdin
 
-Read one gateway token from stdin, or set CARE_GATEWAY_TOKEN privately. The
-default operation reads health/config only and does not use paid model quota.
+Read one gateway token from stdin, or set CARE_GATEWAY_TOKEN privately. Inside
+the deployed server only, --server-environment explicitly opts into reading
+the first configured CARE_BACKEND_TOKENS value without printing/exporting it.
+The default operation reads health/config only and does not use paid model quota.
 --synthetic opts into one fixed synthetic check; --extract opts into one fixed
 fictional source extraction. At most two model-facing gateway requests can be
 made per run; a configured fallback can increase provider attempts.
@@ -133,12 +135,17 @@ def verify(base, token, *, synthetic=False, extract=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="https://careinone-api.onrender.com")
-    parser.add_argument("--token-stdin", action="store_true", help="Read the gateway token from stdin; never put it in command arguments")
+    credentials = parser.add_mutually_exclusive_group()
+    credentials.add_argument("--token-stdin", action="store_true", help="Read the gateway token from stdin; never put it in command arguments")
+    credentials.add_argument("--server-environment", action="store_true", help="Inside the deployed server only, use its first CARE_BACKEND_TOKENS entry without printing or exporting it")
     parser.add_argument("--synthetic", action="store_true", help="Make one small, paid synthetic connection check")
     parser.add_argument("--extract", action="store_true", help="Make one small, paid fictional source extraction")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
-    token = sys.stdin.read().strip() if args.token_stdin else os.getenv("CARE_GATEWAY_TOKEN", "")
+    if args.server_environment:
+        token = next((value.strip() for value in os.getenv("CARE_BACKEND_TOKENS", "").split(',') if value.strip()), "")
+    else:
+        token = sys.stdin.read().strip() if args.token_stdin else os.getenv("CARE_GATEWAY_TOKEN", "")
     try: report = verify(args.url, token, synthetic=args.synthetic, extract=args.extract)
     except Exception: report = {"passed": False, "error": "invalid_verification_configuration", "paidRequestsAttempted": 0}
     rendered = json.dumps(report, indent=2) + "\n"

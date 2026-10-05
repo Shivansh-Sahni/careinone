@@ -7,6 +7,7 @@
 !backend/app.py
 !backend/providers.py
 !backend/schema.py
+!backend/verify_gateway.py
 !backend/public/
 !backend/public/privacy.html
 !backend/public/support.html
