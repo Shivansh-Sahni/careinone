@@ -1,0 +1,22 @@
+{
+  "scope": "whole focused Loop date/precision/Keep/Discard/save/relaunch on disposable iOS 27 phone",
+  "result_bundle": "/private/tmp/CareInOneFinalPhoneLoop.xcresult",
+  "actual_runner_exit": 0,
+  "case_seconds": 153.8,
+  "case_passed": 1,
+  "case_failed": 0,
+  "skipped": 0,
+  "diagnostic_collector_cleanup": {
+    "pid": 84131,
+    "parent": 83496,
+    "cpu_percent": 0,
+    "idle_elapsed_seconds": 156,
+    "signal": "SIGTERM",
+    "only_owned_post_test_diagnostics_child": true,
+    "after_all_assertions_ended": "2026-10-05 03:13:17.404 EDT",
+    "simulator_app_runner_parent_not_terminated": true
+  },
+  "primary_personal_simulator_untouched": true,
+  "source_unchanged": "final-phone-loop-source-sha.json",
+  "does_not_replace_failed_full_C7_action": true
+}

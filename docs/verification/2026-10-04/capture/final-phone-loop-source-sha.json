@@ -1,0 +1,23 @@
+{
+  "phase": "before/after completed case assertions; runner finalization separate",
+  "source_commit": "f7283f6dafd5159832cc80f2d521c61b27f7bae7",
+  "device": "DFFF1AD7-0FBD-4955-882D-10A006F6F925",
+  "primary_device_untouched": "E80CF6B8-76BE-4160-8BA8-E0E63C19E0BF",
+  "inputs": [
+    {
+      "filename": "UITests/FollowThroughDraftRecoveryUITests.swift",
+      "sha256": "4c0c4b3c85169c0a8273ce4d412b77bf31fb693f824f68f2b92f148a45bb74d0",
+      "unchanged_after_run": true
+    },
+    {
+      "filename": "CareInOne/Views/FollowThroughViews.swift",
+      "sha256": "99795e5bb3edf66e315102e82161826c2b92cfc6816ed0c711e27811fbf268e8",
+      "unchanged_after_run": true
+    },
+    {
+      "filename": "CareInOne/Views/VisitWorkspaceView.swift",
+      "sha256": "c42ff89c6df2708ab03aca6772926e6743d52a99e89d1315200e6e7d4fd92571",
+      "unchanged_after_run": true
+    }
+  ]
+}

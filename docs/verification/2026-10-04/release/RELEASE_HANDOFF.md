@@ -53,3 +53,8 @@ C7's full action remains a failed action because its Loop date/precision Toggle 
 ## Simulator left ready for use
 
 CareInOne version 1.0/build 1 is running on the primary simulator in ordinary Release mode, with the isolated fictional demo loaded on Today. Native entry was Settings → Explore the fictional demo. The banner provides Return to my care; all 12 existing personal record-type fingerprints and the original-file fingerprint remain unchanged. [Exact handoff/source hash](candidate7-final-simulator-handoff.json), [fictional-only final picture](candidate7-primary-fictional-demo.png). No Debug flags, patient reset, consent change or paid request was used.
+
+
+## Final scoped current-phone recovery
+
+The whole previously failing Loop note/date/precision/draft workflow also passed separately on a disposable iPhone 16 Pro Max / iOS 27 simulator: one case, zero failures/skips, actual runner exit 0, 153.800 seconds. [Native summary](../capture/final-phone-loop-recovery-summary.json), [finalization](../capture/final-phone-loop-finalization.json) and [source comparison](../capture/final-phone-loop-source-sha.json) preserve the exact scope, warnings and owned idle post-test collector cleanup. No production edits, paid requests or primary/personal simulator actions accompanied this rerun. This current-phone pass and the separate SE/iOS 18.2 pass do not relabel the full C7 29-case failed action as green.
