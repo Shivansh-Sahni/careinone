@@ -14,7 +14,52 @@ FIELDS = {
     "kind", "label", "quote", "action", "value", "numericValue", "unit", "route", "frequency", "form", "eventDate", "effectiveDate", "dueDate",
     "duePrecision", "intervalDays", "page", "transcriptSeconds", "subject", "speaker", "speakerUncertain", "certainty", "negated", "conditional", "confidence", "clarification", "code", "codeSystem"
 }
-class ValidationError(ValueError): pass
+VALIDATION_MESSAGE_CODES = {
+    "Invalid JSON": "json_invalid", "Unsupported envelope": "envelope_invalid",
+    "Too many proposals": "proposal_limit", "Unknown proposal fields": "unknown_fields",
+    "Unsupported entity kind": "kind_invalid", "Missing or oversized required field": "required_field_invalid",
+    "Supporting quote not found exactly": "quote_not_exact", "Invalid text field": "text_field_invalid",
+    "Invalid enumeration": "enumeration_invalid", "Expected boolean": "boolean_invalid",
+    "Expected finite numeric value": "numeric_invalid", "Confidence outside range": "numeric_invalid",
+    "Invalid timestamp": "numeric_invalid", "Invalid integer field": "integer_invalid",
+    "Invalid date": "date_invalid", "Invalid ISO date": "date_invalid",
+    "Due precision requires a date": "due_precision_invalid",
+}
+VALIDATION_CODES = frozenset(VALIDATION_MESSAGE_CODES.values()) | {
+    "validation_unknown", "provider_envelope_invalid", "output_incomplete", "output_refused",
+    "output_missing", "response_oversized",
+}
+
+class ValidationError(ValueError):
+    @property
+    def validation_code(self):
+        # Only fixed categories are disclosed, never offending keys or values.
+        return VALIDATION_MESSAGE_CODES.get(str(self), "validation_unknown")
+
+def openai_output_schema():
+    """Strict Structured Outputs schema; unknown optional values remain null.
+
+    Exact evidence matching and semantic relationships are still validated by
+    validate_envelope after receipt. This schema does not verify clinical facts.
+    """
+    properties = {"kind": {"type": "string", "enum": sorted(KINDS)},
+                  "label": {"type": "string"}, "quote": {"type": "string"}}
+    for key in ("value", "unit", "route", "frequency", "form", "eventDate", "effectiveDate", "dueDate", "speaker", "clarification", "code", "codeSystem"):
+        properties[key] = {"type": ["string", "null"]}
+    for key, allowed in (("action", ACTIONS), ("certainty", CERTAINTIES), ("subject", SUBJECTS), ("duePrecision", PRECISIONS)):
+        properties[key] = {"type": ["string", "null"], "enum": [*sorted(allowed), None]}
+    for key in ("negated", "conditional", "speakerUncertain"):
+        properties[key] = {"type": ["boolean", "null"]}
+    for key in ("numericValue", "confidence", "transcriptSeconds"):
+        properties[key] = {"type": ["number", "null"]}
+    for key in ("page", "intervalDays"):
+        properties[key] = {"type": ["integer", "null"]}
+    assert set(properties) == FIELDS
+    return {"type": "object", "additionalProperties": False, "required": ["schemaVersion", "claims"],
+            "properties": {"schemaVersion": {"type": "string", "enum": [VERSION]},
+                           "claims": {"type": "array", "maxItems": 30,
+                                      "items": {"type": "object", "additionalProperties": False,
+                                                "properties": properties, "required": list(properties)}}}}
 
 def has_unpaired_surrogate(value):
     # Escaped lone UTF-16 surrogates are accepted by json.loads but cannot be

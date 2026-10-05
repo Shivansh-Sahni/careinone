@@ -137,7 +137,10 @@ class Gateway:
             return await self.respond(send,200,result)
         except ValidationError: return await self.respond(send,422,{'error':'Invalid request or unsupported extraction schema'})
         except TimeoutError: return await self.respond(send,504,{'error':'Analysis timed out. Evidence remains on your device.'})
-        except ProviderError as exc: return await self.respond(send,503,{'error':exc.public_message,'errorCode':exc.code})
+        except ProviderError as exc:
+            failure={'error':exc.public_message,'errorCode':exc.code}
+            if exc.validation_code is not None: failure['validationCode']=exc.validation_code
+            return await self.respond(send,503,failure)
         except asyncio.CancelledError: raise
         except Exception: return await self.respond(send,503,{'error':'Analysis unavailable. Use local analysis or retry.'})
         finally: body.clear()

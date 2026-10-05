@@ -23,7 +23,7 @@ import urllib.error
 import urllib.request
 
 from .providers import CompatibleProvider, NoRedirect, PROVIDER_ERROR_MESSAGES, looks_like_credential, validate_model_identifier
-from .schema import VERSION, loads, validate_envelope
+from .schema import VERSION, VALIDATION_CODES, loads, validate_envelope
 
 
 FICTIONAL_SOURCE = "Fictional verification patient Alex Example. My clinician ordered a CBC blood test today. My mother has diabetes. The clinician said to consider MRI if pain persists; no MRI was ordered."
@@ -72,6 +72,8 @@ def fetch(base, path, token=None, payload=None, limit=32_000):
                 value = loads(raw)
                 code = value.get("errorCode") if isinstance(value, dict) else None
                 if code in PROVIDER_ERROR_MESSAGES: summary["errorCode"] = code
+                validation = value.get("validationCode") if isinstance(value, dict) else None
+                if validation in VALIDATION_CODES: summary["validationCode"] = validation
         except Exception: pass
         exc.close()
         return summary, None
