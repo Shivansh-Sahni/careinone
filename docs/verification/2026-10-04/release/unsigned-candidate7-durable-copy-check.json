@@ -1,0 +1,78 @@
+{
+  "checked_utc": "2026-10-05T05:35:19.110930+00:00",
+  "source_archive": "/private/tmp/CareInOneUnsignedReleaseCandidate7.xcarchive",
+  "durable_archive": "/Users/shivanshsahni/Downloads/Personal/CAC 2026/artifacts/release/CareInOneUnsignedCandidate7.xcarchive",
+  "files_compared": 11,
+  "bytes_compared": 24457543,
+  "all_match": true,
+  "ignored_by_git": true,
+  "rows": [
+    {
+      "path": "Info.plist",
+      "bytes": 867,
+      "sha256": "cbab223c369e2486eb42cbbd517a365877db68386b550cf8f6cebbf8e8a73ddb",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "Products/Applications/CareInOne.app/AppIcon60x60@2x.png",
+      "bytes": 5644,
+      "sha256": "ef0474e4d49e123d86f23dce6d5cb3ce519d00a5703851d0bebd505f014fa7d5",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "Products/Applications/CareInOne.app/AppIcon76x76@2x~ipad.png",
+      "bytes": 7001,
+      "sha256": "feb5ac48eca85e642244f805727fad4aa384dcb93edac7c261e909cb5e2b4fee",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "Products/Applications/CareInOne.app/Assets.car",
+      "bytes": 49464,
+      "sha256": "a3ab9150b876549484c7ee976162e6dfe8fe4875a38c07aabd716da387cd371b",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "Products/Applications/CareInOne.app/CareInOne",
+      "bytes": 5279544,
+      "sha256": "ae0afd55185fb9abdfe4e6de16a79662d1a2de441fc057469efa5bf24643907d",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "Products/Applications/CareInOne.app/Info.plist",
+      "bytes": 2225,
+      "sha256": "6cc915caa5680cdc33c15a3ad886b4d854eedc4acad826a606f0ae1bff26933f",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "Products/Applications/CareInOne.app/PkgInfo",
+      "bytes": 8,
+      "sha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "Products/Applications/CareInOne.app/PrivacyInfo.xcprivacy",
+      "bytes": 1413,
+      "sha256": "66adb62b5fcba3d6e7feb3e922b752f8604ac17f7c78c62ae9cc0bc3c05a27ae",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "dSYMs/CareInOne.app.dSYM/Contents/Info.plist",
+      "bytes": 651,
+      "sha256": "7f069fa33d9747dea705225fae1665c830469ac900575dba909197919127da08",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "dSYMs/CareInOne.app.dSYM/Contents/Resources/DWARF/CareInOne",
+      "bytes": 19110468,
+      "sha256": "381c707d6ac5a2690b4ba9eb7654e4a973a7701bce51c4cd61313124c7356b25",
+      "matches_durable_copy": true
+    },
+    {
+      "path": "dSYMs/CareInOne.app.dSYM/Contents/Resources/Relocations/aarch64/CareInOne.yml",
+      "bytes": 258,
+      "sha256": "61ca1365a1fe681816a751a4673031491cc9bb7288b8f8cdf46c27d22fcaf0fe",
+      "matches_durable_copy": true
+    }
+  ],
+  "scope": "Copied actual successful unsigned C7 archive without replacing earlier C5 archive or modifying source/simulator/signing. Not uploadable."
+}

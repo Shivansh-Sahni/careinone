@@ -1,0 +1,44 @@
+{
+  "scope": "ConflictsView only in FollowThroughViews.swift; parent-authorized exception to production freeze for a reproducible actual hit-area defect.",
+  "historicalFailure": {
+    "device": "iPhone SE 3rd generation / iOS 18.5 disposable",
+    "case": "FollowThroughDraftRecoveryUITests.testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard",
+    "stage": "Native center Button.tap did not open Compare sources; no note input had occurred.",
+    "originalBundle": "/private/tmp/CareInOneFinalSmallPhoneAllUI.xcresult",
+    "explicitEntryRetryBundle": "/private/tmp/CareInOneSmallPhoneBoundaryRetest.xcresult",
+    "explicitEntryRetryDurationSeconds": 43.985,
+    "explicitEntryRetryResult": "Failed at Compare sources prerequisite",
+    "failureAX": "/private/tmp/CareInOneFinalSmallPhoneAllUIAttachments/861CAA73-1447-4EC6-A9D7-02FC4660D9DA.txt",
+    "visualReview": "Actual fictional Records to Clarify list remained; title visible, no modal."
+  },
+  "causeEvidence": {
+    "buttonFrame": [
+      16,
+      347,
+      343,
+      97.5
+    ],
+    "defaultCenter": [
+      187.5,
+      395.75
+    ],
+    "narrowBadgeHorizontalExtent": [
+      41,
+      107
+    ],
+    "badgeYExtent": [
+      391.5,
+      406
+    ],
+    "source": "Leading VStack plain Button lacked rectangular content shape; center fell on blank space to the right of badge. Existing title tap test passed on same SE."
+  },
+  "repair": {
+    "path": "CareInOne/Views/FollowThroughViews.swift",
+    "sha256": "99795e5bb3edf66e315102e82161826c2b92cfc6816ed0c711e27811fbf268e8",
+    "change": "Expand label to full row width with leading alignment and add contentShape(Rectangle()).",
+    "compatibility": "No identifiers, clinical policy, stored state or persistence changed. Existing visual text/layout retained.",
+    "testRequirement": "The full SE dirty-note workflow must retain center Button.tap for initial/reopen entry rather than a title-only workaround."
+  },
+  "verificationStatus": "Focused full workflow delegated to capture_pipeline on their disposable SE; result pending. Root separately verifies final candidate/archive and affected primary cases.",
+  "paidRequests": 0
+}

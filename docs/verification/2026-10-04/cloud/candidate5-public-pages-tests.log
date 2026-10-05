@@ -1,0 +1,13 @@
+test_both_reviewed_pages_are_available_without_authentication (backend.tests.test_public_pages.PublicPageTests.test_both_reviewed_pages_are_available_without_authentication) ... ok
+test_document_mutations_are_not_allowed (backend.tests.test_public_pages.PublicPageTests.test_document_mutations_are_not_allowed) ... ok
+test_documents_are_isolated_from_query_and_headers (backend.tests.test_public_pages.PublicPageTests.test_documents_are_isolated_from_query_and_headers) ... ok
+test_head_preserves_headers_without_document_body (backend.tests.test_public_pages.PublicPageTests.test_head_preserves_headers_without_document_body) ... ok
+test_missing_oversized_or_non_utf8_document_fails_without_file_details (backend.tests.test_public_pages.PublicPageTests.test_missing_oversized_or_non_utf8_document_fails_without_file_details) ... ok
+test_static_documents_have_restrictive_security_headers (backend.tests.test_public_pages.PublicPageTests.test_static_documents_have_restrictive_security_headers) ... ok
+test_traversal_and_non_allowlisted_files_cannot_be_read (backend.tests.test_public_pages.PublicPageTests.test_traversal_and_non_allowlisted_files_cannot_be_read) ... ok
+test_docker_runtime_includes_public_pages_and_excludes_credentials (backend.tests.test_public_pages.RuntimePackagingTests.test_docker_runtime_includes_public_pages_and_excludes_credentials) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.013s
+
+OK

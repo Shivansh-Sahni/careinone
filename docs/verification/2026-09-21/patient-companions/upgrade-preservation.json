@@ -1,0 +1,117 @@
+{
+  "result": "passed",
+  "method": "Canonical decoded-record hashes and original-file byte hashes before and after normal install and launch. No reset, demo reload or test flags.",
+  "recordTypesCompared": 12,
+  "originalFilesCompared": 1,
+  "identical": true,
+  "before": {
+    "records": {
+      "ZEVIDENCESOURCE": {
+        "count": 20,
+        "sha256": "2cf503fb4b4aa930b0301b5915a0f878347aa6835542155700f15f2096baf10e"
+      },
+      "ZENCOUNTER": {
+        "count": 3,
+        "sha256": "aa0cbbdb330f482a47fd35f93da516756b7c38fcc50303c2bf53718e17b7fcf9"
+      },
+      "ZCAREENTITY": {
+        "count": 14,
+        "sha256": "d53fea9cd3244c2fbe855deb281bae9f3608fd7b9e77eef5af83e7a1da8c132e"
+      },
+      "ZCARECLAIM": {
+        "count": 19,
+        "sha256": "162e5ea55e23dcd61053c61b8c8694bf774fa120a68ed5848bb3edc384e3e628"
+      },
+      "ZCLAIMRELATION": {
+        "count": 22,
+        "sha256": "ed9657fc9fa9540f39cfd7f395055eefcbf75a52e645adf6a8c225cff1c1b01b"
+      },
+      "ZCONFLICTRECORD": {
+        "count": 2,
+        "sha256": "c934d974dabd1b389692a91f6b968257f9ada2376049da2ae6a07e5f22944e30"
+      },
+      "ZOPENLOOP": {
+        "count": 7,
+        "sha256": "cf4c58cd1eab44217834572432ce7f47320f43cbe4ac046e7d0b5840457c8745"
+      },
+      "ZCHANGERECORD": {
+        "count": 29,
+        "sha256": "54173fe0e748dc0cfedf1e1530fe8d2ee45af7120b2aec1499fb8394660292e6"
+      },
+      "ZSAVEDQUESTION": {
+        "count": 1,
+        "sha256": "f52c58b6160d551d91f752656b4bf3c4227fdf3661b222ce9d79e0067ed23df5"
+      },
+      "ZPATIENTNOTE": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "ZPATIENTPROFILE": {
+        "count": 1,
+        "sha256": "e3c3a57512a5a6c783982a2202270cda3bbf5dac7735c3036ac4c3581a3ea69c"
+      },
+      "ZAUDITEVENT": {
+        "count": 40,
+        "sha256": "c5ed3ed4c7bc8f313e43be0f077fa3ce06052da58006ab9ce40b4ecfaa51612f"
+      }
+    },
+    "evidence": {
+      "458629b0953cf9fac095e5e50acafcf531af08eac022627f6a409e61d9b3f5ad": "368713c01edbbc24ea04a5e1523287a9e78614ba288e3f50a68377c87cbfe374"
+    }
+  },
+  "after": {
+    "records": {
+      "ZEVIDENCESOURCE": {
+        "count": 20,
+        "sha256": "2cf503fb4b4aa930b0301b5915a0f878347aa6835542155700f15f2096baf10e"
+      },
+      "ZENCOUNTER": {
+        "count": 3,
+        "sha256": "aa0cbbdb330f482a47fd35f93da516756b7c38fcc50303c2bf53718e17b7fcf9"
+      },
+      "ZCAREENTITY": {
+        "count": 14,
+        "sha256": "d53fea9cd3244c2fbe855deb281bae9f3608fd7b9e77eef5af83e7a1da8c132e"
+      },
+      "ZCARECLAIM": {
+        "count": 19,
+        "sha256": "162e5ea55e23dcd61053c61b8c8694bf774fa120a68ed5848bb3edc384e3e628"
+      },
+      "ZCLAIMRELATION": {
+        "count": 22,
+        "sha256": "ed9657fc9fa9540f39cfd7f395055eefcbf75a52e645adf6a8c225cff1c1b01b"
+      },
+      "ZCONFLICTRECORD": {
+        "count": 2,
+        "sha256": "c934d974dabd1b389692a91f6b968257f9ada2376049da2ae6a07e5f22944e30"
+      },
+      "ZOPENLOOP": {
+        "count": 7,
+        "sha256": "cf4c58cd1eab44217834572432ce7f47320f43cbe4ac046e7d0b5840457c8745"
+      },
+      "ZCHANGERECORD": {
+        "count": 29,
+        "sha256": "54173fe0e748dc0cfedf1e1530fe8d2ee45af7120b2aec1499fb8394660292e6"
+      },
+      "ZSAVEDQUESTION": {
+        "count": 1,
+        "sha256": "f52c58b6160d551d91f752656b4bf3c4227fdf3661b222ce9d79e0067ed23df5"
+      },
+      "ZPATIENTNOTE": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "ZPATIENTPROFILE": {
+        "count": 1,
+        "sha256": "e3c3a57512a5a6c783982a2202270cda3bbf5dac7735c3036ac4c3581a3ea69c"
+      },
+      "ZAUDITEVENT": {
+        "count": 40,
+        "sha256": "c5ed3ed4c7bc8f313e43be0f077fa3ce06052da58006ab9ce40b4ecfaa51612f"
+      }
+    },
+    "evidence": {
+      "458629b0953cf9fac095e5e50acafcf531af08eac022627f6a409e61d9b3f5ad": "368713c01edbbc24ea04a5e1523287a9e78614ba288e3f50a68377c87cbfe374"
+    }
+  }
+}

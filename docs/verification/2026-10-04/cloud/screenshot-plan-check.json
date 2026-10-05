@@ -1,0 +1,23 @@
+{
+  "snapshot": "current generated project after screenshot plan hardening",
+  "uiSourceFiles": 9,
+  "appSourceFiles": 35,
+  "integrationSourceFiles": 14,
+  "checks": {
+    "screenshotUsesRelease": true,
+    "screenshotHasOnlyPlan": true,
+    "selectedOnlyFictionalScreenshotCase": true,
+    "noIntegrationInScreenshotScheme": true,
+    "normalStillDebug": true,
+    "normalBothTestTargets": true,
+    "noScreenshotLaunchArgs": true,
+    "planRecognizedByXcode": true
+  },
+  "runtimeTestsExecutedByThisCheck": 0,
+  "limitations": [
+    "Xcode listing recognizes the plan; actual Release screenshot capture is separately required.",
+    "A disposable simulator is still a caller requirement; do not run capture on a personal device.",
+    "The normal onboarding Explore action intentionally saves personal onboarding preferences before opening the separately persisted fictional demo.",
+    "The screenshot case intentionally saves a fictional source in its demo database; reruns must handle duplicate-evidence notice rather than reset personal data."
+  ]
+}

@@ -1,0 +1,21 @@
+CareInOne organizes information a patient or caregiver chooses to capture. It is free, with no ads, subscriptions, or in-app purchases. There is no required account or login. It does not diagnose, prescribe, determine which conflicting instruction is medically correct, or monitor emergencies. Proposed details require the user's review.
+
+LOCAL REVIEW PATH
+1. On first launch choose Explore the fictional demo. After onboarding use Settings > Explore the fictional demo. The banner marks isolated practice; Return to my care exits without merging demo records. Settings > Reset fictional demo resets practice only.
+2. Today shows appointments, next steps and reports needing clarification. My Care opens reviewed details and their supporting sources; conflicting reports remain visible.
+3. Today > Add an update opens text capture. Use only fictional information, for example:
+Fictional review example.
+Allergy: penicillin.
+Follow-up: call the clinic tomorrow to arrange an appointment.
+Save the source, open its proposals and review each consequential detail. Sources retains the original. Repeating identical evidence can show Already saved and close capture; resume through Sources > original evidence > Review & edit.
+4. Today > Get ready for my visit opens the appointment companion. Save an opening and questions, enter an answer, leave and return. Saved answers become patient-reported evidence requiring review.
+5. Open a follow-through item > Help me get this done. Edit the clinic message and save outreach/replies. Nothing is sent automatically and outreach is not clinical completion.
+6. Care Brief > Choose what to include prepares a selected visit packet. Share selected text or PDF using the system share sheet.
+7. Settings > Practice text, PDF, photo & FHIR imports contains fictional sample files. Practice and personal stores/original files stay separate.
+
+PRIVACY AND PERMISSIONS
+Capture, local text recognition, review, search, preparation and export work without cloud analysis. On-device transcription depends on the device/language; typed notes remain available. Camera, microphone, Speech, notifications and calendar-write permission are requested for their matching actions. Visit recording requires agreement confirmation and pauses on leaving the foreground. Calendar copies/shares require user action and are not recalled by later local deletion.
+Settings offers device authentication and passphrase-protected encrypted backup. The passphrase cannot be recovered. Local deletion does not erase previously shared external copies.
+
+OPTIONAL CLOUD
+The build offers operator-configured optional cloud; it has no self-service public cloud enrollment. Core local features need no gateway. Any reviewer-specific gateway access must be provided separately in private review information. To configure it, first Return to my care, then Settings > Set up or test cloud connection. Check configuration, test synthetic text and grant permission for the displayed model providers. Only working source text/type/date is transmitted for proposals; original photos, PDFs and audio remain local. Never enter an OpenAI key into the app. Real-provider availability and private access must be verified for the submitted build.

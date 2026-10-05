@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "file": "AppIcon60x60@2x.png",
+      "bytes": 5644,
+      "sha256": "ef0474e4d49e123d86f23dce6d5cb3ce519d00a5703851d0bebd505f014fa7d5",
+      "credential_pattern_counts": {
+        "openai_key_pattern": 0,
+        "private_key_block": 0,
+        "render_api_secret_pattern": 0
+      }
+    },
+    {
+      "file": "Assets.car",
+      "bytes": 49464,
+      "sha256": "a3ab9150b876549484c7ee976162e6dfe8fe4875a38c07aabd716da387cd371b",
+      "credential_pattern_counts": {
+        "openai_key_pattern": 0,
+        "private_key_block": 0,
+        "render_api_secret_pattern": 0
+      }
+    },
+    {
+      "file": "AppIcon76x76@2x~ipad.png",
+      "bytes": 7001,
+      "sha256": "feb5ac48eca85e642244f805727fad4aa384dcb93edac7c261e909cb5e2b4fee",
+      "credential_pattern_counts": {
+        "openai_key_pattern": 0,
+        "private_key_block": 0,
+        "render_api_secret_pattern": 0
+      }
+    },
+    {
+      "file": "PrivacyInfo.xcprivacy",
+      "bytes": 1413,
+      "sha256": "66adb62b5fcba3d6e7feb3e922b752f8604ac17f7c78c62ae9cc0bc3c05a27ae",
+      "credential_pattern_counts": {
+        "openai_key_pattern": 0,
+        "private_key_block": 0,
+        "render_api_secret_pattern": 0
+      }
+    },
+    {
+      "file": "CareInOne",
+      "bytes": 5230000,
+      "sha256": "48e8733bc9a313e2b3a70c135d7ba0c513c3483fdbbde8c6d4aaf05e70bd69d2",
+      "credential_pattern_counts": {
+        "openai_key_pattern": 0,
+        "private_key_block": 0,
+        "render_api_secret_pattern": 0
+      }
+    },
+    {
+      "file": "Info.plist",
+      "bytes": 2225,
+      "sha256": "6cc915caa5680cdc33c15a3ad886b4d854eedc4acad826a606f0ae1bff26933f",
+      "credential_pattern_counts": {
+        "openai_key_pattern": 0,
+        "private_key_block": 0,
+        "render_api_secret_pattern": 0
+      }
+    },
+    {
+      "file": "PkgInfo",
+      "bytes": 8,
+      "sha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "credential_pattern_counts": {
+        "openai_key_pattern": 0,
+        "private_key_block": 0,
+        "render_api_secret_pattern": 0
+      }
+    }
+  ],
+  "totals": {
+    "openai_key_pattern": 0,
+    "private_key_block": 0,
+    "render_api_secret_pattern": 0
+  },
+  "limitations": "Pattern scanning is a bounded static screen and cannot establish absence of all unknown credentials."
+}

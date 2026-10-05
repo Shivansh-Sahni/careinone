@@ -1,0 +1,39 @@
+{
+  "scope": "Targeted ordinary-editor recovery; not full final candidate",
+  "platform": "iPhone 18 Pro simulator / iOS 27.0",
+  "result": "Passed",
+  "total": 3,
+  "passed": 3,
+  "failed": 0,
+  "skipped": 0,
+  "start_utc": "2026-10-05T01:46:13.809000+00:00",
+  "finish_utc": "2026-10-05T02:02:44.825000+00:00",
+  "exit_code": 0,
+  "log": "editor-recovery5.log",
+  "result_bundle": "/private/tmp/CareInOneEditorRecovery5Authorized.xcresult",
+  "verified": [
+    "Encounter Done hides keyboard, dirty Cancel supports Keep/discard, original title/provider grouping remains and clean Cancel closes",
+    "30-line Unicode note paste/save, dirty Keep/discard, relaunch preserves unchanged original",
+    "Question saved notice explicit, answer paste, dirty swipe blocked, Keep/discard unchanged answer, save/relaunch, Keep question cancellation, confirmed question/answer delete persists across relaunch"
+  ],
+  "runtime_warnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "diagnostic_warning": "After assertions ended 21:52:44 EDT, Xcode waited 600 seconds for idle simulator diagnostic collection and reported timeout; command subsequently finalized TEST SUCCEEDED. This is disclosed, not represented as warning-free execution.",
+  "limitations": [
+    "Separate disposable simulator; no physical-device proof",
+    "Minimum-supported iOS 18 paste has separate verification",
+    "Later global source/configuration changes require final full candidate"
+  ]
+}

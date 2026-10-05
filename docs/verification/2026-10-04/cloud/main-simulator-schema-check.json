@@ -1,0 +1,16 @@
+{
+  "scope": "Authorized read-only schema table names on main simulator; no row values, patient text, original filenames, Keychain or credentials read",
+  "table_names": [
+    "ACHANGE", "ATRANSACTION", "ATRANSACTIONSTRING", "ZAUDITEVENT",
+    "ZCARECLAIM", "ZCAREENTITY", "ZCHANGERECORD", "ZCLAIMRELATION",
+    "ZCONFLICTRECORD", "ZENCOUNTER", "ZEVIDENCESOURCE", "ZOPENLOOP",
+    "ZPATIENTNOTE", "ZPATIENTPROFILE", "ZSAVEDQUESTION", "Z_METADATA",
+    "Z_MODELCACHE", "Z_PRIMARYKEY"
+  ],
+  "application_payload_tables": 12,
+  "additional_known_persistent_history_tables": ["ACHANGE", "ATRANSACTION", "ATRANSACTIONSTRING"],
+  "history_row_values_read": false,
+  "simulator_mutations_performed_by_subtask": false,
+  "first_approval_review": "timed out before command execution",
+  "permitted_retry": "approved and schema-only read succeeded"
+}

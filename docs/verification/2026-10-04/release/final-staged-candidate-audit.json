@@ -1,0 +1,4088 @@
+{
+  "timestamp_utc": "2026-10-05T04:56:45.742558+00:00",
+  "scope": "Read-only staged blob, working snapshot, bounded text-pattern, whitespace and release packet link audit. No builds, tests, simulator, mutations of source or index. Image pixel audit remains separate and was not rerun.",
+  "head": "9f5e88bf9e6bc7c8b743a6c69249e48c23bc13b9",
+  "staged_entries": 385,
+  "staged_nondeleted_files": 374,
+  "staged_bytes": 25743552,
+  "status_counts": {
+    "M": 22,
+    "D": 11,
+    "A": 321,
+    "R": 31
+  },
+  "unstaged_changed_paths": [
+    "UITests/CareInOneUITests.swift",
+    "UITests/ReleaseScreenshotsUITests.swift",
+    "docs/app-store/screenshots/iphone-6.9/01-today.png",
+    "docs/app-store/screenshots/iphone-6.9/02-source-review.png",
+    "docs/verification/2026-10-04/capture/final-se-all-ui.log",
+    "docs/verification/2026-10-04/release/SCREEN_CONTROL_INVENTORY.md",
+    "docs/verification/2026-10-04/release/git-eligible-image-ocr-check.json"
+  ],
+  "staged_working_mismatches": [
+    "UITests/CareInOneUITests.swift",
+    "UITests/ReleaseScreenshotsUITests.swift",
+    "docs/app-store/screenshots/iphone-6.9/01-today.png",
+    "docs/app-store/screenshots/iphone-6.9/02-source-review.png",
+    "docs/verification/2026-10-04/capture/final-se-all-ui.log",
+    "docs/verification/2026-10-04/release/SCREEN_CONTROL_INVENTORY.md",
+    "docs/verification/2026-10-04/release/git-eligible-image-ocr-check.json"
+  ],
+  "bounded_text_credential_flags": [
+    {
+      "path": "IntegrationTests/CloudSafetyIntegrationTests.swift",
+      "match_count": 1,
+      "marked_fixture_only": true
+    }
+  ],
+  "text_scan_limitations": "Known recognizable credential patterns only. Fixture-marking is contextual, not proof that an arbitrary match is safe. No matched values are recorded. Images/binaries excluded.",
+  "binary_paths": [
+    {
+      "path": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "bytes": 8990
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/01-today.png",
+      "bytes": 432608
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/02-source-review.png",
+      "bytes": 293115
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/04-appointment-companion.png",
+      "bytes": 412554
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/05-selected-packet.png",
+      "bytes": 500115
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/visit-packet.png",
+      "bytes": 325076
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/checkpoint-comparison.png",
+      "bytes": 353172
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/deletion-impact.png",
+      "bytes": 261293
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/review-impact.png",
+      "bytes": 213650
+    },
+    {
+      "path": "docs/verification/2026-09-20/demo-today.png",
+      "bytes": 449211
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/care-connections-accessibility.png",
+      "bytes": 301040
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/care-connections.png",
+      "bytes": 331886
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/combined-omission.png",
+      "bytes": 378213
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/deletion-disclosure.png",
+      "bytes": 266189
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/evidence-trace.png",
+      "bytes": 362071
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/exact-handoff-copy.png",
+      "bytes": 233677
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/handoff-changes.png",
+      "bytes": 495660
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/timeline-accessibility.png",
+      "bytes": 493539
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/two-date-timeline.png",
+      "bytes": 377581
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-accessibility.png",
+      "bytes": 232820
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-answer.png",
+      "bytes": 215023
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-accessibility.png",
+      "bytes": 510747
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-next-step.png",
+      "bytes": 353434
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-reply.png",
+      "bytes": 348564
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/opening-brief.png",
+      "bytes": 240039
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/backup-created.png",
+      "bytes": 610498
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/cleared-source.png",
+      "bytes": 3814903
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/review-draft-kept.png",
+      "bytes": 146794
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-appointment-answer.png",
+      "bytes": 165575
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-appointment-brief.png",
+      "bytes": 119734
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-care-connections-accessibility.png",
+      "bytes": 128671
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-cleared-working-original.png",
+      "bytes": 119795
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-compact-demo-accessibility.png",
+      "bytes": 106348
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-native-paste-relaunch.png",
+      "bytes": 150732
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-outreach-reply.png",
+      "bytes": 207808
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-timeline-accessibility.png",
+      "bytes": 174039
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/workspace-draft-kept.png",
+      "bytes": 108785
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/live-gateway-shell.jpg",
+      "bytes": 75986
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/ordinary-release-saved-source-fictional.png",
+      "bytes": 271359
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/strict-output-deploy-live.jpg",
+      "bytes": 121911
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/strict-output-fictional-check.jpg",
+      "bytes": 56444
+    }
+  ],
+  "cached_whitespace_exit": 2,
+  "cached_whitespace_diagnostic_count": 1018,
+  "cached_whitespace_by_file": {
+    "docs/verification/2026-10-04/capture/backup-build.log": 34,
+    "docs/verification/2026-10-04/capture/backup-capture-tests.log": 17,
+    "docs/verification/2026-10-04/capture/backup-final.log": 12,
+    "docs/verification/2026-10-04/capture/backup-retest.log": 15,
+    "docs/verification/2026-10-04/capture/demo-packet-native-choices.log": 6,
+    "docs/verification/2026-10-04/capture/editor-draft-recovery-final.log": 20,
+    "docs/verification/2026-10-04/capture/editor-draft-recovery.log": 57,
+    "docs/verification/2026-10-04/capture/expanded-build-latest.log": 15,
+    "docs/verification/2026-10-04/capture/expanded-build.log": 34,
+    "docs/verification/2026-10-04/capture/final-se-all-ui.log": 30,
+    "docs/verification/2026-10-04/capture/focused-tests.log": 19,
+    "docs/verification/2026-10-04/capture/keyboard-retest.log": 16,
+    "docs/verification/2026-10-04/capture/paste-isolation-build.log": 25,
+    "docs/verification/2026-10-04/capture/personal-packet-native-choices.log": 6,
+    "docs/verification/2026-10-04/capture/personal-packet-workspace-diagnosis.log": 25,
+    "docs/verification/2026-10-04/capture/se-outgoing-message-measured.log": 12,
+    "docs/verification/2026-10-04/capture/se-outgoing-message-stable.log": 6,
+    "docs/verification/2026-10-04/capture/se-outgoing-message-verified.log": 7,
+    "docs/verification/2026-10-04/capture/se-outgoing-message.log": 1,
+    "docs/verification/2026-10-04/capture/small-phone-companion-measured.log": 57,
+    "docs/verification/2026-10-04/capture/small-phone-companion-retest.log": 61,
+    "docs/verification/2026-10-04/capture/small-phone-final.log": 56,
+    "docs/verification/2026-10-04/capture/small-phone-release-checks.log": 67,
+    "docs/verification/2026-10-04/capture/small-phone-retest.log": 60,
+    "docs/verification/2026-10-04/capture/small-phone-tests.log": 52,
+    "docs/verification/2026-10-04/capture/small-phone-verified.log": 54,
+    "docs/verification/2026-10-04/capture/ui-isolation-build.log": 25,
+    "docs/verification/2026-10-04/cloud/ask-and-source-status-native.log": 12,
+    "docs/verification/2026-10-04/cloud/follow-through-draft-native.log": 34,
+    "docs/verification/2026-10-04/cloud/follow-through-loop-retry-native.log": 13,
+    "docs/verification/2026-10-04/cloud/follow-through-loop-retry2-native.log": 16,
+    "docs/verification/2026-10-04/integration-baseline.log": 29,
+    "docs/verification/2026-10-04/pipeline-candidate.log": 12,
+    "docs/verification/2026-10-04/release/SCREEN_CONTROL_INVENTORY.md": 1,
+    "docs/verification/2026-10-04/release/editor-recovery4.log": 28,
+    "docs/verification/2026-10-04/release/editor-recovery5.log": 16,
+    "docs/verification/2026-10-04/release/editor-recovery6.log": 11,
+    "docs/verification/2026-10-04/release/editor-recovery7.log": 7,
+    "docs/verification/2026-10-04/release/editor-recovery8.log": 10,
+    "docs/verification/2026-10-04/release/editor-release-build.log": 5,
+    "docs/verification/2026-10-04/release/keychain-signing-test.log": 29,
+    "docs/verification/2026-10-04/release/unsigned-candidate5-archive.log": 3,
+    "docs/verification/2026-10-04/release/unsigned-release-archive.log": 3
+  },
+  "non_log_whitespace_diagnostics": [
+    {
+      "path": "docs/verification/2026-10-04/release/SCREEN_CONTROL_INVENTORY.md",
+      "type": "new blank line at EOF."
+    }
+  ],
+  "release_markdown_files_checked": 24,
+  "broken_release_links": [],
+  "entries": [
+    {
+      "status": "M",
+      "path": ".github/workflows/verify.yml"
+    },
+    {
+      "status": "M",
+      "path": ".gitignore"
+    },
+    {
+      "status": "D",
+      "path": "CareContinuity.xcodeproj/project.pbxproj"
+    },
+    {
+      "status": "D",
+      "path": "CareContinuity.xcodeproj/xcshareddata/xcschemes/CareContinuity.xcscheme"
+    },
+    {
+      "status": "D",
+      "path": "CareContinuity/Resources/PrivacyInfo.xcprivacy"
+    },
+    {
+      "status": "D",
+      "path": "CareContinuity/Services/ExportService.swift"
+    },
+    {
+      "status": "D",
+      "path": "CareContinuity/Services/ReminderService.swift"
+    },
+    {
+      "status": "D",
+      "path": "CareContinuity/Views/BackupView.swift"
+    },
+    {
+      "status": "D",
+      "path": "CareContinuity/Views/CaptureView.swift"
+    },
+    {
+      "status": "D",
+      "path": "CareContinuity/Views/PatientEditors.swift"
+    },
+    {
+      "status": "D",
+      "path": "CareContinuity/Views/PatientWorkflowViews.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne.xcodeproj/project.pbxproj"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne.xcodeproj/xcshareddata/xcschemes/CareInOne.xcscheme"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne.xcodeproj/xcshareddata/xcschemes/CareInOneScreenshots.xcscheme"
+    },
+    {
+      "status": "R050",
+      "path": "CareInOne/App/AppStore.swift",
+      "old_path": "CareContinuity/App/AppStore.swift"
+    },
+    {
+      "status": "R066",
+      "path": "CareInOne/App/CareInOneApp.swift",
+      "old_path": "CareContinuity/App/CareContinuityApp.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/App/FollowThroughAssistStore.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/App/VisitCompanionStore.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/AppointmentCalendar.swift"
+    },
+    {
+      "status": "R092",
+      "path": "CareInOne/Core/CareArchive.swift",
+      "old_path": "CareContinuity/Core/CareArchive.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/CareHandoff.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/ContinuityComparison.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/ContinuityMemory.swift"
+    },
+    {
+      "status": "R066",
+      "path": "CareInOne/Core/DisplayLabels.swift",
+      "old_path": "CareContinuity/Core/DisplayLabels.swift"
+    },
+    {
+      "status": "R096",
+      "path": "CareInOne/Core/Domain.swift",
+      "old_path": "CareContinuity/Core/Domain.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/EntityAliasPolicy.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/EvidenceGraph.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/EvidenceTimeline.swift"
+    },
+    {
+      "status": "R100",
+      "path": "CareInOne/Core/Extraction.swift",
+      "old_path": "CareContinuity/Core/Extraction.swift"
+    },
+    {
+      "status": "R060",
+      "path": "CareInOne/Core/FHIRImporter.swift",
+      "old_path": "CareContinuity/Core/FHIRImporter.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/FollowThroughAssist.swift"
+    },
+    {
+      "status": "R096",
+      "path": "CareInOne/Core/LoopEngine.swift",
+      "old_path": "CareContinuity/Core/LoopEngine.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/NumericTrends.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/PatientHome.swift"
+    },
+    {
+      "status": "R088",
+      "path": "CareInOne/Core/PatientWorkflows.swift",
+      "old_path": "CareContinuity/Core/PatientWorkflows.swift"
+    },
+    {
+      "status": "R083",
+      "path": "CareInOne/Core/Reconciliation.swift",
+      "old_path": "CareContinuity/Core/Reconciliation.swift"
+    },
+    {
+      "status": "R067",
+      "path": "CareInOne/Core/SyntheticDemo.swift",
+      "old_path": "CareContinuity/Core/SyntheticDemo.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/VisitCompanion.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/VisitPacket.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Core/VisitReadiness.swift"
+    },
+    {
+      "status": "R100",
+      "path": "CareInOne/Resources/Assets.xcassets/AccentColor.colorset/Contents.json",
+      "old_path": "CareContinuity/Resources/Assets.xcassets/AccentColor.colorset/Contents.json"
+    },
+    {
+      "status": "R100",
+      "path": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "old_path": "CareContinuity/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png"
+    },
+    {
+      "status": "R100",
+      "path": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "old_path": "CareContinuity/Resources/Assets.xcassets/AppIcon.appiconset/Contents.json"
+    },
+    {
+      "status": "R100",
+      "path": "CareInOne/Resources/Assets.xcassets/Contents.json",
+      "old_path": "CareContinuity/Resources/Assets.xcassets/Contents.json"
+    },
+    {
+      "status": "R100",
+      "path": "CareInOne/Resources/CareInOne.entitlements",
+      "old_path": "CareContinuity/Resources/CareContinuity.entitlements"
+    },
+    {
+      "status": "R092",
+      "path": "CareInOne/Resources/Info.plist",
+      "old_path": "CareContinuity/Resources/Info.plist"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Resources/PrivacyInfo.xcprivacy"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Services/BackupWorkflow.swift"
+    },
+    {
+      "status": "R059",
+      "path": "CareInOne/Services/CaptureServices.swift",
+      "old_path": "CareContinuity/Services/CaptureServices.swift"
+    },
+    {
+      "status": "R058",
+      "path": "CareInOne/Services/CloudAnalysis.swift",
+      "old_path": "CareContinuity/Services/CloudAnalysis.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Services/ExportService.swift"
+    },
+    {
+      "status": "R090",
+      "path": "CareInOne/Services/Persistence.swift",
+      "old_path": "CareContinuity/Services/Persistence.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Services/ReminderService.swift"
+    },
+    {
+      "status": "R096",
+      "path": "CareInOne/Services/SecurityServices.swift",
+      "old_path": "CareContinuity/Services/SecurityServices.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/BackupView.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/CaptureView.swift"
+    },
+    {
+      "status": "R059",
+      "path": "CareInOne/Views/CareViews.swift",
+      "old_path": "CareContinuity/Views/CareViews.swift"
+    },
+    {
+      "status": "R078",
+      "path": "CareInOne/Views/CloudConnectionView.swift",
+      "old_path": "CareContinuity/Views/CloudConnectionView.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/ContinuityViews.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/DemoWorkspaceView.swift"
+    },
+    {
+      "status": "R069",
+      "path": "CareInOne/Views/DesignSystem.swift",
+      "old_path": "CareContinuity/Views/DesignSystem.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/EvidenceImpactView.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/EvidenceIntelligenceViews.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/FollowThroughAssistView.swift"
+    },
+    {
+      "status": "R064",
+      "path": "CareInOne/Views/FollowThroughViews.swift",
+      "old_path": "CareContinuity/Views/FollowThroughViews.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/HandoffViews.swift"
+    },
+    {
+      "status": "R071",
+      "path": "CareInOne/Views/HelpPrivacyView.swift",
+      "old_path": "CareContinuity/Views/HelpPrivacyView.swift"
+    },
+    {
+      "status": "R055",
+      "path": "CareInOne/Views/OnboardingView.swift",
+      "old_path": "CareContinuity/Views/OnboardingView.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/PatientEditors.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/PatientWorkflowViews.swift"
+    },
+    {
+      "status": "R058",
+      "path": "CareInOne/Views/ReviewEditor.swift",
+      "old_path": "CareContinuity/Views/ReviewEditor.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/SampleEvidenceView.swift"
+    },
+    {
+      "status": "R064",
+      "path": "CareInOne/Views/SettingsView.swift",
+      "old_path": "CareContinuity/Views/SettingsView.swift"
+    },
+    {
+      "status": "R062",
+      "path": "CareInOne/Views/SourceViews.swift",
+      "old_path": "CareContinuity/Views/SourceViews.swift"
+    },
+    {
+      "status": "R053",
+      "path": "CareInOne/Views/TodayView.swift",
+      "old_path": "CareContinuity/Views/TodayView.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/VisitCompanionViews.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/VisitPacketView.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOne/Views/VisitWorkspaceView.swift"
+    },
+    {
+      "status": "A",
+      "path": "CareInOneScreenshots.xctestplan"
+    },
+    {
+      "status": "M",
+      "path": "IMPLEMENTATION_STATUS.md"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/AudioLifecycleIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/BackupWorkflowIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/CalendarExportIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/CapturePipelineIntegrationTests.swift"
+    },
+    {
+      "status": "D",
+      "path": "IntegrationTests/CareContinuityIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/CareInOneIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/ClaimCorrectionIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/CloudSafetyIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/EntityAliasIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/ExportSafetyIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/LiveGatewayIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/PatientCompanionIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/ReminderServiceIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/WorkflowEditRecoveryIntegrationTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "IntegrationTests/WorkspaceIsolationIntegrationTests.swift"
+    },
+    {
+      "status": "M",
+      "path": "Package.swift"
+    },
+    {
+      "status": "M",
+      "path": "README.md"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/ContinuityTests.swift"
+    },
+    {
+      "status": "M",
+      "path": "Tests/CareCoreTests/EdgeCaseTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/EntityAliasPolicyTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/EvidenceIntelligenceTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/FollowThroughAssistTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/NumericTrendTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/PatientHomeTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/PublicationWorkflowRegressionTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/SearchRecoveryTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/VisitCompanionTests.swift"
+    },
+    {
+      "status": "A",
+      "path": "Tests/CareCoreTests/VisitPacketTests.swift"
+    },
+    {
+      "status": "M",
+      "path": "Tests/CareCoreTests/WorkflowHardeningTests.swift"
+    },
+    {
+      "status": "M",
+      "path": "Tests/Fixtures/synthetic-patient.fhir.json"
+    },
+    {
+      "status": "A",
+      "path": "UITests/AskPrivacyUITests.swift"
+    },
+    {
+      "status": "A",
+      "path": "UITests/BackupWorkflowUITests.swift"
+    },
+    {
+      "status": "A",
+      "path": "UITests/CapturePipelineUITests.swift"
+    },
+    {
+      "status": "D",
+      "path": "UITests/CareContinuityUITests.swift"
+    },
+    {
+      "status": "A",
+      "path": "UITests/CareInOneUITests.swift"
+    },
+    {
+      "status": "A",
+      "path": "UITests/EditorDraftRecoveryUITests.swift"
+    },
+    {
+      "status": "A",
+      "path": "UITests/EditorRecoveryUITests.swift"
+    },
+    {
+      "status": "A",
+      "path": "UITests/FollowThroughDraftRecoveryUITests.swift"
+    },
+    {
+      "status": "A",
+      "path": "UITests/PatientCompanionUITests.swift"
+    },
+    {
+      "status": "A",
+      "path": "UITests/ReleaseScreenshotsUITests.swift"
+    },
+    {
+      "status": "M",
+      "path": "backend/public/privacy.html"
+    },
+    {
+      "status": "M",
+      "path": "backend/public/support.html"
+    },
+    {
+      "status": "M",
+      "path": "backend/tests/test_public_pages.py"
+    },
+    {
+      "status": "M",
+      "path": "deploy/cloudrun.yaml"
+    },
+    {
+      "status": "M",
+      "path": "deploy/render.yaml"
+    },
+    {
+      "status": "A",
+      "path": "docs/BRAND_COMPATIBILITY.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/COMPETITIVE_REVIEW_2026-09-20.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/CONTINUITY_IMPROVEMENT_PLAN.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/EVIDENCE_INTELLIGENCE_PLAN.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/FHIR.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/LOW_COST_LAUNCH.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/PATIENT_COMPANIONS.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/RELEASE.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/SECURITY.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/SIMULATOR_WALKTHROUGH.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/VALIDATION.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/encryption-export-worksheet.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/hosting-plan.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/listing.en-US.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/privacy-label-worksheet.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/privacy-policy.draft.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/review-notes.en-US.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/screenshots-plan.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/screenshots/iphone-6.9/01-today.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/screenshots/iphone-6.9/02-source-review.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/screenshots/iphone-6.9/04-appointment-companion.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/screenshots/iphone-6.9/05-selected-packet.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/submission-checklist.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/support.draft.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/app-store/verify-screenshots.py"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/competition/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/competition/device-release.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/competition/gateway-tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/competition/integration-final.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/competition/native-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/competition/preflight.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/competition/swift-core.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/competition/upgrade-preservation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/competition/visit-packet.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/checkpoint-comparison.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/core-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/deletion-impact.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/gateway-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/native-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/navigation-regression-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/preflight.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/reinstall-preservation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/release-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/review-impact.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/continuity/upgrade-preservation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/demo-today.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/device-release.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/gateway-tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/native-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/preflight.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-20/swift-core.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/care-connections-accessibility.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/care-connections.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/combined-omission.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/core-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/deletion-disclosure-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/deletion-disclosure.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/evidence-trace.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/exact-handoff-copy.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/gateway-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/handoff-changes.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/native-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/preflight.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/release-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/screenshots.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/timeline-accessibility.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/two-date-timeline.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/evidence-intelligence/upgrade-preservation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/broad-run-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/core-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/final-native-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/layout-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/preflight.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/release-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-accessibility.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-answer.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-accessibility.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-next-step.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-reply.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/opening-brief.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-09-21/patient-companions/upgrade-preservation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/WORK_LOG.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/BACKUP_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/FEATURE_EVIDENCE.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/PACKET_NATIVE_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/READ_ONLY_ACTION_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/SMALL_PHONE_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/backup-build.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/backup-capture-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/backup-created.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/backup-final.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/backup-retest.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/cleared-source.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/demo-packet-native-choices.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/editor-draft-recovery-final.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/editor-draft-recovery-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/editor-draft-recovery.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/expanded-build-latest.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/expanded-build.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/final-se-all-ui-source-sha.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/final-se-all-ui.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/focused-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/ios18-paste-crash-signature.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/keyboard-retest.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/paste-isolation-build.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/personal-packet-native-choices.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/personal-packet-workspace-diagnosis.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/review-draft-kept.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message-measured.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message-stable.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message-verified.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-appointment-answer.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-appointment-brief.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-care-connections-accessibility.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-cleared-working-original.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-compact-demo-accessibility.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-companion-measured.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-companion-retest.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-final.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-native-paste-relaunch.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-outreach-reply.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-release-checks.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-release-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-retest.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-timeline-accessibility.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/small-phone-verified.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/ui-isolation-build.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/capture/workspace-draft-kept.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/ASK_AND_DRAFT_RECOVERY.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/CANDIDATE5_SECURITY_FOLLOWUP.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/UPGRADE_AND_PREFLIGHT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/ask-and-source-status-native.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/ask-source-preflight.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/ask-source-status-results.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/ask-source-xcresult-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/audio-lifecycle-audit.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/backend-tests-py313.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/backend-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/candidate5-final-preflight.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/candidate5-public-content-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/candidate5-public-pages-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/candidate5-secret-scan.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/deployed-public-routes.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/final-public-auth-boundary-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/final-public-page-byte-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/final-secret-scan.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/final-security-audit.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/fingerprint-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/follow-through-draft-native.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/follow-through-final-results.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/follow-through-initial-xcresult-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/follow-through-loop-final-xcresult-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/follow-through-loop-retry-native.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/follow-through-loop-retry2-native.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/follow-through-source-preflight.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/http-smoke.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/live-gateway-2026-10-05T003830Z.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/live-gateway-shell.jpg"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/main-simulator-schema-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/native-live-signed-test.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/ordinary-release-capture-diagnosis.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/ordinary-release-capture-xcresult-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/ordinary-release-saved-source-fictional.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/public-health.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/screenshot-plan-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/source-dependency-privacy-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/source-preflight.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/strict-output-deploy-live.jpg"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/strict-output-fictional-check.jpg"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/strict-output-live-result.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/cloud/tracked-env-example-scan.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/core-baseline.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/integration-baseline.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/pipeline-candidate.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/ALIAS_RECOVERY_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/APPLE_UPLOAD_REQUIREMENTS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/APP_STORE_CONNECT_READINESS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/EDITOR_RECOVERY_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/EXPORT_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/FEATURE_VERIFICATION.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/FINAL_CANDIDATE_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/NAVIGATION_AND_CONTROL_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/PRIVACY_MANIFEST_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/RELEASE_HANDOFF.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/SCREEN_CONTROL_INVENTORY.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/UNSIGNED_RELEASE_ARCHIVE.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/alias-core-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/alias-syntax-check.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate2-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate3-source-fingerprint.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate3-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate4-demo-before.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate4-personal-before.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate4-source-fingerprint.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate4-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate4-summary.raw.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate5-archive-source-after.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate5-archive-source-before.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate5-backend.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate5-core.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate5-fingerprint-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate5-native-source-fingerprint.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate5-native-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate5-native-summary.raw.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/candidate5-personal-preupgrade.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/ci-workflow-static-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/contact-verification.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/control-inventory.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery4-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery4.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery5-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery5.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery6-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery6.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery7-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery7.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery8-summary.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-recovery8.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/editor-release-build.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/export-syntax-check.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/final-candidate-readonly-audit.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/generate-control-inventory.py"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/git-eligible-image-ocr-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/keychain-signing-test.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/metadata-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/public-pages-calendar-source-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/public-pages-calendar-tests.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/public-pages-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/public-pages-live-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/release-preflight-final.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/screenshot-format-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/unsigned-archive-dylibs.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/unsigned-archive-file-screen.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-archive-inspection.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-archive.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-durable-copy-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-dylibs.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-file-screen.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/unsigned-release-archive-inspection.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/release/unsigned-release-archive.log"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/reminders/AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/workflow-audit/AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/verification/2026-10-04/workflow-audit/core-tests.log"
+    },
+    {
+      "status": "M",
+      "path": "scripts/generate_project.py"
+    },
+    {
+      "status": "M",
+      "path": "scripts/release_preflight.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/simulator_fingerprint.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/tests/test_simulator_fingerprint.py"
+    },
+    {
+      "status": "M",
+      "path": "scripts/update_status.py"
+    },
+    {
+      "status": "M",
+      "path": "scripts/verify.sh"
+    }
+  ],
+  "staged_files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "bytes": 1652,
+      "sha256": "a5b8ede01320854162113ccd69fa1c82ece7366f3ea81575a622600af23a3d30",
+      "matches_working_file": true
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 370,
+      "sha256": "6f0a72b53b446de1290e2a417af6d6b9e684f5e4c29e3c44fba986de9d0ad449",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne.xcodeproj/project.pbxproj",
+      "bytes": 28967,
+      "sha256": "852a3ca8fb065794ecc125512e5f1e47421a1875617803a50c514623f04762e0",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne.xcodeproj/xcshareddata/xcschemes/CareInOne.xcscheme",
+      "bytes": 2623,
+      "sha256": "62f86de9c3440f586c966f46ed290bf8a6d0b317a389f39a06cbe37ef7cc5aff",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne.xcodeproj/xcshareddata/xcschemes/CareInOneScreenshots.xcscheme",
+      "bytes": 2149,
+      "sha256": "095dd5dc1d676cdfac0af235d38059cea843d6153f1b7dc19271e3a00dc8932c",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/App/AppStore.swift",
+      "bytes": 40150,
+      "sha256": "b366646640bf0e44cd194ad3ed3b1f31531c8b6ecf4ae235ec56f0d07717ab82",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/App/CareInOneApp.swift",
+      "bytes": 5832,
+      "sha256": "413fdd069ecbe7646f5ade670e9330e9597370b28cf60e3f8017d1a26c4bb753",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/App/FollowThroughAssistStore.swift",
+      "bytes": 1660,
+      "sha256": "1dfc73b0b13062975f264117ca28c8f2f9e50d893b6039779962b2f8cd544508",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/App/VisitCompanionStore.swift",
+      "bytes": 1019,
+      "sha256": "15724005514dc3163946fbd13e7e6353917b3fcbe10614afdb294259fa960b26",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/AppointmentCalendar.swift",
+      "bytes": 1710,
+      "sha256": "fc5c5f6787f987e655746d4ebdc7fa81a8a156278a0d3c250c5152829adefa56",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/CareArchive.swift",
+      "bytes": 8048,
+      "sha256": "034ed9542f9da26150f2d740a80d15b5e077a4ce659d4d92f8e1d99c50f26e6a",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/CareHandoff.swift",
+      "bytes": 18855,
+      "sha256": "a27d794c5bfef3b539bd9c9075514a6243d023e0f72fedce6748d8e97b1a87a5",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/ContinuityComparison.swift",
+      "bytes": 11766,
+      "sha256": "6c3265b36fcda307d6c4d666b114d43f7d9ae8393df718ce30f34263265aafbf",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/ContinuityMemory.swift",
+      "bytes": 17288,
+      "sha256": "fb03d06a7b4c5f963a570c77fa177ff48afcdb0b32c2139b9d1fe7e29eeaa824",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/DisplayLabels.swift",
+      "bytes": 1672,
+      "sha256": "098cad3f8b6aa585c0c798ffa537242dc09212b08410b39bf39fd4b01868427c",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/Domain.swift",
+      "bytes": 15248,
+      "sha256": "d3a33690f2112f1a277cfa6590d7bba8379da702ada7a84fdf0ba043b622f0b7",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/EntityAliasPolicy.swift",
+      "bytes": 1973,
+      "sha256": "0bdcb57e42f33d03a9006298472b2f1f34a52b1f0a390ade418b0de2b4e19ca8",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/EvidenceGraph.swift",
+      "bytes": 8167,
+      "sha256": "21cac9adf48bdc012aabfb35d6783b760bcb526abc17b21bff307b23af35580e",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/EvidenceTimeline.swift",
+      "bytes": 2851,
+      "sha256": "638400a46f77cbee743960de925c85f69cf957ed88f1e4366c92a1f9381b6dda",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/Extraction.swift",
+      "bytes": 16218,
+      "sha256": "1f8da96f8aa6d055773de0edaaab82528f3ed8c1ce1d08eb6d0f4acb899aad60",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/FHIRImporter.swift",
+      "bytes": 13947,
+      "sha256": "7aeb9357f91de3efa2e0d343fdb9804bbf277eb18eaf362b670205dbc806e28f",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/FollowThroughAssist.swift",
+      "bytes": 21156,
+      "sha256": "8930833b6e9b2436a98bef1eb4afddf5614380e1aba7d49d2f80605298d085b8",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/LoopEngine.swift",
+      "bytes": 11150,
+      "sha256": "158aee646edc9a0924df5c93b309e828d3033694b5a7712a51fae140d023f725",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/NumericTrends.swift",
+      "bytes": 3690,
+      "sha256": "e0a8bee9c09be846575adbda2e0fb807615f5defcad0500aad40d9fd1ce604fa",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/PatientHome.swift",
+      "bytes": 2917,
+      "sha256": "6fd3a433a828cd5a15cd27be43b1935828255a65724aef3e718d11395bda656f",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/PatientWorkflows.swift",
+      "bytes": 8064,
+      "sha256": "ca2c8fdbbedfc90783b16a7402b3f2bd4056e5cf8b4c7bc4dc2a25e08019727c",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/Reconciliation.swift",
+      "bytes": 20188,
+      "sha256": "195eceb15cd8b61a08665d7689354c9f9a350f6961efe8f4b336470fd2add632",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/SyntheticDemo.swift",
+      "bytes": 5865,
+      "sha256": "b840a37d1a0928dc89e6e5386ba65cbd19c1ce6320a4a33578112a6cc0fba70b",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/VisitCompanion.swift",
+      "bytes": 22073,
+      "sha256": "b9e7bface5a844148ea9e869913927490362b4e0e6b4fb0710f60b8a41118d57",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/VisitPacket.swift",
+      "bytes": 8099,
+      "sha256": "80d61888ea4496bcbb26093108918566ad5575a42890a9ac5f4e7e2377567059",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Core/VisitReadiness.swift",
+      "bytes": 4100,
+      "sha256": "43f6395eeafee3eafdc14be113ef2deadc746b5079a8b298acf142ac55e63870",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Resources/Assets.xcassets/AccentColor.colorset/Contents.json",
+      "bytes": 198,
+      "sha256": "5ba1ec0b5358e7f726dc8261d41ba57e1ae87c0467a04103cf206b57fa2da9da",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "bytes": 8990,
+      "sha256": "94c7d1bd1035688ffb05e46bf2c387265bade49e17a4ebfe2235a36f61309f30",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Resources/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "bytes": 146,
+      "sha256": "1b2cc6b6e1ad340faeaae5f07d292eb20c7a22c9995ac8795ea6aa604efa491d",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Resources/Assets.xcassets/Contents.json",
+      "bytes": 43,
+      "sha256": "e8e8ef4b27126d62305af321d12a6e64b866ca0b160f0f83efae90111f0ee576",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Resources/CareInOne.entitlements",
+      "bytes": 280,
+      "sha256": "01d189fa1ffb8a630198b6d35f75bdab1ef13e1af49eb73256f541a479d21962",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Resources/Info.plist",
+      "bytes": 2417,
+      "sha256": "ffffa9ac908540b0cdd9057e1936e212f70aa45a9bbcf66310229581a7f59b5e",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Resources/PrivacyInfo.xcprivacy",
+      "bytes": 1413,
+      "sha256": "66adb62b5fcba3d6e7feb3e922b752f8604ac17f7c78c62ae9cc0bc3c05a27ae",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Services/BackupWorkflow.swift",
+      "bytes": 6350,
+      "sha256": "81b5a56842596553feca8a5478b9d9ab127f7ffaeab33a91115c77f7316e8051",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Services/CaptureServices.swift",
+      "bytes": 21499,
+      "sha256": "1e1b4a47aa3896ed2c1a5f6072bf43b9fc23b0a9528aee6665fa1aaf8b680401",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Services/CloudAnalysis.swift",
+      "bytes": 12214,
+      "sha256": "51e58a82d264f38d6a5aee9470d6e573a41ae28719b6bd491d24f8897abf9122",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Services/ExportService.swift",
+      "bytes": 7775,
+      "sha256": "877192f4117fb804d57592a083e0814e9006b5319aacff82fcc256a19a26abf0",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Services/Persistence.swift",
+      "bytes": 8664,
+      "sha256": "808a868613d51185233181371d820c765318bc9998777e40876230e32e2f6370",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Services/ReminderService.swift",
+      "bytes": 13367,
+      "sha256": "ef9fd05eebc82d8ddcc21aae617959dea0532fe906853ce262fa54f872dd9a1c",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Services/SecurityServices.swift",
+      "bytes": 4540,
+      "sha256": "478ec7d5b6cdeebd57ef0261b01effa41307ee127780d12b366fa6a46e186ce2",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/BackupView.swift",
+      "bytes": 6729,
+      "sha256": "220fa6c3ecc8ece77b9905f88baddab87de387ce618f4dfba30f6f7c58efa753",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/CaptureView.swift",
+      "bytes": 31247,
+      "sha256": "f372061d141edb5c77545a0c7814bd882d17d7f401c8a5ae7d482c632ba9d21c",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/CareViews.swift",
+      "bytes": 15798,
+      "sha256": "b07c3de5aad4d56c83e52e4a6b008620c3e2680f1db682b8757185143ec2d944",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/CloudConnectionView.swift",
+      "bytes": 9502,
+      "sha256": "f33aa416feddf7dad51ef3849d4ac7f2af0c7ae4c0510f310b67b10abadd6eda",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/ContinuityViews.swift",
+      "bytes": 15765,
+      "sha256": "f5454a4bcb82cf4b32bd65a99d587d9970b38b9041163b4f407446a2a05e4c1e",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/DemoWorkspaceView.swift",
+      "bytes": 2630,
+      "sha256": "f27240f59161e3d1e8b6f26c53ca81d3b9b1d14e0d4fd677dbbc2ead03ed11db",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/DesignSystem.swift",
+      "bytes": 6524,
+      "sha256": "1072de85b697343f9b742c01c46c8fe34a1d23ddc1a86ca0e623ed723c7a4b1f",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/EvidenceImpactView.swift",
+      "bytes": 2704,
+      "sha256": "dfa12793e82be1185a0c8b7f42a8fc660d6449dc67142eed289fd628aa145aa2",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/EvidenceIntelligenceViews.swift",
+      "bytes": 15193,
+      "sha256": "92caf31ae226300574a5ad027a15b65edc4db91826f42dd2c2e07b1fed11fed7",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/FollowThroughAssistView.swift",
+      "bytes": 25454,
+      "sha256": "4adb2e2b32a0eeb633b573c8c6553702c032a740c912be63f161d4a11d7c994a",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/FollowThroughViews.swift",
+      "bytes": 12296,
+      "sha256": "e9b9938dfe9f49502448e6df8b7c9497c649e3fec43f9cc657041dcecb2ca491",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/HandoffViews.swift",
+      "bytes": 17349,
+      "sha256": "f68746b9153ab733705e401603ad05ba170c2c701fd9615b8f5ea2c3e4158c70",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/HelpPrivacyView.swift",
+      "bytes": 6405,
+      "sha256": "fab545e8a5d4af61c62319940f60aa61c602bdfd6f67a951e84828cb3a0e8daf",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/OnboardingView.swift",
+      "bytes": 3288,
+      "sha256": "733b3668f3add9e3cb09f2fa4d0e24c895b699b61cf9c3547e6911092724b6b7",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/PatientEditors.swift",
+      "bytes": 10417,
+      "sha256": "2b317edb850cac7e078f25d823f18ae479460cf3e92992ae6cfdebeba5fd0170",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/PatientWorkflowViews.swift",
+      "bytes": 20660,
+      "sha256": "87fac911bca338bef3e949094d26dda91319c1dd40e7ef883408784dc1f49c4d",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/ReviewEditor.swift",
+      "bytes": 12550,
+      "sha256": "a09d7aa7767e2f9ee13a3cacdc4cb9e86e2fb3f64b7becadb813a8460e79bf47",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/SampleEvidenceView.swift",
+      "bytes": 2654,
+      "sha256": "70c1316b8f7566b8616784a81755beb87cfa4e8820be53a687a7a2b98e64b0ff",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/SettingsView.swift",
+      "bytes": 12890,
+      "sha256": "f8ce8fe1585685c48324843d1e59369644acbedd1b495b031b625b4afdbb780d",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/SourceViews.swift",
+      "bytes": 18752,
+      "sha256": "f895e5762d48b5f994ba933be81c31aeef8a7780f7ef79c0c5b375858e2dbc3a",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/TodayView.swift",
+      "bytes": 9529,
+      "sha256": "ea083eba859c2fbdb49fc7595da431b3662ea844d4c3a5723b7f6b248cbed899",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/VisitCompanionViews.swift",
+      "bytes": 37879,
+      "sha256": "d9b64f3d99ca74ace49ce67c012658e96528ac4a6b66432486dc7e03093aa5dd",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/VisitPacketView.swift",
+      "bytes": 8293,
+      "sha256": "26a4101162db9f4a237ac0ee977e97fc79dae440633bc669783ca696e44ea039",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOne/Views/VisitWorkspaceView.swift",
+      "bytes": 11644,
+      "sha256": "4f44256083a15046eb4ad79ab9c6a177a6a84faf69041d46d663c89afd83f417",
+      "matches_working_file": true
+    },
+    {
+      "path": "CareInOneScreenshots.xctestplan",
+      "bytes": 520,
+      "sha256": "9eb83c28529b8ae820acb3007317cdf532029c1ac02bc69a4891f4ef19012b2a",
+      "matches_working_file": true
+    },
+    {
+      "path": "IMPLEMENTATION_STATUS.md",
+      "bytes": 72571,
+      "sha256": "59ec2b1ab29af867a69db5e93e38ca44fadc3826783b18db86d263424b1733c2",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/AudioLifecycleIntegrationTests.swift",
+      "bytes": 5850,
+      "sha256": "3206a63ee916573dbb118e8dd37155bba120f8811e36ea278cf8a32d0ff38343",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/BackupWorkflowIntegrationTests.swift",
+      "bytes": 10961,
+      "sha256": "16ecd1ae5f92e9afc8f01dfcb7f516c6717f02bbf9c62dc60261432c5b0de821",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/CalendarExportIntegrationTests.swift",
+      "bytes": 10369,
+      "sha256": "2dc95d9325869ebabc602488ac59272e830fb816e5e8d366b4ceaf9b9c65b892",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/CapturePipelineIntegrationTests.swift",
+      "bytes": 27013,
+      "sha256": "b5bfb0d39a45cb7567466cf964e2d302f8521eab6911094de9c5df72455d7e66",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/CareInOneIntegrationTests.swift",
+      "bytes": 36690,
+      "sha256": "bdaada5b2b7208e4f0e7c88ff0a63ac1e8017d31d2729bc1aa28a3ae6851fa8d",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/ClaimCorrectionIntegrationTests.swift",
+      "bytes": 4995,
+      "sha256": "894fc1c655dc5949c12bdcfb0736a772b7787b24e308a29339abaad663e20b45",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/CloudSafetyIntegrationTests.swift",
+      "bytes": 5286,
+      "sha256": "665d6bc4aa423975a3447a6a0e0dfb19f65a854f34dca281467a01812ab7ef3f",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/EntityAliasIntegrationTests.swift",
+      "bytes": 3876,
+      "sha256": "9db0eb81d52870490731caaad0eba7fb4bf29cc60350ba14c975500394dfc355",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/ExportSafetyIntegrationTests.swift",
+      "bytes": 6265,
+      "sha256": "4d24ad0d015601494f87b73845580d336e3731a11afa8aa5b565e5780e806cb2",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/LiveGatewayIntegrationTests.swift",
+      "bytes": 5809,
+      "sha256": "04db5938cd6a080868a43b25dcfef41481ecb5854eb2acef7eb67157dad867a4",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/PatientCompanionIntegrationTests.swift",
+      "bytes": 25390,
+      "sha256": "3efb7188b9ebed8f5d9b46622b25c1e2c52d5bf50fd6e374b1430a76f004204d",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/ReminderServiceIntegrationTests.swift",
+      "bytes": 10090,
+      "sha256": "cc7b147829ef5fa983bf5c75fe78b67a71d9edfa6828f58aacffac00772716a0",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/WorkflowEditRecoveryIntegrationTests.swift",
+      "bytes": 3322,
+      "sha256": "a68f4b92da537956ac8712c5a78ba38f235a7b08f4ba7e77e11f32c736cda51d",
+      "matches_working_file": true
+    },
+    {
+      "path": "IntegrationTests/WorkspaceIsolationIntegrationTests.swift",
+      "bytes": 4186,
+      "sha256": "a630d2b5fc99b64c441fb77c30988be908c5c9071c66c43c2ed0be8a6e1a4f98",
+      "matches_working_file": true
+    },
+    {
+      "path": "Package.swift",
+      "bytes": 392,
+      "sha256": "833719348383431d652c682a642ea624951d2db2f7b059d6c4dc5d813d975e13",
+      "matches_working_file": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 12549,
+      "sha256": "005cd143888d4589638f5899fc112eac652f019c4ea7fe975d3714387e976925",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/ContinuityTests.swift",
+      "bytes": 14117,
+      "sha256": "9cdd3a20f525789fbf627ce59f8472d6b8297149cd03403003b0b74350ef5f4e",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/EdgeCaseTests.swift",
+      "bytes": 12073,
+      "sha256": "1083c7addd9ad57750c6e7cb9c6389e9fac6f9b24b851e3a8725417282333f6e",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/EntityAliasPolicyTests.swift",
+      "bytes": 3482,
+      "sha256": "75cbd778f19f692931e82d85e2c70d0592a5e2d17c2f51cea035615b20552132",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/EvidenceIntelligenceTests.swift",
+      "bytes": 18361,
+      "sha256": "37d84754624226822c95cbda84c75aa82e76aad260e1bb5d58be82522648fb94",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/FollowThroughAssistTests.swift",
+      "bytes": 18581,
+      "sha256": "f04dac0c885abd2311983dad525ebac9d7441bfbfda209115c8c7c6fe6f6e10f",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/NumericTrendTests.swift",
+      "bytes": 6676,
+      "sha256": "fbd1ded7b808d21198d5676bd37b1cd41338bf2a8565b594230289277ad0e992",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/PatientHomeTests.swift",
+      "bytes": 5431,
+      "sha256": "f752b1f1c96992becba1c9bb80accfe93624bcaaff88e14dec1414130d6eab74",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/PublicationWorkflowRegressionTests.swift",
+      "bytes": 7711,
+      "sha256": "ae548dadc9636da6d5df478e1767c26c54c07ef699fe554d8328d27c28640cd8",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/SearchRecoveryTests.swift",
+      "bytes": 1560,
+      "sha256": "271e685a2db661e85c9644dae430a78e48155bf222a258ecaf7415608e88968f",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/VisitCompanionTests.swift",
+      "bytes": 17784,
+      "sha256": "2ce7d98b2324c39b5d4bd13878ba964bd5eba8abb0618a2e91a589b7e93ec5d9",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/VisitPacketTests.swift",
+      "bytes": 4108,
+      "sha256": "0f139d12e6e2bc064f8afc38d3679d33b46230507e95113837107c388af62d8c",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/CareCoreTests/WorkflowHardeningTests.swift",
+      "bytes": 11708,
+      "sha256": "d3abdbc221e8b6f6c312d60bcec0e8179e300b3b1e4a5a75ab5a32120ea0487a",
+      "matches_working_file": true
+    },
+    {
+      "path": "Tests/Fixtures/synthetic-patient.fhir.json",
+      "bytes": 1283,
+      "sha256": "79f42e9447f597747c3f2fcd23c935b76ee5d80ca8e3f827917398982fddc0d6",
+      "matches_working_file": true
+    },
+    {
+      "path": "UITests/AskPrivacyUITests.swift",
+      "bytes": 3882,
+      "sha256": "46bda3b9e41beea7a1fc550f4c4f7cfcf2b877afa15cc477e495ced16abdcb59",
+      "matches_working_file": true
+    },
+    {
+      "path": "UITests/BackupWorkflowUITests.swift",
+      "bytes": 2883,
+      "sha256": "bb30274d8d63e0fc6f874ed98333bd0ccb00573b12a9ca33bd45a24e2562a893",
+      "matches_working_file": true
+    },
+    {
+      "path": "UITests/CapturePipelineUITests.swift",
+      "bytes": 6304,
+      "sha256": "ee8bdadff90a8d7cefb486cbbe36b0f1754b079e437c0939527153707be7488e",
+      "matches_working_file": true
+    },
+    {
+      "path": "UITests/CareInOneUITests.swift",
+      "bytes": 33316,
+      "sha256": "ef867e7e05608fa0979cf113e3fd9f03d376a99041d6332d728d9347fce64fbe",
+      "matches_working_file": false
+    },
+    {
+      "path": "UITests/EditorDraftRecoveryUITests.swift",
+      "bytes": 9735,
+      "sha256": "700cd6d3549ccc5a6b6c6243fc3f3348fc78749dc22b1a4b85ec36e1f93c8a1a",
+      "matches_working_file": true
+    },
+    {
+      "path": "UITests/EditorRecoveryUITests.swift",
+      "bytes": 11127,
+      "sha256": "747b3f4a3cead61fa1b63beefdcae7c51d9d8ef251295e31a45dd7269b7b00f2",
+      "matches_working_file": true
+    },
+    {
+      "path": "UITests/FollowThroughDraftRecoveryUITests.swift",
+      "bytes": 8172,
+      "sha256": "40639817277e9d132b5b519b743a0847deebfc50d3f770ea0ad1b7303f7ed02c",
+      "matches_working_file": true
+    },
+    {
+      "path": "UITests/PatientCompanionUITests.swift",
+      "bytes": 14158,
+      "sha256": "33720f7b3ca62f88ed7669adda283012338ae3421f70fee32d4c3499028506a2",
+      "matches_working_file": true
+    },
+    {
+      "path": "UITests/ReleaseScreenshotsUITests.swift",
+      "bytes": 6204,
+      "sha256": "27a5cd5565d1c920c6e835b0d3ae779bc64241321e39edd8b0debdc0ed73f909",
+      "matches_working_file": false
+    },
+    {
+      "path": "backend/public/privacy.html",
+      "bytes": 14270,
+      "sha256": "177a012f25fbe8a99fd71ccf901efe7be593bcf5f9b55a05df7d5412a034fc62",
+      "matches_working_file": true
+    },
+    {
+      "path": "backend/public/support.html",
+      "bytes": 11162,
+      "sha256": "ecd7b0d2ec118b8fc94d1e52231e90d40d45cd5eafdf852c5965b014985683cd",
+      "matches_working_file": true
+    },
+    {
+      "path": "backend/tests/test_public_pages.py",
+      "bytes": 5777,
+      "sha256": "1f37bbaf2c70efc85c48c1156b69f25e9d7a3f859ed2f0277730cb29c7fd1ce8",
+      "matches_working_file": true
+    },
+    {
+      "path": "deploy/cloudrun.yaml",
+      "bytes": 1421,
+      "sha256": "a8373e8dbba5b8f720111e95b73eb06fcbc7e8485d977f7e6d801b6198d4dbd3",
+      "matches_working_file": true
+    },
+    {
+      "path": "deploy/render.yaml",
+      "bytes": 633,
+      "sha256": "659e3d022a5887ac02298928c5d4bcd975604954dfde66378f9cec08106b1d56",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/BRAND_COMPATIBILITY.md",
+      "bytes": 1803,
+      "sha256": "8878cf75954fddc68f5dfcc762ea1209eedd8e2771d39894fd58f6a5cec994b4",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/COMPETITIVE_REVIEW_2026-09-20.md",
+      "bytes": 18274,
+      "sha256": "2b58c981258567f83e4ae9b2309c9398fb3e72af66ffbd0eb6bf8ae634cde3ef",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/CONTINUITY_IMPROVEMENT_PLAN.md",
+      "bytes": 4939,
+      "sha256": "0af3e505903aa77938e8fab75de02e92382ef99f732159f6617e3f5c2e0dce86",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/EVIDENCE_INTELLIGENCE_PLAN.md",
+      "bytes": 3114,
+      "sha256": "46850de42cce82a349f95bcaf9c1bef82e788c1d8ec40051bd286db719bf6369",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/FHIR.md",
+      "bytes": 5322,
+      "sha256": "5693b158209bc373f0ef91e6c848c5cee819b462a52f910ffaba2727ddd91aa5",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/LOW_COST_LAUNCH.md",
+      "bytes": 12754,
+      "sha256": "e0cf991d314a4d59c92cbaffcbee559585c236c425b7f181dc3b874f340a8749",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/PATIENT_COMPANIONS.md",
+      "bytes": 7736,
+      "sha256": "15fc90a0f5eda9fa135f98362ae2952088e96a2cdc02d8bad69a987c7bfced8e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/RELEASE.md",
+      "bytes": 7007,
+      "sha256": "1826a63202bd7285a7ecf1023f59fbfd8a6fe1e69169b7739cc1d2fe664cf003",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "bytes": 9102,
+      "sha256": "78a70726d59b5dc9272809cd21d39111fe65d10911b48ed6be944666df7f71ac",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/SIMULATOR_WALKTHROUGH.md",
+      "bytes": 13481,
+      "sha256": "4f586af6d9ff16376179d633b50a081754667059cf4dc9868568d5b265ab14cf",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 18517,
+      "sha256": "077e323b53dff25b07c70ae82619e5cdb788f3ef7916e613928db468bbf28f8f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/README.md",
+      "bytes": 4295,
+      "sha256": "fe20a004c5b46a088c78028f85dd6f42dda5f4859b5792705a59f93a8e693d64",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/encryption-export-worksheet.md",
+      "bytes": 6709,
+      "sha256": "fc85c3475951ccc989b8524cbda85afaa9f052e69715a18b59cccd1269bf29db",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/hosting-plan.md",
+      "bytes": 5848,
+      "sha256": "684f05aca4949b2283e3b3adf961076a11927ad49b8158aacf5c1853212bfa79",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/listing.en-US.md",
+      "bytes": 4298,
+      "sha256": "63405c84f6a6c1c5d5f196926d6d94c0b3935918f60d8aa717d19bbcd30423af",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/privacy-label-worksheet.md",
+      "bytes": 9693,
+      "sha256": "15ac9b07df21251b7839e3832e807bfa52741897d41b0f51c9def7b5b2d6165c",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/privacy-policy.draft.md",
+      "bytes": 10752,
+      "sha256": "920c0066eb06cc73972f286af78d8efa943de842506cac5f8c0ee17bcb23d072",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/review-notes.en-US.md",
+      "bytes": 5567,
+      "sha256": "60be8cf89988a801ebbc3800b9b40142eea7ae8a1dd0ce44e2a314281367bed2",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/screenshots-plan.md",
+      "bytes": 5093,
+      "sha256": "9588386bd6d953dd8ab557cdb059847889a84f905aceed4ac932b3c916d23931",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/01-today.png",
+      "bytes": 432608,
+      "sha256": "0c654e2dc3a75948c0c57c8bf1f31acbed88d32d3ce1801131a51abac4c1b64e",
+      "matches_working_file": false
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/02-source-review.png",
+      "bytes": 293115,
+      "sha256": "351be9c94dc70a69e9180437a76d3cc53f23d325e105c0265342359ba3f2f037",
+      "matches_working_file": false
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/04-appointment-companion.png",
+      "bytes": 412554,
+      "sha256": "694bf71228bf4e2afa9643b4673bf71ea9f29ef761d60562c9d84a053b7a3088",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/screenshots/iphone-6.9/05-selected-packet.png",
+      "bytes": 500115,
+      "sha256": "dae4c1c49fe8a7e0273f30da19913680527f8f8ad532c35c9c3d1de61744db61",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/submission-checklist.md",
+      "bytes": 7512,
+      "sha256": "a13759094365d2db0eb227ea335b69513e096322486ad8c781d4e708e1b06592",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/support.draft.md",
+      "bytes": 5338,
+      "sha256": "f7443554f817822d87c75a122936f1f9d243f473baeb6af13779ead7497e6439",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/app-store/verify-screenshots.py",
+      "bytes": 4004,
+      "sha256": "3bc888c3cdac9c35aff1318cb30e04eafc85b80cac401936d785fb42a13b8049",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/README.md",
+      "bytes": 3801,
+      "sha256": "3ad8b7fa9b250653d0dd8746b155849ee4166cfbee5c8bd0633cb0aae04f1393",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/device-release.txt",
+      "bytes": 357,
+      "sha256": "d9471ba07595ed5beb58f7661f282e1c51272d7f52339891a93fb7e90fcaa1f0",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/gateway-tests.txt",
+      "bytes": 5511,
+      "sha256": "3e08ccc3daceb99f9cb5be386b5113a5b52604c0e8af25102a81c5304a1a1f36",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/integration-final.json",
+      "bytes": 1194,
+      "sha256": "3edceb7d0539f48954bd0034d81e8912fde3e9af2bbb1ad92bfe8d91f2bfa29f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/native-summary.json",
+      "bytes": 1194,
+      "sha256": "fc7648070f25d211fc333dd5b7af16115788b9badce8348506051db12d34ae34",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/preflight.txt",
+      "bytes": 285,
+      "sha256": "c40a2e8b49a0bfe39778085a74c6514194dc862354676a8bbd1d9f9f162a19ce",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/swift-core.txt",
+      "bytes": 13235,
+      "sha256": "3f9461c414ee7c298eb371db4f205398cff3876b8e578ccb048bf52df8e61ad8",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/upgrade-preservation.json",
+      "bytes": 321,
+      "sha256": "5c760eb262a664978ec2c9b82308733d113131adb1812f65c3e02a3d2c997cfb",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/competition/visit-packet.png",
+      "bytes": 325076,
+      "sha256": "27a4800673a687a75be02a75ae7a380ee568dc7357bccd0c569beddfc9bfbc0d",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/README.md",
+      "bytes": 6345,
+      "sha256": "6ea19060258ee9503b13da52338e442a1345493bdf0ab8c75d8f9aa38c8b381b",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/checkpoint-comparison.png",
+      "bytes": 353172,
+      "sha256": "3e913c747a7f4cb0d95d3a2cd13eb72d28b7b53b7d68c701b9cd5793e9d9b981",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/core-tests.log",
+      "bytes": 16246,
+      "sha256": "f837449c9e361124323ec1f07bdec0355be930614b464367ceae89a7446cebba",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/deletion-impact.png",
+      "bytes": 261293,
+      "sha256": "13abc3e2f3d5822d8d96d36464805bdfadf199279f727d514950e32bb84cdda7",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/gateway-tests.log",
+      "bytes": 5511,
+      "sha256": "ed9a0812fa588b20483154d5992c30ee809dbfe121f77461fe8bf8d7c1050473",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/native-summary.json",
+      "bytes": 1194,
+      "sha256": "ac889a80834cc201cfd995eb6d6bcd71e99506252ec78de6725cf669d2395a4b",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/navigation-regression-summary.json",
+      "bytes": 1001,
+      "sha256": "ba52f0e9f56e31e3eca72489f1e8b3259e0d50d41b3d3a54098b0ea7fd05b98a",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/preflight.log",
+      "bytes": 285,
+      "sha256": "c40a2e8b49a0bfe39778085a74c6514194dc862354676a8bbd1d9f9f162a19ce",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/reinstall-preservation.json",
+      "bytes": 1705,
+      "sha256": "ded5479e9cfe6273f3275b5a5369f2fedcedd8ef133997729a9e89a4115a84a4",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/release-summary.json",
+      "bytes": 226,
+      "sha256": "a6a22fef6e44dbc1d0c6e3b730fc2377497a1ea2061d0a5e89a48e60c65ff180",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/review-impact.png",
+      "bytes": 213650,
+      "sha256": "31b919ab992a7d63bd7db054231b55c763172840a2544811b715aa9b579ea276",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/continuity/upgrade-preservation.json",
+      "bytes": 1096,
+      "sha256": "291b85d54786fc3d1bc304d66541b6161c0399c3b9335d241b91ddc65a8b2beb",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/demo-today.png",
+      "bytes": 449211,
+      "sha256": "7cb154c4c46d4563f0c73919b38aa1cac32e63cb08a1a2556d2b81593ae1e70a",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/device-release.txt",
+      "bytes": 409,
+      "sha256": "fa68a4c142a2031d9731d8160486ab002c3bf806f62f0fe886b0fa22e2965ece",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/gateway-tests.txt",
+      "bytes": 149,
+      "sha256": "8916816d2424665b6894d261528c461e4fd78a03dfc3d50e25a2d8fd17f84757",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/native-summary.json",
+      "bytes": 1204,
+      "sha256": "d832ef936bba217fafc2ee955e2f39f74ee1b626d8f31b497a11d870defd1672",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/preflight.txt",
+      "bytes": 235,
+      "sha256": "0f80502a7ae9c631b56c20d2cf351300d7ab3e18d1f872b2bdb9d3a1dd6c7280",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-20/swift-core.txt",
+      "bytes": 13230,
+      "sha256": "abe29b383c8a008056778a4375979560fe92cb629946d57381dfe4842f801410",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/README.md",
+      "bytes": 8168,
+      "sha256": "0a008f8f8dfe4c933c36546b0dbfe1bdce802892b9bb48ec05c9f5d18bd04b88",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/care-connections-accessibility.png",
+      "bytes": 301040,
+      "sha256": "c50c0ff4f027b039e216d8b65db6d65d8e01880647b65b027cbaf0d80b6e5898",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/care-connections.png",
+      "bytes": 331886,
+      "sha256": "cfae3a8692bfd46febc6afc50e5f8a01ce6fb87d9a95912622a3364fef216f23",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/combined-omission.png",
+      "bytes": 378213,
+      "sha256": "ddd4303a1bf777ece3aa5b772de69596e7697559e0afff0082a71848f1affd87",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/core-tests.log",
+      "bytes": 19866,
+      "sha256": "01d484c4f7e7a8cdf78ecef66efd02e06dbd648f4de064b556947ed007f5861e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/deletion-disclosure-summary.json",
+      "bytes": 1001,
+      "sha256": "9ebe21bf833341070cff9cf1934ab36a08dd21fcdd81081599fe6722caba3b74",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/deletion-disclosure.png",
+      "bytes": 266189,
+      "sha256": "4fd466f53040589dea2fceaf99c9ebbb1f4df3a0c1373f8ce03e0062832ba726",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/evidence-trace.png",
+      "bytes": 362071,
+      "sha256": "900b988f946718830763b721a479fa3e57e89399aae49a163521d272e9816da8",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/exact-handoff-copy.png",
+      "bytes": 233677,
+      "sha256": "a939ed57a06881471ec36550a941a134eb281bbabc30bb63de34e9522748d4f6",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/gateway-tests.log",
+      "bytes": 5857,
+      "sha256": "2538f14a3798ddd65e6bb13dbd9c047929535140b943f86ccc0f68064b36e917",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/handoff-changes.png",
+      "bytes": 495660,
+      "sha256": "0fe19805a2e4e270107f5c31b498112c2886a31a3f4d1e73a2eb5edb123d8d27",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/native-summary.json",
+      "bytes": 1194,
+      "sha256": "5036fd5149c1053ebf900eee1e39fcd97bce367d60bd843dae3c51902952a2bc",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/preflight.log",
+      "bytes": 285,
+      "sha256": "c40a2e8b49a0bfe39778085a74c6514194dc862354676a8bbd1d9f9f162a19ce",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/release-summary.json",
+      "bytes": 723,
+      "sha256": "a44c5c4847df62a3ad27f94e3b425fe482493d2999262513cfbde2a7ca13d478",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/screenshots.json",
+      "bytes": 906,
+      "sha256": "6c1c8ef3d35bc6aecbddb97c1ed94161e08d01e46a7112efc95c502cc5411afc",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/timeline-accessibility.png",
+      "bytes": 493539,
+      "sha256": "8b13b5d4a794c63ed7f6ce518b62be194e6b204f662c9d251905e49d6fb62c1a",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/two-date-timeline.png",
+      "bytes": 377581,
+      "sha256": "44a8ae88363378570f7e964c30bc723235c2f9130d72eb665b1670c7c05200e3",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/evidence-intelligence/upgrade-preservation.json",
+      "bytes": 2137,
+      "sha256": "559325d643853dbd3454ce9e9f67cffc84c4853b5204dc78e8838f2f007728b8",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/README.md",
+      "bytes": 9918,
+      "sha256": "ff23ca6120610a3dd87ef1c54ac232321f53c6c5bf5efebf7ffc69e81d2b3b90",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/broad-run-summary.json",
+      "bytes": 3274,
+      "sha256": "f1311f990227a955ace86914c5c544a4623c517be19e701165acf5494e8d37f9",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/core-tests.log",
+      "bytes": 28190,
+      "sha256": "e218aa79e17f85da4ee4ec3e6e011350b6a5edffddfa517238b05e928b6da4dc",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/final-native-summary.json",
+      "bytes": 1194,
+      "sha256": "4d5a67cf496f0d5296b3552e34d0cbc160c0558f7360d57b0a57af5cd5d6aa9f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/layout-summary.json",
+      "bytes": 1001,
+      "sha256": "25f6aa40d9346188130217a9aca5ca1e46d56ac13298f1bf841302c10ffe1fc2",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/preflight.log",
+      "bytes": 285,
+      "sha256": "c40a2e8b49a0bfe39778085a74c6514194dc862354676a8bbd1d9f9f162a19ce",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/release-summary.json",
+      "bytes": 398,
+      "sha256": "465031f8a18d54cc2f101e4b3ee026a555d89f63102b988bc3ec109ecd3f158a",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots.json",
+      "bytes": 2223,
+      "sha256": "b6008fcfd7ab1391cb9c00e263e7c230fb508cb2b801d2ecd7720dadd7577041",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-accessibility.png",
+      "bytes": 232820,
+      "sha256": "f7087dc8fd6fe4a073f2e2c4be7ab201dea5a608c5a694c94987d0a7d7932dd6",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/appointment-answer.png",
+      "bytes": 215023,
+      "sha256": "b646c985d6e6b2681ab9a5dd063a4a47d91d7a77f7279e19fcf1533ed809709d",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-accessibility.png",
+      "bytes": 510747,
+      "sha256": "c02185b95e5bb44483dd9512908a083f14abf92c6c897635cbc99d5df869dd79",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-next-step.png",
+      "bytes": 353434,
+      "sha256": "14c44d741ded5cca52c2573184e58c67638127dd065d2b00fd1df9a6a52ec135",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/follow-through-reply.png",
+      "bytes": 348564,
+      "sha256": "871d46f43d8a394271380023aec40bb7a081cfef9fb395d5a58f67d8a265306e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/screenshots/opening-brief.png",
+      "bytes": 240039,
+      "sha256": "9801a32919066261be9f6e3dba99ba7fc880dec21e27755713996fe5ef89a59d",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-09-21/patient-companions/upgrade-preservation.json",
+      "bytes": 4010,
+      "sha256": "19886b8cca581f61ebc1cac7fa8774b0427c03f78e57b41fb440a06c112d4a16",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/WORK_LOG.md",
+      "bytes": 13374,
+      "sha256": "56016a8b55fea16658693d0130ad7acfc43c41d57f3e727036f35470634bba7a",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/AUDIT.md",
+      "bytes": 7271,
+      "sha256": "ac4d4e742bc9ab272b7fb059aa843bf73d92e86010d9e11b673ebb3c5f217587",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/BACKUP_AUDIT.md",
+      "bytes": 4745,
+      "sha256": "7e2f42dcd0e5b61362e6e445be29af8778cf8eedaf1d35748740a7970f6d1176",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/FEATURE_EVIDENCE.md",
+      "bytes": 5956,
+      "sha256": "5ff5963d2b554abe7cab2c86c5e846660eeb93bb12bdbf948ce87d7a84df0e28",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/PACKET_NATIVE_AUDIT.md",
+      "bytes": 3041,
+      "sha256": "549e1df218fa8b855a6b0cb36be77ac16d41fd70c34e960e899a5a700d6ad312",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/READ_ONLY_ACTION_AUDIT.md",
+      "bytes": 3426,
+      "sha256": "96a4b1c8e0f8a0eee97296b9b833454c513db0211e72e79524107d97c14ffcf9",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/SMALL_PHONE_AUDIT.md",
+      "bytes": 6432,
+      "sha256": "46899a73fea3142b6e68a16ecd7690fd271b883677ed671854f10201635b438f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/backup-build.log",
+      "bytes": 441226,
+      "sha256": "7bc6aa8294f6713f26514ca18ae7429e07b45ca1d756a0fb1fa7569671d06b0e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/backup-capture-tests.log",
+      "bytes": 200010,
+      "sha256": "2e1f1db51b3ad47e86719190149180c794244329eac76b283bf988810d7497a1",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/backup-created.png",
+      "bytes": 610498,
+      "sha256": "ece68dd2b8222b5e0a6c6b33df74add694fca75a39460a02f8791e9422a560b6",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/backup-final.log",
+      "bytes": 109592,
+      "sha256": "eb9b0a887262ac66fd4df576682151535e6024d0eb0e142c4c9daf0ee02993bb",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/backup-retest.log",
+      "bytes": 129601,
+      "sha256": "0471c8ee38c9b04c9972b3fd717d373da714c78d8b84917e98356c0d3bbf5933",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/cleared-source.png",
+      "bytes": 3814903,
+      "sha256": "c2de87179e19b1152acdced4cbecafaed747e3872219bfc55c3a84e49d5309c7",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/demo-packet-native-choices.log",
+      "bytes": 38589,
+      "sha256": "0de280babf1d54f69c0bd9a3a752861daa7ad034c6e4ffcc3ec4aca56491e07c",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/editor-draft-recovery-final.log",
+      "bytes": 181565,
+      "sha256": "e4c7449e89e4fa89111d4a34bdd035078f46d7130a40ba83d58f2397a80ef9c4",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/editor-draft-recovery-summary.json",
+      "bytes": 1165,
+      "sha256": "50e0af7d2906d58e3999c280cfd6acc3fecb6ea4d72e9935b3bfea69c7a3fea5",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/editor-draft-recovery.log",
+      "bytes": 236888,
+      "sha256": "04d78e16d7d86ee579b7ba927af185cae95aa839b54294dfcf71df05339455c5",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/expanded-build-latest.log",
+      "bytes": 84976,
+      "sha256": "22be22bff5a8a07f1670e6c421ac8b339cb4032a93e9d4acf5dcb3ed1fb1fc98",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/expanded-build.log",
+      "bytes": 458461,
+      "sha256": "4a620dc486208c39f6567f2d57d4fc781b3364b25a256cff81b0ac6be337b2e9",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/final-se-all-ui-source-sha.json",
+      "bytes": 14518,
+      "sha256": "5c6b55fee811e07c90f6f6768b3b45c36da6d67c8d9b2411a5b28c003c9027a9",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/final-se-all-ui.log",
+      "bytes": 277326,
+      "sha256": "5cf3ae65e2b404ad03067905afb873dbee35abc949cdc5dc484c064a6d8c31a0",
+      "matches_working_file": false
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/focused-tests.log",
+      "bytes": 272202,
+      "sha256": "2b18e32401e8077a286712679ecedf980f5d0af20c0ba1fffebc6e78746f2790",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/ios18-paste-crash-signature.json",
+      "bytes": 1185,
+      "sha256": "71f4a5662c918ed8b5dc6208de4ce59f557c84e2844b5cee688660eadcf454e0",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/keyboard-retest.log",
+      "bytes": 79179,
+      "sha256": "eaff91f0f37aeabefff371b1c54e70ea3d92913dfdf4e5a661d4dd9098f720e1",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/paste-isolation-build.log",
+      "bytes": 321204,
+      "sha256": "a18a925381d65d5ef420010cee5441e4f4ca1ddcccdc1e482adde185c843af4f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/personal-packet-native-choices.log",
+      "bytes": 40505,
+      "sha256": "be60834ba404e421c2468eddb7c3aca2ed0c40599f1240dfd4f267671180c9dd",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/personal-packet-workspace-diagnosis.log",
+      "bytes": 111919,
+      "sha256": "ff1145436e5798ae18a0c67e84111da07e284073e3ed9f40a3958d0025f72eb4",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/review-draft-kept.png",
+      "bytes": 146794,
+      "sha256": "34beea6a2765ee7870d47dc7cb27f69408da97c3b25cc9708e32264d339b7f61",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message-measured.log",
+      "bytes": 60696,
+      "sha256": "cee2db85d7e88d5f1d5d41cae4f71cd4ccda21570f9a6ac8652738ad47311871",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message-stable.log",
+      "bytes": 40928,
+      "sha256": "03169b7fca573f825f591a96a7980cbbd5beb4e368ae8109b1efc234c175cc83",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message-summary.json",
+      "bytes": 1165,
+      "sha256": "77ad0d49e79bbfa3f9fec4d3b6d9d290cc9eaf66424e32e7bab1f1aefee16d83",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message-verified.log",
+      "bytes": 46274,
+      "sha256": "2eaa78b6d5e9af476b0883d62fda220884220142997e0b483087a91f1c3cb8c1",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/se-outgoing-message.log",
+      "bytes": 12791,
+      "sha256": "bcfa86b06bbcdd6bbf8928189be0fb08c42b9b0a5c7f3e59016999f26e88e24b",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-appointment-answer.png",
+      "bytes": 165575,
+      "sha256": "2b204102ba58a030908b04163bd9a7e97f905414b47738cf58df6a6d93632249",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-appointment-brief.png",
+      "bytes": 119734,
+      "sha256": "626fd2deeafbf83838b1eb7befd61d2d2050f6da874d935badaf7b107b5d65db",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-care-connections-accessibility.png",
+      "bytes": 128671,
+      "sha256": "72a4c7f8cedb91992a84c70e71e1401cae2818cc15ad63b852b059b6da0dd58a",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-cleared-working-original.png",
+      "bytes": 119795,
+      "sha256": "02c075f5173aa2ecdf3d3164869f39099a038325bfe37989657372545158d597",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-compact-demo-accessibility.png",
+      "bytes": 106348,
+      "sha256": "6dcc0ea9a0cc0853ed3c99173cb80ec871f9168b0bc781230029f14f4cdb062a",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-companion-measured.log",
+      "bytes": 241494,
+      "sha256": "a9f40050e7dde962e9c9a3349e55b1186760ad197be72650196b333fa1e0f0f1",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-companion-retest.log",
+      "bytes": 229825,
+      "sha256": "dca77cf5edcdf0ef028970d1625299faeac16fc9ab74be52f1858cc0a717f0c5",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-final.log",
+      "bytes": 232347,
+      "sha256": "fc294cb5242cd58caacf8eaffb85e42ef7e39513fc4a3aa5b1acbcf76bddfa80",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-native-paste-relaunch.png",
+      "bytes": 150732,
+      "sha256": "2fd6d3e4bfcfbbbef9412a43965300915ecb636f520f718e927e7163d0dbc4ad",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-outreach-reply.png",
+      "bytes": 207808,
+      "sha256": "b035afe2e4ff945e0bb2aeb5fdf778ed082cc0170e2b7bf3b4440b2c0148ee32",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-release-checks.log",
+      "bytes": 313621,
+      "sha256": "1dc425c85eb2da5029ae93087d8be7bf762ed037a4d3bd0296b0186c3564232c",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-release-summary.json",
+      "bytes": 1409,
+      "sha256": "82b48de0e348cd5c74affa5415462a3b775906aaab4130bae5da20fee59d0c44",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-retest.log",
+      "bytes": 319629,
+      "sha256": "c64c14e137a2069cd963e8ca88fbacda17a62b3c489a6665f8ef31d40a2a2761",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-tests.log",
+      "bytes": 369021,
+      "sha256": "541ce118e010b1a8deb9d9b661a6cc206f67f4e036421e4ef9e25ecb589823c1",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-timeline-accessibility.png",
+      "bytes": 174039,
+      "sha256": "80dbe4918069e1e69760ecc17b10c23635d03cc5bb43020bc580ec61edc26134",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/small-phone-verified.log",
+      "bytes": 261566,
+      "sha256": "ee8604ade89a3fa1aee29c2bac8044173846ff05c877be75f66f2fc6bf00e623",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/ui-isolation-build.log",
+      "bytes": 303128,
+      "sha256": "5ff46504fd319253c4c9cd344dbeb1917782e51453516fe82688702468fe38bb",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/capture/workspace-draft-kept.png",
+      "bytes": 108785,
+      "sha256": "cbb35e87c194c3ef8c40debc632c13d3b129566beaf4d391a231b87b29bb57a1",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/ASK_AND_DRAFT_RECOVERY.md",
+      "bytes": 4731,
+      "sha256": "6eec3f66a0f793381016bc70fb776f9f9154dc1ca7a203359b15e0566be6a4ac",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/CANDIDATE5_SECURITY_FOLLOWUP.md",
+      "bytes": 3403,
+      "sha256": "0f1950e3d003c04819992000ceec58097d1d61831c45198069a9f77fe515c687",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/README.md",
+      "bytes": 13153,
+      "sha256": "c4704648cda0b812f2e02964530d82ae3ee03dd9e5553f8f23e377498f637c29",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/UPGRADE_AND_PREFLIGHT.md",
+      "bytes": 15439,
+      "sha256": "53613975f34ac6d5d4a182cd2d3aae58e0b8e6f1606b59e28c693844057fc5d1",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/ask-and-source-status-native.log",
+      "bytes": 298703,
+      "sha256": "add555b280e123f5de80d909f7b86b8076c6bf9b62d1cfcd5d3d4776febaf70f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/ask-source-preflight.log",
+      "bytes": 767,
+      "sha256": "afa4000ee015719b759071dd969261efd238b3efc62a3d71c1da1e9e593c7c1c",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/ask-source-status-results.json",
+      "bytes": 1268,
+      "sha256": "61da4048412682ec4cb54bd752d5f8f523ad920e39c58541054766a9ea6c7f16",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/ask-source-xcresult-summary.json",
+      "bytes": 1004,
+      "sha256": "612487d63a63b2007923694849b5118aa8b31544437cfe56dd88e4061000b828",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/audio-lifecycle-audit.md",
+      "bytes": 2880,
+      "sha256": "a02ec791d1dd6e5355531037589eaa9d0df39b4dccbfad247c958a51d166dcf2",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/backend-tests-py313.log",
+      "bytes": 15602,
+      "sha256": "8938285bcae1bad6e9cbd201c5cb1f836740e42b2e9646646e83996cc8e0582f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/backend-tests.log",
+      "bytes": 15602,
+      "sha256": "fbf75f19b5c44fcddf21bfe96da4b8d55aad1bb57bff02fd5e0d049e6da7b7aa",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/candidate5-final-preflight.log",
+      "bytes": 767,
+      "sha256": "1472baff1f57e1319b9e3e7eceec5d49dd9bb0971797207e8aa916676ecf56cd",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/candidate5-public-content-check.json",
+      "bytes": 1388,
+      "sha256": "9aad787952aef749ba6618e3900094c001d239789889d09fce92c601eab01c33",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/candidate5-public-pages-tests.log",
+      "bytes": 1466,
+      "sha256": "669eab33bf40a30082db6a75e80f78f6d3904a5ff1dc4f2cc6120e0b09d13169",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/candidate5-secret-scan.json",
+      "bytes": 3163,
+      "sha256": "9ffbe05a7c4816379c6fbe654bb55ac4917ade4456486c997f5e7f854e49b82b",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/deployed-public-routes.json",
+      "bytes": 576,
+      "sha256": "61526ecd13264500bb7b52244e32eceed9a89222f812f4fc22138f89341e44c9",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/final-public-auth-boundary-check.json",
+      "bytes": 1372,
+      "sha256": "7d89d4cd14ea2ae04bca7ae54d6d56fb712edcac043ef1b8986ddc3c352f6615",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/final-public-page-byte-check.json",
+      "bytes": 1555,
+      "sha256": "ccbd42c42bf1b3d8171cfa42091407070524d116baac8ef5e692bf7b937af34e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/final-secret-scan.json",
+      "bytes": 1617,
+      "sha256": "ef11b7707bb938fb95904580fe9fbf9a9b49b6a34594e6e7e4c094d7aec2da4f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/final-security-audit.md",
+      "bytes": 6722,
+      "sha256": "fe440d67ea52cd4e331e4edae14279036989df44419d73c10c63b09a6a84468c",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/fingerprint-tests.log",
+      "bytes": 2577,
+      "sha256": "387a525e2ebcc71ac5f3799a18884877e1056c1680a92ab8e1d82ee5a0379eeb",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/follow-through-draft-native.log",
+      "bytes": 174504,
+      "sha256": "ded27745bdb04257333bd0454fb641598083363b026c022ef0626472217b468a",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/follow-through-final-results.json",
+      "bytes": 1263,
+      "sha256": "52a7f878fc4ad7eba9a03348679551b0500f3d83d47f9523e62f92451bac5190",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/follow-through-initial-xcresult-summary.json",
+      "bytes": 1690,
+      "sha256": "846a025af0e877316750554a6f58a6608e4e1daeed3f0fcd18264a577a526f07",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/follow-through-loop-final-xcresult-summary.json",
+      "bytes": 851,
+      "sha256": "ff8f563c88d0266f56765ce8a22a8864e6228f15c9652d09aa833e39b2a24f75",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/follow-through-loop-retry-native.log",
+      "bytes": 74193,
+      "sha256": "58da6bfbd22b6433237a42edf3c67fd58440a6f25255afb2afd55c82a832f7df",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/follow-through-loop-retry2-native.log",
+      "bytes": 93276,
+      "sha256": "c977adf900d8db4102a3b64155016f94427194d970a449f1619e60a8adf0df52",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/follow-through-source-preflight.log",
+      "bytes": 767,
+      "sha256": "d92ba4318d15aca47cf744a296363bccd0fe662bc28e948ac02103f3cd826af9",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/http-smoke.log",
+      "bytes": 192,
+      "sha256": "fd177857e081223413f3babed01f6daf61f488199cd4622a7177d5170880452f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/live-gateway-2026-10-05T003830Z.json",
+      "bytes": 884,
+      "sha256": "dafdfae5327bd9afda4e8601b1d6062a43a62d67db5165469ead9ab7ab4e3ac8",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/live-gateway-shell.jpg",
+      "bytes": 75986,
+      "sha256": "14a994ecac55874d6e649353360b1316cc4e1291477cfe85820ca5c0ecf7e6be",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/main-simulator-schema-check.json",
+      "bytes": 842,
+      "sha256": "c88c7c93ac96e674cb9f4a4daa05a74c29ca505796c8474e7e1da20e32baa139",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/native-live-signed-test.log",
+      "bytes": 3522,
+      "sha256": "528930019f35961161aba71a228d8918fe8f1b24c8a1e9aa1afd5f8e2cd49701",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/ordinary-release-capture-diagnosis.json",
+      "bytes": 8881,
+      "sha256": "83f1b6153a7cef8d9397c22f5e3f9f049f846391c5c68c65e686fe63e57e6953",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/ordinary-release-capture-xcresult-summary.json",
+      "bytes": 1173,
+      "sha256": "12b6a9e434eb7eda39f552a0ec38ed45d2dae1c260c73aa63dc7ba9652f8cef6",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/ordinary-release-saved-source-fictional.png",
+      "bytes": 271359,
+      "sha256": "4bc32504652ed13995d8fef3c88243651800bcbaf84519ccbe66c759f34c7006",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/public-health.json",
+      "bytes": 295,
+      "sha256": "14f22a005d59ccab9a2faa484c4f00b9940dad368374d6a4d872ea031ad30504",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/screenshot-plan-check.json",
+      "bytes": 1057,
+      "sha256": "80db571e32d5b05d53f80f5d95dbd716202099682e8e95f71977f2bd45655c8d",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/source-dependency-privacy-check.json",
+      "bytes": 2564,
+      "sha256": "66d2bb89eed4d1b0426e13dfbbb8b3506663e82c5161483ce399f062bf153f26",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/source-preflight.log",
+      "bytes": 767,
+      "sha256": "feebe6cb5c884f2502019c5948c21fb729e4bb2050e5b1a6667e7d11f3055938",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/strict-output-deploy-live.jpg",
+      "bytes": 121911,
+      "sha256": "f317f8a9d5314bf62dd1ab2685979e3c4d0de5efa4e1afcc1e056e5a8eb81d52",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/strict-output-fictional-check.jpg",
+      "bytes": 56444,
+      "sha256": "6e28e987bf2692c8fe54f293a8db70724f8730278e0c0672543209f00c06d339",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/strict-output-live-result.json",
+      "bytes": 1060,
+      "sha256": "eaaa7f5dcc9784007debad1f3d893c3112d974ca4d21dbbad74844cce2238eb6",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/cloud/tracked-env-example-scan.json",
+      "bytes": 439,
+      "sha256": "f54e8c7e446b5841aa2537509ef5b5cf9c03e782360ba4763e0e291bb3c75531",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/core-baseline.log",
+      "bytes": 28077,
+      "sha256": "69d74f2b48d9d0ee9cddc979f5a5aa5744b9622581a4404fbad1b99a6497c179",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/integration-baseline.log",
+      "bytes": 278892,
+      "sha256": "87fcfd356a10fbd24a7e960a3edd0f8f33b5cb5cb524bb727226fbfebc1ef984",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/pipeline-candidate.log",
+      "bytes": 316256,
+      "sha256": "4785d167dba43f6eb383dd76ee00254d6d1317af54e2ba683a3ffb1302f8d07d",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/ALIAS_RECOVERY_AUDIT.md",
+      "bytes": 2094,
+      "sha256": "8eb77f5f09bc2cd6b769955a611e3ad51d97edd7342b244449dfd71b0c141764",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/APPLE_UPLOAD_REQUIREMENTS.md",
+      "bytes": 2486,
+      "sha256": "8fa1b1c9f2e7b1d375307b21fd8ad9f1d79f2a1b15c2bd98199b0276710a84a4",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/APP_STORE_CONNECT_READINESS.md",
+      "bytes": 2437,
+      "sha256": "2dbdd26508f4912e42ebd157a92799d665b7aa5378d0aa05ee8f2a62cb153595",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/AUDIT.md",
+      "bytes": 14545,
+      "sha256": "b2f50f41f1ccbb27d8a7445b3b4b641903de91b459ff24be3c0fdc3c47f8a4a2",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/EDITOR_RECOVERY_AUDIT.md",
+      "bytes": 4640,
+      "sha256": "a675daf438fab00ba8171b8094cfdcf83d97698537b64e9c6073b747d85665ae",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/EXPORT_AUDIT.md",
+      "bytes": 4150,
+      "sha256": "1c4dcdb8fc78f1bf9600a0b2a565b33ea543b0e6342657992fe8cb88f4e7a183",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/FEATURE_VERIFICATION.md",
+      "bytes": 33977,
+      "sha256": "b0a472f405f8602ff176a77e50b29d2c566dedf68b4dfe136f057157240ca6ee",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/FINAL_CANDIDATE_AUDIT.md",
+      "bytes": 6723,
+      "sha256": "7c0b1081fb555acd3902c05b5fa204f1f7d9c3dfc257d2f6f28d19c79cf207c0",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/NAVIGATION_AND_CONTROL_AUDIT.md",
+      "bytes": 9760,
+      "sha256": "d9ba908822586abf2addec6c5aed536911c06fe4cb50f003a789d5b86c83ffd3",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/PRIVACY_MANIFEST_AUDIT.md",
+      "bytes": 11209,
+      "sha256": "3bfe99f90916630351df1233f4c00a743f1e07138c8f44a067a0b147dd3736f8",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/RELEASE_HANDOFF.md",
+      "bytes": 7195,
+      "sha256": "355add4c42f43fed6909914935088722aba6196d630607312696fb0ef9232194",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/SCREEN_CONTROL_INVENTORY.md",
+      "bytes": 38534,
+      "sha256": "2a10195cd8fbc10b4dcdcc5fb944e87429d216d3a94d56606fbd25720ab0d61c",
+      "matches_working_file": false
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/UNSIGNED_RELEASE_ARCHIVE.md",
+      "bytes": 6110,
+      "sha256": "658f0662b9c2b6d639f0967e44bf5c1185abdfcc5c97cf7fbf9d19b8e3f6cc83",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/alias-core-tests.log",
+      "bytes": 2579,
+      "sha256": "e891a4eadb76986af8a35896313fbc9f9445922ae6024118013c233e9b572df4",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/alias-syntax-check.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate2-summary.json",
+      "bytes": 1656,
+      "sha256": "afecadff903fc4d89d73720cfbf52484b25b93f667542665515ed24c3beade52",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate3-source-fingerprint.json",
+      "bytes": 10190,
+      "sha256": "6495ac87512321670b253512000ef9dae6a388a050e0e2dc01700f332aeae716",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate3-summary.json",
+      "bytes": 2218,
+      "sha256": "5bcd5b629a034385f4f454760acc8d56d4b8858083952fa826f0d3a2cc2d7c4e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate4-demo-before.json",
+      "bytes": 69,
+      "sha256": "abf4aab523bbaed00acbf48513dc7b77059814cfc26aa5450a8bb71cbd315927",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate4-personal-before.json",
+      "bytes": 1748,
+      "sha256": "ddcc08f8e5e0925e18b0601d90914ca47b9b234447243dbd461c90f7b00d3ee7",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate4-source-fingerprint.json",
+      "bytes": 9051,
+      "sha256": "422a4bcd0c24cf717d204f40d1128df52545f49ebcb0dc6fd729aba924092a63",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate4-summary.json",
+      "bytes": 2054,
+      "sha256": "aa6d11ca30a5c6a38e9281bdae15edda5870926d8eb8c5eb7914d9c876186eb7",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate4-summary.raw.json",
+      "bytes": 4676,
+      "sha256": "b54811c13910cd1b25d7cc1c07bb07ffe9d856641890727781828426b7ce7b68",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate5-archive-source-after.json",
+      "bytes": 8124,
+      "sha256": "8c344bee5cd4c04f3dfcb6e7d5fbfe727d5a20dee449be5b510cd4ea0b8948ef",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate5-archive-source-before.json",
+      "bytes": 8065,
+      "sha256": "f349041b1080be7278d9518bebf5794403c26223325cae55f6ae72a3c8ea328f",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate5-backend.log",
+      "bytes": 16469,
+      "sha256": "688ebcc1e5f8ba280104cbeba706f81b3025293aea298c88fa233caec4bb9bcb",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate5-core.log",
+      "bytes": 34730,
+      "sha256": "b60212a28ab20d238be1d72b07f21d70eaf25dbc7ec5573098f311c178888674",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate5-fingerprint-tests.log",
+      "bytes": 2577,
+      "sha256": "7c6eb10356a88b9c0183c8b6a487d487dd963668d96b8abc0cd466bd85d8a30c",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate5-native-source-fingerprint.json",
+      "bytes": 13775,
+      "sha256": "04c6aaa48fbbe848425e6e59992fedaeb517e7e7dc1c8b7772dbfe6982ded3dd",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate5-native-summary.json",
+      "bytes": 2754,
+      "sha256": "34b2aa3cba9a15c7581cf78eb1541478591edfa7d2531c2d53778495208f65d7",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate5-native-summary.raw.json",
+      "bytes": 1198,
+      "sha256": "66dea14847c6ed030904b9f4ddc3cd266cc9f447deda5b5e1e7c3e323debdff6",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/candidate5-personal-preupgrade.json",
+      "bytes": 1748,
+      "sha256": "ddcc08f8e5e0925e18b0601d90914ca47b9b234447243dbd461c90f7b00d3ee7",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/ci-workflow-static-check.json",
+      "bytes": 366,
+      "sha256": "79c94df14109f0c58c68cab467125d3827ad831e6d020e6ffe961c5c38285a5e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/contact-verification.json",
+      "bytes": 1423,
+      "sha256": "98f123f83c5c28d368a983baf46e918faf6ed2fb649b8d54fa5699b78c100ed3",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/control-inventory.json",
+      "bytes": 257347,
+      "sha256": "e79992929ca011564a097ee6379b32d2a43d0367462c32d3365e156b6aa3337e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery4-summary.json",
+      "bytes": 1167,
+      "sha256": "3c0736f3a1d89dedc6a2b88e1bd323b426445ec47c282a3bdb7346241147d37e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery4.log",
+      "bytes": 336538,
+      "sha256": "d033ba4a77c163971b780c38dbc3d842be8d24a876e98f0ba8d113e512ee451c",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery5-summary.json",
+      "bytes": 1784,
+      "sha256": "d446501c583a04fb1fd8c0ece62990c3542ce60f8dd03791043dd96b13d4b97c",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery5.log",
+      "bytes": 339719,
+      "sha256": "e1fd1962b051749c2656ed4056dc26f684b15cb039d16f8e4b4815167e7531e4",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery6-summary.json",
+      "bytes": 1471,
+      "sha256": "ccd3506a4eaa58d80306e52fd88220a827b750bbf5977469aa949ed6e9fa3963",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery6.log",
+      "bytes": 153623,
+      "sha256": "428843bb1aee79b7a4d0f2a1879a3765f08a89663380677633f978d0181122a5",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery7-summary.json",
+      "bytes": 841,
+      "sha256": "0c1f691e6cb6ad92f81a6b30048c04405a950750e4eb00f6a6a3756ef9ae2d57",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery7.log",
+      "bytes": 58002,
+      "sha256": "fee7e4cab408f24a979ddb8989fcd9b79561ee7b9c4d35ae09477b2d37870f76",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery8-summary.json",
+      "bytes": 1202,
+      "sha256": "71ecb718bc2b271a944c1f1ce434aca9133de51e1a1b7a3fb28781b4072528e7",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-recovery8.log",
+      "bytes": 147717,
+      "sha256": "37d8d67232fdc1fcc3fe881dd5d23389708cdca40ce14ca9951352edfb24ac47",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/editor-release-build.log",
+      "bytes": 230617,
+      "sha256": "e958f4ef07ce452de4bb214b115580093a2d9c5c7475eb138580a688f4399e77",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/export-syntax-check.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/final-candidate-readonly-audit.json",
+      "bytes": 31507,
+      "sha256": "6dc4806639131d6bdcd6d10b426c477a4ed85b2d84de6b976108d68e0c14c815",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/generate-control-inventory.py",
+      "bytes": 7450,
+      "sha256": "e71f0e97e9a305bd2a57330afe19e487bbb333bf5b782cd01ab79a73f866c2c5",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/git-eligible-image-ocr-check.json",
+      "bytes": 11532,
+      "sha256": "d97d45272ab401cc93fcac364afc4753ccb379cc75fb83fdb4aed69eb669b837",
+      "matches_working_file": false
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/keychain-signing-test.log",
+      "bytes": 267384,
+      "sha256": "ed8031884f0c713f4fcc4dd8d53f9bbe715678b6cc680c1e2d2e96ebf4237a1d",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/metadata-check.json",
+      "bytes": 1634,
+      "sha256": "caf59d3dd0e4be948df88202a43eef8ab275b0a532f3aacb34038bac25cdf753",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/public-pages-calendar-source-check.json",
+      "bytes": 1104,
+      "sha256": "cd037a060972425b0016947a1cbb54349f54af55cf1c9398c20a80d344e0cfb8",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/public-pages-calendar-tests.log",
+      "bytes": 106,
+      "sha256": "b08b9c38c255cdcdf80383851bd57965fe77785989faec558a19418a08703332",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/public-pages-check.json",
+      "bytes": 1813,
+      "sha256": "9833fe81fa609bbe8c87e732b5fe0e5d7eb2dfe5bb4b8fe2141b50a4be78ab2b",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/public-pages-live-check.json",
+      "bytes": 1269,
+      "sha256": "2e1c2463345d61946a98760988e7acec0bba9eec6b51bcf9087a6fd83fb1e77a",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/release-preflight-final.log",
+      "bytes": 767,
+      "sha256": "1472baff1f57e1319b9e3e7eceec5d49dd9bb0971797207e8aa916676ecf56cd",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/screenshot-format-check.json",
+      "bytes": 547,
+      "sha256": "92ae98c5121b7b4b14366724ea5fa313b484093484c53e6e637a11fbbf3db244",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/unsigned-archive-dylibs.log",
+      "bytes": 5102,
+      "sha256": "1a375c14a803cc08c66bd721083ccc3c55cc6b99a22577805c37a4e8baed03b9",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/unsigned-archive-file-screen.json",
+      "bytes": 2349,
+      "sha256": "f3c4e8a6d20915d946ce409f265b2c9cb04f821e3482b9a70f607fe7af73b616",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-archive-inspection.json",
+      "bytes": 7706,
+      "sha256": "0e16505ebe528a27bea9b1e207723f732a7cd7c25bf72ee5950df51e39458b16",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-archive.log",
+      "bytes": 151857,
+      "sha256": "a716a56f0922ff786fa460a8a702c0464449faa255dc377f350fbe5fd7bffb9d",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-durable-copy-check.json",
+      "bytes": 2536,
+      "sha256": "f95e4eb97dd359a81dc980f763c90763a416819ee6461e132093858ab47e8011",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-dylibs.log",
+      "bytes": 5104,
+      "sha256": "1c93f5d608d6d0ab9357327adfb7269a814a323b70fbf5129da91450da2ad112",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/unsigned-candidate5-file-screen.json",
+      "bytes": 1432,
+      "sha256": "2c9985df5664c5ee8d47909d5da75229899bd89beee6fc8d93f68ba48b5055ae",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/unsigned-release-archive-inspection.json",
+      "bytes": 7263,
+      "sha256": "1c6b829c12b8701c76f51f414a10ed3f08750ea7da37a8058bed54262adb0150",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/release/unsigned-release-archive.log",
+      "bytes": 150850,
+      "sha256": "a739666d74026fc36ef33ce8664a2ada0d6628c410a95225bf81f6d6febc737e",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/reminders/AUDIT.md",
+      "bytes": 3196,
+      "sha256": "59e8e805be7332f8edb912a2c36e9ccbac63572a691b8a1186a02558d90b1069",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/workflow-audit/AUDIT.md",
+      "bytes": 11128,
+      "sha256": "0ff477a4b018dbf15ba1ac495f216e6b8e1f59e067c713aecd942ac83cab5068",
+      "matches_working_file": true
+    },
+    {
+      "path": "docs/verification/2026-10-04/workflow-audit/core-tests.log",
+      "bytes": 34138,
+      "sha256": "3812b78aa0f730332c4361aa64a01822b9ce95f71f788eed90c8883c7c040b6b",
+      "matches_working_file": true
+    },
+    {
+      "path": "scripts/generate_project.py",
+      "bytes": 15217,
+      "sha256": "88dcfaa33cef081e8f78214fbf574455a0a29b3934c3265142fd06187687a813",
+      "matches_working_file": true
+    },
+    {
+      "path": "scripts/release_preflight.py",
+      "bytes": 4957,
+      "sha256": "d7967571aa8221d175aa79e3d122bf2d51dd8da03f8c63a6bbcf0cad2e812587",
+      "matches_working_file": true
+    },
+    {
+      "path": "scripts/simulator_fingerprint.py",
+      "bytes": 7874,
+      "sha256": "81b1d57540472ddbc1fd196c9609b7c181dc2c50961cc03f60352b1d574b1ab5",
+      "matches_working_file": true
+    },
+    {
+      "path": "scripts/tests/test_simulator_fingerprint.py",
+      "bytes": 12157,
+      "sha256": "5070278d276d0b7b7099ea35bf36a5151326291fd12a0c88ab1b175a55b0d46b",
+      "matches_working_file": true
+    },
+    {
+      "path": "scripts/update_status.py",
+      "bytes": 23579,
+      "sha256": "7a8270a3ef339afbe8a7f2999f13e5ed784c8c2ad27e2a6713e0e4e1178ffb6e",
+      "matches_working_file": true
+    },
+    {
+      "path": "scripts/verify.sh",
+      "bytes": 437,
+      "sha256": "06b50019972d78f2e6d5ea85bd58afcfaa0ca365668550f3b412946adafd8e1c",
+      "matches_working_file": true
+    }
+  ],
+  "frozen_candidate5_production_comparison": {
+    "scope": "App/Core/resources/Package only; screenshot scheme/project and ignored macOS .DS_Store metadata excluded. All 68 original archive inputs remain documented separately.",
+    "files_checked": 65,
+    "mismatches": [],
+    "excluded_nonproduction_metadata": [
+      "CareInOne/.DS_Store"
+    ]
+  }
+}

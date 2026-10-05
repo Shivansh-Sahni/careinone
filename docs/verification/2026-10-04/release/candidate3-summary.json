@@ -1,0 +1,45 @@
+{
+  "phase": "Candidate3 compiled earlier source; not final repaired candidate",
+  "result": "Failed",
+  "started_at_utc": "2026-10-05T01:03:52.491000+00:00",
+  "finished_at_utc": "2026-10-05T01:33:02.039000+00:00",
+  "device": "iPhone 18 Pro / iOS 27.0 Simulator",
+  "total": 138,
+  "passed": 129,
+  "failed": 8,
+  "skipped": 1,
+  "native": {
+    "executed": 115,
+    "passed": 113,
+    "failed": 1,
+    "skipped": 1
+  },
+  "ui": {
+    "executed": 23,
+    "passed": 16,
+    "failed": 7,
+    "skipped": 0
+  },
+  "failing_native_tests": [
+    "CareInOneIntegrationTests/testKeychainUpdateAndDeletion()"
+  ],
+  "native_failure_category": "Keychain access error OSStatus -34018; signing/entitlements investigation pending; not waived as a passing test",
+  "failing_ui_tests": [
+    "PatientCompanionUITests/testEmptyPatientAppointmentBriefAnswersResumeAndReview()",
+    "EditorRecoveryUITests/testEncounterDiscardLeavesExistingGroupingAndCleanCancelCloses()",
+    "PatientCompanionUITests/testFollowThroughMessageOutreachReplyPersistsAndNeedsReview()",
+    "CapturePipelineUITests/testKeyboardDoneAndClearedWorkingTextKeepOriginalEvidence()",
+    "CareInOneUITests/testOutgoingMessageEditingInvalidatesPreviousPDF()",
+    "EditorRecoveryUITests/testPersonalNoteDiscardPreservesSavedMultilineContentAfterRelaunch()",
+    "EditorRecoveryUITests/testQuestionAnswerSwipeAndCancelKeepInputThenDiscardWithoutSaving()"
+  ],
+  "runtime_warning_occurrences": 11,
+  "runtime_warning_categories": [
+    "AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+    "Invalid frame dimension (negative or non-finite)."
+  ],
+  "authoritative_result_bundle": "/private/tmp/CareInOneCandidate3.xcresult",
+  "summary_source": "/private/tmp/CareInOneCandidate3.summary.json",
+  "source_snapshot": "candidate3-source-fingerprint.json",
+  "scope": "Finalized exact counts. Result finalized after parent terminated only an idle owned simulator diagnostic child. Current paste/editor/alias/search/trends/audio/banner/calendar cleanup repairs require Candidate4; no current-source readiness claim."
+}

@@ -1,0 +1,62 @@
+{
+  "scope": "Public health and rejected unauthenticated/fictional-invalid requests only; no actual credentials, no provider inference",
+  "paidRequestsAttempted": 0,
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/health",
+      "authentication": "none",
+      "httpStatus": 200,
+      "noStore": true,
+      "nosniff": true
+    },
+    {
+      "method": "GET",
+      "path": "/v1/config",
+      "authentication": "none",
+      "httpStatus": 401,
+      "noStore": true,
+      "nosniff": true
+    },
+    {
+      "method": "GET",
+      "path": "/v1/config",
+      "authentication": "fictional_invalid",
+      "httpStatus": 401,
+      "noStore": true,
+      "nosniff": true
+    },
+    {
+      "method": "POST",
+      "path": "/v1/extract",
+      "authentication": "none",
+      "httpStatus": 401,
+      "noStore": true,
+      "nosniff": true
+    },
+    {
+      "method": "POST",
+      "path": "/v1/check",
+      "authentication": "none",
+      "httpStatus": 401,
+      "noStore": true,
+      "nosniff": true
+    },
+    {
+      "method": "POST",
+      "path": "/privacy",
+      "authentication": "none",
+      "httpStatus": 405,
+      "noStore": true,
+      "nosniff": true
+    },
+    {
+      "method": "GET",
+      "path": "/privacy/%2e%2e/support",
+      "authentication": "none",
+      "httpStatus": 404,
+      "noStore": true,
+      "nosniff": true
+    }
+  ]
+}

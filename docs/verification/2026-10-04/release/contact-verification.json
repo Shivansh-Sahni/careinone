@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-04",
+  "method": "approved read-only HTTPS fetch from host; HTML content inspected without submitting forms or sending email",
+  "urls": [
+    {
+      "url": "https://nutriassist.org/",
+      "httpStatus": 200,
+      "htmlSHA256": "7af3453e9c6e658fdeba5e82230c785c2fc29bf8f23bd6e6610de55e5f505c0b"
+    },
+    {
+      "url": "https://nutriassist.org/contact/",
+      "httpStatus": 200,
+      "htmlSHA256": "296da177f31f72152742cdebacfc8f25cac9f906ac9f023199083eb8a26aae4d"
+    },
+    {
+      "url": "https://nutriassist.org/about/",
+      "httpStatus": 200,
+      "htmlSHA256": "2a378bc5338ce68ac8984acbb3bb489c52e87aef5434cc6ee28d89334c871d55"
+    }
+  ],
+  "publicGeneralEmail": "shivika@nutriassist.org",
+  "emailEvidence": "Contact page contains an explicit mailto link and visible address for general inquiries",
+  "legalEntityVerified": false,
+  "appleOrganizationApprovalVerified": false,
+  "careInOneMailboxMonitoringVerified": false,
+  "privacyLinkFoundOnHomeOrContact": false,
+  "accessLimitation": "Web reading tool could not retrieve the NutriAssist site and indexed search gave no useful result; host HTTPS fetch succeeded.",
+  "nonprofitDescription": "NutriAssist About page describes itself as a nonprofit providing free protein supplements to adults facing cancer or ESRD; this is the publisher website\u2019s description, not independent registration or tax-status verification."
+}

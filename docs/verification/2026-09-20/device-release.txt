@@ -1,0 +1,5 @@
+Unsigned iPhone Release build: PASSED
+Xcode 27, iOS 27 SDK, deployment target iOS 18
+xcodebuild -project CareContinuity.xcodeproj -scheme CareContinuity -configuration Release -sdk iphoneos -derivedDataPath /private/tmp/CareInOneRelease -jobs 2 CODE_SIGNING_ALLOWED=NO build
+Includes the final FHIR, reconciliation, reminders, notes, and import changes.
+Signing and physical-device validation remain pending.

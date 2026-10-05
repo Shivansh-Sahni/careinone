@@ -1,0 +1,187 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CareInOne.xcodeproj -scheme CareInOne -destination "platform=iOS Simulator,id=8F5B891A-2848-4BFC-8726-64A936A6601C" -derivedDataPath /private/tmp/CareInOneSmallPhone -resultBundlePath /private/tmp/CareInOneSEOutgoingMessage.xcresult -parallel-testing-enabled NO "-only-testing:CareInOneUITests/CareInOneUITests/testOutgoingMessageEditingInvalidatesPreviousPDF" test
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  CareInOne: /Users/shivanshsahni/Downloads/Personal/CAC 2026 @ local
+
+Writing result bundle at path:
+	/private/tmp/CareInOneSEOutgoingMessage.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (5 targets)
+    Target 'CareInOneIntegrationTests' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareInOne' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore-product' in project 'CareInOne'
+    Target 'CareInOneUITests' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareInOne' in project 'CareInOne'
+    Target 'CareInOne' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore-product' in project 'CareInOne'
+    Target 'CareCore-product' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore' in project 'CareInOne'
+    Target 'CareCore' in project 'CareInOne' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /tmp/CareInOneSmallPhone/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /tmp/CareInOneSmallPhone/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache
+
+PruneExplicitPrecompiledModules /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneSmallPhone/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+2026-10-04 23:34:19.636352-0400 CareInOneUITests-Runner[33335:30570025] [Default] Running tests...
+Test Suite 'Selected tests' started at 2026-10-04 23:34:22.731.
+Test Suite 'CareInOneUITests.xctest' started at 2026-10-04 23:34:22.739.
+Test Suite 'CareInOneUITests' started at 2026-10-04 23:34:22.740.
+Test Case '-[CareInOneUITests.CareInOneUITests testOutgoingMessageEditingInvalidatesPreviousPDF]' started.
+    t =     0.00s Start Test at 2026-10-04 23:34:22.741
+    t =     0.13s Set Up
+    t =     0.16s Open org.carecontinuity.app
+    t =     0.16s     Launch org.carecontinuity.app
+2026-10-04 23:34:23.464 xcodebuild[33182:30568668] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-04 23:34:23.468 xcodebuild[33182:30568668] [MT] IDELaunchParametersSnapshot: no debugger version
+Resolve Package Graph
+    t =     4.21s         Setting up automation session
+
+    t =     5.32s         Wait for org.carecontinuity.app to idle
+    t =     7.02s Waiting 20.0s for "Visits" Button to exist
+Resolve Package Graph
+
+    t =     8.05s     Checking `Expect predicate `existsNoRetry == 1` for object "Visits" Button`
+    t =     8.05s         Checking existence of `"Visits" Button`
+    t =     9.89s Checking existence of `"OK" Button`
+    t =    10.23s Tap "Visits" Button
+    t =    10.23s     Wait for org.carecontinuity.app to idle
+    t =    10.30s     Find the "Visits" Button
+    t =    10.46s     Check for interrupting elements affecting "Visits" Button
+    t =    10.74s     Synthesize event
+    t =    11.50s     Wait for org.carecontinuity.app to idle
+    t =    11.84s Tap "Prepare for your next visit" Button
+    t =    11.84s     Wait for org.carecontinuity.app to idle
+    t =    12.64s     Find the "Prepare for your next visit" Button
+    t =    12.83s     Check for interrupting elements affecting "Prepare for your next visit" Button
+    t =    12.94s     Synthesize event
+    t =    13.29s     Wait for org.carecontinuity.app to idle
+    t =    13.67s Tap "Choose a visit packet" Button
+    t =    13.67s     Wait for org.carecontinuity.app to idle
+    t =    14.12s     Find the "Choose a visit packet" Button
+    t =    14.37s     Check for interrupting elements affecting "Choose a visit packet" Button
+    t =    14.74s     Synthesize event
+    t =    15.08s     Wait for org.carecontinuity.app to idle
+    t =    18.69s Find the "Format as a message to my care team" Switch
+    t =    19.06s Find the "Format as a message to my care team" Switch
+    t =    19.30s Find the TabBar (First Match)
+    t =    19.44s Checking existence of `Table (First Match)`
+    t =    19.82s Checking existence of `CollectionView (First Match)`
+    t =    19.89s Find the CollectionView (First Match)
+    t =    19.99s Find the Target Application 'org.carecontinuity.app'
+    t =    20.03s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (187.5, 452.5) for 0.1 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (187.5, 223.5) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    20.03s     Wait for org.carecontinuity.app to idle
+    t =    20.03s     Find the Target Application 'org.carecontinuity.app'
+    t =    20.07s     Check for interrupting elements affecting "CareInOne" Application
+    t =    20.12s     Synthesize event
+    t =    20.13s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.16s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.20s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.23s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.28s         Find the Target Application 'org.carecontinuity.app'
+    t =    21.08s     Wait for org.carecontinuity.app to idle
+    t =    22.65s Find the "Format as a message to my care team" Switch
+    t =    22.79s Find the "Format as a message to my care team" Switch
+    t =    22.90s Find the "Visit packet" NavigationBar
+    t =    23.00s Find the TabBar (First Match)
+    t =    23.07s Find the "Format as a message to my care team" Switch
+    t =    23.18s Find the "Format as a message to my care team" Switch
+    t =    23.29s Find the "Visit packet" NavigationBar
+    t =    23.38s Find the "Format as a message to my care team" Switch
+    t =    23.47s Find the TabBar (First Match)
+    t =    23.53s Find the "Format as a message to my care team" Switch
+    t =    23.61s Tap "Format as a message to my care team" Switch
+    t =    23.61s     Wait for org.carecontinuity.app to idle
+    t =    23.62s     Find the "Format as a message to my care team" Switch
+    t =    23.69s     Check for interrupting elements affecting "Format as a message to my care team" Switch
+    t =    23.77s     Synthesize event
+    t =    24.10s     Wait for org.carecontinuity.app to idle
+    t =    25.14s Checking `Expect predicate `value == "1"` for object "Format as a message to my care team" Switch`
+    t =    25.14s     Find the "Format as a message to my care team" Switch
+    t =    25.23s     Capturing element debug description
+    t =    25.63s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    25.70s         Find: Descendants matching type Switch
+    t =    25.70s         Find: Elements matching predicate '"Format as a message to my care team" IN identifiers'
+    t =    25.71s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    25.77s         Find: Descendants matching type Switch
+    t =    25.78s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    26.13s Checking `Expect predicate `value == "1"` for object "Format as a message to my care team" Switch`
+    t =    26.14s     Find the "Format as a message to my care team" Switch
+    t =    26.20s     Capturing element debug description
+    t =    26.66s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    26.75s         Find: Descendants matching type Switch
+    t =    26.75s         Find: Elements matching predicate '"Format as a message to my care team" IN identifiers'
+    t =    26.75s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    26.87s         Find: Descendants matching type Switch
+    t =    26.88s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    27.20s Checking `Expect predicate `value == "1"` for object "Format as a message to my care team" Switch`
+    t =    27.20s     Find the "Format as a message to my care team" Switch
+    t =    27.28s     Capturing element debug description
+    t =    27.64s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    27.69s         Find: Descendants matching type Switch
+    t =    27.70s         Find: Elements matching predicate '"Format as a message to my care team" IN identifiers'
+    t =    27.70s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    27.76s         Find: Descendants matching type Switch
+    t =    27.76s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    28.20s Checking `Expect predicate `value == "1"` for object "Format as a message to my care team" Switch`
+    t =    28.20s     Find the "Format as a message to my care team" Switch
+    t =    28.26s     Capturing element debug description
+    t =    28.67s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    28.74s         Find: Descendants matching type Switch
+    t =    28.75s         Find: Elements matching predicate '"Format as a message to my care team" IN identifiers'
+    t =    28.75s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    28.82s         Find: Descendants matching type Switch
+    t =    28.82s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    29.10s Checking `Expect predicate `value == "1"` for object "Format as a message to my care team" Switch`
+    t =    29.10s     Find the "Format as a message to my care team" Switch
+    t =    29.17s     Capturing element debug description
+    t =    29.43s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    29.43s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+    t =    29.43s         Requesting snapshot of accessibility hierarchy for app with pid 33362
+/Users/shivanshsahni/Downloads/Personal/CAC 2026/UITests/CareInOneUITests.swift:257: error: -[CareInOneUITests.CareInOneUITests testOutgoingMessageEditingInvalidatesPreviousPDF] : XCTAssertEqual failed: ("XCTWaiterResult(rawValue: 2)") is not equal to ("XCTWaiterResult(rawValue: 1)") - Wait for the native switch to finish changing state
+    t =    29.70s Tear Down
+Test Case '-[CareInOneUITests.CareInOneUITests testOutgoingMessageEditingInvalidatesPreviousPDF]' failed (30.047 seconds).
+Test Suite 'CareInOneUITests' failed at 2026-10-04 23:34:52.789.
+	 Executed 1 test, with 1 failure (0 unexpected) in 30.047 (30.050) seconds
+Test Suite 'CareInOneUITests.xctest' failed at 2026-10-04 23:34:52.790.
+	 Executed 1 test, with 1 failure (0 unexpected) in 30.047 (30.051) seconds
+Test Suite 'Selected tests' failed at 2026-10-04 23:34:52.790.
+	 Executed 1 test, with 1 failure (0 unexpected) in 30.047 (30.059) seconds
+2026-10-04 23:35:24.260 xcodebuild[33182:30568668] [MT] IDETestOperationsObserverDebug: 74.052 elapsed -- Testing started completed.
+2026-10-04 23:35:24.261 xcodebuild[33182:30568668] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-04 23:35:24.261 xcodebuild[33182:30568668] [MT] IDETestOperationsObserverDebug: 74.052 sec, +74.052 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/CareInOneSEOutgoingMessage.xcresult
+
+Failing tests:
+	CareInOneUITests.testOutgoingMessageEditingInvalidatesPreviousPDF()
+
+** TEST FAILED **
+
+Testing started

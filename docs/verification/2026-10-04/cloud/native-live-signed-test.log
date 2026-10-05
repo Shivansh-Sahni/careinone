@@ -1,0 +1,49 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CareInOne.xcodeproj -scheme CareInOne -destination "platform=iOS Simulator,id=E80CF6B8-76BE-4160-8BA8-E0E63C19E0BF" -derivedDataPath /private/tmp/CareInOneKeychainSigning -resultBundlePath /private/tmp/CareInOneLiveSigned.xcresult -parallel-testing-enabled NO "-only-testing:CareInOneIntegrationTests/LiveGatewayIntegrationTests/testOptInRealCloudSourceReviewAndPersistence" test-without-building
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  CareInOne: /Users/shivanshsahni/Downloads/Personal/CAC 2026 @ local
+
+Writing result bundle at path:
+	/private/tmp/CareInOneLiveSigned.xcresult
+
+2026-10-04 21:35:28.686559-0400 CareInOne[7643:30209868] [API] cannot add handler to 0 from 0 - dropping
+2026-10-04 21:35:28.693780-0400 CareInOne[7643:30209868] [API] cannot add handler to 0 from 0 - dropping
+2026-10-04 21:35:28.694165-0400 CareInOne[7643:30209868] [API] cannot add handler to 0 from 0 - dropping
+2026-10-04 21:35:28.694773-0400 CareInOne[7643:30209868] [API] cannot add handler to 0 from 0 - dropping
+Test Suite 'Selected tests' started at 2026-10-04 21:35:28.708.
+Test Suite 'CareInOneIntegrationTests.xctest' started at 2026-10-04 21:35:28.710.
+Test Suite 'LiveGatewayIntegrationTests' started at 2026-10-04 21:35:28.711.
+Test Case '-[CareInOneIntegrationTests.LiveGatewayIntegrationTests testOptInRealCloudSourceReviewAndPersistence]' started.
+2026-10-04 21:35:28.721562-0400 CareInOne[7643:30209868] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+/Users/shivanshsahni/Downloads/Personal/CAC 2026/IntegrationTests/LiveGatewayIntegrationTests.swift:77: error: -[CareInOneIntegrationTests.LiveGatewayIntegrationTests testOptInRealCloudSourceReviewAndPersistence] : failed - Live fictional cloud verification failed at configuration. Inspect the app’s sanitized recovery message; no credentials were printed.
+CAREINONE_LIVE_VERIFICATION={"checkedAtUTC":"2026-10-05T01:35:28Z","paidRequestsAttempted":0,"recoveryMessage":"Use your gateway’s HTTPS address without embedded credentials, query parameters, or a fragment.","stage":"configuration","status":"blocked_or_failed","syntheticOnly":true}
+Test Case '-[CareInOneIntegrationTests.LiveGatewayIntegrationTests testOptInRealCloudSourceReviewAndPersistence]' failed (0.157 seconds).
+Test Suite 'LiveGatewayIntegrationTests' failed at 2026-10-04 21:35:28.873.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.157 (0.162) seconds
+Test Suite 'CareInOneIntegrationTests.xctest' failed at 2026-10-04 21:35:28.874.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.157 (0.163) seconds
+Test Suite 'Selected tests' failed at 2026-10-04 21:35:28.874.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.157 (0.166) seconds
+Resolve Package Graph
+
+Resolve Package Graph
+
+Resolve Package Graph
+
+2026-10-04 21:41:39.080 xcodebuild[7636:30209587] [MT] IDETestOperationsObserverDebug: 381.614 elapsed -- Testing started completed.
+2026-10-04 21:41:39.090 xcodebuild[7636:30209587] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-04 21:41:39.091 xcodebuild[7636:30209587] [MT] IDETestOperationsObserverDebug: 381.614 sec, +381.614 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/CareInOneLiveSigned.xcresult
+
+Failing tests:
+	LiveGatewayIntegrationTests.testOptInRealCloudSourceReviewAndPersistence()
+
+** TEST EXECUTE FAILED **
+
+Testing started

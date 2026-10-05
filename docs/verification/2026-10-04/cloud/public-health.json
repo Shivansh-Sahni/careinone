@@ -1,0 +1,14 @@
+{
+  "checkedAtUTC": "2026-10-04T23:34:30.906838+00:00",
+  "paidRequestsAttempted": 0,
+  "syntheticOnly": true,
+  "health": {
+    "passed": true,
+    "httpStatus": 200
+  },
+  "configuration": {
+    "passed": false,
+    "error": "gateway_token_unavailable"
+  },
+  "liveInferenceVerified": false
+}

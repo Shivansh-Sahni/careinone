@@ -1,0 +1,70 @@
+{
+  "scope": "Bounded known credential-pattern screen, counts only; does not prove absence of every possible unknown credential",
+  "files_checked": 7,
+  "match_count": 0,
+  "files": [
+    {
+      "file": "AppIcon60x60@2x.png",
+      "bytes": 5644,
+      "matches": {
+        "OpenAI_key": 0,
+        "Render_secret": 0,
+        "private_key_block": 0
+      }
+    },
+    {
+      "file": "AppIcon76x76@2x~ipad.png",
+      "bytes": 7001,
+      "matches": {
+        "OpenAI_key": 0,
+        "Render_secret": 0,
+        "private_key_block": 0
+      }
+    },
+    {
+      "file": "Assets.car",
+      "bytes": 49464,
+      "matches": {
+        "OpenAI_key": 0,
+        "Render_secret": 0,
+        "private_key_block": 0
+      }
+    },
+    {
+      "file": "CareInOne",
+      "bytes": 5279232,
+      "matches": {
+        "OpenAI_key": 0,
+        "Render_secret": 0,
+        "private_key_block": 0
+      }
+    },
+    {
+      "file": "Info.plist",
+      "bytes": 2225,
+      "matches": {
+        "OpenAI_key": 0,
+        "Render_secret": 0,
+        "private_key_block": 0
+      }
+    },
+    {
+      "file": "PkgInfo",
+      "bytes": 8,
+      "matches": {
+        "OpenAI_key": 0,
+        "Render_secret": 0,
+        "private_key_block": 0
+      }
+    },
+    {
+      "file": "PrivacyInfo.xcprivacy",
+      "bytes": 1413,
+      "matches": {
+        "OpenAI_key": 0,
+        "Render_secret": 0,
+        "private_key_block": 0
+      }
+    }
+  ]
+}

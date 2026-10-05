@@ -1,0 +1,24 @@
+{
+  "recorded_utc": "2026-10-05T05:09:48.964917+00:00",
+  "action": "Finalized C5 full UI result without rewriting outcome",
+  "summary_file": "candidate5-ui-summary.json",
+  "counts": {
+    "totalTestCount": 29,
+    "passedTests": 27,
+    "failedTests": 1,
+    "skippedTests": 1,
+    "result": "Failed"
+  },
+  "collector_intervention": {
+    "parent_pid": 39527,
+    "child_pid": 53572,
+    "child": "simctl diagnose",
+    "scope": "Exact Candidate5UI result Staging diagnostics and E80CF6B8 device",
+    "observed_cpu_percent": 0,
+    "minimum_idle_elapsed_minutes": 3,
+    "all_selected_suites_ended_before_signal": true,
+    "signal": "TERM",
+    "runner_or_app_signaled": false
+  },
+  "historical_failure": "Removed temporary packet sharing diagnostic case remains a real failure in this action; current outgoing-PDF full workflow is included in C6."
+}

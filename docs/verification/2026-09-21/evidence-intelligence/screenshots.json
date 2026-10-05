@@ -1,0 +1,20 @@
+{
+  "sourceBundle": "/private/tmp/CareInOneIntelligenceVerified.xcresult",
+  "syntheticOnly": true,
+  "files": {
+    "care-connections.png": "D5FAC431-5190-48E1-89E0-1BD25AD63FD1.png",
+    "evidence-trace.png": "874C1FD8-44FB-4686-85E3-BF95D691959B.png",
+    "two-date-timeline.png": "0C4E1405-2005-46A2-9AE5-ECA5CBF08756.png",
+    "combined-omission.png": "E23C3866-E478-4704-8C67-CCD66C06A3DF.png",
+    "exact-handoff-copy.png": "19889307-5264-4395-8458-D9CA1BD13F87.png",
+    "handoff-changes.png": "2822CC12-AE3E-48B5-9E95-E14EA0FBB4AF.png",
+    "care-connections-accessibility.png": "EC2953C6-2CD7-4C32-9579-55A82C1F0438.png",
+    "timeline-accessibility.png": "55355740-2991-471D-8873-779AF012F61B.png"
+  },
+  "followUp": {
+    "sourceBundle": "/private/tmp/CareInOneDeletionDisclosure.xcresult",
+    "files": {
+      "deletion-disclosure.png": "4D790AF3-DD10-4960-8DFD-62A7CE5C376A.png"
+    }
+  }
+}

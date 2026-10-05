@@ -1,0 +1,36 @@
+{
+  "checkedAtUTC": "2026-10-05T00:38:30.861819+00:00",
+  "deployedCommit": "69bde8ef39609d5ba25b040b6421b1580d21caee",
+  "deploymentID": "dep-db1f1cnavr4c73bjsal0",
+  "deploymentStatus": "Live",
+  "paidRequestsAttempted": 2,
+  "syntheticOnly": true,
+  "health": {
+    "passed": true,
+    "httpStatus": 200
+  },
+  "configuration": {
+    "passed": true,
+    "httpStatus": 200,
+    "primary": {
+      "adapter": "openai",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "host": "api.openai.com",
+      "maxOutputTokens": 6000
+    },
+    "fallback": null,
+    "patientContentStored": false,
+    "maxSourceCharacters": 40000
+  },
+  "connectionCheck": {
+    "passed": true,
+    "httpStatus": 200,
+    "route": "primary"
+  },
+  "fictionalExtraction": {
+    "passed": false,
+    "httpStatus": 503,
+    "errorCode": "provider_response_invalid"
+  },
+  "completeCloudPipelineVerified": false
+}

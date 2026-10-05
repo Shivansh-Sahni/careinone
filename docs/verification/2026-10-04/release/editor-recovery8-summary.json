@@ -1,0 +1,21 @@
+{
+  "scope": "Focused multiline note preservation after toolbar-specific test navigation repair; no production change from focused6",
+  "result": "Passed",
+  "total": 1,
+  "passed": 1,
+  "failed": 0,
+  "skipped": 0,
+  "start_utc": "2026-10-05T03:06:57.484000+00:00",
+  "finish_utc": "2026-10-05T03:23:31.200000+00:00",
+  "verified_behavior": "Exact 30-line Unicode system paste/save; keyboard Done/absence; Keep editing retains correction; discard restores saved original; saved original persists after relaunch; clean Cancel closes.",
+  "runtime_warnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "diagnostic_note": "Finalized after terminating only the confirmed owned simctl diagnose child, idle at 0.0% CPU for more than three minutes after assertions ended. No active test, app process, other simulator or user data was stopped.",
+  "log": "editor-recovery8.log",
+  "result_bundle": "/private/tmp/CareInOneEditorRecovery8.xcresult",
+  "boundary": "One focused case, separate from focused6 question/encounter passes and the full final candidate. Historical runs are not combined into one passing candidate."
+}

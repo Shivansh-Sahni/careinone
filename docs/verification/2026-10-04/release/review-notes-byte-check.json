@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-05T05:20:35.796690+00:00",
+  "file": "docs/app-store/review-notes-for-paste.en-US.txt",
+  "utf8_bytes": 3234,
+  "limit_bytes": 4000,
+  "within_limit": true,
+  "sha256": "eeef0dfca6db5ba4f19108d4745ab9165b77696306f6aeb4287351138197d6ec",
+  "source": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information/",
+  "scope": "Exact Notes text size only; private contact/access and final archived path still require verification. Not submitted."
+}

@@ -1,0 +1,63 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "8F5B891A-2848-4BFC-8726-64A936A6601C",
+        "deviceName" : "CareInOne temporary small-phone verification",
+        "modelName" : "iPhone SE (3rd generation)",
+        "osBuildNumber" : "22C150",
+        "osVersion" : "18.2",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 1,
+      "passedTests" : 2,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "CareInOne · Built with macOS 26.6.2",
+  "expectedFailures" : 0,
+  "failedTests" : 1,
+  "finishTime" : 1791179255.699,
+  "passedTests" : 2,
+  "result" : "Failed",
+  "runtimeWarnings" : [
+    {
+      "issueType" : "Runtime Warning",
+      "message" : "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType" : "Runtime Warning",
+      "message" : "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType" : "Runtime Warning",
+      "message" : "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "skippedTests" : 0,
+  "startTime" : 1791178885.951,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+    {
+      "failureText" : "XCTAssertEqual failed: (\"Optional(\"\")\") is not equal to (\"Optional(\"Your resolution note\")\") - Discard must leave the saved note empty",
+      "targetName" : "CareInOneUITests",
+      "testIdentifier" : 3,
+      "testIdentifierString" : "FollowThroughDraftRecoveryUITests/testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard()",
+      "testIdentifierURL" : "test://com.apple.xcode/CareInOne/CareInOneUITests/FollowThroughDraftRecoveryUITests/testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard",
+      "testName" : "testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard()"
+    }
+  ],
+  "title" : "Test - CareInOne",
+  "topInsights" : [
+
+  ],
+  "totalTestCount" : 3
+}

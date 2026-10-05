@@ -1,0 +1,33 @@
+{
+  "scope": "Focused fictional disposable simulator UI, production batch frozen for root Candidate 5",
+  "device": "BEFFC231-C67F-4FFC-9F41-53789BF05F78",
+  "runtime": "iPhone 18 Pro / iOS 27.0",
+  "signing": "Normal simulator Sign to Run Locally",
+  "paid_requests": 0,
+  "final_verified_cases": [
+    {
+      "name": "testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard",
+      "result": "passed",
+      "seconds": 138.803,
+      "bundle": "/private/tmp/CareInOneFollowThroughDraftRegression.xcresult"
+    },
+    {
+      "name": "testLoopNoteDateAndPrecisionKeepDiscardSaveAndRelaunch",
+      "result": "passed",
+      "seconds": 220.188,
+      "bundle": "/private/tmp/CareInOneFollowThroughLoopRetry2.xcresult",
+      "runner_exit": 0
+    }
+  ],
+  "earlier_loop_failures": [
+    {
+      "bundle": "/private/tmp/CareInOneFollowThroughDraftRegression.xcresult",
+      "cause": "Default XCTest labelled switch-row center did not toggle the right-hand switch; guard assertions not reached"
+    },
+    {
+      "bundle": "/private/tmp/CareInOneFollowThroughLoopRetry.xcresult",
+      "cause": "Test ignored picker textual label when a numeric AX value existed; production unchanged"
+    }
+  ],
+  "physical_device_or_Keychain_verification": false
+}

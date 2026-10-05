@@ -1,0 +1,28 @@
+{
+  "scope": "Focused fictional disposable simulator, not final release candidate or live cloud verification",
+  "device": "BEFFC231-C67F-4FFC-9F41-53789BF05F78",
+  "runtime": "iPhone 18 Pro / iOS 27.0",
+  "paid_requests": 0,
+  "simulator_signing": "CODE_SIGNING_ALLOWED=NO for these fictional fixture-only tests; final release candidate uses normal simulator signing",
+  "tests": [
+    {
+      "name": "AskPrivacyUITests.testAskQueryChangesAndSourceDeletionRemoveCachedExactQuote",
+      "result": "passed",
+      "duration_seconds": 291.934
+    },
+    {
+      "name": "CapturePipelineIntegrationTests.testDateOnlySourceChangeRequiresReanalysisAndTitleOnlyEditKeepsCurrentStatus",
+      "result": "passed",
+      "duration_seconds": 5.013
+    },
+    {
+      "name": "CapturePipelineIntegrationTests.testEditedEvidenceRetiresReportsAndPersistsTruthfulAnalysisStatus",
+      "result": "passed",
+      "duration_seconds": 0.197
+    }
+  ],
+  "runner_completion": "TEST SUCCEEDED, xcodebuild exit 0",
+  "log": "ask-and-source-status-native.log",
+  "result_bundle": "/private/tmp/CareInOneAskPrivacyRegression.xcresult",
+  "diagnostic_collection": "Owned disposable-simulator collector timed out after 600 seconds during result finalization; no process was interrupted."
+}

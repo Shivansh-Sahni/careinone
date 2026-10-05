@@ -3,7 +3,7 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: carecontinuity
+  name: careinone
 spec:
   template:
     metadata:
@@ -16,7 +16,7 @@ spec:
       containerConcurrency: 4
       timeoutSeconds: 210
       containers:
-        - image: REGION-docker.pkg.dev/PROJECT_ID/carecontinuity/gateway:IMAGE_TAG
+        - image: REGION-docker.pkg.dev/PROJECT_ID/careinone/gateway:IMAGE_TAG
           ports:
             - containerPort: 8000
           resources:

@@ -1,0 +1,32 @@
+{
+  "checked_at_utc": "2026-10-05T01:08:22.178920+00:00",
+  "scope": "Local source structure and current Calendar wording only; previous visual and live-response verification refer to preceding revisions. Current bytes need deployment/recheck.",
+  "pages": [
+    {
+      "source": "backend/public/privacy.html",
+      "bytes": 14270,
+      "sha256": "177a012f25fbe8a99fd71ccf901efe7be593bcf5f9b55a05df7d5412a034fc62",
+      "one_h1": true,
+      "unique_ids": true,
+      "internal_fragment_links_valid": true,
+      "scripts": false,
+      "external_resources": [],
+      "responsive_viewport": true,
+      "credential_patterns": false,
+      "calendar_disclosure": true
+    },
+    {
+      "source": "backend/public/support.html",
+      "bytes": 11162,
+      "sha256": "ecd7b0d2ec118b8fc94d1e52231e90d40d45cd5eafdf852c5965b014985683cd",
+      "one_h1": true,
+      "unique_ids": true,
+      "internal_fragment_links_valid": true,
+      "scripts": false,
+      "external_resources": [],
+      "responsive_viewport": true,
+      "credential_patterns": false,
+      "calendar_disclosure": true
+    }
+  ]
+}

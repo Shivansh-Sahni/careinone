@@ -51,7 +51,7 @@ LIMITS={
 140:'Exact code/system or explicitly reviewed result relationships can link result entities to test loops; fuzzy panel/component interpretation is not inferred.',
 158:'Local generic notifications; permission/timing/locked-device delivery require device validation.',
 175:'Tasks and appointments configurable separately. No clinical-risk or emergency alerts.'}
-head='''# CareContinuity implementation status
+head='''# CareInOne implementation status
 
 The supplied specification ends at **215: Mark clarified**. Every supplied numbered capability is listed below. `Implemented` means code is present; test/device evidence is stated separately. No claim of medical validation, App Store approval, or production certification is made.
 
@@ -79,8 +79,19 @@ The supplied specification ends at **215: Mark clarified**. Every supplied numbe
 
 ## Numbered capability ledger
 
-Paths below are relative to `CareContinuity/` unless marked otherwise. Automated test references resolve to `Tests/CareCoreTests/CareCoreTests.swift`, `Tests/CareCoreTests/EdgeCaseTests.swift`, `IntegrationTests/CareContinuityIntegrationTests.swift`, `UITests/CareContinuityUITests.swift`, or `backend/tests/test_gateway.py`. Group-level tests exercise the shared boundary; they do not imply independent automated coverage of every individual row.
+Paths below are relative to `CareInOne/` unless marked otherwise. Automated test references resolve to `Tests/CareCoreTests/CareCoreTests.swift`, `Tests/CareCoreTests/EdgeCaseTests.swift`, `IntegrationTests/CareInOneIntegrationTests.swift`, `UITests/CareInOneUITests.swift`, or `backend/tests/test_gateway.py`. Group-level tests exercise the shared boundary; they do not imply independent automated coverage of every individual row.
 '''
+head = head.replace("# CareInOne implementation status", "# CareInOne implementation status")
+head = head.replace("## Release hardening verification", '## Offline pipeline usability update (2026-09-20)\n\n- Public display name is now **CareInOne**. Internal target, bundle, and storage identifiers remain compatible with existing installations.\n- Capture (19–36), source preservation/review (41, 61–80): manual medication route/frequency/form/effective dates, draft-discard protection, locked capture mode during staged imports, finite numeric validation, and save-failure draft retention. `Views/CaptureView.swift`, `Views/OnboardingView.swift`, `Views/ReviewEditor.swift`.\n- Demo (10), imports (23–28), and onboarding (1): broader source-linked synthetic graph, future encounter, completed test, all care categories, and real TXT/PDF/PNG/FHIR practice imports. `Core/SyntheticDemo.swift`, `Views/SampleEvidenceView.swift`, `Services/ExportService.swift`. Samples always pass through review; direct practice imports are flagged synthetic.\n- Notes/questions (89–90): note edit/delete and question save failure handling. `Views/CareViews.swift`, `Views/PatientEditors.swift`, `App/AppStore.swift`. Synthetic removal cleans original files and cancels in-flight analysis while preserving patient sources.\n- Import/export acceptance: source original-file/text/audio share actions, existing graph JSON, care brief text/PDF, and encrypted full backup/restore are available. Graph JSON is not a restore format. `Views/SourceViews.swift`, `Services/ExportService.swift`, `Views/BackupView.swift`.\n- Walkthrough: `docs/SIMULATOR_WALKTHROUGH.md` covers the loaded demo, real imports, fresh-patient onboarding, export/restore, and genuine device/cloud limits.\n- Verification: 60 Swift core tests and 50 backend tests pass. First native run: 19 integration + 3 UI tests pass, including generated practice-file processing through real importers. Unsigned iPhone Release build succeeds. Final native run: **20 integration + 4 UI tests pass**, including the in-app practice importer, synthetic-file cleanup, and patient-data preservation. Evidence: `docs/verification/2026-09-20/`.\n\n' + "## Release hardening verification", 1)
+head = head.replace("## Release hardening verification", '- Deeper pipeline audit: claim identity now preserves effective dates, intervals, date precision, codes, attribution, and explicit relationships; known conflicting terminology codes require patient review. Duplicate analysis links survive rebuilding. Rejected source-edit history remains backup-compatible, and notes/questions detach from removed entities without losing their text. Appointment discrepancies respect date-only precision and never substitute event dates for missing appointment dates. Source reads are bounded and image OCR decodes at a bounded resolution. Regression tests: `Tests/CareCoreTests/WorkflowHardeningTests.swift`; native personal-notes UI test added. FHIR medication instructions, route/coded timing, as-needed flags, and allergy reactions are now retained. Multiple explicit patient references are rejected even without Patient resources; complex dosages are not flattened. Final verification: **73 core tests, 20 native integration tests, and 5 UI tests pass**; the unsigned iPhone Release build succeeds. The verified app is installed and launched on iPhone 16 Pro / iOS 18.4 with the expanded synthetic patient. Screenshot and test evidence are saved in `docs/verification/2026-09-20/`.\n\n' + "## Release hardening verification", 1)
+# Keep the manually maintained, dated verification history when regenerating the ledger.
+# The generated fallback above is used only when creating the file for the first time.
+status_path = ROOT/'IMPLEMENTATION_STATUS.md'
+if status_path.exists():
+    existing = status_path.read_text()
+    marker = '\n## Numbered capability ledger\n'
+    if marker in existing:
+        head = existing.split(marker, 1)[0] + marker + head.split(marker, 1)[1]
 lines=[head]
 for heading,start,end,location,tests in GROUPS:
     lines += [f'\n### {heading}\n', '| # | Capability | Status | Code location | Verification / limitation |','|---|---|---|---|---|']
@@ -113,7 +124,8 @@ lines.append('''
 | Loop state machines | Tests, referrals, follow-ups, procedures, explicit result follow-up, admin; honest absence wording | No inference that a missing result means test never occurred |
 | Today prioritization | Consequential conflicts, explicit approaching dates, upcoming visits, recent changes, old loops, information | Scores are organizational, not clinical triage |
 | Product boundaries | No diagnosis, symptom triage, dose calculation, treatment recommendation, silent clinical edits | README, in-app explanations, deterministic Ask excerpts |
-| Useful secondary workflows | Prepare, Questions, grounded local Ask, Search, Care Brief text/PDF, unit-separated Trends, Care Network | Multipage PDF test passes; device share checklist remains |
+| Useful secondary workflows | Prepare with prior-encounter open work; selected VisitPacketBuilder, quote-linked text/PDF preview, optional profile/notes, editable outgoing copy; Questions, grounded local Ask, Search, complete Care Brief, unit-separated Trends, Care Network | Core packet-selection/provenance tests, native selected-PDF test, UI packet/draft tests; device share checklist remains. Static exports have no remote revocation. |
+| Connected visit continuity (C1–C10) | Named local checkpoints, source-linked comparisons, visit workspaces, saved recollection drafts, separate unanswered questions, readiness checklist and acceptance/deletion impact | ContinuityTests and native persistence/rollback/UI workflows; exact results above. A checkpoint compares saved knowledge, never clinical correctness. Source deletion purges cached checkpoint evidence. |
 | Stateless backend/security | No PHI DB/cache/request logs; HTTPS configured provider, tokens, limits, no redirects, exact quote checks | Deploy behind TLS; verify provider retention and infrastructure logging |
 ''')
 (ROOT/'IMPLEMENTATION_STATUS.md').write_text('\n'.join(lines))

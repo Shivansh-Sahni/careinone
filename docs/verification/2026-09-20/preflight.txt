@@ -1,0 +1,2 @@
+PASS: Xcode source membership, property lists, privacy manifest, 215 capability rows, release documents, listing text limits.
+Native build/device/live-provider validation and publisher-specific release settings remain separate checks.

@@ -1,0 +1,41 @@
+{
+  "device": "iPhone 16 Pro / iOS 18.4",
+  "launchFlags": [],
+  "bundleID": "org.carecontinuity.app",
+  "records": {
+    "ZEVIDENCESOURCE": {
+      "beforeCount": 20,
+      "afterCount": 20,
+      "payloadBytesUnchanged": true
+    },
+    "ZCARECLAIM": {
+      "beforeCount": 19,
+      "afterCount": 19,
+      "payloadBytesUnchanged": true
+    },
+    "ZCAREENTITY": {
+      "beforeCount": 14,
+      "afterCount": 14,
+      "payloadBytesUnchanged": true
+    },
+    "ZOPENLOOP": {
+      "beforeCount": 7,
+      "afterCount": 7,
+      "payloadBytesUnchanged": true
+    },
+    "ZCONFLICTRECORD": {
+      "beforeCount": 2,
+      "afterCount": 2,
+      "payloadBytesUnchanged": true
+    },
+    "ZPATIENTPROFILE": {
+      "beforeCount": 1,
+      "afterCount": 1,
+      "payloadBytesUnchanged": false
+    }
+  },
+  "originalAndAudioReferences": 1,
+  "referencedFilesPresent": true,
+  "evidenceFileCount": 1,
+  "note": "Record byte checks compare the pre-work baseline with the normal launch. Original-file deletion/rollback and backup preservation are independently exercised in the integration suite."
+}

@@ -61,10 +61,10 @@ Cloud Run scale-to-zero can delay the first request after inactivity. If consist
 ### Concrete Cloud Run setup
 
 1. Create a dedicated Google Cloud project, attach billing, and choose a region appropriate for your users and data processing requirements. us-central1 is the example, not a universal residency recommendation.
-2. Enable Cloud Run, Artifact Registry, and Secret Manager. Use a Docker repository named `carecontinuity`. Enable Cloud Build only if you choose Google-hosted builds.
+2. Enable Cloud Run, Artifact Registry, and Secret Manager. Use a Docker repository named `careinone`. Enable Cloud Build only if you choose Google-hosted builds.
 3. Create a service account named `care-gateway`. Grant it **Secret Manager Secret Accessor only on the two required secrets**, rather than project-wide administrator access.
 4. Run `.venv/bin/python -m backend.configure` locally. Choose `openai` and the candidate model. Put `CARE_MODEL_API_KEY` into a Secret Manager secret named `care-model-key`; put the generated gateway token list into `care-installation-tokens`. Use the console or a protected secret file. Never put these values in the deployment YAML, git, or the iOS bundle.
-5. Build from the repository root using `backend/Dockerfile`, targeting Linux AMD64 when building from an Apple Silicon Mac. Push the image to `REGION-docker.pkg.dev/PROJECT_ID/carecontinuity/gateway:IMAGE_TAG`.
+5. Build from the repository root using `backend/Dockerfile`, targeting Linux AMD64 when building from an Apple Silicon Mac. Push the image to `REGION-docker.pkg.dev/PROJECT_ID/careinone/gateway:IMAGE_TAG`.
 6. Edit `deploy/cloudrun.yaml` placeholders for project, region, and image tag. It specifies one vCPU, 512 MiB, concurrency 4, min instances 0, max instances 3, a 210-second request deadline, and secret references. The container listens on port 8000. No disk or patient database is attached.
 7. Deploy the YAML with `gcloud run services replace deploy/cloudrun.yaml --region REGION`. Allow public invocation at Cloud Run’s transport layer so the iOS app can reach it; **the application still requires its own bearer token** for config, checks, and extraction. `/health` is intentionally public. Review your organization’s public-ingress policy first.
 8. Use the assigned HTTPS `run.app` address in the app. No purchased API domain is needed. Settings → Cloud connection → check configuration → synthetic test → review recipients → allow analysis.

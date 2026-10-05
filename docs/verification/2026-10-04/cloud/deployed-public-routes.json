@@ -1,0 +1,27 @@
+{
+  "health": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "cacheControl": "no-store",
+    "nosniff": "nosniff",
+    "bytes": 49,
+    "body": {
+      "status": "ok",
+      "schemaVersion": "care-schema-1.0"
+    }
+  },
+  "privacy": {
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "cacheControl": "no-store",
+    "nosniff": "nosniff",
+    "bytes": 13810
+  },
+  "support": {
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "cacheControl": "no-store",
+    "nosniff": "nosniff",
+    "bytes": 10903
+  }
+}

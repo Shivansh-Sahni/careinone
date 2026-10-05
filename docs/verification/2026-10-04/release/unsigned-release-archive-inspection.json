@@ -1,0 +1,173 @@
+{
+  "built_at_utc": "2026-10-05T02:29:14+00:00",
+  "archive_path": "/private/tmp/CareInOneUnsignedRelease20261004.xcarchive",
+  "result": "ARCHIVE SUCCEEDED",
+  "exit_code": 0,
+  "configuration": "Release",
+  "platform": "generic iOS device arm64",
+  "uploadable": false,
+  "reason": "Unsigned archive, no signing identity/team/profile. Not an App Store or physical-device install artifact. No App Store validation/upload performed.",
+  "bundle": {
+    "CFBundleDisplayName": "CareInOne",
+    "CFBundleIdentifier": "org.carecontinuity.app",
+    "CFBundleName": "CareInOne",
+    "CFBundleExecutable": "CareInOne",
+    "CFBundleShortVersionString": "1.0",
+    "CFBundleVersion": "1",
+    "MinimumOSVersion": "18.0",
+    "DTPlatformName": "iphoneos",
+    "DTPlatformVersion": "27.0",
+    "DTSDKName": "iphoneos27.0",
+    "DTXcode": "2700",
+    "DTXcodeBuild": "27A266a",
+    "UIDeviceFamily": [
+      1,
+      2
+    ],
+    "CFBundleSupportedPlatforms": [
+      "iPhoneOS"
+    ],
+    "ITSAppUsesNonExemptEncryption": false
+  },
+  "crypto_declaration_boolean": true,
+  "privacy_manifest_matches_source": true,
+  "privacy_manifest": {
+    "NSPrivacyTracking": false,
+    "NSPrivacyTrackingDomains": [],
+    "NSPrivacyCollectedDataTypes": [
+      {
+        "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeHealth",
+        "NSPrivacyCollectedDataTypeLinked": true,
+        "NSPrivacyCollectedDataTypeTracking": false,
+        "NSPrivacyCollectedDataTypePurposes": [
+          "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+        ]
+      },
+      {
+        "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeOtherUserContent",
+        "NSPrivacyCollectedDataTypeLinked": true,
+        "NSPrivacyCollectedDataTypeTracking": false,
+        "NSPrivacyCollectedDataTypePurposes": [
+          "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+        ]
+      }
+    ],
+    "NSPrivacyAccessedAPITypes": [
+      {
+        "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryFileTimestamp",
+        "NSPrivacyAccessedAPITypeReasons": [
+          "C617.1"
+        ]
+      },
+      {
+        "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+        "NSPrivacyAccessedAPITypeReasons": [
+          "CA92.1"
+        ]
+      }
+    ]
+  },
+  "entitlement_source": {
+    "com.apple.developer.default-data-protection": "NSFileProtectionComplete"
+  },
+  "signed_entitlements_enforced": false,
+  "signing": {
+    "archive_identity": "",
+    "archive_team": "",
+    "valid_local_identity_count": 0,
+    "embedded_profile": false,
+    "code_signature": false
+  },
+  "ATS_exception_present": false,
+  "embedded_frameworks": [],
+  "dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/AVFAudio.framework/AVFAudio",
+    "/System/Library/Frameworks/Charts.framework/Charts",
+    "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+    "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+    "/System/Library/Frameworks/CoreText.framework/CoreText",
+    "/System/Library/Frameworks/CoreTransferable.framework/CoreTransferable",
+    "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+    "/System/Library/Frameworks/DeveloperToolsSupport.framework/DeveloperToolsSupport",
+    "/System/Library/Frameworks/EventKit.framework/EventKit",
+    "/System/Library/Frameworks/ImageIO.framework/ImageIO",
+    "/System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication",
+    "/System/Library/Frameworks/PDFKit.framework/PDFKit",
+    "/System/Library/Frameworks/PhotosUI.framework/PhotosUI",
+    "/System/Library/Frameworks/QuickLook.framework/QuickLook",
+    "/System/Library/Frameworks/Security.framework/Security",
+    "/System/Library/Frameworks/Speech.framework/Speech",
+    "/System/Library/Frameworks/SwiftData.framework/SwiftData",
+    "/System/Library/Frameworks/SwiftUI.framework/SwiftUI",
+    "/System/Library/Frameworks/UIKit.framework/UIKit",
+    "/System/Library/Frameworks/UserNotifications.framework/UserNotifications",
+    "/System/Library/Frameworks/Vision.framework/Vision",
+    "/System/Library/Frameworks/_PhotosUI_SwiftUI.framework/_PhotosUI_SwiftUI",
+    "/usr/lib/swift/libswiftAVFoundation.dylib",
+    "/usr/lib/swift/libswiftAccelerate.dylib",
+    "/usr/lib/swift/libswiftCompression.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreAudio.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftCoreImage.dylib",
+    "/usr/lib/swift/libswiftCoreLocation.dylib",
+    "/usr/lib/swift/libswiftCoreMIDI.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftMetal.dylib",
+    "/usr/lib/swift/libswiftOSLog.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftObservation.dylib",
+    "/usr/lib/swift/libswiftQuartzCore.dylib",
+    "/usr/lib/swift/libswiftSpatial.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib",
+    "/usr/lib/swift/libswiftsimd.dylib"
+  ],
+  "non_Apple_library_load_paths": [],
+  "cryptography_symbols": {
+    "CryptoKit_AES_GCM": true,
+    "CommonCrypto_PBKDF2": true,
+    "Security_random": true
+  },
+  "debug_test_argument_strings_in_binary": {
+    "--uitesting": false,
+    "--reset": false,
+    "--demo": false
+  },
+  "binary_sha256": "48e8733bc9a313e2b3a70c135d7ba0c513c3483fdbbde8c6d4aaf05e70bd69d2",
+  "dSYM_matches_arm64_binary_UUID": true,
+  "log": "unsigned-release-archive.log",
+  "bounded_secret_screen": "unsigned-archive-file-screen.json",
+  "limitations": [
+    "Successful archive does not establish all feature/runtime correctness",
+    "Operating-system-only crypto declaration supports this source/dependency inventory, separate governmental reporting/territory duties remain owner responsibilities",
+    "Final signed artifact must revalidate permissions, privacy, endpoint configuration, symbol match, version and publisher identity",
+    "NutriAssist organization team has not yet been observed; individual identity must not substitute for publication"
+  ],
+  "permission_explanations": {
+    "NSCalendarsWriteOnlyAccessUsageDescription": "Add an appointment to your calendar only when you choose Add to Calendar.",
+    "NSCameraUsageDescription": "Capture care documents, labels, or appointment cards as preserved source evidence.",
+    "NSFaceIDUsageDescription": "Unlock your locally saved care information.",
+    "NSMicrophoneUsageDescription": "Record a voice update or a visit only when you choose and everyone present agrees.",
+    "NSSpeechRecognitionUsageDescription": "Transcribe your chosen recording on this device when on-device recognition is supported."
+  },
+  "compiled_document_import_types": [
+    {
+      "CFBundleTypeName": "Patient-owned care evidence",
+      "CFBundleTypeRole": "Viewer",
+      "LSHandlerRank": "Alternate",
+      "LSItemContentTypes": [
+        "com.adobe.pdf",
+        "public.plain-text",
+        "public.json",
+        "public.image"
+      ]
+    }
+  ]
+}

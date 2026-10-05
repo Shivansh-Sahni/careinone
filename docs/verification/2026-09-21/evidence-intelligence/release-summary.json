@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-21",
+  "project": "CareInOne.xcodeproj",
+  "scheme": "CareInOne",
+  "configuration": "Release",
+  "sdk": "iphoneos",
+  "destination": "generic/platform=iOS",
+  "codeSigningAllowed": false,
+  "exitCode": 0,
+  "result": "BUILD SUCCEEDED",
+  "compilerWarnings": [],
+  "command": "xcodebuild -project CareInOne.xcodeproj -scheme CareInOne -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath /private/tmp/CareInOneRelease CODE_SIGNING_ALLOWED=NO build",
+  "fullLog": "/private/tmp/careinone-intelligence-release-final.log",
+  "limitation": "Unsigned device build; physical installation and signing are separate validation.",
+  "includesFinalDeletionDisclosure": true
+}

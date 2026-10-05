@@ -1,0 +1,286 @@
+Building for debugging...
+[Computing dependencies]
+[Provisioning 2 / 4]
+[Using on-disk description]
+[1 / 5]
+[2 / 6] CareCore
+[3 / 7] CareCore
+[5 / 7] CareCore
+[7 / 9] CareCore
+[8 / 10] CareCore
+[9 / 10] CareCore
+[10 / 11] CareCore
+[11 / 14] CareCoreTests-product
+[13 / 16] CareCoreTests-product
+[15 / 16] CareCoreTests-product
+[17 / 19] CareCoreTests-product
+[18 / 19] CareCoreTests-product
+[19 / 19] CareCoreTests-product
+[20 / 20] CareCore-product
+Build complete! (116.51 sec)
+Test Suite 'All tests' started at 2026-09-21 11:19:42.274.
+Test Suite 'All tests' passed at 2026-09-21 11:19:42.280.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.006) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite AssociationHistoryRegressionTests started.
+◇ Suite ReminderTimingRegressionTests started.
+◇ Suite CareCoreTests started.
+◇ Suite ContinuityTests started.
+◇ Suite ClaimIdentityRegressionTests started.
+◇ Suite EdgeCaseTests started.
+◇ Suite VisitPacketTests started.
+◇ Suite FHIRDetailRegressionTests started.
+◇ Test retiringOnlyClaimKeepsPersonalContextAccessible() started.
+◇ Test sameNameWithDifferentKnownCodeRequiresReview() started.
+◇ Test appointmentReminderNeverFiresAfterAppointment() started.
+◇ Test fhirRejectsMultiplePatients() started.
+◇ Test cacheInvalidatesOnEventDateAndVersion() started.
+◇ Test medicationDimensions(field:) started.
+◇ Test priorityExplainsConsequentialConflict() started.
+◇ Test conditionalMRIIsNotAnOrder() started.
+◇ Test allLoopMachines(kind:) started.
+◇ Test laterUploadIsNotLaterEvent() started.
+◇ Test fhirUnknownSubjectRequiresReview() started.
+◇ Test proposalsCannotBecomeCanonical() started.
+◇ Test rejectionAndOtherSubjectStayOut() started.
+◇ Test undatedCompletionDoesNotSilentlyCloseOtherEncounter() started.
+◇ Test testCompletesOnlyWhenResultAvailable() started.
+◇ Test normalizedUnitsDoNotConflict() started.
+◇ Test duplicateLoopSuppression() started.
+◇ Test mentionedTestDoesNotOpenLoop() started.
+◇ Test clarificationIsBounded() started.
+◇ Test approximateDatesNeverSayOverdue() started.
+◇ Test chunkingPreservesOverlapAndUnicode() started.
+◇ Test invalidNumbersRejected() started.
+◇ Test missingMedicationNeverMeansStopped() started.
+◇ Test conflictResolutionPersistsAndNewEvidenceReopensInbox() started.
+◇ Test dosageDisagreementPersistsWithoutChoosingWinner() started.
+◇ Suite AppointmentPrecisionRegressionTests started.
+◇ Test intervalUsesMedicalEventNotUpload() started.
+◇ Test weakMatchesRequireReview() started.
+◇ Test fhirPreservesValueAndSubject() started.
+◇ Suite EvidenceIntelligenceTests started.
+◇ Test codeAndAliasMatching() started.
+◇ Suite WorkflowHardeningTests started.
+◇ Test wrongPageRejected() started.
+◇ Test deletionRebuildsAndCascades() started.
+◇ Test roundTripMaintainsGraph() started.
+◇ Test supersessionRequiresPatientEdit() started.
+◇ Test previewIsPureAndPredictsConflictWithoutChoosingWinner() started.
+◇ Test editedUncertaintyAndSupersessionAreCompared() started.
+◇ Test corruptSnapshotAndWorkspaceReferencesAreRejected() started.
+◇ Test lateDebriefValidationFailureIsAtomic() started.
+◇ Test checkpointRemovalDetachesWorkspaceAndPreservesSources() started.
+◇ Test invalidPreviewLeavesPendingAndCanonicalStateUnchanged() started.
+◇ Test workspaceAndQuestionOnlyDebriefWorkFromEmptyState() started.
+◇ Test oldJSONWithoutContinuityStillDecodes() started.
+◇ Test debriefPreservesExactPatientEvidenceAndDoesNotExtractQuestions() started.
+◇ Test deletingEvidenceDoesNotPretendAWorkflowCompleted() started.
+◇ Test retiredSourceVersionRemainsReadableUntilExplicitDeletion() started.
+◇ Test evidenceChecklistIncludesEarlierWorkWithoutFalseCompletionOrOrders() started.
+◇ Test deletingOneOfTwoSupportingSourcesDoesNotCreateNewSurvivingLoop() started.
+◇ Test encryptedArchiveRoundTripIncludesDraftAndCheckpoint() started.
+◇ Test userCompletionIsDistinctAndRebuildable() started.
+◇ Test identityPreservesEffectiveDatePrecisionCodesAndAttribution() started.
+◇ Test sourceRetirementStillAllowsBackup() started.
+◇ Test differingIntervalsAreNotDiscardedAsDuplicates() started.
+◇ Test dateOnlyPreservesLocalCivilDay() started.
+◇ Test deletionPreservesUnrelatedEmptyEncounter() started.
+◇ Test gatewayWireContract() started.
+◇ Test briefPreservesConflictsAndSyntheticLabels() started.
+◇ Test demoCoversOfflineCareCategoriesAndUpcomingEncounter() started.
+◇ Test sourceConditionalityOverridesOptimisticModel() started.
+◇ Test syntheticFHIRBundleProposesAndLinksOnlyAfterReview() started.
+◇ Test fhirNonActiveMedicationAndAppointmentStatusesStayHonest() started.
+◇ Test syntheticDemoIsIdempotent() started.
+◇ Test codedResultClosesMatchingTestWithoutMergingEntityKinds() started.
+◇ Test appointmentCaptureDateIsNotAnAppointmentDate() started.
+◇ Test remindersExcludeSupersededApproximateAndHistoricalAppointments() started.
+◇ Test localTestNameContinuesAcrossRecaps() started.
+◇ Test deletionPurgesCachedQuotesAndSuppressesInvalidBaselineComparisons() started.
+◇ Test safeBulkReviewExcludesUnknownHistoricalAndDisputedStates() started.
+◇ Test olderMedicalEventIsStillNewSavedKnowledgeAndPendingIsExcluded() started.
+◇ Test aDateTodayDoesNotClaimItHasPassed() started.
+◇ Test ambiguousExactAliasesNeverAutoMerge() started.
+◇ Test unclassifiedFHIRServiceRequiresCategoryReview() started.
+◇ Test deterministicSearchAndGroundedAnswer() started.
+◇ Test dateFilterNeverHidesUnresolvedWorkAndPendingClaimsAreExcluded() started.
+◇ Test medicationSelectionKeepsAllDifferingReportsAndEvidence() started.
+◇ Test emptySelectionDoesNotLeakOtherItemsOrClaimAllClear() started.
+◇ Test identityAndPrivateNotesAreExcludedUnlessSelected() started.
+◇ Test multipleDosesNeverFlattenToFirstDose() started.
+◇ Test dateAndStorageBoundsRejectInvalidMetadata() started.
+◇ Test mixedPatientReferencesWithoutPatientResourcesAreRejected() started.
+◇ Suite ArchiveTests started.
+◇ Test duplicateRelationshipSurvivesRebuild() started.
+◇ Test transcriptLocationsAreEvidenceValidated() started.
+◇ Test upcomingVisitIncludesEarlierUnfinishedWorkButFiltersOtherQuestions() started.
+◇ Test medicationInstructionsAndReactionDetailsArePreserved() started.
+◇ Test forgedQuoteRejectedAtomically() started.
+◇ Test case passing 1 argument field → "route" to medicationDimensions(field:) started.
+◇ Test case passing 1 argument field → "frequency" to medicationDimensions(field:) started.
+◇ Test case passing 1 argument field → "form" to medicationDimensions(field:) started.
+◇ Test case passing 1 argument field → "status" to medicationDimensions(field:) started.
+◇ Test case passing 1 argument kind → .referral to allLoopMachines(kind:) started.
+◇ Test case passing 1 argument kind → .procedure to allLoopMachines(kind:) started.
+◇ Test case passing 1 argument kind → .administrativeTask to allLoopMachines(kind:) started.
+◇ Test case passing 1 argument kind → .resultType to allLoopMachines(kind:) started.
+◇ Test case passing 1 argument kind → .followUp to allLoopMachines(kind:) started.
+✔ Test sameNameWithDifferentKnownCodeRequiresReview() passed after 0.264 seconds.
+✔ Test medicationDimensions(field:) with 4 test cases passed after 0.264 seconds.
+✔ Test fhirRejectsMultiplePatients() passed after 0.272 seconds.
+✔ Test allLoopMachines(kind:) with 5 test cases passed after 0.272 seconds.
+✔ Test fhirUnknownSubjectRequiresReview() passed after 0.272 seconds.
+✔ Test conditionalMRIIsNotAnOrder() passed after 0.273 seconds.
+✔ Test rejectionAndOtherSubjectStayOut() passed after 0.272 seconds.
+✔ Test undatedCompletionDoesNotSilentlyCloseOtherEncounter() passed after 0.272 seconds.
+✔ Test testCompletesOnlyWhenResultAvailable() passed after 0.272 seconds.
+✔ Test duplicateLoopSuppression() passed after 0.272 seconds.
+✔ Test mentionedTestDoesNotOpenLoop() passed after 0.272 seconds.
+✔ Test cacheInvalidatesOnEventDateAndVersion() passed after 0.273 seconds.
+✔ Test proposalsCannotBecomeCanonical() passed after 0.273 seconds.
+✔ Test chunkingPreservesOverlapAndUnicode() passed after 0.273 seconds.
+✔ Test invalidNumbersRejected() passed after 0.273 seconds.
+✔ Test missingMedicationNeverMeansStopped() passed after 0.273 seconds.
+✔ Test clarificationIsBounded() passed after 0.273 seconds.
+✔ Test priorityExplainsConsequentialConflict() passed after 0.273 seconds.
+◇ Test eventDateDoesNotSubstituteForMissingAppointmentDate() started.
+◇ Test unknownTimeDoesNotDisagreeWithTimeOnSameDay() started.
+◇ Test followUpDatesOneDayApartAreCompared() started.
+✔ Test appointmentReminderNeverFiresAfterAppointment() passed after 0.273 seconds.
+✔ Test fhirPreservesValueAndSubject() passed after 0.273 seconds.
+✔ Test weakMatchesRequireReview() passed after 0.285 seconds.
+◇ Test replyValidationFailureAndStaleSelectionAreAtomic() started.
+◇ Test handoffIgnoresPendingAndUnrelatedClaimsButDetectsSourceMetadataChanges() started.
+◇ Test selectedSnapshotExcludesUnselectedInformationAndRemainsImmutable() started.
+◇ Test sourceReanalysisWithNewEntityIdentityStillInvalidatesOldHandoffContext() started.
+◇ Test replySourceDeletionAndHandoffDeletionPreserveIndependentEvidence() started.
+◇ Test lateArrivingEvidenceOrdersByMedicalDateWithoutChangingCaptureOrder() started.
+◇ Test legacyDecodeAndEncryptedArchiveIncludeHandoffDraftAndDetectTampering() started.
+◇ Test finishAndReopenNeverCloseClinicalWorkAndCanShowNewContext() started.
+◇ Test graphTracesEvidenceAndDependenciesWithTypedIDs() started.
+◇ Test sourceDeletionPurgesWholeOutgoingCopyAndPrunesAllFingerprints() started.
+◇ Test handoffWatchesOnlyExplicitlySelectedProfileFields() started.
+◇ Test timelineKeepsUnknownMedicalDatesAndSeparatesEffectiveAndReviewDates() started.
+◇ Test traversalHandlesCyclesAndReportsTruncationDeterministically() started.
+◇ Test handoffKeepsEncounterAfterLastSourceIsDeletedAndCanDetachExplicitly() started.
+◇ Test passageOfTimeAndRebuildDoNotFalselyChangeHandoff() started.
+◇ Test pendingRejectedAndOtherSubjectNeverEnterEvidenceGraph() started.
+◇ Test combinedOmissionShowsJointEffectsWithoutAnyMutationOrCompletion() started.
+◇ Test emptyPatientCanTrackOneQuestionAndReplyThroughReviewGate() started.
+✔ Test intervalUsesMedicalEventNotUpload() passed after 0.306 seconds.
+◇ Test searchIncludesReviewedValuesBeyondRawSourceText() started.
+◇ Test askDoesNotReturnUnrelatedClaimsFromMatchingSource() started.
+◇ Test largeIntervalsDoNotOverflowOrInventDates() started.
+✔ Test codeAndAliasMatching() passed after 0.307 seconds.
+✔ Test normalizedUnitsDoNotConflict() passed after 0.307 seconds.
+✔ Test deletionRebuildsAndCascades() passed after 0.307 seconds.
+✔ Test supersessionRequiresPatientEdit() passed after 0.307 seconds.
+✔ Test wrongPageRejected() passed after 0.307 seconds.
+✔ Test laterUploadIsNotLaterEvent() passed after 0.308 seconds.
+✔ Test dosageDisagreementPersistsWithoutChoosingWinner() passed after 0.307 seconds.
+✔ Test previewIsPureAndPredictsConflictWithoutChoosingWinner() passed after 0.307 seconds.
+✔ Test roundTripMaintainsGraph() passed after 0.307 seconds.
+✔ Test checkpointRemovalDetachesWorkspaceAndPreservesSources() passed after 0.307 seconds.
+✔ Test invalidPreviewLeavesPendingAndCanonicalStateUnchanged() passed after 0.307 seconds.
+✔ Test oldJSONWithoutContinuityStillDecodes() passed after 0.307 seconds.
+✔ Test workspaceAndQuestionOnlyDebriefWorkFromEmptyState() passed after 0.307 seconds.
+✔ Test deletingEvidenceDoesNotPretendAWorkflowCompleted() passed after 0.307 seconds.
+✔ Test retiredSourceVersionRemainsReadableUntilExplicitDeletion() passed after 0.307 seconds.
+✔ Test approximateDatesNeverSayOverdue() passed after 0.308 seconds.
+✔ Test corruptSnapshotAndWorkspaceReferencesAreRejected() passed after 0.307 seconds.
+✔ Test evidenceChecklistIncludesEarlierWorkWithoutFalseCompletionOrOrders() passed after 0.307 seconds.
+✔ Test conflictResolutionPersistsAndNewEvidenceReopensInbox() passed after 0.308 seconds.
+✔ Test editedUncertaintyAndSupersessionAreCompared() passed after 0.307 seconds.
+✔ Test sourceRetirementStillAllowsBackup() passed after 0.306 seconds.
+✔ Test lateDebriefValidationFailureIsAtomic() passed after 0.307 seconds.
+✔ Test deletionPreservesUnrelatedEmptyEncounter() passed after 0.306 seconds.
+✔ Test userCompletionIsDistinctAndRebuildable() passed after 0.308 seconds.
+✔ Test gatewayWireContract() passed after 0.307 seconds.
+✔ Test differingIntervalsAreNotDiscardedAsDuplicates() passed after 0.307 seconds.
+✔ Test sourceConditionalityOverridesOptimisticModel() passed after 0.307 seconds.
+✔ Test identityPreservesEffectiveDatePrecisionCodesAndAttribution() passed after 0.308 seconds.
+✔ Test deletingOneOfTwoSupportingSourcesDoesNotCreateNewSurvivingLoop() passed after 0.311 seconds.
+✔ Test dateOnlyPreservesLocalCivilDay() passed after 0.311 seconds.
+✔ Test fhirNonActiveMedicationAndAppointmentStatusesStayHonest() passed after 0.311 seconds.
+✔ Test codedResultClosesMatchingTestWithoutMergingEntityKinds() passed after 0.312 seconds.
+✔ Test syntheticFHIRBundleProposesAndLinksOnlyAfterReview() passed after 0.312 seconds.
+✔ Test remindersExcludeSupersededApproximateAndHistoricalAppointments() passed after 0.312 seconds.
+✔ Test localTestNameContinuesAcrossRecaps() passed after 0.312 seconds.
+✔ Test debriefPreservesExactPatientEvidenceAndDoesNotExtractQuestions() passed after 0.313 seconds.
+✔ Test safeBulkReviewExcludesUnknownHistoricalAndDisputedStates() passed after 0.312 seconds.
+✔ Test deletionPurgesCachedQuotesAndSuppressesInvalidBaselineComparisons() passed after 0.312 seconds.
+✔ Test aDateTodayDoesNotClaimItHasPassed() passed after 0.312 seconds.
+✔ Test ambiguousExactAliasesNeverAutoMerge() passed after 0.312 seconds.
+✔ Test unclassifiedFHIRServiceRequiresCategoryReview() passed after 0.312 seconds.
+✔ Test olderMedicalEventIsStillNewSavedKnowledgeAndPendingIsExcluded() passed after 0.313 seconds.
+✔ Test appointmentCaptureDateIsNotAnAppointmentDate() passed after 0.312 seconds.
+✔ Test syntheticDemoIsIdempotent() passed after 0.313 seconds.
+✔ Test demoCoversOfflineCareCategoriesAndUpcomingEncounter() passed after 0.326 seconds.
+✔ Test medicationSelectionKeepsAllDifferingReportsAndEvidence() passed after 0.328 seconds.
+✔ Test multipleDosesNeverFlattenToFirstDose() passed after 0.331 seconds.
+✔ Test mixedPatientReferencesWithoutPatientResourcesAreRejected() passed after 0.331 seconds.
+✔ Test dateAndStorageBoundsRejectInvalidMetadata() passed after 0.331 seconds.
+◇ Test wrongPasswordOrTamperingCannotRestore() started.
+◇ Test encryptedRoundTripPreservesEvidenceAndDecisions() started.
+◇ Test randomSaltAndNonceProduceDifferentBackups() started.
+◇ Test rejectsDuplicateIDsMissingFilesAndTraversal() started.
+◇ Test fileReaderEnforcesLimitEvenWithoutSizeMetadata() started.
+◇ Test rejectsUnsupportedVersionWeakPassphraseAndOrphanClaim() started.
+✔ Test duplicateRelationshipSurvivesRebuild() passed after 0.331 seconds.
+✔ Test transcriptLocationsAreEvidenceValidated() passed after 0.330 seconds.
+✔ Test briefPreservesConflictsAndSyntheticLabels() passed after 0.332 seconds.
+✔ Test medicationInstructionsAndReactionDetailsArePreserved() passed after 0.332 seconds.
+✔ Test forgedQuoteRejectedAtomically() passed after 0.332 seconds.
+✔ Suite CareCoreTests passed after 0.600 seconds.
+✔ Test eventDateDoesNotSubstituteForMissingAppointmentDate() passed after 0.331 seconds.
+✔ Test unknownTimeDoesNotDisagreeWithTimeOnSameDay() passed after 0.331 seconds.
+✔ Test followUpDatesOneDayApartAreCompared() passed after 0.331 seconds.
+✔ Suite ReminderTimingRegressionTests passed after 0.606 seconds.
+✔ Test replyValidationFailureAndStaleSelectionAreAtomic() passed after 0.311 seconds.
+✔ Test dateFilterNeverHidesUnresolvedWorkAndPendingClaimsAreExcluded() passed after 0.603 seconds.
+✔ Test handoffIgnoresPendingAndUnrelatedClaimsButDetectsSourceMetadataChanges() passed after 0.300 seconds.
+✔ Test sourceReanalysisWithNewEntityIdentityStillInvalidatesOldHandoffContext() passed after 0.300 seconds.
+✔ Test replySourceDeletionAndHandoffDeletionPreserveIndependentEvidence() passed after 0.300 seconds.
+✔ Test lateArrivingEvidenceOrdersByMedicalDateWithoutChangingCaptureOrder() passed after 0.300 seconds.
+✔ Test selectedSnapshotExcludesUnselectedInformationAndRemainsImmutable() passed after 0.301 seconds.
+✔ Test deterministicSearchAndGroundedAnswer() passed after 0.603 seconds.
+✔ Test graphTracesEvidenceAndDependenciesWithTypedIDs() passed after 0.300 seconds.
+✔ Test sourceDeletionPurgesWholeOutgoingCopyAndPrunesAllFingerprints() passed after 0.300 seconds.
+✔ Test identityAndPrivateNotesAreExcludedUnlessSelected() passed after 0.603 seconds.
+✔ Test timelineKeepsUnknownMedicalDatesAndSeparatesEffectiveAndReviewDates() passed after 0.300 seconds.
+✔ Test traversalHandlesCyclesAndReportsTruncationDeterministically() passed after 0.300 seconds.
+✔ Test handoffKeepsEncounterAfterLastSourceIsDeletedAndCanDetachExplicitly() passed after 0.300 seconds.
+✔ Test emptySelectionDoesNotLeakOtherItemsOrClaimAllClear() passed after 0.603 seconds.
+✔ Test handoffWatchesOnlyExplicitlySelectedProfileFields() passed after 0.328 seconds.
+✔ Test passageOfTimeAndRebuildDoNotFalselyChangeHandoff() passed after 0.328 seconds.
+✔ Test searchIncludesReviewedValuesBeyondRawSourceText() passed after 0.329 seconds.
+✔ Test askDoesNotReturnUnrelatedClaimsFromMatchingSource() passed after 0.329 seconds.
+✔ Test largeIntervalsDoNotOverflowOrInventDates() passed after 0.329 seconds.
+✔ Suite ClaimIdentityRegressionTests passed after 0.637 seconds.
+✔ Suite FHIRDetailRegressionTests passed after 0.637 seconds.
+✔ Test combinedOmissionShowsJointEffectsWithoutAnyMutationOrCompletion() passed after 0.330 seconds.
+✔ Test emptyPatientCanTrackOneQuestionAndReplyThroughReviewGate() passed after 0.330 seconds.
+✔ Test finishAndReopenNeverCloseClinicalWorkAndCanShowNewContext() passed after 0.332 seconds.
+✔ Test upcomingVisitIncludesEarlierUnfinishedWorkButFiltersOtherQuestions() passed after 0.633 seconds.
+✔ Test fileReaderEnforcesLimitEvenWithoutSizeMetadata() passed after 0.305 seconds.
+✔ Test rejectsUnsupportedVersionWeakPassphraseAndOrphanClaim() passed after 0.318 seconds.
+✔ Test rejectsDuplicateIDsMissingFilesAndTraversal() passed after 0.318 seconds.
+✔ Suite AppointmentPrecisionRegressionTests passed after 0.652 seconds.
+✔ Suite VisitPacketTests passed after 0.661 seconds.
+✔ Suite EdgeCaseTests passed after 0.672 seconds.
+✔ Suite WorkflowHardeningTests passed after 0.672 seconds.
+✔ Test pendingRejectedAndOtherSubjectNeverEnterEvidenceGraph() passed after 0.300 seconds.
+✔ Test retiringOnlyClaimKeepsPersonalContextAccessible() passed after 1.239 seconds.
+✔ Suite AssociationHistoryRegressionTests passed after 1.240 seconds.
+✔ Test encryptedArchiveRoundTripIncludesDraftAndCheckpoint() passed after 1.385 seconds.
+✔ Suite ContinuityTests passed after 1.387 seconds.
+✔ Test legacyDecodeAndEncryptedArchiveIncludeHandoffDraftAndDetectTampering() passed after 1.161 seconds.
+✔ Suite EvidenceIntelligenceTests passed after 1.466 seconds.
+✔ Test randomSaltAndNonceProduceDifferentBackups() passed after 1.222 seconds.
+✔ Test encryptedRoundTripPreservesEvidenceAndDecisions() passed after 1.238 seconds.
+✔ Test wrongPasswordOrTamperingCannotRestore() passed after 1.512 seconds.
+✔ Suite ArchiveTests passed after 1.844 seconds.
+✔ Test run with 113 tests in 12 suites passed after 1.848 seconds.

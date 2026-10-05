@@ -1,0 +1,4 @@
+PASS: CareInOne branding and compatible model identity, target source membership, Boolean OS-only encryption declaration, property lists, privacy manifest, 215 capability rows, release documents, actual listing field limits.
+Native source membership: {"CareInOne": 35, "CareInOneIntegrationTests": 14, "CareInOneUITests": 5}
+Actual listing fields: {"App name": {"characters": 9, "limit": 30}, "Description": {"characters": 2365, "limit": 4000}, "First-version release notes": {"characters": 166, "limit": 4000}, "Keywords": {"characters": 90, "limit": 100}, "Promotional text": {"characters": 146, "limit": 170}, "Subtitle": {"characters": 20, "limit": 30}}
+Native build/device/live-provider validation and publisher-specific release settings remain separate checks.

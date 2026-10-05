@@ -1,0 +1,4 @@
+Exported 1 attachment for: FollowThroughDraftRecoveryUITests/testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard():
+File: 3ADB1786-A451-4575-95BC-D64CC2C2B230.png, suggested name: "CareInOne · clarification note kept after cancelled dismissal_0_C414C3FA-819F-4177-A856-260234F98432.png"
+
+Generated manifest file with attachment details: /private/tmp/CareInOneSmallPhoneClarificationFinalAttachments/manifest.json

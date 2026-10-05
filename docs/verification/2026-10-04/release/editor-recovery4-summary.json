@@ -1,0 +1,29 @@
+{
+  "scope": "Targeted ordinary-editor repair run; older compiled snapshot, not final candidate",
+  "platform": "iPhone 18 Pro simulator / iOS 27.0",
+  "total": 3,
+  "passed": 1,
+  "failed": 2,
+  "skipped": 0,
+  "cases": [
+    {
+      "name": "EditorRecoveryUITests/testEncounterDiscardLeavesExistingGroupingAndCleanCancelCloses()",
+      "result": "Failure"
+    },
+    {
+      "name": "EditorRecoveryUITests/testPersonalNoteDiscardPreservesSavedMultilineContentAfterRelaunch()",
+      "result": "Success"
+    },
+    {
+      "name": "EditorRecoveryUITests/testQuestionAnswerSwipeAndCancelKeepInputThenDiscardWithoutSaving()",
+      "result": "Failure"
+    }
+  ],
+  "log": "editor-recovery4.log",
+  "limitations": [
+    "Question case stopped behind expected Question saved notice; test now asserts it and dismisses OK before editing",
+    "Encounter case checked keyboard count immediately after Done; bounded wait must distinguish AX transition from actual focus failure",
+    "Latest question delete confirmation assertions are absent from this compiled snapshot",
+    "Minimum-supported iOS 18 shared Paste callback repair has separate pending verification"
+  ]
+}

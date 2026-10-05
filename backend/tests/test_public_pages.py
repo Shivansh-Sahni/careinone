@@ -85,7 +85,7 @@ class RuntimePackagingTests(unittest.TestCase):
         for line in docker.splitlines():
             words=shlex.split(line)
             if words and words[0]=='COPY': copied.update(words[1:-1])
-        allowed={'backend/requirements.lock','backend/app.py','backend/schema.py','backend/providers.py','backend/__init__.py','backend/public/privacy.html','backend/public/support.html'}
+        allowed={'backend/requirements.lock','backend/app.py','backend/schema.py','backend/providers.py','backend/__init__.py','backend/verify_gateway.py','backend/public/privacy.html','backend/public/support.html'}
         self.assertEqual(copied,allowed)
         context=root.parent
         ignore=(context/'.dockerignore').read_text().splitlines()

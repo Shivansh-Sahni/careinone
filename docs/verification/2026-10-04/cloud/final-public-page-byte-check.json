@@ -1,0 +1,39 @@
+{
+  "scope": "Unauthenticated public-policy GET requests only; no credentials and no paid model requests",
+  "documents": [
+    {
+      "path": "/privacy",
+      "localBytes": 14270,
+      "localSHA256": "177a012f25fbe8a99fd71ccf901efe7be593bcf5f9b55a05df7d5412a034fc62",
+      "httpStatus": 200,
+      "deployedBytes": 13810,
+      "deployedSHA256": "8de02874dd2595f9422d1e9eace93b82b8816b658dc2f031a68c6d0675bb4609",
+      "matchesLocal": false,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "no-referrer",
+        "X-Frame-Options": "DENY",
+        "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+      }
+    },
+    {
+      "path": "/support",
+      "localBytes": 11162,
+      "localSHA256": "ecd7b0d2ec118b8fc94d1e52231e90d40d45cd5eafdf852c5965b014985683cd",
+      "httpStatus": 200,
+      "deployedBytes": 10903,
+      "deployedSHA256": "098757ba401ec37098325f60e92f5ba98aeae078691d2635c9b9e676e657e0f8",
+      "matchesLocal": false,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "no-referrer",
+        "X-Frame-Options": "DENY",
+        "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+      }
+    }
+  ]
+}

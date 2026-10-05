@@ -1,0 +1,87 @@
+{
+  "scope": "Read-only source dependency/privacy inventory; archive and service validation separate",
+  "third_party_native_remote_packages": 0,
+  "swift_package_external_dependencies_declared": false,
+  "native_imported_modules": [
+    "AVFoundation",
+    "Charts",
+    "CommonCrypto",
+    "CoreText",
+    "CryptoKit",
+    "EventKit",
+    "Foundation",
+    "ImageIO",
+    "LocalAuthentication",
+    "OSLog",
+    "Observation",
+    "PDFKit",
+    "PhotosUI",
+    "QuickLook",
+    "Security",
+    "Speech",
+    "SwiftData",
+    "SwiftUI",
+    "UIKit",
+    "UniformTypeIdentifiers",
+    "UserNotifications",
+    "Vision"
+  ],
+  "privacy_manifest_in_app_resource_phase": true,
+  "privacy_tracking": false,
+  "privacy_tracking_domains_count": 0,
+  "privacy_collected_data_types": [
+    {
+      "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeHealth",
+      "NSPrivacyCollectedDataTypeLinked": true,
+      "NSPrivacyCollectedDataTypeTracking": false,
+      "NSPrivacyCollectedDataTypePurposes": [
+        "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+      ]
+    },
+    {
+      "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeOtherUserContent",
+      "NSPrivacyCollectedDataTypeLinked": true,
+      "NSPrivacyCollectedDataTypeTracking": false,
+      "NSPrivacyCollectedDataTypePurposes": [
+        "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+      ]
+    }
+  ],
+  "required_reason_apis": [
+    {
+      "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryFileTimestamp",
+      "NSPrivacyAccessedAPITypeReasons": [
+        "C617.1"
+      ]
+    },
+    {
+      "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+      "NSPrivacyAccessedAPITypeReasons": [
+        "CA92.1"
+      ]
+    }
+  ],
+  "permission_explanation_keys": [
+    "NSCalendarsWriteOnlyAccessUsageDescription",
+    "NSCameraUsageDescription",
+    "NSFaceIDUsageDescription",
+    "NSMicrophoneUsageDescription",
+    "NSSpeechRecognitionUsageDescription"
+  ],
+  "entitlements": {
+    "com.apple.developer.default-data-protection": "NSFileProtectionComplete"
+  },
+  "bundle_display_name": "CareInOne",
+  "version": "1.0",
+  "build": "1",
+  "non_exempt_encryption": false,
+  "backend_locked_requirements": [
+    "click==8.5.0",
+    "h11==0.16.0",
+    "uvicorn==0.52.4"
+  ],
+  "backend_requirements_exact_versions_only": true,
+  "docker_python_base_digest_pinned": false,
+  "final_archive_inspection": "pending parent candidate",
+  "source_preflight": "PASS after parent regeneration: 35 app, 14 integration, 5 UI source files; see source-preflight.log"
+}

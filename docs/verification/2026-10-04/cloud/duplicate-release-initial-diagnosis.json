@@ -1,0 +1,15 @@
+{
+  "scope": "private Release snapshot only; normal launch; BEFFC231 disposable",
+  "initialFixtureResult": "Failed after duplicate notice/OK and correct Sources navigation, at assumption of visible Source SearchField",
+  "observedRoute": [
+    "Duplicate notice references original title; original title retained",
+    "OK closes capture sheet to isolated demo Today",
+    "Sources tab navigation works and original row is present once in native AX snapshot"
+  ],
+  "evidenceLoss": "Not demonstrated; full reopening review/relaunch still pending in focused retry",
+  "runnerExit": 65,
+  "diagnosticFinalization": "TERM only to verified idle simctl diagnose child 49246 of xcodebuild 47867 after all cases ended, exact device/result and zero CPU over 3 minutes; no runner/app interruption",
+  "remainingLimitation": "Duplicate save does not immediately display its existing review sheet; user currently returns through Sources",
+  "productionChanges": false,
+  "paidCalls": 0
+}

@@ -1,0 +1,12 @@
+{
+  "configuration": "Release",
+  "destination": "generic/platform=iOS",
+  "signing": "disabled",
+  "result": "passed",
+  "warnings": [],
+  "errors": [],
+  "log": "/private/tmp/careinone-patient-value-release.log",
+  "logSHA256": "ae235c1c50909c34885377d2e5ca42c0d594abc1405dc3fb18d74bc2de1a6858",
+  "builtAt": "2026-09-21T16:36:56.920189+00:00",
+  "derivedData": "/private/tmp/CareInOneRelease"
+}

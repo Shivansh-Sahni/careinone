@@ -1,0 +1,39 @@
+{
+  "phase": "Candidate2 before ordinary editor and Calendar receipt cleanup repairs",
+  "result": "Failed",
+  "started_at_utc": "2026-10-05T00:25:35.382000+00:00",
+  "finished_at_utc": "2026-10-05T00:47:45.140000+00:00",
+  "device": "iPhone 18 Pro / iOS 27.0 Simulator",
+  "total": 111,
+  "passed": 104,
+  "failed": 6,
+  "skipped": 1,
+  "native": {
+    "executed": 91,
+    "passed": 90,
+    "failed": 0,
+    "skipped": 1
+  },
+  "ui": {
+    "executed": 20,
+    "passed": 14,
+    "failed": 6,
+    "skipped": 0
+  },
+  "failing_ui_tests": [
+    "PatientCompanionUITests/testAppointmentCompanionAtAccessibilityTextSize()",
+    "CareInOneUITests/testCareConnectionsAtAccessibilityTextSize()",
+    "PatientCompanionUITests/testFollowThroughMessageOutreachReplyPersistsAndNeedsReview()",
+    "CareInOneUITests/testOutgoingMessageEditingInvalidatesPreviousPDF()",
+    "CareInOneUITests/testPersonalNoteCreatePersistAndDelete()",
+    "CareInOneUITests/testVisitDraftPersistsAcrossRelaunchAndDeletionHasImpactPreview()"
+  ],
+  "runtime_warning_occurrences": 9,
+  "runtime_warning_categories": [
+    "AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+    "Invalid frame dimension (negative or non-finite)."
+  ],
+  "authoritative_result_bundle": "/private/tmp/CareInOneCandidate2.xcresult",
+  "summary_source": "/private/tmp/CareInOneCandidate2.summary.json",
+  "scope": "Finalized result counts; not a passing release candidate. Native/UI split confirmed by root. Later source needs Candidate3/final verification."
+}

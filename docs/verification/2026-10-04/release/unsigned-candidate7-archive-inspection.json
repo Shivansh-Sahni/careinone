@@ -1,0 +1,200 @@
+{
+  "built_at_utc": "2026-10-05T05:34:08.903457+00:00",
+  "archive_path": "/private/tmp/CareInOneUnsignedReleaseCandidate7.xcarchive",
+  "result": "ARCHIVE SUCCEEDED",
+  "exit_code": 0,
+  "configuration": "Release",
+  "platform": "generic iOS / arm64",
+  "uploadable": false,
+  "reason": "Unsigned; no signing team/profile/local identity; organization publisher gate separate.",
+  "source_fingerprint": {
+    "before": "candidate7-source-before.json",
+    "production_file_count": 64,
+    "production_unchanged": true,
+    "changed_production_paths": [],
+    "compiled_changes_from_candidate5": [
+      "CareInOne/Views/FollowThroughViews.swift",
+      "CareInOne/Views/VisitWorkspaceView.swift",
+      "UITests/CapturePipelineUITests.swift",
+      "UITests/CareInOneUITests.swift",
+      "UITests/EditorDraftRecoveryUITests.swift",
+      "UITests/FollowThroughDraftRecoveryUITests.swift",
+      "UITests/ReleaseScreenshotsUITests.swift"
+    ],
+    "scope": "64 app source/resource files present in root C7 before snapshot; tooling/UI helper changes excluded. Package.swift is independently unchanged from the C5 archive fingerprint.",
+    "package_matches_candidate5": true
+  },
+  "bundle": {
+    "CFBundleDisplayName": "CareInOne",
+    "CFBundleIdentifier": "org.carecontinuity.app",
+    "CFBundleName": "CareInOne",
+    "CFBundleExecutable": "CareInOne",
+    "CFBundleShortVersionString": "1.0",
+    "CFBundleVersion": "1",
+    "MinimumOSVersion": "18.0",
+    "DTPlatformName": "iphoneos",
+    "DTPlatformVersion": "27.0",
+    "DTSDKName": "iphoneos27.0",
+    "DTXcode": "2700",
+    "DTXcodeBuild": "27A266a",
+    "UIDeviceFamily": [
+      1,
+      2
+    ],
+    "CFBundleSupportedPlatforms": [
+      "iPhoneOS"
+    ],
+    "ITSAppUsesNonExemptEncryption": false
+  },
+  "crypto_declaration_boolean": true,
+  "privacy_manifest_matches_source": true,
+  "privacy_manifest": {
+    "NSPrivacyTracking": false,
+    "NSPrivacyTrackingDomains": [],
+    "NSPrivacyCollectedDataTypes": [
+      {
+        "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeHealth",
+        "NSPrivacyCollectedDataTypeLinked": true,
+        "NSPrivacyCollectedDataTypeTracking": false,
+        "NSPrivacyCollectedDataTypePurposes": [
+          "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+        ]
+      },
+      {
+        "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeOtherUserContent",
+        "NSPrivacyCollectedDataTypeLinked": true,
+        "NSPrivacyCollectedDataTypeTracking": false,
+        "NSPrivacyCollectedDataTypePurposes": [
+          "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+        ]
+      }
+    ],
+    "NSPrivacyAccessedAPITypes": [
+      {
+        "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryFileTimestamp",
+        "NSPrivacyAccessedAPITypeReasons": [
+          "C617.1"
+        ]
+      },
+      {
+        "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+        "NSPrivacyAccessedAPITypeReasons": [
+          "CA92.1"
+        ]
+      }
+    ]
+  },
+  "entitlement_source": {
+    "com.apple.developer.default-data-protection": "NSFileProtectionComplete"
+  },
+  "signed_entitlements_enforced": false,
+  "signing": {
+    "archive_identity": "",
+    "archive_team": "",
+    "valid_local_identity_count": 0,
+    "embedded_profile": false,
+    "code_signature": false,
+    "codesign_display_exit": 1,
+    "codesign_display_status": "Unsigned"
+  },
+  "ATS_exception_present": false,
+  "embedded_frameworks": [],
+  "dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/AVFAudio.framework/AVFAudio",
+    "/System/Library/Frameworks/Charts.framework/Charts",
+    "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+    "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+    "/System/Library/Frameworks/CoreText.framework/CoreText",
+    "/System/Library/Frameworks/CoreTransferable.framework/CoreTransferable",
+    "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+    "/System/Library/Frameworks/DeveloperToolsSupport.framework/DeveloperToolsSupport",
+    "/System/Library/Frameworks/EventKit.framework/EventKit",
+    "/System/Library/Frameworks/ImageIO.framework/ImageIO",
+    "/System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication",
+    "/System/Library/Frameworks/PDFKit.framework/PDFKit",
+    "/System/Library/Frameworks/PhotosUI.framework/PhotosUI",
+    "/System/Library/Frameworks/QuickLook.framework/QuickLook",
+    "/System/Library/Frameworks/Security.framework/Security",
+    "/System/Library/Frameworks/Speech.framework/Speech",
+    "/System/Library/Frameworks/SwiftData.framework/SwiftData",
+    "/System/Library/Frameworks/SwiftUI.framework/SwiftUI",
+    "/System/Library/Frameworks/UIKit.framework/UIKit",
+    "/System/Library/Frameworks/UserNotifications.framework/UserNotifications",
+    "/System/Library/Frameworks/Vision.framework/Vision",
+    "/System/Library/Frameworks/_PhotosUI_SwiftUI.framework/_PhotosUI_SwiftUI",
+    "/usr/lib/swift/libswiftAVFoundation.dylib",
+    "/usr/lib/swift/libswiftAccelerate.dylib",
+    "/usr/lib/swift/libswiftCompression.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreAudio.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftCoreImage.dylib",
+    "/usr/lib/swift/libswiftCoreLocation.dylib",
+    "/usr/lib/swift/libswiftCoreMIDI.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftMetal.dylib",
+    "/usr/lib/swift/libswiftOSLog.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftObservation.dylib",
+    "/usr/lib/swift/libswiftQuartzCore.dylib",
+    "/usr/lib/swift/libswiftSpatial.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib",
+    "/usr/lib/swift/libswiftsimd.dylib"
+  ],
+  "non_Apple_library_load_paths": [],
+  "cryptography_symbols": {
+    "CryptoKit_AES_GCM": true,
+    "CommonCrypto_PBKDF2": true,
+    "Security_random": true
+  },
+  "debug_test_argument_strings_in_binary": {
+    "--uitesting": false,
+    "--reset": false,
+    "--demo": false
+  },
+  "binary_sha256": "ae0afd55185fb9abdfe4e6de16a79662d1a2de441fc057469efa5bf24643907d",
+  "dSYM_matches_arm64_binary_UUID": true,
+  "log": "docs/verification/2026-10-04/release/unsigned-candidate7-archive.log",
+  "log_issue_count": 0,
+  "log_issues": [],
+  "bounded_secret_screen": {
+    "files": 7,
+    "credential_pattern_count": 0,
+    "values_recorded": false,
+    "scope": "Known recognizable prefixes only, not universal credential absence or image pixel recognition."
+  },
+  "permission_explanations": {
+    "NSCalendarsWriteOnlyAccessUsageDescription": "Add an appointment to your calendar only when you choose Add to Calendar.",
+    "NSCameraUsageDescription": "Capture care documents, labels, or appointment cards as preserved source evidence.",
+    "NSFaceIDUsageDescription": "Unlock your locally saved care information.",
+    "NSMicrophoneUsageDescription": "Record a voice update or a visit only when you choose and everyone present agrees.",
+    "NSSpeechRecognitionUsageDescription": "Transcribe your chosen recording on this device when on-device recognition is supported."
+  },
+  "compiled_document_import_types": [
+    {
+      "CFBundleTypeName": "Patient-owned care evidence",
+      "CFBundleTypeRole": "Viewer",
+      "LSHandlerRank": "Alternate",
+      "LSItemContentTypes": [
+        "com.adobe.pdf",
+        "public.plain-text",
+        "public.json",
+        "public.image"
+      ]
+    }
+  ],
+  "limitations": [
+    "No upload, signing, provisioning, App Review or publication approval.",
+    "Source entitlement is not an enforced signed hardware entitlement.",
+    "Build and static bundle inspection do not establish runtime/physical device/cloud inference results.",
+    "Known-pattern screen can miss unfamiliar/encoded secrets."
+  ],
+  "exit_code_evidence": "Root confirmed actual archive runner exit 0, corroborated by ARCHIVE SUCCEEDED marker and compiled artifact."
+}

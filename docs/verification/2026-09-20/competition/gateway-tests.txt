@@ -1,0 +1,55 @@
+test_conflicting_doses_must_both_survive (test_evaluation.EvaluationTests.test_conflicting_doses_must_both_survive) ... ok
+test_omission_cannot_become_a_stop (test_evaluation.EvaluationTests.test_omission_cannot_become_a_stop) ... ok
+test_schema_valid_family_misattribution_fails_quality_gate (test_evaluation.EvaluationTests.test_schema_valid_family_misattribution_fails_quality_gate) ... ok
+test_auth_required (test_gateway.GatewayTests.test_auth_required) ... ok
+test_clarification_cap (test_gateway.GatewayTests.test_clarification_cap) ... ok
+test_disconnect_cancels_work (test_gateway.GatewayTests.test_disconnect_cancels_work) ... ok
+test_duplicate_auth_denied (test_gateway.GatewayTests.test_duplicate_auth_denied) ... ok
+test_failure_never_echoes_phi_or_secrets (test_gateway.GatewayTests.test_failure_never_echoes_phi_or_secrets) ... ok
+test_health_is_content_free (test_gateway.GatewayTests.test_health_is_content_free) ... ok
+test_invalid_request (test_gateway.GatewayTests.test_invalid_request) ... ok
+test_no_cache_headers (test_gateway.GatewayTests.test_no_cache_headers) ... ok
+test_no_patient_state_retained (test_gateway.GatewayTests.test_no_patient_state_retained) ... ok
+test_primary_fallback (test_gateway.GatewayTests.test_primary_fallback) ... ok
+test_prompt_injection_is_only_source_data (test_gateway.GatewayTests.test_prompt_injection_is_only_source_data) ... ok
+test_rate_limit (test_gateway.GatewayTests.test_rate_limit) ... ok
+test_raw_size_limit (test_gateway.GatewayTests.test_raw_size_limit) ... ok
+test_requires_json_content_type (test_gateway.GatewayTests.test_requires_json_content_type) ... ok
+test_unvalidated_primary_falls_back (test_gateway.GatewayTests.test_unvalidated_primary_falls_back) ... ok
+test_wrong_token (test_gateway.GatewayTests.test_wrong_token) ... ok
+test_chunk_overlap_and_dedup (test_gateway.SchemaTests.test_chunk_overlap_and_dedup) ... ok
+test_consent_required (test_gateway.SchemaTests.test_consent_required) ... ok
+test_date_validation (test_gateway.SchemaTests.test_date_validation) ... ok
+test_duplicate_json_keys_rejected (test_gateway.SchemaTests.test_duplicate_json_keys_rejected) ... ok
+test_exact_quote_required (test_gateway.SchemaTests.test_exact_quote_required) ... ok
+test_explicit_unknown_defaults (test_gateway.SchemaTests.test_explicit_unknown_defaults) ... ok
+test_mock_requires_explicit_configuration (test_gateway.SchemaTests.test_mock_requires_explicit_configuration) ... ok
+test_nan_json_rejected (test_gateway.SchemaTests.test_nan_json_rejected) ... ok
+test_no_additional_state_fields (test_gateway.SchemaTests.test_no_additional_state_fields) ... ok
+test_numeric_boolean_and_nonfinite_rejected (test_gateway.SchemaTests.test_numeric_boolean_and_nonfinite_rejected) ... ok
+test_preserves_conditionality_negation_and_family (test_gateway.SchemaTests.test_preserves_conditionality_negation_and_family) ... ok
+test_provider_urls_server_config_only (test_gateway.SchemaTests.test_provider_urls_server_config_only) ... ok
+test_ranges_and_enums (test_gateway.SchemaTests.test_ranges_and_enums) ... ok
+test_request_limits (test_gateway.SchemaTests.test_request_limits) ... ok
+test_duplicate_or_malformed_config_rejected (test_providers.ConfigurationTests.test_duplicate_or_malformed_config_rejected) ... ok
+test_example_and_control_character_tokens_are_rejected (test_providers.ConfigurationTests.test_example_and_control_character_tokens_are_rejected) ... ok
+test_secret_file_exclusive_private_round_trip (test_providers.ConfigurationTests.test_secret_file_exclusive_private_round_trip) ... ok
+test_check_accepts_only_fixed_synthetic_request (test_providers.ConnectionTests.test_check_accepts_only_fixed_synthetic_request) ... ok
+test_check_reports_fallback (test_providers.ConnectionTests.test_check_reports_fallback) ... ok
+test_configuration_requires_auth_and_never_calls_model (test_providers.ConnectionTests.test_configuration_requires_auth_and_never_calls_model) ... ok
+test_duplicate_content_headers_rejected (test_providers.ConnectionTests.test_duplicate_content_headers_rejected) ... ok
+test_missing_or_changed_recipient_consent_prevents_provider_call (test_providers.ConnectionTests.test_missing_or_changed_recipient_consent_prevents_provider_call) ... ok
+test_source_limit_rejects_before_model_call (test_providers.ConnectionTests.test_source_limit_rejects_before_model_call) ... ok
+test_complete_valid_response_is_validated (test_providers.ProviderTests.test_complete_valid_response_is_validated) ... ok
+test_configuration_bounds (test_providers.ProviderTests.test_configuration_bounds) ... ok
+test_fallback_adapter_has_independent_parameters (test_providers.ProviderTests.test_fallback_adapter_has_independent_parameters) ... ok
+test_kimi_environment_omits_incompatible_temperature (test_providers.ProviderTests.test_kimi_environment_omits_incompatible_temperature) ... ok
+test_openai_uses_current_token_parameter_and_does_not_request_storage (test_providers.ProviderTests.test_openai_uses_current_token_parameter_and_does_not_request_storage) ... ok
+test_partial_fallback_fails_at_startup (test_providers.ProviderTests.test_partial_fallback_fails_at_startup) ... ok
+test_rejects_truncated_refused_and_tool_responses (test_providers.ProviderTests.test_rejects_truncated_refused_and_tool_responses) ... ok
+test_secret_not_in_repr_or_configuration (test_providers.ProviderTests.test_secret_not_in_repr_or_configuration) ... ok
+
+----------------------------------------------------------------------
+Ran 50 tests in 0.046s
+
+OK

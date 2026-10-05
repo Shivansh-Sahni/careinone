@@ -1,0 +1,58 @@
+Building for debugging...
+[Constructing description]
+[Planning deferred tasks]
+[28 / 52]
+[29 / 53] CareCore
+[38 / 100]
+[41 / 100]
+[47 / 100]
+[50 / 100]
+[54 / 100]
+[56 / 100]
+[59 / 100]
+[63 / 100]
+[64 / 100]
+[65 / 100]
+[66 / 100]
+[75 / 100] CareCore
+[77 / 100] CareCore
+[84 / 100]
+[84 / 100] CareCore
+[90 / 101]
+[90 / 101] CareCoreTests-product
+[100 / 142]
+[103 / 142]
+[106 / 142]
+[109 / 142]
+[110 / 142]
+[112 / 142]
+[115 / 142]
+[117 / 142]
+[118 / 142]
+[121 / 142]
+[122 / 142]
+[131 / 142] CareCoreTests-product
+[136 / 142] CareCoreTests-product
+/Users/shivanshsahni/Downloads/Personal/CAC 2026/Tests/CareCoreTests/WorkflowHardeningTests.swift:131:53: warning: '#require(_:_:)' is redundant because 'DateParser.parse("2026-10-01")' never equals 'nil' (from macro 'require')
+129 |     @Test func followUpDatesOneDayApartAreCompared() throws {
+130 |         var a = Claim(sourceID: UUID(), kind: .followUp, label: "Follow-up", quote: "Follow-up requested")
+131 |         a.entityID = UUID(); a.dueAt = try #require(DateParser.parse("2026-10-01")); a.duePrecision = .exact
+    |                                                     `- warning: '#require(_:_:)' is redundant because 'DateParser.parse("2026-10-01")' never equals 'nil' (from macro 'require')
+132 |         var b = a; b.id = UUID(); b.dueAt = Calendar.current.date(byAdding: .day, value: 1, to: a.dueAt!)
+133 |         #expect(Reconciler.conflictReason(a, b) != nil)
+[138 / 142] CareCoreTests-product
+Build complete! (20.11 sec)
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite EntityAliasPolicyTests started.
+◇ Test legacyDuplicateRemovalPreservesOtherAliasesAndCanonicalAssociation() started.
+◇ Test emptyNamesAndStaleItemOrAliasCannotReportSuccess() started.
+◇ Test removingAliasChangesFutureMatchingWithoutRewritingReviewedCare() started.
+◇ Test caseAndWhitespaceDuplicatesCannotAddFalseHistory() started.
+✔ Test legacyDuplicateRemovalPreservesOtherAliasesAndCanonicalAssociation() passed after 0.002 seconds.
+✔ Test removingAliasChangesFutureMatchingWithoutRewritingReviewedCare() passed after 0.002 seconds.
+✔ Test caseAndWhitespaceDuplicatesCannotAddFalseHistory() passed after 0.002 seconds.
+✔ Test emptyNamesAndStaleItemOrAliasCannotReportSuccess() passed after 0.002 seconds.
+✔ Suite EntityAliasPolicyTests passed after 0.002 seconds.
+✔ Test run with 4 tests in 1 suite passed after 0.002 seconds.

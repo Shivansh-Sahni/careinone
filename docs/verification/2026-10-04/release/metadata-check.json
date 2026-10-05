@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-04",
+  "checked_utc": "2026-10-05T04:27:20.481009+00:00",
+  "checks": {
+    "listingFieldLengths": {
+      "App name": {
+        "characters": 9,
+        "limit": 30,
+        "passes": true
+      },
+      "Subtitle": {
+        "characters": 20,
+        "limit": 30,
+        "passes": true
+      },
+      "Promotional text": {
+        "characters": 146,
+        "limit": 170,
+        "passes": true
+      },
+      "Description": {
+        "characters": 2365,
+        "limit": 4000,
+        "passes": true
+      },
+      "Keywords": {
+        "characters": 90,
+        "limit": 100,
+        "passes": true
+      },
+      "First-version release notes": {
+        "characters": 166,
+        "limit": 4000,
+        "passes": true
+      }
+    },
+    "localLinksValid": true,
+    "providerSecretPatternsAbsent": true,
+    "localMarkdownFilesChecked": 23,
+    "badLocalLinks": [],
+    "secretPatternFileCount": 0,
+    "secretScreenScope": "Bounded provider-key/private-key patterns with token boundary; not universal credential-absence proof."
+  },
+  "artifactCount": 66,
+  "status": "Current metadata/links screened; C5 core173, backend108, normally signed native128pass/one gated live-cloud skip and unchanged-source unsigned archive audited. SE6/companion4/review-workspace2/Ask1UI+2native/ordinary editors passed in separate focused actions; no repeated-case aggregate. Final whole C5UI, native real-cloud missing credential pair, current production Calendar HTML bytes, authentic final screenshots, actual hardware and NutriAssist identity/legal/signing remain separate gates. Not uploadable or submission-ready."
+}

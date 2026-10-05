@@ -1,0 +1,50 @@
+[
+  {
+    "file": "screenshots/follow-through-accessibility.png",
+    "test": "PatientCompanionUITests/testAppointmentCompanionAtAccessibilityTextSize()",
+    "bundle": "/private/tmp/CareInOnePatientCompanionsLayout.xcresult",
+    "timestamp": 1790008669.839,
+    "syntheticOnly": true,
+    "sha256": "c02185b95e5bb44483dd9512908a083f14abf92c6c897635cbc99d5df869dd79"
+  },
+  {
+    "file": "screenshots/appointment-accessibility.png",
+    "test": "PatientCompanionUITests/testAppointmentCompanionAtAccessibilityTextSize()",
+    "bundle": "/private/tmp/CareInOnePatientCompanionsLayout.xcresult",
+    "timestamp": 1790008546.52,
+    "syntheticOnly": true,
+    "sha256": "f7087dc8fd6fe4a073f2e2c4be7ab201dea5a608c5a694c94987d0a7d7932dd6"
+  },
+  {
+    "file": "screenshots/appointment-answer.png",
+    "test": "PatientCompanionUITests/testEmptyPatientAppointmentBriefAnswersResumeAndReview()",
+    "bundle": "/private/tmp/CareInOnePatientCompanionsLayout.xcresult",
+    "timestamp": 1790008749.882,
+    "syntheticOnly": true,
+    "sha256": "b646c985d6e6b2681ab9a5dd063a4a47d91d7a77f7279e19fcf1533ed809709d"
+  },
+  {
+    "file": "screenshots/opening-brief.png",
+    "test": "PatientCompanionUITests/testEmptyPatientAppointmentBriefAnswersResumeAndReview()",
+    "bundle": "/private/tmp/CareInOnePatientCompanionsLayout.xcresult",
+    "timestamp": 1790008709.863,
+    "syntheticOnly": true,
+    "sha256": "9801a32919066261be9f6e3dba99ba7fc880dec21e27755713996fe5ef89a59d"
+  },
+  {
+    "file": "screenshots/follow-through-reply.png",
+    "test": "PatientCompanionUITests/testFollowThroughMessageOutreachReplyPersistsAndNeedsReview()",
+    "bundle": "/private/tmp/CareInOnePatientCompanionsFinal.xcresult",
+    "timestamp": 1790008244.96,
+    "syntheticOnly": true,
+    "sha256": "871d46f43d8a394271380023aec40bb7a081cfef9fb395d5a58f67d8a265306e"
+  },
+  {
+    "file": "screenshots/follow-through-next-step.png",
+    "test": "PatientCompanionUITests/testFollowThroughMessageOutreachReplyPersistsAndNeedsReview()",
+    "bundle": "/private/tmp/CareInOnePatientCompanionsFinal.xcresult",
+    "timestamp": 1790008202.727,
+    "syntheticOnly": true,
+    "sha256": "14c44d741ded5cca52c2573184e58c67638127dd065d2b00fd1df9a6a52ec135"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "yaml_parsed": true,
+  "preflight_steps": [
+    {
+      "job": "core",
+      "runner": "macos-latest",
+      "run": "python3 scripts/release_preflight.py"
+    }
+  ],
+  "jobs": {
+    "core": "macos-latest",
+    "gateway": "ubuntu-latest",
+    "ios": "macos-latest"
+  },
+  "scope": "Static parser and job-membership validation only; no GitHub Actions execution"
+}

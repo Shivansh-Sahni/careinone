@@ -1,0 +1,67 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "8F5B891A-2848-4BFC-8726-64A936A6601C",
+        "deviceName" : "CareInOne temporary small-phone verification",
+        "modelName" : "iPhone SE (3rd generation)",
+        "osBuildNumber" : "22C150",
+        "osVersion" : "18.2",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 2,
+      "passedTests" : 1,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "CareInOne · Built with macOS 26.6.2",
+  "expectedFailures" : 0,
+  "failedTests" : 2,
+  "finishTime" : 1791178515.727,
+  "passedTests" : 1,
+  "result" : "Failed",
+  "runtimeWarnings" : [
+    {
+      "issueType" : "Runtime Warning",
+      "message" : "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType" : "Runtime Warning",
+      "message" : "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "skippedTests" : 0,
+  "startTime" : 1791177775.22,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+    {
+      "failureText" : "XCTAssertEqual failed: (\"Optional(\"Allergy: latex\\nBring records\")\") is not equal to (\"Optional(\"\")\")",
+      "targetName" : "CareInOneUITests",
+      "testIdentifier" : 1,
+      "testIdentifierString" : "CapturePipelineUITests/testKeyboardDoneAndClearedWorkingTextKeepOriginalEvidence()",
+      "testIdentifierURL" : "test://com.apple.xcode/CareInOne/CareInOneUITests/CapturePipelineUITests/testKeyboardDoneAndClearedWorkingTextKeepOriginalEvidence",
+      "testName" : "testKeyboardDoneAndClearedWorkingTextKeepOriginalEvidence()"
+    },
+    {
+      "failureText" : "XCTAssertTrue failed",
+      "targetName" : "CareInOneUITests",
+      "testIdentifier" : 3,
+      "testIdentifierString" : "FollowThroughDraftRecoveryUITests/testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard()",
+      "testIdentifierURL" : "test://com.apple.xcode/CareInOne/CareInOneUITests/FollowThroughDraftRecoveryUITests/testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard",
+      "testName" : "testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard()"
+    }
+  ],
+  "title" : "Test - CareInOne",
+  "topInsights" : [
+
+  ],
+  "totalTestCount" : 3
+}

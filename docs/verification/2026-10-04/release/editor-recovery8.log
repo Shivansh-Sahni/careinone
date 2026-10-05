@@ -1,0 +1,820 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CareInOne.xcodeproj -scheme CareInOne -configuration Debug -destination "platform=iOS Simulator,id=36A9D3D3-365D-422E-8E9D-135DEB8BB063" -derivedDataPath /private/tmp/CareInOneEditorRecovery5Authorized -resultBundlePath /private/tmp/CareInOneEditorRecovery8.xcresult -parallel-testing-enabled NO "-only-testing:CareInOneUITests/EditorRecoveryUITests/testPersonalNoteDiscardPreservesSavedMultilineContentAfterRelaunch" CODE_SIGNING_ALLOWED=NO test
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  CareInOne: /Users/shivanshsahni/Downloads/Personal/CAC 2026 @ local
+
+Writing result bundle at path:
+	/private/tmp/CareInOneEditorRecovery8.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (5 targets)
+    Target 'CareInOneIntegrationTests' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareInOne' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore-product' in project 'CareInOne'
+    Target 'CareInOneUITests' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareInOne' in project 'CareInOne'
+    Target 'CareInOne' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore-product' in project 'CareInOne'
+    Target 'CareCore-product' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore' in project 'CareInOne'
+    Target 'CareCore' in project 'CareInOne' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne/Resources/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: da1f7d07dc9235dadd3a82962e8e7a24
+Build description path: /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/XCBuildData/da1f7d07dc9235dadd3a82962e8e7a24.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache
+
+ProcessInfoPlistFile /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks/CareCore_-6A9FFEEF0198AEF4_PackageProduct.framework/Info.plist /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareCore-product-t.build/empty-CareCore_-6A9FFEEF0198AEF4_PackageProduct.plist (in target 'CareCoredynamic-product' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/Package.swift')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-infoPlistUtility /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareCore-product-t.build/empty-CareCore_-6A9FFEEF0198AEF4_PackageProduct.plist -producttype com.apple.product-type.framework -expandbuildsettings -format binary -platform iphonesimulator -o /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks/CareCore_-6A9FFEEF0198AEF4_PackageProduct.framework/Info.plist
+
+CompileAssetCatalogVariant thinned /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets --compile /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_dependencies_thinned --output-partial-info-plist /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --filter-for-thinning-device-configuration iPhone19,2 --filter-for-device-os-version 27.0 --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 18.0 --platform iphonesimulator
+/* com.apple.actool.compilation-results */
+/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_generated_info.plist_thinned
+/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_output/thinned/Assets.car
+
+
+GenerateAssetSymbols /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets --compile /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_dependencies --output-partial-info-plist /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_generated_info.plist --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 18.0 --platform iphonesimulator --bundle-identifier org.carecontinuity.app --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources/GeneratedAssetSymbols.h
+/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+SwiftDriver CareInOne normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareContinuity -Onone @/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList -DDEBUG -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneEditorRecovery5Authorized/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-generated-files.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-own-target-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-project-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+LinkAssetCatalog /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Assets.xcassets (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-linkAssetCatalog --thinned /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_output/thinned --thinned-dependencies /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_generated_info.plist_thinned --unthinned /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_output/unthinned --unthinned-dependencies /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_generated_info.plist_unthinned --output /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app --plist-output /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_generated_info.plist
+note: Emplaced /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/AppIcon60x60@2x.png (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+note: Emplaced /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/AppIcon76x76@2x~ipad.png (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+note: Emplaced /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/Assets.car (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ CareContinuity (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+
+SwiftCompile normal arm64 Compiling\ ContinuityViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/ContinuityViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/ContinuityViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile ContinuityViews.swift
+
+SwiftCompile normal arm64 Compiling\ ReviewEditor.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/ReviewEditor.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/ReviewEditor.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile ReviewEditor.swift
+
+SwiftCompile normal arm64 Compiling\ AppStore.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/AppStore.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/App/AppStore.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile AppStore.swift
+
+SwiftCompile normal arm64 Compiling\ PatientWorkflowViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/PatientWorkflowViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/PatientWorkflowViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile PatientWorkflowViews.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling ReviewEditor.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 Compiling\ SourceViews.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/SourceViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/SourceViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile SourceViews.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling AppStore.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ContinuityViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 Compiling\ VisitWorkspaceView.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/VisitWorkspaceView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/VisitWorkspaceView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile VisitWorkspaceView.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling PatientWorkflowViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 Compiling\ DesignSystem.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/DesignSystem.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Views/DesignSystem.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile DesignSystem.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling VisitWorkspaceView.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriverJobDiscovery normal arm64 Compiling DesignSystem.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriverJobDiscovery normal arm64 Compiling SourceViews.swift (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for CareContinuity (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation CareInOne normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareContinuity -Onone @/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList -DDEBUG -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneEditorRecovery5Authorized/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-generated-files.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-own-target-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-project-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver\ Compilation\ Requirements CareInOne normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareContinuity -Onone @/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList -DDEBUG -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneEditorRecovery5Authorized/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-generated-files.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-own-target-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-project-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareContinuity.swiftmodule/arm64-apple-ios-simulator.swiftmodule /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareContinuity.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareContinuity.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.abi.json (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.abi.json /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareContinuity.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareContinuity.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftsourceinfo (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftsourceinfo /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareContinuity.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+Ld /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne.debug.dylib normal (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -filelist /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne.LinkFileList -install_name @rpath/CareInOne.debug.dylib -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path -Xlinker -rpath -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne_lto.o -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareContinuity.swiftmodule -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks/CareCore_-6A9FFEEF0198AEF4_PackageProduct.framework/CareCore_-6A9FFEEF0198AEF4_PackageProduct -o /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne.debug.dylib
+
+ConstructStubExecutorLinkFileList /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-ExecutorLinkFileList-normal-arm64.txt (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    construct-stub-executor-link-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+Ld /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne normal (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker @loader_path -Xlinker -rpath -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne-ExecutorLinkFileList-normal-arm64.txt /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne.debug.dylib -o /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne
+
+ExtractAppIntentsMetadata (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name CareContinuity --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier org.carecontinuity.app --output /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app --target-triple arm64-apple-ios18.0-simulator --binary-file /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne --dependency-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne_dependency_info.dat --stringsdata-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftFileList --metadata-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne.DependencyMetadataFileList --static-metadata-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/CareInOne.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/Objects-normal/arm64/CareInOne.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-04 23:08:20.429 appintentsmetadataprocessor[27101:30477528] Starting appintentsmetadataprocessor export
+2026-10-04 23:08:22.437 appintentsmetadataprocessor[27101:30477528] Extracted no relevant App Intents symbols, skipping writing output
+
+SwiftDriver CareInOneIntegrationTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneIntegrationTests -Onone @/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.SwiftFileList -DDEBUG -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneEditorRecovery5Authorized/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-generated-files.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-own-target-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-project-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+ProcessInfoPlistFile /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/Info.plist /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Info.plist (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-infoPlistUtility /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne/Resources/Info.plist -producttype com.apple.product-type.application -genpkginfo /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/assetcatalog_generated_info.plist -scanforprivacyfile /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/Frameworks/CareCore_-6A9FFEEF0198AEF4_PackageProduct.framework -o /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/Info.plist
+
+WriteAuxiliaryFile /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList
+
+WriteAuxiliaryFile /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftConstValuesFileList (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.LinkFileList (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.LinkFileList
+
+WriteAuxiliaryFile /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    write-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json
+
+SwiftDriver CareInOneUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneUITests -Onone @/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList -DDEBUG -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneEditorRecovery5Authorized/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-generated-files.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-own-target-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-project-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+CopySwiftLibs /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne.debug.dylib --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/Frameworks --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/SystemExtensions --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/Extensions --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks/CareCore_-6A9FFEEF0198AEF4_PackageProduct.framework --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ CareInOneUITests (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+
+SwiftCompile normal arm64 Compiling\ CareInOneUITests.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/CareInOneUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/CareInOneUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile CareInOneUITests.swift
+
+SwiftCompile normal arm64 Compiling\ AskPrivacyUITests.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/AskPrivacyUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/AskPrivacyUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile AskPrivacyUITests.swift
+
+SwiftCompile normal arm64 Compiling\ EditorRecoveryUITests.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/EditorRecoveryUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/EditorRecoveryUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile EditorRecoveryUITests.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ CareInOneIntegrationTests (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+
+SwiftCompile normal arm64 Compiling\ CapturePipelineIntegrationTests.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/IntegrationTests/CapturePipelineIntegrationTests.swift (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/IntegrationTests/CapturePipelineIntegrationTests.swift (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile CapturePipelineIntegrationTests.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for CareInOneUITests (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation\ Requirements CareInOneUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneUITests -Onone @/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList -DDEBUG -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneEditorRecovery5Authorized/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-generated-files.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-own-target-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-project-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.swiftmodule /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.swiftdoc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftdoc (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftdoc /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.abi.json (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.abi.json /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftsourceinfo (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftsourceinfo /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling AskPrivacyUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for CareInOneIntegrationTests (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation\ Requirements CareInOneIntegrationTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneIntegrationTests -Onone @/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.SwiftFileList -DDEBUG -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneEditorRecovery5Authorized/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-generated-files.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-own-target-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-project-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneIntegrationTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.swiftsourceinfo (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.swiftsourceinfo /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneIntegrationTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneIntegrationTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.swiftmodule (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.swiftmodule /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneIntegrationTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneIntegrationTests.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.abi.json (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.abi.json /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneIntegrationTests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+SwiftDriverJobDiscovery normal arm64 Compiling EditorRecoveryUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriverJobDiscovery normal arm64 Compiling CareInOneUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation CareInOneUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneUITests -Onone @/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList -DDEBUG -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneEditorRecovery5Authorized/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-generated-files.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-own-target-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-project-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling CapturePipelineIntegrationTests.swift (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation CareInOneIntegrationTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneIntegrationTests -Onone @/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.SwiftFileList -DDEBUG -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneEditorRecovery5Authorized/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneEditorRecovery5Authorized/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneEditorRecovery5Authorized/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-generated-files.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-own-target-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests-project-headers.hmap -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+ProcessInfoPlistFile /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/Info.plist /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/empty-CareInOneIntegrationTests.plist (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-infoPlistUtility /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/empty-CareInOneIntegrationTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -format binary -platform iphonesimulator -o /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/Info.plist
+
+Ld /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/CareInOneIntegrationTests normal (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -filelist /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path -Xlinker -rpath -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -bundle_loader /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne -Xlinker -object_path_lto -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests_lto.o -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks/CareCore_-6A9FFEEF0198AEF4_PackageProduct.framework/CareCore_-6A9FFEEF0198AEF4_PackageProduct /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/CareInOne.debug.dylib -o /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/CareInOneIntegrationTests
+
+ExtractAppIntentsMetadata (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name CareInOneIntegrationTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier org.carecontinuity.integrationtests --output /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest --target-triple arm64-apple-ios18.0-simulator --binary-file /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/CareInOneIntegrationTests --dependency-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests_dependency_info.dat --stringsdata-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.SwiftFileList --metadata-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests.DependencyMetadataFileList --static-metadata-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/CareInOneIntegrationTests.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/Objects-normal/arm64/CareInOneIntegrationTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-04 23:08:46.927 appintentsmetadataprocessor[27193:30478994] Starting appintentsmetadataprocessor export
+2026-10-04 23:08:48.754 appintentsmetadataprocessor[27193:30478994] Extracted no relevant App Intents symbols, skipping writing output
+
+CopySwiftLibs /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest (in target 'CareInOneIntegrationTests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/CareInOneIntegrationTests --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/Frameworks --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/PlugIns --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/SystemExtensions --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/Extensions --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/PackageFrameworks/CareCore_-6A9FFEEF0198AEF4_PackageProduct.framework --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app/PlugIns/CareInOneIntegrationTests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneIntegrationTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+Validate /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app (in target 'CareInOne' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-validationUtility /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOne.app -shallow-bundle -infoplist-subpath Info.plist
+
+ProcessInfoPlistFile /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Info.plist /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/empty-CareInOneUITests.plist (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-infoPlistUtility /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/empty-CareInOneUITests.plist -producttype com.apple.product-type.bundle.ui-testing -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/ProductTypeInfoPlistAdditions.plist -o /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Info.plist
+
+Ld /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests normal (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -filelist /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_lto.o -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport -o /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests
+
+ExtractAppIntentsMetadata (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name CareInOneUITests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier org.carecontinuity.uitests --output /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest --target-triple arm64-apple-ios18.0-simulator --binary-file /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests --dependency-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_dependency_info.dat --stringsdata-file /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList --metadata-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.DependencyMetadataFileList --static-metadata-file-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-04 23:08:51.111 appintentsmetadataprocessor[27209:30479333] Starting appintentsmetadataprocessor export
+2026-10-04 23:08:51.134 appintentsmetadataprocessor[27209:30479333] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CopySwiftLibs /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Frameworks --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/PlugIns --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/SystemExtensions --scan-folder /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Extensions --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/CareInOneEditorRecovery5Authorized/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+PruneExplicitPrecompiledModules /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneEditorRecovery5Authorized/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneEditorRecovery5Authorized/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+Resolve Package Graph
+
+Resolve Package Graph
+
+Resolve Package Graph
+
+2026-10-04 23:13:21.616852-0400 CareInOneUITests-Runner[28263:30494752] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-10-04 23:14:10.531.
+Test Suite 'CareInOneUITests.xctest' started at 2026-10-04 23:14:10.543.
+Test Suite 'EditorRecoveryUITests' started at 2026-10-04 23:14:10.543.
+2026-10-04 23:14:15.963 xcodebuild[26675:30471102] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-04 23:14:15.970 xcodebuild[26675:30471102] [MT] IDELaunchParametersSnapshot: no debugger version
+Test Case '-[CareInOneUITests.EditorRecoveryUITests testPersonalNoteDiscardPreservesSavedMultilineContentAfterRelaunch]' started.
+    t =     0.08s Start Test at 2026-10-04 23:14:10.620
+    t =     0.67s Set Up
+    t =     0.71s Open org.carecontinuity.app
+    t =     0.72s     Launch org.carecontinuity.app
+objc[28263]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.434.0.MSFl2k/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x103514398) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.434.0.MSFl2k/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x103658310). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =    34.24s         Setting up automation session
+    t =    53.90s         Wait for org.carecontinuity.app to idle
+    t =    61.38s Checking existence of `"Start with an empty care memory" Button`
+    t =    62.43s Find the "Start with an empty care memory" Button
+    t =    63.13s Find the Target Application 'org.carecontinuity.app'
+    t =    63.41s Get all elements bound by index for: Descendants matching type Table
+    t =    63.53s Get all elements bound by index for: Descendants matching type CollectionView
+    t =    63.58s Get all elements bound by index for: Descendants matching type ScrollView
+    t =    63.64s Checking existence of `ScrollView (Element at index 0)`
+    t =    63.73s Find the ScrollView (Element at index 0)
+    t =    64.05s Checking existence of `ScrollView at {{0.0, 0.0}, {402.0, 874.0}}`
+    t =    64.16s Find the ScrollView at {{0.0, 0.0}, {402.0, 874.0}}
+    t =    64.33s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    64.52s Get all elements bound by index for: Descendants matching type TabBar
+    t =    64.60s Checking existence of `Keyboard (First Match)`
+    t =    65.40s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 689.6) for 0.1 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 184.4) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    65.41s     Wait for org.carecontinuity.app to idle
+    t =    65.43s     Find the Target Application 'org.carecontinuity.app'
+    t =    65.47s     Check for interrupting elements affecting "CareInOne" Application
+    t =    65.76s     Synthesize event
+    t =    65.77s         Find the Target Application 'org.carecontinuity.app'
+    t =    65.83s         Find the Target Application 'org.carecontinuity.app'
+    t =    65.87s         Find the Target Application 'org.carecontinuity.app'
+    t =    65.92s         Find the Target Application 'org.carecontinuity.app'
+    t =    65.98s         Find the Target Application 'org.carecontinuity.app'
+    t =    67.54s     Wait for org.carecontinuity.app to idle
+    t =    67.56s Checking existence of `"Start with an empty care memory" Button`
+    t =    68.65s Find the "Start with an empty care memory" Button
+    t =    68.93s Waiting 5.0s for "Start with an empty care memory" Button to exist
+    t =    69.97s     Checking `Expect predicate `existsNoRetry == 1` for object "Start with an empty care memory" Button`
+    t =    69.97s         Checking existence of `"Start with an empty care memory" Button`
+    t =    70.04s Find the "Start with an empty care memory" Button
+    t =    70.22s Tap "Start with an empty care memory" Button
+    t =    70.22s     Wait for org.carecontinuity.app to idle
+    t =    70.23s     Find the "Start with an empty care memory" Button
+    t =    70.38s     Check for interrupting elements affecting "Start with an empty care memory" Button
+    t =    70.66s     Synthesize event
+    t =    71.10s     Wait for org.carecontinuity.app to idle
+    t =    77.87s Waiting 20.0s for "Today" Button to exist
+    t =    78.89s     Checking `Expect predicate `existsNoRetry == 1` for object "Today" Button`
+    t =    78.89s         Checking existence of `"Today" Button`
+    t =    79.63s Checking existence of `"OK" Button`
+    t =    79.74s Tap "My Care" Button
+    t =    79.74s     Wait for org.carecontinuity.app to idle
+    t =    79.74s     Find the "My Care" Button
+    t =    80.00s     Check for interrupting elements affecting "heart.text.clipboard" Button
+    t =    80.21s     Synthesize event
+    t =    80.71s     Wait for org.carecontinuity.app to idle
+    t =    84.36s Checking existence of `"Personal notes" Button`
+    t =    85.48s Find the Target Application 'org.carecontinuity.app'
+    t =    85.58s Get all elements bound by index for: Descendants matching type Table
+    t =    85.69s Get all elements bound by index for: Descendants matching type CollectionView
+    t =    85.81s Get all elements bound by index for: Descendants matching type ScrollView
+    t =    85.92s Checking existence of `CollectionView (Element at index 0)`
+    t =    86.04s Find the CollectionView (Element at index 0)
+    t =    89.23s Checking existence of `CollectionView at {{0.0, 0.0}, {402.0, 874.0}}`
+    t =    89.35s Find the CollectionView at {{0.0, 0.0}, {402.0, 874.0}}
+    t =    89.56s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    90.00s Find the Target Application 'org.carecontinuity.app'
+    t =    90.17s Checking existence of `NavigationBar (Element at index 0)`
+    t =    90.30s Find the NavigationBar (Element at index 0)
+    t =    90.85s Get all elements bound by index for: Descendants matching type TabBar
+    t =    90.97s Find the Target Application 'org.carecontinuity.app'
+    t =    91.04s Checking existence of `TabBar (Element at index 0)`
+    t =    91.15s Find the TabBar (Element at index 0)
+    t =    91.28s Checking existence of `Keyboard (First Match)`
+    t =    93.07s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 656.8) for 0.1 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 302.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    93.07s     Wait for org.carecontinuity.app to idle
+    t =    93.08s     Find the Target Application 'org.carecontinuity.app'
+    t =    93.23s     Check for interrupting elements affecting "CareInOne" Application
+    t =    93.65s     Synthesize event
+    t =    93.67s         Find the Target Application 'org.carecontinuity.app'
+    t =    94.03s         Find the Target Application 'org.carecontinuity.app'
+    t =    94.24s         Find the Target Application 'org.carecontinuity.app'
+    t =    94.44s         Find the Target Application 'org.carecontinuity.app'
+    t =    94.56s         Find the Target Application 'org.carecontinuity.app'
+    t =    95.77s     Wait for org.carecontinuity.app to idle
+    t =    97.38s Checking existence of `"Personal notes" Button`
+    t =    97.60s Find the "Personal notes" Button
+    t =    97.80s Waiting 5.0s for "Personal notes" Button to exist
+    t =    98.83s     Checking `Expect predicate `existsNoRetry == 1` for object "Personal notes" Button`
+    t =    98.83s         Checking existence of `"Personal notes" Button`
+    t =    99.09s Find the "Personal notes" Button
+    t =    99.34s Tap "Personal notes" Button
+    t =    99.34s     Wait for org.carecontinuity.app to idle
+    t =    99.35s     Find the "Personal notes" Button
+    t =    99.50s     Check for interrupting elements affecting "Personal notes" Button
+    t =    99.71s     Synthesize event
+    t =   100.12s     Wait for org.carecontinuity.app to idle
+    t =   105.23s Checking existence of `"Write a personal note" Button`
+    t =   106.47s Find the "Write a personal note" Button
+    t =   106.69s Waiting 5.0s for "Write a personal note" Button to exist
+    t =   107.73s     Checking `Expect predicate `existsNoRetry == 1` for object "Write a personal note" Button`
+    t =   107.74s         Checking existence of `"Write a personal note" Button`
+    t =   107.91s Find the "Write a personal note" Button
+    t =   108.04s Tap "Write a personal note" Button
+    t =   108.04s     Wait for org.carecontinuity.app to idle
+    t =   108.04s     Find the "Write a personal note" Button
+    t =   108.13s     Check for interrupting elements affecting "Write a personal note" Button
+    t =   108.30s     Synthesize event
+    t =   108.67s     Wait for org.carecontinuity.app to idle
+    t =   137.94s Checking existence of `"personal-note-text-paste" Button`
+    t =   138.53s Find the "personal-note-text-paste" Button
+    t =   138.76s Waiting 5.0s for "personal-note-text-paste" Button to exist
+    t =   139.81s     Checking `Expect predicate `existsNoRetry == 1` for object "personal-note-text-paste" Button`
+    t =   139.82s         Checking existence of `"personal-note-text-paste" Button`
+    t =   139.95s Find the "personal-note-text-paste" Button
+    t =   140.11s Tap "personal-note-text-paste" Button
+    t =   140.11s     Wait for org.carecontinuity.app to idle
+    t =   140.11s     Find the "personal-note-text-paste" Button
+    t =   140.22s     Check for interrupting elements affecting "personal-note-text-paste" Button
+    t =   140.37s     Synthesize event
+    t =   140.73s     Wait for org.carecontinuity.app to idle
+    t =   140.74s Checking existence of `"Allow Paste" Button`
+    t =   141.26s Waiting 5.0s for "personal-note-text" TextView to exist
+    t =   142.27s     Checking `Expect predicate `existsNoRetry == 1` for object "personal-note-text" TextView`
+    t =   142.27s         Checking existence of `"personal-note-text" TextView`
+    t =   142.48s Find the "personal-note-text" TextView
+    t =   142.70s Checking existence of `"Save changes" Button`
+    t =   142.86s Find the Target Application 'org.carecontinuity.app'
+    t =   143.02s Get all elements bound by index for: Descendants matching type Table
+    t =   143.12s Get all elements bound by index for: Descendants matching type CollectionView
+    t =   143.23s Get all elements bound by index for: Descendants matching type ScrollView
+    t =   143.34s Checking existence of `CollectionView (Element at index 0)`
+    t =   143.42s Find the CollectionView (Element at index 0)
+    t =   143.65s Checking existence of `CollectionView at {{0.0, 62.0}, {402.0, 812.0}}`
+    t =   143.77s Find the CollectionView at {{0.0, 62.0}, {402.0, 812.0}}
+    t =   143.87s Checking existence of `CollectionView (Element at index 1)`
+    t =   143.97s Find the CollectionView (Element at index 1)
+    t =   144.15s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =   144.25s Find the Target Application 'org.carecontinuity.app'
+    t =   144.32s Checking existence of `NavigationBar (Element at index 0)`
+    t =   144.42s Find the NavigationBar (Element at index 0)
+    t =   144.51s Find the Target Application 'org.carecontinuity.app'
+    t =   144.59s Checking existence of `NavigationBar (Element at index 1)`
+    t =   144.69s Find the NavigationBar (Element at index 1)
+    t =   144.80s Get all elements bound by index for: Descendants matching type TabBar
+    t =   144.93s Find the Target Application 'org.carecontinuity.app'
+    t =   145.01s Checking existence of `TabBar (Element at index 0)`
+    t =   145.11s Find the TabBar (Element at index 0)
+    t =   145.21s Checking existence of `Keyboard (First Match)`
+    t =   145.70s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 660.0) for 0.1 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 315.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =   145.70s     Wait for org.carecontinuity.app to idle
+    t =   145.70s     Find the Target Application 'org.carecontinuity.app'
+    t =   145.76s     Check for interrupting elements affecting "CareInOne" Application
+    t =   145.88s     Synthesize event
+    t =   145.89s         Find the Target Application 'org.carecontinuity.app'
+    t =   145.95s         Find the Target Application 'org.carecontinuity.app'
+    t =   146.02s         Find the Target Application 'org.carecontinuity.app'
+    t =   146.09s         Find the Target Application 'org.carecontinuity.app'
+    t =   146.16s         Find the Target Application 'org.carecontinuity.app'
+    t =   147.30s     Wait for org.carecontinuity.app to idle
+    t =   147.34s Checking existence of `"Save changes" Button`
+    t =   147.60s Find the Target Application 'org.carecontinuity.app'
+    t =   147.75s Get all elements bound by index for: Descendants matching type Table
+    t =   147.88s Get all elements bound by index for: Descendants matching type CollectionView
+    t =   148.03s Get all elements bound by index for: Descendants matching type ScrollView
+    t =   148.14s Checking existence of `CollectionView (Element at index 0)`
+    t =   148.22s Find the CollectionView (Element at index 0)
+    t =   148.35s Checking existence of `CollectionView at {{0.0, 62.0}, {402.0, 812.0}}`
+    t =   148.42s Find the CollectionView at {{0.0, 62.0}, {402.0, 812.0}}
+    t =   148.50s Checking existence of `CollectionView (Element at index 1)`
+    t =   148.57s Find the CollectionView (Element at index 1)
+    t =   148.70s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =   148.77s Find the Target Application 'org.carecontinuity.app'
+    t =   148.83s Checking existence of `NavigationBar (Element at index 0)`
+    t =   148.92s Find the NavigationBar (Element at index 0)
+    t =   149.03s Find the Target Application 'org.carecontinuity.app'
+    t =   149.11s Checking existence of `NavigationBar (Element at index 1)`
+    t =   149.21s Find the NavigationBar (Element at index 1)
+    t =   149.31s Get all elements bound by index for: Descendants matching type TabBar
+    t =   149.41s Find the Target Application 'org.carecontinuity.app'
+    t =   149.58s Checking existence of `TabBar (Element at index 0)`
+    t =   149.67s Find the TabBar (Element at index 0)
+    t =   149.77s Checking existence of `Keyboard (First Match)`
+    t =   151.72s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 656.8) for 0.1 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 302.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =   151.72s     Wait for org.carecontinuity.app to idle
+    t =   151.73s     Find the Target Application 'org.carecontinuity.app'
+    t =   151.82s     Check for interrupting elements affecting "CareInOne" Application
+    t =   151.94s     Synthesize event
+    t =   151.95s         Find the Target Application 'org.carecontinuity.app'
+    t =   152.01s         Find the Target Application 'org.carecontinuity.app'
+    t =   152.10s         Find the Target Application 'org.carecontinuity.app'
+    t =   152.17s         Find the Target Application 'org.carecontinuity.app'
+    t =   152.26s         Find the Target Application 'org.carecontinuity.app'
+    t =   153.37s     Wait for org.carecontinuity.app to idle
+    t =   153.77s Checking existence of `"Save changes" Button`
+    t =   153.94s Find the "Save changes" Button
+    t =   154.16s Waiting 5.0s for "Save changes" Button to exist
+    t =   155.20s     Checking `Expect predicate `existsNoRetry == 1` for object "Save changes" Button`
+    t =   155.20s         Checking existence of `"Save changes" Button`
+    t =   155.44s Find the "Save changes" Button
+    t =   155.64s Tap "Save changes" Button
+    t =   155.64s     Wait for org.carecontinuity.app to idle
+    t =   155.65s     Find the "Save changes" Button
+    t =   155.85s     Check for interrupting elements affecting "Save changes" Button
+    t =   155.99s     Synthesize event
+    t =   156.62s     Wait for org.carecontinuity.app to idle
+    t =   158.39s Checking existence of `"Edit note" Button`
+    t =   160.45s Find the Target Application 'org.carecontinuity.app'
+    t =   160.66s Get all elements bound by index for: Descendants matching type Table
+    t =   160.74s Get all elements bound by index for: Descendants matching type CollectionView
+    t =   160.80s Get all elements bound by index for: Descendants matching type ScrollView
+    t =   160.86s Checking existence of `CollectionView (Element at index 0)`
+    t =   160.91s Find the CollectionView (Element at index 0)
+    t =   161.09s Checking existence of `CollectionView at {{0.0, 0.0}, {402.0, 874.0}}`
+    t =   161.15s Find the CollectionView at {{0.0, 0.0}, {402.0, 874.0}}
+    t =   161.21s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =   161.26s Find the Target Application 'org.carecontinuity.app'
+    t =   161.30s Checking existence of `NavigationBar (Element at index 0)`
+    t =   161.34s Find the NavigationBar (Element at index 0)
+    t =   161.42s Get all elements bound by index for: Descendants matching type TabBar
+    t =   161.50s Find the Target Application 'org.carecontinuity.app'
+    t =   161.54s Checking existence of `TabBar (Element at index 0)`
+    t =   161.61s Find the TabBar (Element at index 0)
+    t =   161.67s Checking existence of `Keyboard (First Match)`
+    t =   162.02s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 656.8) for 0.1 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 302.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =   162.02s     Wait for org.carecontinuity.app to idle
+    t =   162.05s     Find the Target Application 'org.carecontinuity.app'
+    t =   162.14s     Check for interrupting elements affecting "CareInOne" Application
+    t =   162.24s     Synthesize event
+    t =   162.25s         Find the Target Application 'org.carecontinuity.app'
+    t =   162.31s         Find the Target Application 'org.carecontinuity.app'
+    t =   162.36s         Find the Target Application 'org.carecontinuity.app'
+    t =   162.40s         Find the Target Application 'org.carecontinuity.app'
+    t =   162.46s         Find the Target Application 'org.carecontinuity.app'
+    t =   163.58s     Wait for org.carecontinuity.app to idle
+    t =   164.11s Checking existence of `"Edit note" Button`
+    t =   164.35s Find the "Edit note" Button
+    t =   164.61s Waiting 5.0s for "Edit note" Button to exist
+    t =   165.67s     Checking `Expect predicate `existsNoRetry == 1` for object "Edit note" Button`
+    t =   165.67s         Checking existence of `"Edit note" Button`
+    t =   165.99s Find the "Edit note" Button
+    t =   167.03s Tap "Edit note" Button
+    t =   167.03s     Wait for org.carecontinuity.app to idle
+    t =   167.03s     Find the "Edit note" Button
+    t =   167.31s     Check for interrupting elements affecting "Edit note" Button
+    t =   167.68s     Synthesize event
+    t =   168.37s     Wait for org.carecontinuity.app to idle
+    t =   173.24s Find the "personal-note-text" TextView
+    t =   173.39s Checking existence of `"personal-note-text" TextView`
+    t =   173.53s Find the "personal-note-text" TextView
+    t =   173.66s Waiting 5.0s for "personal-note-text" TextView to exist
+    t =   174.67s     Checking `Expect predicate `existsNoRetry == 1` for object "personal-note-text" TextView`
+    t =   174.67s         Checking existence of `"personal-note-text" TextView`
+    t =   174.76s Find the "personal-note-text" TextView
+    t =   174.89s Tap "personal-note-text" TextView
+    t =   174.89s     Wait for org.carecontinuity.app to idle
+    t =   174.89s     Find the "personal-note-text" TextView
+    t =   175.00s     Check for interrupting elements affecting "personal-note-text" TextView
+    t =   175.09s     Synthesize event
+    t =   175.43s     Wait for org.carecontinuity.app to idle
+<unknown>:0: warning: -[CareInOneUITests.EditorRecoveryUITests testPersonalNoteDiscardPreservesSavedMultilineContentAfterRelaunch] : Invalid frame dimension (negative or non-finite).
+    t =   200.33s Type 'Unsaved correction' into "personal-note-text" TextView
+    t =   200.34s     Wait for org.carecontinuity.app to idle
+    t =   200.59s     Find the "personal-note-text" TextView
+    t =   202.82s     Check for interrupting elements affecting "personal-note-text" TextView
+    t =   203.06s     Synthesize event
+    t =   206.12s     Wait for org.carecontinuity.app to idle
+    t =   207.74s Waiting 5.0s for "personal-note-text-done" Button to exist
+    t =   208.76s     Checking `Expect predicate `existsNoRetry == 1` for object "personal-note-text-done" Button`
+    t =   208.79s         Checking existence of `"personal-note-text-done" Button`
+    t =   209.14s Tap "personal-note-text-done" Button
+    t =   209.15s     Wait for org.carecontinuity.app to idle
+    t =   209.15s     Find the "personal-note-text-done" Button
+    t =   210.08s     Check for interrupting elements affecting "personal-note-text-done" Button
+    t =   210.40s     Synthesize event
+    t =   210.85s     Wait for org.carecontinuity.app to idle
+    t =   211.21s Waiting 5.0s for Keyboard (First Match) to not exist
+    t =   212.26s     Checking `Expect predicate `existsNoRetry == 0` for object Keyboard (First Match)`
+    t =   212.28s         Checking existence of `Keyboard (First Match)`
+    t =   212.72s Tap "Cancel" Button
+    t =   212.72s     Wait for org.carecontinuity.app to idle
+    t =   212.73s     Find the "Cancel" Button
+    t =   212.87s     Check for interrupting elements affecting "Cancel" Button
+    t =   213.04s     Synthesize event
+    t =   213.40s     Wait for org.carecontinuity.app to idle
+    t =   214.27s Waiting 5.0s for "Discard changes" Button to exist
+    t =   215.34s     Checking `Expect predicate `existsNoRetry == 1` for object "Discard changes" Button`
+    t =   215.35s         Checking existence of `"Discard changes" Button`
+    t =   215.65s Tap "Keep editing" Button
+    t =   215.65s     Wait for org.carecontinuity.app to idle
+    t =   215.68s     Find the "Keep editing" Button
+    t =   215.85s     Check for interrupting elements affecting "Keep editing" Button
+    t =   216.20s     Synthesize event
+    t =   217.12s     Wait for org.carecontinuity.app to idle
+    t =   218.95s Find the "personal-note-text" TextView
+    t =   219.68s Tap "Cancel" Button
+    t =   219.68s     Wait for org.carecontinuity.app to idle
+    t =   219.84s     Find the "Cancel" Button
+    t =   220.29s     Check for interrupting elements affecting "Cancel" Button
+    t =   220.95s     Synthesize event
+    t =   222.00s     Wait for org.carecontinuity.app to idle
+    t =   222.54s Tap "Discard changes" Button
+    t =   222.54s     Wait for org.carecontinuity.app to idle
+    t =   222.59s     Find the "Discard changes" Button
+    t =   222.91s     Check for interrupting elements affecting "Discard changes" Button
+    t =   223.55s     Synthesize event
+    t =   223.96s     Wait for org.carecontinuity.app to idle
+    t =   224.35s Waiting 5.0s for "Edit note" NavigationBar to not exist
+    t =   225.38s     Checking `Expect predicate `existsNoRetry == 0` for object "Edit note" NavigationBar`
+    t =   225.41s         Checking existence of `"Edit note" NavigationBar`
+    t =   225.49s Terminate org.carecontinuity.app:28876
+    t =   226.52s Open org.carecontinuity.app
+    t =   226.52s     Launch org.carecontinuity.app
+2026-10-04 23:17:57.103 xcodebuild[26675:30471102] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-04 23:17:57.104 xcodebuild[26675:30471102] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =   234.68s         Setting up automation session
+    t =   243.64s         Wait for org.carecontinuity.app to idle
+    t =   254.77s Waiting 15.0s for "My Care" Button to exist
+    t =   255.81s     Checking `Expect predicate `existsNoRetry == 1` for object "My Care" Button`
+    t =   255.86s         Checking existence of `"My Care" Button`
+    t =   257.50s Tap "My Care" Button
+    t =   257.50s     Wait for org.carecontinuity.app to idle
+    t =   257.53s     Find the "My Care" Button
+    t =   257.77s     Check for interrupting elements affecting "My Care" Button
+    t =   257.98s     Synthesize event
+    t =   258.52s     Wait for org.carecontinuity.app to idle
+    t =   262.33s Checking existence of `"Personal notes" Button`
+    t =   262.76s Find the Target Application 'org.carecontinuity.app'
+    t =   262.89s Get all elements bound by index for: Descendants matching type Table
+    t =   263.01s Get all elements bound by index for: Descendants matching type CollectionView
+    t =   263.13s Get all elements bound by index for: Descendants matching type ScrollView
+    t =   263.25s Checking existence of `CollectionView (Element at index 0)`
+    t =   263.37s Find the CollectionView (Element at index 0)
+    t =   263.76s Checking existence of `CollectionView at {{0.0, 0.0}, {402.0, 874.0}}`
+    t =   263.90s Find the CollectionView at {{0.0, 0.0}, {402.0, 874.0}}
+    t =   264.10s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =   264.23s Find the Target Application 'org.carecontinuity.app'
+    t =   264.32s Checking existence of `NavigationBar (Element at index 0)`
+    t =   264.41s Find the NavigationBar (Element at index 0)
+    t =   264.53s Get all elements bound by index for: Descendants matching type TabBar
+    t =   264.64s Find the Target Application 'org.carecontinuity.app'
+    t =   264.76s Checking existence of `TabBar (Element at index 0)`
+    t =   264.89s Find the TabBar (Element at index 0)
+    t =   264.99s Checking existence of `Keyboard (First Match)`
+    t =   269.76s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 656.8) for 0.1 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 302.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =   269.76s     Wait for org.carecontinuity.app to idle
+    t =   269.79s     Find the Target Application 'org.carecontinuity.app'
+    t =   269.92s     Check for interrupting elements affecting "CareInOne" Application
+    t =   270.21s     Synthesize event
+    t =   270.22s         Find the Target Application 'org.carecontinuity.app'
+    t =   270.33s         Find the Target Application 'org.carecontinuity.app'
+    t =   270.43s         Find the Target Application 'org.carecontinuity.app'
+    t =   270.54s         Find the Target Application 'org.carecontinuity.app'
+    t =   270.71s         Find the Target Application 'org.carecontinuity.app'
+    t =   271.93s     Wait for org.carecontinuity.app to idle
+    t =   273.45s Checking existence of `"Personal notes" Button`
+    t =   273.66s Find the "Personal notes" Button
+    t =   274.20s Waiting 5.0s for "Personal notes" Button to exist
+    t =   275.29s     Checking `Expect predicate `existsNoRetry == 1` for object "Personal notes" Button`
+    t =   275.30s         Checking existence of `"Personal notes" Button`
+    t =   275.54s Find the "Personal notes" Button
+    t =   275.79s Tap "Personal notes" Button
+    t =   275.79s     Wait for org.carecontinuity.app to idle
+    t =   275.80s     Find the "Personal notes" Button
+    t =   276.16s     Check for interrupting elements affecting "Personal notes" Button
+    t =   276.38s     Synthesize event
+    t =   276.75s     Wait for org.carecontinuity.app to idle
+    t =   277.59s Checking existence of `"Edit note" Button`
+    t =   283.56s Find the Target Application 'org.carecontinuity.app'
+    t =   283.83s Get all elements bound by index for: Descendants matching type Table
+    t =   283.91s Get all elements bound by index for: Descendants matching type CollectionView
+    t =   284.01s Get all elements bound by index for: Descendants matching type ScrollView
+    t =   284.06s Checking existence of `CollectionView (Element at index 0)`
+    t =   284.12s Find the CollectionView (Element at index 0)
+    t =   284.27s Checking existence of `CollectionView at {{0.0, 0.0}, {402.0, 874.0}}`
+    t =   284.32s Find the CollectionView at {{0.0, 0.0}, {402.0, 874.0}}
+    t =   284.37s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =   284.42s Find the Target Application 'org.carecontinuity.app'
+    t =   284.46s Checking existence of `NavigationBar (Element at index 0)`
+    t =   284.54s Find the NavigationBar (Element at index 0)
+    t =   284.62s Get all elements bound by index for: Descendants matching type TabBar
+    t =   284.67s Find the Target Application 'org.carecontinuity.app'
+    t =   284.71s Checking existence of `TabBar (Element at index 0)`
+    t =   284.77s Find the TabBar (Element at index 0)
+    t =   284.86s Checking existence of `Keyboard (First Match)`
+    t =   285.16s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 656.8) for 0.1 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (201.0, 302.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =   285.17s     Wait for org.carecontinuity.app to idle
+    t =   285.17s     Find the Target Application 'org.carecontinuity.app'
+    t =   285.23s     Check for interrupting elements affecting "CareInOne" Application
+    t =   285.30s     Synthesize event
+    t =   285.30s         Find the Target Application 'org.carecontinuity.app'
+    t =   285.35s         Find the Target Application 'org.carecontinuity.app'
+    t =   285.41s         Find the Target Application 'org.carecontinuity.app'
+    t =   285.45s         Find the Target Application 'org.carecontinuity.app'
+    t =   285.52s         Find the Target Application 'org.carecontinuity.app'
+    t =   286.65s     Wait for org.carecontinuity.app to idle
+    t =   287.67s Checking existence of `"Edit note" Button`
+    t =   288.17s Find the "Edit note" Button
+    t =   288.75s Waiting 5.0s for "Edit note" Button to exist
+    t =   289.98s     Checking `Expect predicate `existsNoRetry == 1` for object "Edit note" Button`
+    t =   290.99s         Checking existence of `"Edit note" Button`
+    t =   291.69s Find the "Edit note" Button
+    t =   292.15s Tap "Edit note" Button
+    t =   292.15s     Wait for org.carecontinuity.app to idle
+    t =   292.16s     Find the "Edit note" Button
+    t =   292.48s     Check for interrupting elements affecting "Edit note" Button
+    t =   292.72s     Synthesize event
+    t =   293.40s     Wait for org.carecontinuity.app to idle
+    t =   299.59s Find the "personal-note-text" TextView
+    t =   300.03s Tap "Cancel" Button
+    t =   300.03s     Wait for org.carecontinuity.app to idle
+    t =   300.04s     Find the "Cancel" Button
+    t =   300.17s     Check for interrupting elements affecting "Cancel" Button
+    t =   300.34s     Synthesize event
+    t =   300.74s     Wait for org.carecontinuity.app to idle
+    t =   301.66s Waiting 5.0s for "Edit note" NavigationBar to not exist
+    t =   302.70s     Checking `Expect predicate `existsNoRetry == 0` for object "Edit note" NavigationBar`
+    t =   302.76s         Checking existence of `"Edit note" NavigationBar`
+    t =   303.74s Tear Down
+Test Case '-[CareInOneUITests.EditorRecoveryUITests testPersonalNoteDiscardPreservesSavedMultilineContentAfterRelaunch]' passed (306.003 seconds).
+Test Suite 'EditorRecoveryUITests' passed at 2026-10-04 23:19:16.651.
+	 Executed 1 test, with 0 failures (0 unexpected) in 306.003 (306.107) seconds
+Test Suite 'CareInOneUITests.xctest' passed at 2026-10-04 23:19:16.680.
+	 Executed 1 test, with 0 failures (0 unexpected) in 306.003 (306.137) seconds
+Test Suite 'Selected tests' passed at 2026-10-04 23:19:16.700.
+	 Executed 1 test, with 0 failures (0 unexpected) in 306.003 (306.170) seconds
+Resolve Package Graph
+
+Resolve Package Graph
+
+2026-10-04 23:23:31.160 xcodebuild[26675:30471102] [MT] IDETestOperationsObserverDebug: 877.033 elapsed -- Testing started completed.
+2026-10-04 23:23:31.160 xcodebuild[26675:30471102] [MT] IDETestOperationsObserverDebug: 0.003 sec, +0.003 sec -- start
+2026-10-04 23:23:31.160 xcodebuild[26675:30471102] [MT] IDETestOperationsObserverDebug: 877.033 sec, +877.030 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/CareInOneEditorRecovery8.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

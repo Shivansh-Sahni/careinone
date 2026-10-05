@@ -1,0 +1,55 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "DF1B37FA-515B-46B4-918E-4BA38BD325E3",
+        "deviceName" : "CareInOne Release iPad 13",
+        "modelName" : "iPad Pro 13-inch (M5)",
+        "osBuildNumber" : "24A434",
+        "osVersion" : "27.0",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 1,
+      "passedTests" : 0,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Release fictional screenshot capture"
+      }
+    }
+  ],
+  "environmentDescription" : "CareInOneScreenshots · Built with macOS 26.6.2",
+  "expectedFailures" : 0,
+  "failedTests" : 1,
+  "finishTime" : 1791178824.569,
+  "passedTests" : 0,
+  "result" : "Failed",
+  "runtimeWarnings" : [
+    {
+      "issueType" : "Runtime Warning",
+      "message" : "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "skippedTests" : 0,
+  "startTime" : 1791177753.192,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+    {
+      "failureText" : "XCTAssertTrue failed - The actual release control must be reachable before capture",
+      "targetName" : "CareInOneUITests",
+      "testIdentifier" : 1,
+      "testIdentifierString" : "ReleaseScreenshotsUITests/testCaptureFictionalReleaseScreens()",
+      "testIdentifierURL" : "test://com.apple.xcode/CareInOne/CareInOneUITests/ReleaseScreenshotsUITests/testCaptureFictionalReleaseScreens",
+      "testName" : "testCaptureFictionalReleaseScreens()"
+    }
+  ],
+  "title" : "Test - CareInOneScreenshots",
+  "topInsights" : [
+
+  ],
+  "totalTestCount" : 1
+}

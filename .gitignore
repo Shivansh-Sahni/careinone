@@ -9,3 +9,9 @@ __pycache__/
 *.pyc
 .DS_Store
 artifacts/
+# Keep raw native test/Simulator diagnostics local. Publish reviewed summaries
+# and safe evidence screenshots outside these bundles instead.
+*.xcresult/
+docs/verification/**/simctl_diagnostics/
+docs/verification/**/Diagnostics/
+docs/verification/**/*.logarchive/

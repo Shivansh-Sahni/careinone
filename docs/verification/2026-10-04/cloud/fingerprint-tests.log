@@ -1,0 +1,19 @@
+test_absence_flag_does_not_hide_partially_present_demo (test_simulator_fingerprint.FingerprintTests.test_absence_flag_does_not_hide_partially_present_demo) ... ok
+test_absent_demo_is_explicit_and_is_never_created_or_applied_to_personal (test_simulator_fingerprint.FingerprintTests.test_absent_demo_is_explicit_and_is_never_created_or_applied_to_personal) ... ok
+test_cli_demo_option_reads_only_isolated_workspace (test_simulator_fingerprint.FingerprintTests.test_cli_demo_option_reads_only_isolated_workspace) ... ok
+test_cli_preserves_default_summary_and_sanitizes_platform_failure (test_simulator_fingerprint.FingerprintTests.test_cli_preserves_default_summary_and_sanitizes_platform_failure) ... ok
+test_complete_preferences_changes_include_handoffs_companions_and_plan_drafts (test_simulator_fingerprint.FingerprintTests.test_complete_preferences_changes_include_handoffs_companions_and_plan_drafts) ... ok
+test_default_shape_preserves_original_decoded_payload_hashes (test_simulator_fingerprint.FingerprintTests.test_default_shape_preserves_original_decoded_payload_hashes) ... ok
+test_duplicate_keys_and_malformed_payloads_fail_without_content (test_simulator_fingerprint.FingerprintTests.test_duplicate_keys_and_malformed_payloads_fail_without_content) ... ok
+test_invalid_columns_and_ambiguous_json_are_rejected (test_simulator_fingerprint.FingerprintTests.test_invalid_columns_and_ambiguous_json_are_rejected) ... ok
+test_json_formatting_does_not_mask_semantic_upgrade_preservation (test_simulator_fingerprint.FingerprintTests.test_json_formatting_does_not_mask_semantic_upgrade_preservation) ... ok
+test_missing_and_unexpected_tables_fail_instead_of_partial_success (test_simulator_fingerprint.FingerprintTests.test_missing_and_unexpected_tables_fail_instead_of_partial_success) ... ok
+test_output_cannot_overwrite_an_original_or_database (test_simulator_fingerprint.FingerprintTests.test_output_cannot_overwrite_an_original_or_database) ... ok
+test_personal_and_demo_stores_are_isolated_with_binary_original_hashes (test_simulator_fingerprint.FingerprintTests.test_personal_and_demo_stores_are_isolated_with_binary_original_hashes) ... ok
+test_read_only_fingerprint_does_not_change_database_bytes (test_simulator_fingerprint.FingerprintTests.test_read_only_fingerprint_does_not_change_database_bytes) ... ok
+test_symlinks_cannot_read_evidence_outside_workspace (test_simulator_fingerprint.FingerprintTests.test_symlinks_cannot_read_evidence_outside_workspace) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.631s
+
+OK

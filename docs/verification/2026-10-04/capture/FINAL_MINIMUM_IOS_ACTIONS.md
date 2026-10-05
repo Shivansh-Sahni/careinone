@@ -1,0 +1,39 @@
+# Final minimum-iOS native actions
+
+All runs used the disposable iPhone SE (3rd generation), iOS 18.2 build 22C150, UUID `8F5B891A-2848-4BFC-8726-64A936A6601C`. Normal local simulator signing was used. All patient content was fictional, fixture storage was isolated, system-service fixture integration disabled, and real backend credentials/patient data/primary simulator were preserved.
+
+## Full compiled UI action
+
+`/private/tmp/CareInOneFinalSmallPhoneAllUI.xcresult` finalized with **exit 65: 29 total, 23 passed, 5 failed, 1 intended Debug screenshot skip**. Exact machine result is `final-se-all-ui-summary.json`; log is `final-se-all-ui.log`. The pre-compilation per-file record is `final-se-all-ui-source-sha.json`.
+
+Passed coverage includes native long multiline Unicode PasteButton/save/relaunch, exact cleared working text/original preservation on this action, backup stale-share recovery, cached quote deletion, reviewed capture persistence, accessibility care connections, discrepancy resolution/reopen, visit recollection/evidence/review/checkpoint/export, finished handoff drift/reopen, outgoing message/native-format/PDF invalidation/immutable saved care, practice import, fictional-demo navigation, selected packet PDF, review/workspace draft safeguards, three note/question/encounter editor recovery journeys, follow-through note/date/precision discard/save/relaunch, and all four appointment/caregiver companion journeys.
+
+Failures were retained, investigated through actual failure accessibility snapshots/screen recordings, and never converted to passing cases merely by documentation:
+
+| Full-action case | Observed boundary | Subsequent evidence |
+| --- | --- | --- |
+| Empty patient handoff | A real successful `Question saved.` alert was still open, so the next packet control could not be tapped. | Explicitly acknowledge that same user-facing success alert, then use visible content scrolling. Complete focused workflow passed, including PDF, persisted reply draft, reviewed allergy. |
+| Evidence graph and combined omission | Omission navigation control was below the small phone viewport after returning from timeline. | Actual content reveal retained all map/timeline/omission/source-preservation assertions; whole focused workflow passed. |
+| Personal note create/persist/delete | Edit note sheet was open; Save changes and Delete note were below the viewport. Creation and isolated-demo relaunch readback had already passed. | Actual modal content scroll retained permanent deletion confirmation and absence assertions; whole focused workflow passed. |
+| Visit draft relaunch/deletion preview | App-wide swipe passed the debrief row to the readiness/delete section. | Measured content reveal entered the editor; a later raw TextEditor keyboard obscured Save draft in the first focused action. Root authorized a native Done toolbar/FocusState/interactive keyboard dismissal in VisitDebriefView; complete whole journey passed 113.114s in the recovery action below. |
+| Clarification draft recovery | Native Button center landed in blank space inside the leading plain row label. Modal never opened; no note was entered. | Explicit modal-entry wait reproduced the row hit-area failure. Root authorized full-width label contentShape. Actual center Button tap remains in the final regression; modal entry now passed; the initial note-reveal automation accidentally opened a source link and needs the focused correction below. |
+
+The five-case first focused retry is `/private/tmp/CareInOneSmallPhoneBoundaryRetest.xcresult`, **exit 65: 3 passed, 2 failed, no skips**. Machine summary is `final-se-boundary-retest-summary.json`; source snapshot is `final-se-boundary-retest-source-sha.json`; the three passing full workflows took 70.549s, 37.982s and 101.717s respectively. This action is not represented as entirely successful.
+
+Historical failure screenshots `clarification-sheet-entry-prior-failure.png` and `visit-draft-reveal-prior-failure.png` show the actual list/workspace boundaries. Full failure attachments remain in the original xcresult and `/private/tmp/CareInOneFinalSmallPhoneAllUIAttachments`.
+
+## Final recovery action
+
+Native recovery action `/private/tmp/CareInOneSmallPhoneRecoveryFinal.xcresult` finalized with **exit 65: 1 passed, 2 failed, no skips**. The entire visit draft/relaunch/impact-preview workflow passed in 113.114s with the actual new Done editing recollection control and visible Save draft. Both authorized production repairs are included. Machine result is `final-se-recovery-summary.json`; log is `final-se-recovery.log`; per-file record is `final-se-recovery-source-sha.json`.
+
+The clarification row's native center tap opened Compare sources after the hit-area repair. Its subsequent near-instant mid-content test drag activated a source link before any note input, confirmed by native movie and failure AX snapshot ending in Source evidence. The source editor fixture's native hardware Cmd+A visibly selected all text, but XCTest's hardware Delete event did not apply to the software keyboard; the exact-empty assertion correctly failed. These are retained failures, not successful native clearing evidence.
+
+Focused action `/private/tmp/CareInOneSmallPhoneMenuRecovery.xcresult` finalized with **exit 65: 2 passed, 1 failed, no skips** (`final-se-menu-recovery-summary.json`). The native contextual Select All appeared as an actual MenuItem, software Delete produced exactly empty source text, Save retained empty working text, and exact original multiline evidence readback passed in **69.448s**. The whole outgoing PDF workflow passed in **55.152s**. Both retained original input/persistence/PDF invalidation and immutability assertions. Per-file source record: `final-se-menu-source-sha.json`; log: `final-se-menu-recovery.log`.
+
+The whole clarification journey successfully verified actual repaired row-center entry, note typing, prevented swipe, Keep editing, exact draft retained after source navigation, and explicit discard. Its final reopened empty field returned actual `""` on iOS 18.2 rather than exposing the placeholder string as value. The assertion expecting only the latter failed; it is retained in the finalized result. Current helper now asserts native `placeholderValue == "Your resolution note"` and that the actual value is either empty or exactly that native placeholder. This preserves empty saved-note semantics across supported OS accessibility representations.
+
+Final one-case whole clarification retry `/private/tmp/CareInOneSmallPhoneClarificationFinal.xcresult` is running. Log: `final-se-clarification.log`; source record: `final-se-clarification-source-sha.json`. The longer confined edge drag remains inside comparison content and verifies that the comparison stays open while revealing draft controls. Outgoing allows 20s for two consecutive actual stable-frame AX snapshots under machine load, retaining exact viewport boundaries, real Toggle on-state, regenerated outgoing copy, prior PDF invalidation and source immutability. No production shortcuts or binding overrides were introduced. Result pending while this record is written.
+
+## Limits
+
+These are separate native actions and must not be added together to imply one all-current green full suite. Parent owns final current primary-device full/focused verification and release archive. Thirteen SwiftUI keyboard-transition invalid-frame warnings were retained in the full action; no assertion about their disappearance is made. Real camera/microphone/speech quality, denied hardware permissions, actual VoiceOver reading, file-provider/share destinations, notification/Calendar behavior, live production inference and organizational signing remain outside this minimum-iOS simulator evidence. Contextual Select All/software Delete is verified in the focused action. The hardware shortcut attempt failed and is not claimed as verified.

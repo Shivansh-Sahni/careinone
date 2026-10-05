@@ -1,0 +1,46 @@
+{
+  "phase": "Candidate4 compiled source; overall failed, later focused test repairs require reconciliation",
+  "result": "Failed",
+  "started_at_utc": "2026-10-05T02:04:52.844000+00:00",
+  "finished_at_utc": "2026-10-05T02:35:46.226000+00:00",
+  "device": "iPhone 18 Pro / iOS 27.0 Simulator",
+  "total": 150,
+  "passed": 146,
+  "failed": 3,
+  "skipped": 1,
+  "native": {
+    "executed": 127,
+    "passed": 126,
+    "failed": 0,
+    "skipped": 1
+  },
+  "ui": {
+    "executed": 23,
+    "passed": 20,
+    "failed": 3,
+    "skipped": 0
+  },
+  "failing_ui_tests": [
+    {
+      "test": "testAppointmentCompanionAtAccessibilityTextSize()",
+      "failure": "Failed to get matching snapshot: No matches found for Descendants matching type CollectionView from input {(\n    Application, pid: 16130\n)}"
+    },
+    {
+      "test": "testEncounterDiscardLeavesExistingGroupingAndCleanCancelCloses()",
+      "failure": "Failed to determine hittability of \"Edit encounter\" NavigationBar: Activation point invalid and no suggested hit points based on element frame"
+    },
+    {
+      "test": "testOutgoingMessageEditingInvalidatesPreviousPDF()",
+      "failure": "XCTAssertTrue failed"
+    }
+  ],
+  "runtime_warning_occurrences": 15,
+  "runtime_warning_categories": [
+    "    AVAudioSession_iOS.mm:978   This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread.",
+    "Invalid frame dimension (negative or non-finite)."
+  ],
+  "authoritative_result_bundle": "/private/tmp/CareInOneCandidate4.xcresult",
+  "summary_source": "/private/tmp/CareInOneCandidate4.summary.json",
+  "scope": "Exact finalized counts; Keychain signing/access and all ordinary native cases passed. Explicit gated live-cloud skip is not a pass. Three UI failures remain, including transient test-helper bar hittability and other root-owned navigation failures. Do not sum historical/repeated runs into passing total.",
+  "source_snapshot": "candidate4-source-fingerprint.json"
+}

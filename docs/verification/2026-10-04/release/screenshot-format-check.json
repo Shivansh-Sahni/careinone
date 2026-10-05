@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-10-05T05:45:04.188396+00:00",
+  "groups": {
+    "iphone-6.9": {
+      "status": "pass",
+      "files": [
+        {
+          "file": "01-today.png",
+          "bytes": 382484,
+          "sha256": "3fb6850f5ef765898eb513b235bf0cbfa6fe5179cbc64378563f3636f152b8af",
+          "errors": [],
+          "width": 1320,
+          "height": 2868,
+          "bit_depth": 8,
+          "color_type": 2
+        },
+        {
+          "file": "02-source-review.png",
+          "bytes": 254698,
+          "sha256": "ef4bf1df1c9c77e0e5f54863cf34ec62e44e5ec7f2c4eb14ec7c65ccde93a3ed",
+          "errors": [],
+          "width": 1320,
+          "height": 2868,
+          "bit_depth": 8,
+          "color_type": 2
+        },
+        {
+          "file": "03-medication-reports.png",
+          "bytes": 375981,
+          "sha256": "97f44739b0baef4bc0488e2cc9eb16b9424828af329c5b92b48ef431f5f555ee",
+          "errors": [],
+          "width": 1320,
+          "height": 2868,
+          "bit_depth": 8,
+          "color_type": 2
+        },
+        {
+          "file": "04-appointment-companion.png",
+          "bytes": 372000,
+          "sha256": "c87d4900b295fcd0117e4c9009e4315deb959f534d85a58a245bf0215ce3c6b2",
+          "errors": [],
+          "width": 1320,
+          "height": 2868,
+          "bit_depth": 8,
+          "color_type": 2
+        },
+        {
+          "file": "05-selected-packet.png",
+          "bytes": 458087,
+          "sha256": "0184eefe8986c7315d31245867290152ec95eccf59551c3772ddd5e1c572188c",
+          "errors": [],
+          "width": 1320,
+          "height": 2868,
+          "bit_depth": 8,
+          "color_type": 2
+        },
+        {
+          "file": "06-follow-through-helper.png",
+          "bytes": 336215,
+          "sha256": "3ff97db24f2370c8abe3c236c45d15172588106ad67ef20986854804ea0c97a9",
+          "errors": [],
+          "width": 1320,
+          "height": 2868,
+          "bit_depth": 8,
+          "color_type": 2
+        }
+      ],
+      "errors": []
+    },
+    "ipad-13": {
+      "status": "pass",
+      "files": [
+        {
+          "file": "01-today.png",
+          "bytes": 362123,
+          "sha256": "ce46ab1c26267c87510c60a14ce1f32ec21cf2de4cb961baf813b6c50ca375c2",
+          "errors": [],
+          "width": 2064,
+          "height": 2752,
+          "bit_depth": 8,
+          "color_type": 2
+        }
+      ],
+      "errors": []
+    }
+  },
+  "scope": "PNG format/dimensions only; visual and final-build review required",
+  "status": "format_pass"
+}

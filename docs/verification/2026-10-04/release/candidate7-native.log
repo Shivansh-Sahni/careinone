@@ -1,0 +1,13 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test -project CareInOne.xcodeproj -scheme CareInOne -destination "platform=iOS Simulator,id=DFFF1AD7-0FBD-4955-882D-10A006F6F925" -derivedDataPath /private/tmp/CareInOneCandidate7Native -resultBundlePath /private/tmp/CareInOneCandidate7Native.xcresult -parallel-testing-enabled NO "-only-testing:CareInOneTests"
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  CareInOne: /Users/shivanshsahni/Downloads/Personal/CAC 2026 @ local
+
+Writing result bundle at path:
+	/private/tmp/CareInOneCandidate7Native.xcresult
+
+xcodebuild: error: Failed to build project CareInOne with scheme CareInOne.: Tests in the target “CareInOneTests” can’t be run because “CareInOneTests” isn’t a member of the specified test plan or scheme.

@@ -1,0 +1,42 @@
+{
+  "application": "CareInOne",
+  "version": "1.0",
+  "build": "1",
+  "bundle": "org.carecontinuity.app",
+  "captureTime": "2026-10-04 21:08:33.8276 -0400",
+  "exception": {
+    "codes": "0x0000000000000001, 0x000000018017ef14",
+    "rawCodes": [
+      1,
+      6444019476
+    ],
+    "type": "EXC_BREAKPOINT",
+    "signal": "SIGTRAP"
+  },
+  "termination": {
+    "flags": 0,
+    "code": 5,
+    "namespace": "SIGNAL",
+    "indicator": "Trace/BPT trap: 5",
+    "byProc": "exc handler",
+    "byPid": 307
+  },
+  "faultingThread": 2,
+  "threadQueue": "com.apple.root.user-initiated-qos.cooperative",
+  "symbols": [
+    "_dispatch_assert_queue_fail",
+    "dispatch_assert_queue",
+    "swift_task_isCurrentExecutorImpl(swift::SerialExecutorRef)",
+    "closure #1 in closure #1 in closure #1 in EvidenceTextEditor.body.getter",
+    "closure #1 in closure #1 in closure #1 in PasteHelper.init<A>(onPaste:)",
+    "<deduplicated_symbol>",
+    "<deduplicated_symbol>",
+    "<deduplicated_symbol>",
+    "completeTaskWithClosure(swift::AsyncContext*, swift::SwiftError*)"
+  ],
+  "verifiedSimulatorRuntime": {
+    "device": "iPhone SE (3rd generation)",
+    "iOS": "18.2",
+    "build": "22C150"
+  }
+}

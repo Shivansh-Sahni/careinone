@@ -1,7 +1,7 @@
 # Paid always-on beta alternative. Verify the current price before provisioning.
 services:
   - type: web
-    name: carecontinuity
+    name: careinone
     runtime: docker
     plan: starter
     region: ohio

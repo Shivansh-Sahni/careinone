@@ -1,0 +1,4 @@
+CareInOne · Xcode 27 · unsigned iPhone Release
+Command: xcodebuild -project CareInOne.xcodeproj -scheme CareInOne -configuration Release -destination generic/platform=iOS -derivedDataPath /private/tmp/CareInOneRelease -jobs 2 CODE_SIGNING_ALLOWED=NO build
+Result: BUILD SUCCEEDED
+Full development log: /private/tmp/careinone-competition-release-final.log

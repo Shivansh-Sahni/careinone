@@ -1,0 +1,9 @@
+{
+  "configuration": "Release",
+  "platform": "iphoneos",
+  "destination": "generic/platform=iOS",
+  "scheme": "CareInOne",
+  "signing": "disabled for build verification",
+  "result": "BUILD SUCCEEDED",
+  "warningLines": []
+}

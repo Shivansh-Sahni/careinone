@@ -1,0 +1,36 @@
+{
+  "observedAtUTC": "2026-10-05T01:06:21.992903+00:00",
+  "deployment": "dep-db1fa8id0e5s73fflpug",
+  "commit": "9f5e88bf9e6bc7c8b743a6c69249e48c23bc13b9",
+  "paidRequestsAttempted": 2,
+  "totalServerVerifierPaidRequestsAttempted": 4,
+  "syntheticOnly": true,
+  "configuration": {
+    "primary": {
+      "adapter": "openai",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "host": "api.openai.com",
+      "maxOutputTokens": 6000
+    },
+    "fallback": null,
+    "patientContentStored": false,
+    "maxSourceCharacters": 40000
+  },
+  "connectionCheck": {
+    "passed": true,
+    "httpStatus": 200,
+    "route": "primary"
+  },
+  "fictionalExtraction": {
+    "passed": true,
+    "httpStatus": 200,
+    "claimCount": 3,
+    "exactQuotesValidated": true
+  },
+  "nativePipeline": {
+    "status": "blocked",
+    "stage": "configuration",
+    "paidRequestsAttempted": 0,
+    "reason": "Existing simulator gateway endpoint/access-token pair unavailable after an early baseline test cleared it; isolation repaired, restoration requested. No credentials printed."
+  }
+}

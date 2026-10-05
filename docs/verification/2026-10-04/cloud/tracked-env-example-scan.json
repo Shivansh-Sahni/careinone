@@ -1,0 +1,15 @@
+{
+  "path": "backend/.env.example",
+  "scope": "explicitly tracked, nonignored example template only; no ignored .env files or credential stores read",
+  "bytes": 1409,
+  "potentialCredentialPatterns": [
+    {
+      "path": "backend/.env.example",
+      "line": 2,
+      "length": 70,
+      "category": "assignedLongCredential",
+      "classification": "obvious example-template placeholder"
+    }
+  ],
+  "potentialActualCredentials": 0
+}

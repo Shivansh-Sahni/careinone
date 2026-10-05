@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-10-05T00:24:52.018617+00:00",
+  "scope": "Unauthenticated production static pages only; no credentials, model request, signing or account mutation",
+  "checks": [
+    {
+      "url": "https://careinone-api.onrender.com/privacy",
+      "status": 200,
+      "bytes": 13810,
+      "sha256": "8de02874dd2595f9422d1e9eace93b82b8816b658dc2f031a68c6d0675bb4609",
+      "matches_local_html": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+      }
+    },
+    {
+      "url": "https://careinone-api.onrender.com/support",
+      "status": 200,
+      "bytes": 10903,
+      "sha256": "098757ba401ec37098325f60e92f5ba98aeae078691d2635c9b9e676e657e0f8",
+      "matches_local_html": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+      }
+    }
+  ]
+}

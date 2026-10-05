@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "id": "EED16618-DA2D-49E2-A28D-B371B49C0405",
+      "name": "Release fictional screenshot capture",
+      "options": {}
+    }
+  ],
+  "defaultOptions": {},
+  "testTargets": [
+    {
+      "target": {
+        "containerPath": "container:CareInOne.xcodeproj",
+        "identifier": "21A4721043EF7FE8B14BE5D9",
+        "name": "CareInOneUITests"
+      },
+      "selectedTests": [
+        "ReleaseScreenshotsUITests/testCaptureFictionalReleaseScreens()"
+      ]
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,16 @@
+{
+  "result": "Passed",
+  "totalTestCount": 1,
+  "passedTests": 1,
+  "failedTests": 0,
+  "skippedTests": 0,
+  "runnerExitCode": 0,
+  "nativeCaseDurationSeconds": 253.44,
+  "device": "BEFFC231-C67F-4FFC-9F41-53789BF05F78",
+  "configuration": "Release, normal simulator signing, no launch flags",
+  "runtimeWarnings": [
+    "AVAudioSession main-thread activation/deactivation may affect responsiveness",
+    "Invalid frame dimension (negative or non-finite)"
+  ],
+  "source": "finalized /private/tmp/CareInOneReleaseDuplicateRetry.xcresult"
+}

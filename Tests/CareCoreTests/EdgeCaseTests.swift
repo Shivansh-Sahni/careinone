@@ -56,6 +56,18 @@ struct EdgeCaseTests {
         #expect(answer.contains { $0.disputed })
         #expect(try await LocalGroundedSynthesis().answer("nonexistent",state:state).isEmpty)
     }
+    @Test func demoCoversOfflineCareCategoriesAndUpcomingEncounter() throws {
+        var state = CareState()
+        let now = Date(timeIntervalSince1970: 1_789_920_000)
+        try SyntheticDemo.load(into: &state, now: now)
+        for kind in [EntityKind.medication, .condition, .allergy, .labTest, .resultType, .referral, .procedure, .provider, .instruction, .followUp, .administrativeTask, .appointment] {
+            #expect(state.entities.contains { $0.kind == kind })
+        }
+        #expect(state.encounters.contains { ($0.date ?? .distantPast) > now })
+        #expect(state.loops.contains { $0.status == .completed })
+        #expect(state.sources.allSatisfy { $0.synthetic })
+        #expect(state.conflicts.contains { $0.status == .unresolved })
+    }
     @Test func briefPreservesConflictsAndSyntheticLabels() throws {
         var state=CareState(); try SyntheticDemo.load(into:&state)
         let text=BriefBuilder.text(state); #expect(text.contains("SYNTHETIC")); #expect(text.contains("25")); #expect(text.contains("50")); #expect(text.contains("RECORDS TO CLARIFY"))

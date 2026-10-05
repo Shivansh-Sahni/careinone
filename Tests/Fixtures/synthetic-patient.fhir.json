@@ -1,7 +1,7 @@
 {
   "resourceType": "Bundle",
   "type": "collection",
-  "meta": {"tag": [{"system": "urn:carecontinuity:demo", "code": "synthetic", "display": "Entirely synthetic demonstration data"}]},
+  "meta": {"tag": [{"system": "urn:careinone:demo", "code": "synthetic", "display": "Entirely synthetic demonstration data"}]},
   "entry": [
     {"resource": {"resourceType": "Patient", "id": "synthetic-person", "name": [{"text": "Synthetic Patient"}]}},
     {"resource": {"resourceType": "ServiceRequest", "id": "synthetic-cbc-order", "status": "active", "intent": "order", "subject": {"reference": "Patient/synthetic-person"}, "authoredOn": "2026-09-01", "code": {"coding": [{"system": "http://loinc.org", "code": "58410-2", "display": "CBC panel"}]}}},

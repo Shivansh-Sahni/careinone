@@ -1,0 +1,18 @@
+{
+  "scope": "Focused note recovery after Candidate4 and EditorRecovery6; before toolbar-specific navigation repair",
+  "result": "Failed",
+  "total": 1,
+  "passed": 0,
+  "failed": 1,
+  "skipped": 0,
+  "failure": "Test runner timed out and exited with signal term while querying keyboard Done after the generic content-scroll helper moved the long editor. No completed recovery verification in this run.",
+  "runtime_warnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "log": "editor-recovery7.log",
+  "result_bundle": "/private/tmp/CareInOneEditorRecovery7.xcresult",
+  "next_check": "EditorRecovery8 uses bounded keyboard-toolbar existence and a native toolbar tap; the keyboard absence and all Keep/discard/relaunch preservation assertions remain."
+}

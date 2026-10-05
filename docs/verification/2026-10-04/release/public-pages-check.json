@@ -1,0 +1,50 @@
+[
+  {
+    "path": "backend/public/privacy.html",
+    "bytes": 13810,
+    "headings_h1": 1,
+    "internal_fragment_links_valid": true,
+    "scripts": false,
+    "external_resources": false,
+    "responsive_viewport": true,
+    "credential_patterns": false,
+    "status": "HTML structure and local browser review passed",
+    "visual_review": {
+      "browser": "Codex in-app browser",
+      "widths": [
+        1280,
+        390
+      ],
+      "phone_horizontal_overflow": false,
+      "headings_and_landmarks_exposed": true,
+      "support_details_keyboard_enter": "not applicable",
+      "scope": "Local HTML preview only; production routes and headers owned by cloud verification"
+    },
+    "sha256": "8de02874dd2595f9422d1e9eace93b82b8816b658dc2f031a68c6d0675bb4609",
+    "copy_review_update": "2026-10-04: isolated demo labels, cancellation qualification, root-verified Ohio (US East) gateway region"
+  },
+  {
+    "path": "backend/public/support.html",
+    "bytes": 10903,
+    "headings_h1": 1,
+    "internal_fragment_links_valid": true,
+    "scripts": false,
+    "external_resources": false,
+    "responsive_viewport": true,
+    "credential_patterns": false,
+    "status": "HTML structure and local browser review passed",
+    "visual_review": {
+      "browser": "Codex in-app browser",
+      "widths": [
+        1280,
+        390
+      ],
+      "phone_horizontal_overflow": false,
+      "headings_and_landmarks_exposed": true,
+      "support_details_keyboard_enter": "passed",
+      "scope": "Local HTML preview only; production routes and headers owned by cloud verification"
+    },
+    "sha256": "098757ba401ec37098325f60e92f5ba98aeae078691d2635c9b9e676e657e0f8",
+    "copy_review_update": "2026-10-04: isolated demo labels, cancellation qualification, root-verified Ohio (US East) gateway region"
+  }
+]

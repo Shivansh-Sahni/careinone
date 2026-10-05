@@ -1,0 +1,617 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CareInOne.xcodeproj -scheme CareInOne -configuration Debug -destination "platform=iOS Simulator,id=8F5B891A-2848-4BFC-8726-64A936A6601C" -derivedDataPath /private/tmp/CareInOneSmallPhone -resultBundlePath /private/tmp/CareInOneSmallPhoneClarificationFinal.xcresult -parallel-testing-enabled NO -maximum-concurrent-test-simulator-destinations 1 "-only-testing:CareInOneUITests/FollowThroughDraftRecoveryUITests/testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard" test
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  CareInOne: /Users/shivanshsahni/Downloads/Personal/CAC 2026 @ local
+
+Writing result bundle at path:
+	/private/tmp/CareInOneSmallPhoneClarificationFinal.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (5 targets)
+    Target 'CareInOneIntegrationTests' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareInOne' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore-product' in project 'CareInOne'
+    Target 'CareInOneUITests' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareInOne' in project 'CareInOne'
+    Target 'CareInOne' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore-product' in project 'CareInOne'
+    Target 'CareCore-product' in project 'CareInOne'
+        ➜ Explicit dependency on target 'CareCore' in project 'CareInOne'
+    Target 'CareCore' in project 'CareInOne' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /tmp/CareInOneSmallPhone/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/CareInOne.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /tmp/CareInOneSmallPhone/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache
+
+SwiftDriver CareInOneUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneUITests -Onone @/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList -DDEBUG -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneSmallPhone/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneSmallPhone/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneSmallPhone/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneSmallPhone/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneSmallPhone/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneSmallPhone/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-generated-files.hmap -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-own-target-headers.hmap -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-project-headers.hmap -Xcc -I/tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ CareInOneUITests (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+
+SwiftCompile normal arm64 Compiling\ FollowThroughDraftRecoveryUITests.swift /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/FollowThroughDraftRecoveryUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftCompile normal arm64 /Users/shivanshsahni/Downloads/Personal/CAC\ 2026/UITests/FollowThroughDraftRecoveryUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-SwiftPerFileCompile FollowThroughDraftRecoveryUITests.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for CareInOneUITests (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation\ Requirements CareInOneUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneUITests -Onone @/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList -DDEBUG -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneSmallPhone/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneSmallPhone/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneSmallPhone/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneSmallPhone/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneSmallPhone/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneSmallPhone/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-generated-files.hmap -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-own-target-headers.hmap -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-project-headers.hmap -Xcc -I/tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+Copy /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftsourceinfo (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftsourceinfo /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+Copy /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.abi.json (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.abi.json /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+SwiftDriverJobDiscovery normal arm64 Compiling FollowThroughDraftRecoveryUITests.swift (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+
+SwiftDriver\ Compilation CareInOneUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name CareInOneUITests -Onone @/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList -DDEBUG -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /tmp/CareInOneSmallPhone/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/CareInOneSmallPhone/Index.noindex/DataStore -swift-version 6 -I /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/CareInOneSmallPhone/SDKStatCaches.noindex/iphonesimulator27.0-24A430-8dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/CareInOneSmallPhone/ModuleCache.noindex -sdk-module-cache-path /tmp/CareInOneSmallPhone/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/CareInOneSmallPhone/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-generated-files.hmap -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-own-target-headers.hmap -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOne-b45d5eaea7a1917937b71352a2819bc4-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests-project-headers.hmap -Xcc -I/tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources-normal/arm64 -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources/arm64 -Xcc -I/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests-Swift.h -working-directory /Users/shivanshsahni/Downloads/Personal/CAC\ 2026 -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests normal (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/tmp/CareInOneSmallPhone/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -filelist /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_lto.o -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.xctest-Simulated.xcent -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __ents_der -Xlinker /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.xctest-Simulated.xcent.der -Xlinker -no_adhoc_codesign -o /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests
+
+CopySwiftLibs /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests --scan-folder /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Frameworks --scan-folder /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/PlugIns --scan-folder /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/SystemExtensions --scan-folder /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Extensions --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+ExtractAppIntentsMetadata (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name CareInOneUITests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier org.carecontinuity.uitests --output /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest --target-triple arm64-apple-ios18.0-simulator --binary-file /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest/CareInOneUITests --dependency-file /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests_dependency_info.dat --stringsdata-file /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftFileList --metadata-file-list /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.DependencyMetadataFileList --static-metadata-file-list /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/CareInOneUITests.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/CareInOne.build/Debug-iphonesimulator/CareInOneUITests.build/Objects-normal/arm64/CareInOneUITests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-05 01:47:56.893 appintentsmetadataprocessor[67049:31013263] Starting appintentsmetadataprocessor export
+2026-10-05 01:47:56.899 appintentsmetadataprocessor[67049:31013263] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CodeSign /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app/PlugIns/CareInOneUITests.xctest
+
+CodeSign /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app (in target 'CareInOneUITests' from project 'CareInOne' at path '/Users/shivanshsahni/Downloads/Personal/CAC 2026/CareInOne.xcodeproj')
+    cd /Users/shivanshsahni/Downloads/Personal/CAC\ 2026
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app
+/tmp/CareInOneSmallPhone/Build/Products/Debug-iphonesimulator/CareInOneUITests-Runner.app: replacing existing signature
+
+PruneExplicitPrecompiledModules /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneSmallPhone/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/CareInOneSmallPhone/SDKExplicitPrecompiledModules
+
+2026-10-05 01:48:00.366813-0400 CareInOneUITests-Runner[67055:31013451] [Default] Running tests...
+Test Suite 'Selected tests' started at 2026-10-05 01:48:01.882.
+Test Suite 'CareInOneUITests.xctest' started at 2026-10-05 01:48:01.883.
+Test Suite 'FollowThroughDraftRecoveryUITests' started at 2026-10-05 01:48:01.883.
+Test Case '-[CareInOneUITests.FollowThroughDraftRecoveryUITests testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard]' started.
+    t =     0.00s Start Test at 2026-10-05 01:48:01.886
+    t =     0.10s Set Up
+    t =     0.11s Open org.carecontinuity.app
+    t =     0.11s     Launch org.carecontinuity.app
+2026-10-05 01:48:02.608 xcodebuild[67020:31012833] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-05 01:48:02.608 xcodebuild[67020:31012833] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     2.67s         Setting up automation session
+Resolve Package Graph
+
+    t =     5.03s         Wait for org.carecontinuity.app to idle
+    t =     6.95s Waiting 20.0s for "Today" Button to exist
+    t =     7.99s     Checking `Expect predicate `existsNoRetry == 1` for object "Today" Button`
+    t =     7.99s         Checking existence of `"Today" Button`
+Resolve Package Graph
+
+    t =     8.33s Checking existence of `"OK" Button`
+    t =     8.41s Tap "Today" Button
+    t =     8.41s     Wait for org.carecontinuity.app to idle
+    t =     8.41s     Find the "Today" Button
+    t =     8.48s     Check for interrupting elements affecting "square.grid.2x2" Button
+    t =     8.56s     Synthesize event
+    t =     8.89s     Wait for org.carecontinuity.app to idle
+    t =     8.90s Checking existence of `"Compare sources" NavigationBar`
+    t =     8.97s Find the Button (First Match)
+    t =     9.08s Find the "2, To clarify" Button
+    t =     9.23s Find the "2, To clarify" Button
+    t =     9.33s Find the "2, To clarify" Button
+    t =     9.51s Find the "2, To clarify" Button
+    t =     9.75s Find the "2, To clarify" Button
+    t =     9.92s Find the "2, To clarify" Button
+    t =    10.12s Find the "2, To clarify" Button
+    t =    10.31s Find the "2, To clarify" Button
+    t =    10.48s Find the "2, To clarify" Button
+    t =    10.65s Find the "2, To clarify" Button
+    t =    10.85s Find the "2, To clarify" Button
+    t =    11.01s Find the "2, To clarify" Button
+    t =    11.15s Find the "2, To clarify" Button
+    t =    11.27s Find the "2, To clarify" Button
+    t =    11.43s Find the "2, To clarify" Button
+    t =    11.63s Find the "2, To clarify" Button
+    t =    11.80s Find the "2, To clarify" Button
+    t =    11.98s Waiting 5.0s for "2, To clarify" Button to exist
+    t =    13.02s     Checking `Expect predicate `existsNoRetry == 1` for object "2, To clarify" Button`
+    t =    13.02s         Checking existence of `"2, To clarify" Button`
+    t =    13.08s Find the "2, To clarify" Button
+    t =    13.16s Tap "2, To clarify" Button
+    t =    13.16s     Wait for org.carecontinuity.app to idle
+    t =    13.17s     Find the "2, To clarify" Button
+    t =    13.24s     Check for interrupting elements affecting "2, To clarify" Button
+    t =    13.34s     Synthesize event
+    t =    13.67s     Wait for org.carecontinuity.app to idle
+    t =    13.70s Waiting 10.0s for "Records to Clarify" NavigationBar to exist
+    t =    14.74s     Checking `Expect predicate `existsNoRetry == 1` for object "Records to Clarify" NavigationBar`
+    t =    14.74s         Checking existence of `"Records to Clarify" NavigationBar`
+    t =    14.80s Checking existence of `"Compare sources" NavigationBar`
+    t =    14.83s Find the Button (First Match)
+    t =    14.93s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.05s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.19s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.33s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.44s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.54s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.64s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.70s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.77s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.84s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    15.91s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    16.00s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    16.11s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    16.21s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    16.30s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    16.39s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    16.50s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    16.63s Waiting 5.0s for "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button to exist
+    t =    17.67s     Checking `Expect predicate `existsNoRetry == 1` for object "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button`
+    t =    17.67s         Checking existence of `"Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button`
+    t =    17.80s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    18.02s Tap "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    18.03s     Wait for org.carecontinuity.app to idle
+    t =    18.04s     Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    18.34s     Check for interrupting elements affecting "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    18.46s     Synthesize event
+    t =    18.79s     Wait for org.carecontinuity.app to idle
+    t =    18.84s Waiting 10.0s for "Compare sources" NavigationBar to exist
+    t =    19.88s     Checking `Expect predicate `existsNoRetry == 1` for object "Compare sources" NavigationBar`
+    t =    19.89s         Checking existence of `"Compare sources" NavigationBar`
+    t =    19.95s Checking existence of `"Compare sources" NavigationBar`
+    t =    19.98s Find the "conflict-resolution-note" Any
+    t =    20.19s Checking existence of `"Compare sources" NavigationBar`
+    t =    20.22s Find the Target Application 'org.carecontinuity.app'
+    t =    20.24s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    20.28s Checking existence of `NavigationBar (Element at index 0)`
+    t =    20.30s Checking existence of `NavigationBar (Element at index 1)`
+    t =    20.33s Find the NavigationBar (Element at index 0)
+    t =    20.37s Find the NavigationBar (Element at index 1)
+    t =    20.40s Get all elements bound by index for: Descendants matching type TabBar
+    t =    20.43s Checking existence of `TabBar (Element at index 0)`
+    t =    20.46s Find the TabBar (Element at index 0)
+    t =    20.50s Checking existence of `Keyboard (First Match)`
+    t =    20.61s Checking existence of `"Compare sources" NavigationBar`
+    t =    20.65s Get all elements bound by index for: Descendants matching type ScrollView
+    t =    20.69s Find the ScrollView (Element at index 0)
+    t =    20.72s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 513.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 237.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    20.72s     Wait for org.carecontinuity.app to idle
+    t =    20.73s     Find the Target Application 'org.carecontinuity.app'
+    t =    20.76s     Check for interrupting elements affecting "CareInOne" Application
+    t =    20.79s     Synthesize event
+    t =    20.79s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.83s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.87s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.90s         Find the Target Application 'org.carecontinuity.app'
+    t =    20.93s         Find the Target Application 'org.carecontinuity.app'
+    t =    21.97s     Wait for org.carecontinuity.app to idle
+    t =    21.97s Find the "conflict-resolution-note" TextField
+    t =    22.22s Checking existence of `"Compare sources" NavigationBar`
+    t =    22.27s Find the Target Application 'org.carecontinuity.app'
+    t =    22.30s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    22.33s Checking existence of `NavigationBar (Element at index 0)`
+    t =    22.37s Checking existence of `NavigationBar (Element at index 1)`
+    t =    22.40s Find the NavigationBar (Element at index 0)
+    t =    22.43s Find the NavigationBar (Element at index 1)
+    t =    22.47s Get all elements bound by index for: Descendants matching type TabBar
+    t =    22.50s Checking existence of `TabBar (Element at index 0)`
+    t =    22.55s Find the TabBar (Element at index 0)
+    t =    22.63s Checking existence of `Keyboard (First Match)`
+    t =    23.01s Checking existence of `"Compare sources" NavigationBar`
+    t =    23.09s Get all elements bound by index for: Descendants matching type ScrollView
+    t =    23.13s Find the ScrollView (Element at index 0)
+    t =    23.18s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 513.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 237.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    23.18s     Wait for org.carecontinuity.app to idle
+    t =    23.26s     Find the Target Application 'org.carecontinuity.app'
+    t =    23.55s     Check for interrupting elements affecting "CareInOne" Application
+    t =    23.63s     Synthesize event
+    t =    23.63s         Find the Target Application 'org.carecontinuity.app'
+    t =    23.66s         Find the Target Application 'org.carecontinuity.app'
+    t =    23.70s         Find the Target Application 'org.carecontinuity.app'
+    t =    23.72s         Find the Target Application 'org.carecontinuity.app'
+    t =    23.76s         Find the Target Application 'org.carecontinuity.app'
+    t =    24.82s     Wait for org.carecontinuity.app to idle
+    t =    25.55s Find the "conflict-resolution-note" TextField
+    t =    25.78s Find the "conflict-resolution-note" TextField
+    t =    26.10s Find the "conflict-resolution-note" TextField
+    t =    26.32s Find the "conflict-resolution-note" TextField
+    t =    26.62s Find the "conflict-resolution-note" TextField
+    t =    26.89s Find the "conflict-resolution-note" TextField
+    t =    27.04s Find the "conflict-resolution-note" TextField
+    t =    27.31s Find the "conflict-resolution-note" TextField
+    t =    27.69s Find the "conflict-resolution-note" TextField
+    t =    28.10s Find the "conflict-resolution-note" TextField
+    t =    28.55s Find the "conflict-resolution-note" TextField
+    t =    28.97s Find the "conflict-resolution-note" TextField
+    t =    29.51s Find the "conflict-resolution-note" TextField
+    t =    29.76s Find the "conflict-resolution-note" TextField
+    t =    29.89s Find the "conflict-resolution-note" TextField
+    t =    30.13s Find the "conflict-resolution-note" TextField
+    t =    30.42s Waiting 5.0s for "conflict-resolution-note" TextField to exist
+    t =    31.46s     Checking `Expect predicate `existsNoRetry == 1` for object "conflict-resolution-note" TextField`
+    t =    31.46s         Checking existence of `"conflict-resolution-note" TextField`
+    t =    31.93s Find the "conflict-resolution-note" TextField
+    t =    32.33s Tap "conflict-resolution-note" TextField
+    t =    32.33s     Wait for org.carecontinuity.app to idle
+    t =    32.35s     Find the "conflict-resolution-note" TextField
+    t =    32.69s     Check for interrupting elements affecting "conflict-resolution-note" TextField
+    t =    32.77s     Synthesize event
+    t =    33.09s     Wait for org.carecontinuity.app to idle
+<unknown>:0: warning: -[CareInOneUITests.FollowThroughDraftRecoveryUITests testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard] : Invalid frame dimension (negative or non-finite).
+    t =    33.49s Type 'Fictional draft to...' into "conflict-resolution-note" TextField
+    t =    33.49s     Wait for org.carecontinuity.app to idle
+    t =    33.94s     Find the "conflict-resolution-note" TextField
+    t =    34.42s     Check for interrupting elements affecting "conflict-resolution-note" TextField
+    t =    34.54s     Synthesize event
+    t =    35.42s     Wait for org.carecontinuity.app to idle
+    t =    35.43s Tap "conflict-resolution-note-done" Button
+    t =    35.43s     Wait for org.carecontinuity.app to idle
+    t =    35.43s     Find the "conflict-resolution-note-done" Button
+    t =    35.56s     Check for interrupting elements affecting "conflict-resolution-note-done" Button
+    t =    35.65s     Synthesize event
+    t =    35.97s     Wait for org.carecontinuity.app to idle
+    t =    36.36s Waiting 5.0s for Keyboard (First Match) to not exist
+    t =    37.40s     Checking `Expect predicate `existsNoRetry == 0` for object Keyboard (First Match)`
+    t =    37.40s         Checking existence of `Keyboard (First Match)`
+    t =    37.72s Find the "conflict-resolution-note" TextField
+    t =    38.30s Swipe down "Compare sources" NavigationBar
+    t =    38.30s     Wait for org.carecontinuity.app to idle
+    t =    38.31s     Find the "Compare sources" NavigationBar
+    t =    38.55s     Check for interrupting elements affecting "Compare sources" NavigationBar
+    t =    38.63s     Synthesize event
+    t =    39.21s     Wait for org.carecontinuity.app to idle
+    t =    39.52s Checking existence of `"Compare sources" NavigationBar`
+    t =    39.99s Find the "conflict-resolution-note" TextField
+    t =    41.21s Tap "Done" Button
+    t =    41.21s     Wait for org.carecontinuity.app to idle
+    t =    41.22s     Find the "Done" Button
+    t =    41.30s     Check for interrupting elements affecting "Done" Button
+    t =    41.39s     Synthesize event
+    t =    41.76s     Wait for org.carecontinuity.app to idle
+    t =    42.11s Waiting 5.0s for "Keep editing" Button to exist
+    t =    43.15s     Checking `Expect predicate `existsNoRetry == 1` for object "Keep editing" Button`
+    t =    43.15s         Checking existence of `"Keep editing" Button`
+    t =    43.29s Tap "Keep editing" Button
+    t =    43.29s     Wait for org.carecontinuity.app to idle
+    t =    43.30s     Find the "Keep editing" Button
+    t =    43.39s     Check for interrupting elements affecting "Keep editing" Button
+    t =    43.52s     Synthesize event
+    t =    43.84s     Wait for org.carecontinuity.app to idle
+    t =    44.11s Find the "conflict-resolution-note" TextField
+    t =    44.51s Checking existence of `"Compare sources" NavigationBar`
+    t =    44.56s Find the "Synthetic · PCP medication list" Button
+    t =    44.71s Checking existence of `"Compare sources" NavigationBar`
+    t =    44.77s Find the Target Application 'org.carecontinuity.app'
+    t =    44.82s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    44.86s Checking existence of `NavigationBar (Element at index 0)`
+    t =    44.90s Checking existence of `NavigationBar (Element at index 1)`
+    t =    44.95s Find the NavigationBar (Element at index 0)
+    t =    45.00s Find the NavigationBar (Element at index 1)
+    t =    45.04s Get all elements bound by index for: Descendants matching type TabBar
+    t =    45.09s Checking existence of `TabBar (Element at index 0)`
+    t =    45.13s Find the TabBar (Element at index 0)
+    t =    45.17s Checking existence of `Keyboard (First Match)`
+    t =    45.38s Checking existence of `"Compare sources" NavigationBar`
+    t =    45.43s Get all elements bound by index for: Descendants matching type ScrollView
+    t =    45.46s Find the ScrollView (Element at index 0)
+    t =    45.51s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 237.2) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 513.8) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    45.51s     Wait for org.carecontinuity.app to idle
+    t =    45.51s     Find the Target Application 'org.carecontinuity.app'
+    t =    45.55s     Check for interrupting elements affecting "CareInOne" Application
+    t =    45.59s     Synthesize event
+    t =    45.60s         Find the Target Application 'org.carecontinuity.app'
+    t =    45.63s         Find the Target Application 'org.carecontinuity.app'
+    t =    45.67s         Find the Target Application 'org.carecontinuity.app'
+    t =    45.70s         Find the Target Application 'org.carecontinuity.app'
+    t =    45.75s         Find the Target Application 'org.carecontinuity.app'
+    t =    46.80s     Wait for org.carecontinuity.app to idle
+    t =    46.80s Find the "Synthetic · PCP medication list" Button
+    t =    46.97s Find the "Synthetic · PCP medication list" Button
+    t =    47.09s Find the "Synthetic · PCP medication list" Button
+    t =    47.18s Find the "Synthetic · PCP medication list" Button
+    t =    47.29s Find the "Synthetic · PCP medication list" Button
+    t =    47.41s Find the "Synthetic · PCP medication list" Button
+    t =    47.56s Find the "Synthetic · PCP medication list" Button
+    t =    47.73s Find the "Synthetic · PCP medication list" Button
+    t =    47.90s Find the "Synthetic · PCP medication list" Button
+    t =    48.09s Find the "Synthetic · PCP medication list" Button
+    t =    48.26s Find the "Synthetic · PCP medication list" Button
+    t =    48.42s Find the "Synthetic · PCP medication list" Button
+    t =    48.58s Find the "Synthetic · PCP medication list" Button
+    t =    48.72s Find the "Synthetic · PCP medication list" Button
+    t =    48.87s Find the "Synthetic · PCP medication list" Button
+    t =    49.01s Find the "Synthetic · PCP medication list" Button
+    t =    49.15s Find the "Synthetic · PCP medication list" Button
+    t =    49.27s Waiting 5.0s for "Synthetic · PCP medication list" Button to exist
+    t =    50.30s     Checking `Expect predicate `existsNoRetry == 1` for object "Synthetic · PCP medication list" Button`
+    t =    50.30s         Checking existence of `"Synthetic · PCP medication list" Button`
+    t =    50.43s Find the "Synthetic · PCP medication list" Button
+    t =    50.57s Tap "Synthetic · PCP medication list" Button
+    t =    50.57s     Wait for org.carecontinuity.app to idle
+    t =    50.58s     Find the "Synthetic · PCP medication list" Button
+    t =    50.69s     Check for interrupting elements affecting "Synthetic · PCP medication list" Button
+    t =    50.76s     Synthesize event
+    t =    51.09s     Wait for org.carecontinuity.app to idle
+    t =    51.18s Waiting 5.0s for "Source evidence" NavigationBar to exist
+    t =    52.21s     Checking `Expect predicate `existsNoRetry == 1` for object "Source evidence" NavigationBar`
+    t =    52.21s         Checking existence of `"Source evidence" NavigationBar`
+    t =    52.28s Tap Button (First Match)
+    t =    52.28s     Wait for org.carecontinuity.app to idle
+    t =    52.28s     Find the Button (First Match)
+    t =    52.35s     Check for interrupting elements affecting "Compare sources" Button
+    t =    52.40s     Synthesize event
+    t =    52.72s     Wait for org.carecontinuity.app to idle
+    t =    53.21s Waiting 5.0s for "Compare sources" NavigationBar to exist
+    t =    54.22s     Checking `Expect predicate `existsNoRetry == 1` for object "Compare sources" NavigationBar`
+    t =    54.22s         Checking existence of `"Compare sources" NavigationBar`
+    t =    54.33s Checking existence of `"Compare sources" NavigationBar`
+    t =    54.41s Find the "conflict-resolution-note" TextField
+    t =    54.90s Checking existence of `"Compare sources" NavigationBar`
+    t =    55.00s Find the Target Application 'org.carecontinuity.app'
+    t =    55.05s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    55.11s Checking existence of `NavigationBar (Element at index 0)`
+    t =    55.17s Checking existence of `NavigationBar (Element at index 1)`
+    t =    55.21s Find the NavigationBar (Element at index 0)
+    t =    55.27s Find the NavigationBar (Element at index 1)
+    t =    55.32s Get all elements bound by index for: Descendants matching type TabBar
+    t =    55.39s Checking existence of `TabBar (Element at index 0)`
+    t =    55.50s Find the TabBar (Element at index 0)
+    t =    55.56s Checking existence of `Keyboard (First Match)`
+    t =    55.79s Checking existence of `"Compare sources" NavigationBar`
+    t =    55.89s Get all elements bound by index for: Descendants matching type ScrollView
+    t =    55.96s Find the ScrollView (Element at index 0)
+    t =    56.01s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 513.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 237.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    56.01s     Wait for org.carecontinuity.app to idle
+    t =    56.02s     Find the Target Application 'org.carecontinuity.app'
+    t =    56.07s     Check for interrupting elements affecting "CareInOne" Application
+    t =    56.15s     Synthesize event
+    t =    56.17s         Find the Target Application 'org.carecontinuity.app'
+    t =    56.23s         Find the Target Application 'org.carecontinuity.app'
+    t =    56.29s         Find the Target Application 'org.carecontinuity.app'
+    t =    56.33s         Find the Target Application 'org.carecontinuity.app'
+    t =    56.39s         Find the Target Application 'org.carecontinuity.app'
+    t =    57.47s     Wait for org.carecontinuity.app to idle
+    t =    57.50s Find the "conflict-resolution-note" TextField
+    t =    60.07s Find the "conflict-resolution-note" TextField
+    t =    62.36s Find the "conflict-resolution-note" TextField
+    t =    63.63s Find the "conflict-resolution-note" TextField
+    t =    64.60s Find the "conflict-resolution-note" TextField
+    t =    65.06s Find the "conflict-resolution-note" TextField
+    t =    65.51s Find the "conflict-resolution-note" TextField
+    t =    65.97s Find the "conflict-resolution-note" TextField
+    t =    66.51s Find the "conflict-resolution-note" TextField
+    t =    67.02s Find the "conflict-resolution-note" TextField
+    t =    67.51s Find the "conflict-resolution-note" TextField
+    t =    68.40s Find the "conflict-resolution-note" TextField
+    t =    68.87s Find the "conflict-resolution-note" TextField
+    t =    69.37s Find the "conflict-resolution-note" TextField
+    t =    69.92s Find the "conflict-resolution-note" TextField
+    t =    70.29s Find the "conflict-resolution-note" TextField
+    t =    70.64s Find the "conflict-resolution-note" TextField
+    t =    70.98s Waiting 5.0s for "conflict-resolution-note" TextField to exist
+    t =    72.00s     Checking `Expect predicate `existsNoRetry == 1` for object "conflict-resolution-note" TextField`
+    t =    72.00s         Checking existence of `"conflict-resolution-note" TextField`
+    t =    72.30s Find the "conflict-resolution-note" TextField
+    t =    72.54s Tap "conflict-resolution-note" TextField
+    t =    72.54s     Wait for org.carecontinuity.app to idle
+    t =    72.54s     Find the "conflict-resolution-note" TextField
+    t =    72.74s     Check for interrupting elements affecting "conflict-resolution-note" TextField
+    t =    72.89s     Synthesize event
+    t =    73.23s     Wait for org.carecontinuity.app to idle
+    t =    73.81s Tap "conflict-resolution-note-done" Button
+    t =    73.81s     Wait for org.carecontinuity.app to idle
+    t =    74.30s     Find the "conflict-resolution-note-done" Button
+    t =    74.40s     Check for interrupting elements affecting "conflict-resolution-note-done" Button
+    t =    74.47s     Synthesize event
+    t =    74.80s     Wait for org.carecontinuity.app to idle
+    t =    75.17s Find the "conflict-resolution-note" TextField
+    t =    75.31s Find the Target Application 'org.carecontinuity.app'
+    t =    75.44s Added attachment named 'CareInOne · clarification note kept after cancelled dismissal'
+    t =    75.44s Tap "Done" Button
+    t =    75.44s     Wait for org.carecontinuity.app to idle
+    t =    75.44s     Find the "Done" Button
+    t =    75.49s     Check for interrupting elements affecting "Done" Button
+    t =    75.54s     Synthesize event
+    t =    75.86s     Wait for org.carecontinuity.app to idle
+    t =    76.18s Tap "Discard changes" Button
+    t =    76.18s     Wait for org.carecontinuity.app to idle
+    t =    76.19s     Find the "Discard changes" Button
+    t =    76.27s     Check for interrupting elements affecting "Discard changes" Button
+    t =    76.38s     Synthesize event
+    t =    76.70s     Wait for org.carecontinuity.app to idle
+    t =    76.96s Waiting 5.0s for "Compare sources" NavigationBar to not exist
+    t =    77.98s     Checking `Expect predicate `existsNoRetry == 0` for object "Compare sources" NavigationBar`
+    t =    77.98s         Checking existence of `"Compare sources" NavigationBar`
+    t =    78.05s Checking existence of `"Compare sources" NavigationBar`
+    t =    78.10s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    78.34s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    78.62s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    78.80s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    79.01s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    79.20s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    79.40s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    79.59s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    79.80s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    80.00s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    80.28s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    80.46s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    80.66s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    80.88s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+Resolve Package Graph
+    t =    81.13s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+
+    t =    81.41s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    81.64s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    81.84s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    82.01s Waiting 5.0s for "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button to exist
+    t =    83.03s     Checking `Expect predicate `existsNoRetry == 1` for object "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button`
+    t =    83.03s         Checking existence of `"Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button`
+    t =    83.16s Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    83.26s Tap "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    83.26s     Wait for org.carecontinuity.app to idle
+    t =    83.27s     Find the "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    83.34s     Check for interrupting elements affecting "Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button
+    t =    83.37s     Synthesize event
+    t =    83.68s     Wait for org.carecontinuity.app to idle
+    t =    84.16s Checking existence of `"Compare sources" NavigationBar`
+    t =    84.24s Find the "conflict-resolution-note" Any
+    t =    84.64s Checking existence of `"Compare sources" NavigationBar`
+    t =    84.69s Find the Target Application 'org.carecontinuity.app'
+    t =    84.72s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    84.76s Checking existence of `NavigationBar (Element at index 0)`
+    t =    84.80s Checking existence of `NavigationBar (Element at index 1)`
+    t =    84.83s Find the NavigationBar (Element at index 0)
+    t =    84.88s Find the NavigationBar (Element at index 1)
+    t =    84.93s Get all elements bound by index for: Descendants matching type TabBar
+    t =    84.97s Checking existence of `TabBar (Element at index 0)`
+    t =    85.01s Find the TabBar (Element at index 0)
+    t =    85.05s Checking existence of `Keyboard (First Match)`
+    t =    85.28s Checking existence of `"Compare sources" NavigationBar`
+    t =    85.36s Get all elements bound by index for: Descendants matching type ScrollView
+    t =    85.44s Find the ScrollView (Element at index 0)
+    t =    85.56s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 513.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 237.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    85.56s     Wait for org.carecontinuity.app to idle
+    t =    85.57s     Find the Target Application 'org.carecontinuity.app'
+    t =    85.63s     Check for interrupting elements affecting "CareInOne" Application
+    t =    85.69s     Synthesize event
+    t =    85.70s         Find the Target Application 'org.carecontinuity.app'
+    t =    85.92s         Find the Target Application 'org.carecontinuity.app'
+    t =    86.07s         Find the Target Application 'org.carecontinuity.app'
+    t =    86.17s         Find the Target Application 'org.carecontinuity.app'
+    t =    86.23s         Find the Target Application 'org.carecontinuity.app'
+    t =    87.34s     Wait for org.carecontinuity.app to idle
+    t =    87.35s Find the "conflict-resolution-note" TextField
+    t =    88.02s Checking existence of `"Compare sources" NavigationBar`
+    t =    88.15s Find the Target Application 'org.carecontinuity.app'
+    t =    88.22s Get all elements bound by index for: Descendants matching type NavigationBar
+    t =    88.31s Checking existence of `NavigationBar (Element at index 0)`
+    t =    88.44s Checking existence of `NavigationBar (Element at index 1)`
+    t =    88.51s Find the NavigationBar (Element at index 0)
+    t =    88.62s Find the NavigationBar (Element at index 1)
+    t =    88.71s Get all elements bound by index for: Descendants matching type TabBar
+    t =    88.78s Checking existence of `TabBar (Element at index 0)`
+    t =    88.84s Find the TabBar (Element at index 0)
+    t =    88.91s Checking existence of `Keyboard (First Match)`
+    t =    89.98s Checking existence of `"Compare sources" NavigationBar`
+    t =    90.07s Get all elements bound by index for: Descendants matching type ScrollView
+    t =    90.14s Find the ScrollView (Element at index 0)
+    t =    90.21s Press Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 513.8) for 0.2 seconds, then drag to Target Application 'org.carecontinuity.app'[0.00, 0.00] -> (12.0, 237.2) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    90.21s     Wait for org.carecontinuity.app to idle
+    t =    90.23s     Find the Target Application 'org.carecontinuity.app'
+    t =    90.32s     Check for interrupting elements affecting "CareInOne" Application
+    t =    90.42s     Synthesize event
+    t =    90.43s         Find the Target Application 'org.carecontinuity.app'
+    t =    90.49s         Find the Target Application 'org.carecontinuity.app'
+    t =    90.55s         Find the Target Application 'org.carecontinuity.app'
+    t =    90.60s         Find the Target Application 'org.carecontinuity.app'
+    t =    90.65s         Find the Target Application 'org.carecontinuity.app'
+    t =    91.72s     Wait for org.carecontinuity.app to idle
+    t =    91.73s Find the "conflict-resolution-note" TextField
+    t =    92.10s Find the "conflict-resolution-note" TextField
+    t =    92.45s Find the "conflict-resolution-note" TextField
+    t =    92.78s Find the "conflict-resolution-note" TextField
+    t =    93.06s Find the "conflict-resolution-note" TextField
+    t =    93.51s Find the "conflict-resolution-note" TextField
+    t =    94.03s Find the "conflict-resolution-note" TextField
+    t =    94.47s Find the "conflict-resolution-note" TextField
+    t =    94.83s Find the "conflict-resolution-note" TextField
+    t =    95.16s Find the "conflict-resolution-note" TextField
+    t =    95.57s Find the "conflict-resolution-note" TextField
+    t =    95.88s Find the "conflict-resolution-note" TextField
+    t =    96.14s Find the "conflict-resolution-note" TextField
+    t =    96.41s Find the "conflict-resolution-note" TextField
+    t =    96.62s Find the "conflict-resolution-note" TextField
+    t =    96.79s Find the "conflict-resolution-note" TextField
+    t =    96.94s Waiting 5.0s for "conflict-resolution-note" TextField to exist
+    t =    97.96s     Checking `Expect predicate `existsNoRetry == 1` for object "conflict-resolution-note" TextField`
+    t =    97.96s         Checking existence of `"conflict-resolution-note" TextField`
+    t =    98.32s Find the "conflict-resolution-note" TextField
+    t =    99.01s Tap "conflict-resolution-note" TextField
+    t =    99.01s     Wait for org.carecontinuity.app to idle
+    t =    99.02s     Find the "conflict-resolution-note" TextField
+    t =    99.35s     Check for interrupting elements affecting "conflict-resolution-note" TextField
+    t =    99.45s     Synthesize event
+    t =    99.76s     Wait for org.carecontinuity.app to idle
+    t =    99.82s Find the "conflict-resolution-note" TextField
+    t =   100.28s Find the "conflict-resolution-note" TextField
+    t =   100.93s Tap "conflict-resolution-note-done" Button
+    t =   100.93s     Wait for org.carecontinuity.app to idle
+    t =   100.94s     Find the "conflict-resolution-note-done" Button
+    t =   101.09s     Check for interrupting elements affecting "conflict-resolution-note-done" Button
+    t =   101.20s     Synthesize event
+    t =   101.54s     Wait for org.carecontinuity.app to idle
+    t =   101.90s Tap "Done" Button
+    t =   101.90s     Wait for org.carecontinuity.app to idle
+    t =   101.91s     Find the "Done" Button
+    t =   101.99s     Check for interrupting elements affecting "Done" Button
+    t =   102.06s     Synthesize event
+    t =   102.38s     Wait for org.carecontinuity.app to idle
+    t =   102.81s Waiting 5.0s for "Compare sources" NavigationBar to not exist
+    t =   103.81s     Checking `Expect predicate `existsNoRetry == 0` for object "Compare sources" NavigationBar`
+    t =   103.82s         Checking existence of `"Compare sources" NavigationBar`
+    t =   103.85s Checking existence of `"Discard changes" Button`
+    t =   103.87s Checking existence of `"Metoprolol succinate: dose differs, Unresolved, Compare 2 source-linked reports" Button`
+    t =   103.96s Tear Down
+Test Case '-[CareInOneUITests.FollowThroughDraftRecoveryUITests testResolutionNoteDoneSwipeAndSourceNavigationRequireExplicitDiscard]' passed (104.337 seconds).
+Test Suite 'FollowThroughDraftRecoveryUITests' passed at 2026-10-05 01:49:46.222.
+	 Executed 1 test, with 0 failures (0 unexpected) in 104.337 (104.339) seconds
+Test Suite 'CareInOneUITests.xctest' passed at 2026-10-05 01:49:46.226.
+	 Executed 1 test, with 0 failures (0 unexpected) in 104.337 (104.343) seconds
+Test Suite 'Selected tests' passed at 2026-10-05 01:49:46.229.
+	 Executed 1 test, with 0 failures (0 unexpected) in 104.337 (104.347) seconds
+2026-10-05 01:50:56.352 xcodebuild[67020:31012833] [MT] IDETestOperationsObserverDebug: 179.372 elapsed -- Testing started completed.
+2026-10-05 01:50:56.353 xcodebuild[67020:31012833] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-05 01:50:56.353 xcodebuild[67020:31012833] [MT] IDETestOperationsObserverDebug: 179.373 sec, +179.373 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/CareInOneSmallPhoneClarificationFinal.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

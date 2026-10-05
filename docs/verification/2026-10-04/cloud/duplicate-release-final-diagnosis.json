@@ -1,0 +1,57 @@
+{
+  "scope": "Private snapshot-only focused native Release case on the agent disposable device; repository production Swift unchanged.",
+  "configuration": "Release, normal simulator signing, app.launchArguments empty, existing isolated fictional demo only.",
+  "initialAttempt": {
+    "result": "failed helper prerequisite",
+    "durationSeconds": 114.27,
+    "exitCode": 65,
+    "reason": "The recovery helper expected the initially collapsed Search original sources field. Failure AX nevertheless showed Sources navigation and the original row once. No draft text was edited after the alert.",
+    "xcresult": "/private/tmp/CareInOneReleaseDuplicateDiagnosis.xcresult",
+    "collectorIntervention": "Terminated only confirmed idle diagnostic child 49246, direct PPID 47867, exact result/device, 0.0 percent CPU longer than three minutes after tests ended; did not stop runner or app."
+  },
+  "retry": {
+    "result": "Passed",
+    "totalTestCount": 1,
+    "passedTests": 1,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "runnerExitCode": 0,
+    "nativeCaseDurationSeconds": 253.44,
+    "device": "BEFFC231-C67F-4FFC-9F41-53789BF05F78",
+    "configuration": "Release, normal simulator signing, no launch flags",
+    "runtimeWarnings": [
+      "AVAudioSession main-thread activation/deactivation may affect responsiveness",
+      "Invalid frame dimension (negative or non-finite)"
+    ],
+    "source": "finalized /private/tmp/CareInOneReleaseDuplicateRetry.xcresult"
+  },
+  "verifiedJourney": [
+    "Normal Settings Explore the fictional demo, Today Add source, title Fictional duplicate attempt, exact evidence Allergy: latex.",
+    "Exact editor text confirmed and Save evidence enabled.",
+    "Duplicate notice says already saved; acknowledge OK. Capture sheet closes and isolated demo Today is visible.",
+    "Sources: original Fictional release save diagnosis appears exactly once; Fictional duplicate attempt is not a new source.",
+    "Open the original, Review & edit, supporting evidence quote is exactly Allergy: latex.",
+    "Terminate and relaunch normally; reopen existing demo via Settings, Sources and original Review; exact quote and original title retained."
+  ],
+  "classification": {
+    "evidenceLost": false,
+    "duplicateSourceCreated": false,
+    "originalTitleRetained": true,
+    "duplicateAttemptTitlePersisted": false,
+    "immediateReviewSheetContinued": false,
+    "supportedRecovery": "Sources \u2192 original evidence \u2192 Review & edit",
+    "remainingUXLimitation": "The global duplicate notice dismisses the capture sheet. Existing evidence can be reopened; the user must navigate through Sources rather than continuing in the sheet."
+  },
+  "retryCollectorIntervention": "None; xcodebuild completed automatically with actual TEST SUCCEEDED and exit 0.",
+  "evidence": {
+    "screenshot": "docs/verification/2026-10-04/cloud/duplicate-release-recovered-review-after-relaunch-fictional.png",
+    "sha256": "b810f09ce59dc49f515cd3d38312969f4a8680e944658550b59a28aa83e1323c",
+    "visualReview": "Actual Review claim sheet shows explicit fictional source title, exact Allergy: latex quote, extraction-confidence qualification. No credentials, account details or real health data displayed."
+  },
+  "limitations": [
+    "Focused fictional duplicate fixture only; all feature and final candidate verification remains separate.",
+    "No paid request, credential-store access, production service/environment change or primary/screenshot simulator mutation.",
+    "Warnings retained; this case does not certify physical microphone behavior or every layout.",
+    "The initial helper failure is preserved, not counted as a pass."
+  ]
+}

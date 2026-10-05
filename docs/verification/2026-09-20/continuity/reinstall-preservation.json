@@ -1,0 +1,69 @@
+{
+  "purpose": "Subsequent normal reinstall: compare decoded JSON so key-order changes are not mistaken for patient-data changes. Includes all 12 record types and protected files.",
+  "launchFlags": [],
+  "records": {
+    "ZEVIDENCESOURCE": {
+      "beforeCount": 20,
+      "afterCount": 20,
+      "decodedContentUnchanged": true
+    },
+    "ZENCOUNTER": {
+      "beforeCount": 3,
+      "afterCount": 3,
+      "decodedContentUnchanged": true
+    },
+    "ZCAREENTITY": {
+      "beforeCount": 14,
+      "afterCount": 14,
+      "decodedContentUnchanged": true
+    },
+    "ZCARECLAIM": {
+      "beforeCount": 19,
+      "afterCount": 19,
+      "decodedContentUnchanged": true
+    },
+    "ZCLAIMRELATION": {
+      "beforeCount": 22,
+      "afterCount": 22,
+      "decodedContentUnchanged": true
+    },
+    "ZCONFLICTRECORD": {
+      "beforeCount": 2,
+      "afterCount": 2,
+      "decodedContentUnchanged": true
+    },
+    "ZOPENLOOP": {
+      "beforeCount": 7,
+      "afterCount": 7,
+      "decodedContentUnchanged": true
+    },
+    "ZCHANGERECORD": {
+      "beforeCount": 29,
+      "afterCount": 29,
+      "decodedContentUnchanged": true
+    },
+    "ZSAVEDQUESTION": {
+      "beforeCount": 1,
+      "afterCount": 1,
+      "decodedContentUnchanged": true
+    },
+    "ZPATIENTNOTE": {
+      "beforeCount": 0,
+      "afterCount": 0,
+      "decodedContentUnchanged": true
+    },
+    "ZPATIENTPROFILE": {
+      "beforeCount": 1,
+      "afterCount": 1,
+      "decodedContentUnchanged": true
+    },
+    "ZAUDITEVENT": {
+      "beforeCount": 40,
+      "afterCount": 40,
+      "decodedContentUnchanged": true
+    }
+  },
+  "beforeEvidenceFileCount": 1,
+  "afterEvidenceFileCount": 1,
+  "evidenceBytesUnchanged": true
+}

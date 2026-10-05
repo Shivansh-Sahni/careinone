@@ -18,6 +18,15 @@
 - Export is explicit. Text/PDF/JSON export contains health information; external recipients and share destinations are selected by the patient. JSON export excludes binary attachments/audio. Temporary exports use file protection and can be removed with all-data deletion.
 - Audit events contain only a fixed operation name, timestamp, and count. Application logging emits generic operational messages, never source text, provider output, tokens, names, or clinical labels.
 
+## Evidence intelligence and handoff copies
+
+- Graph traversal and multi-source omission run only over local values. Omission reconciles a copy off the UI thread and discards it if cancelled or if saved state/selection changes. It never mutates patient records or schedules notifications.
+- Handoffs keep an immutable selected outgoing text copy, comparison hashes, explicit selected source/claim/entity references, organizational status and patient-authored reply drafts in the protected SwiftData payload. These are health data and are included in encrypted backup. Optional metadata preserves older store/archive decoding.
+- Comparison hashes include canonical claims, relevant discrepancies/workflows, reviewed content and metadata of supporting sources, selected questions/notes and only profile fields explicitly included in the outgoing copy. Unreviewed model proposals do not become accepted care. Re-analysis can change entity IDs; source-content fingerprints still surface a change without silently merging identities.
+- SHA-256 identifies a text copy; it does not authenticate its author or certify medical accuracy. Sharing is explicit through the system share sheet. Status reflects the patient's report, not recipient delivery, clinician acknowledgement or clinical task completion.
+- Deleting a supporting source invalidates the entire copied outgoing text, prunes associated comparison references and clears local export staging after the database transaction succeeds. A failed save retains the prior copy and files. Deleting a handoff leaves independently captured reply sources intact. User-authored labels/drafts are independent context; source deletion cannot infer their origin. All-data deletion clears every handoff.
+- Bounds: 100 handoffs; 2M combined outgoing/draft characters; 200K characters per outgoing copy; 30K per reply draft; 500 selected items; 50K combined comparison fingerprints, at most 10K per context. Restore validates identifiers, dates, digests, bounds and source references. The ordinary encrypted-archive bounds still apply.
+
 ## Gateway
 
 - HTTPS is mandatory in the iOS cloud adapter and provider adapter; redirects are rejected to prevent bearer-token forwarding.

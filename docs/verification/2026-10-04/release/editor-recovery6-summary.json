@@ -1,0 +1,32 @@
+{
+  "scope": "Focused UI recovery after Candidate4 transition-bar helper repair; note bounded keyboard wait added later",
+  "result": "Failed",
+  "total": 3,
+  "passed": 2,
+  "failed": 1,
+  "skipped": 0,
+  "start_utc": "2026-10-05T02:43:08.147000+00:00",
+  "finish_utc": "2026-10-05T02:56:11.900000+00:00",
+  "passed_cases": [
+    "Encounter discard/Keep/keyboard/grouping/clean Cancel",
+    "Question answer paste/dirty swipe/Keep/discard/save/relaunch/Keep and confirmed deletion/relaunch"
+  ],
+  "failed_case": "Note recovery stopped at immediate keyboard-count assertion after Done; earlier focused5 and Candidate4 passed. Test now awaits keyboard absence up to 5 seconds, preserving the same assertion. Note7 is a targeted rerun.",
+  "runtime_warnings": [
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    },
+    {
+      "issueType": "Runtime Warning",
+      "message": "Invalid frame dimension (negative or non-finite)."
+    }
+  ],
+  "diagnostic_note": "Finalized after terminating only the confirmed owned simctl diagnose child, idle at 0.0% CPU for about four minutes after all assertions ended. No app process, active test, other simulator, or user data was terminated.",
+  "log": "editor-recovery6.log",
+  "result_bundle": "/private/tmp/CareInOneEditorRecovery6.xcresult"
+}
