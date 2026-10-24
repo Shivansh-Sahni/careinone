@@ -4,7 +4,7 @@ Owner decisions on October 19, 2026: retain CareInOne branding; browser-only rec
 
 ## October 24 launch update
 
-The website is now the priority for the competition, with completion of the working HTTPS web release targeted within the next few hours on October 24, before domain purchase; Apple/model migration and competition-registration details are deferred outside the website critical path. Domain purchase remains with the owner. Read [the exact service/DNS/backup cutover](DOMAIN_CUTOVER.md) and [judge demo path](JUDGE_DEMO.md); the October 19 local result is not a public deployment.
+**Web1.0.1 is live at https://careinone-api.onrender.com**, runtime SHA `b5aeb69b8da5e1fe1acb31f7ab00974618201d5b`, deployed October24 at19:27:02UTC. The existing Render Docker image built/started successfully and public routes, assets, browser workflows and native authenticated API configuration passed. Web cloud is enabled after owner private credential setup; one fictional real extraction passed with3exact-quote-validated claims at19:48:35UTC. Domain purchase remains with the owner; Apple/model migration and competition-registration details are outside the website critical path. Read [the exact service/DNS/backup cutover](DOMAIN_CUTOVER.md), [judge demo path](JUDGE_DEMO.md) and current Website management status. The October19 local result is separate historical evidence.
 
 ## Architecture and preservation
 
@@ -31,10 +31,10 @@ The website is now the priority for the competition, with completion of the work
 
 Browser-only records need **no new paid database**. Hosting the web shell and gateway on the existing Render service is intended to reuse its current compute plan; this is an architecture estimate, not a verification of the account's actual bill or capacity. Model usage, domain registration, bandwidth and build overages remain separate. Avoid a second service unless isolation is worth that additional bill.
 
-Render documents custom domains and automatic TLS on existing web services: [custom domains](https://render.com/docs/custom-domains). Its [pricing page](https://render.com/pricing) lists service/storage prices and usage allowances. A separate static site can be free, but cannot safely hold the gateway secret or replace the server bridge. Render's default filesystem is ephemeral; do not later add server records without durable storage. [Persistent disks](https://render.com/docs/disks). Free Render Postgres expires after 30 days and is unsuitable as an indefinite production database. [Free service limits](https://render.com/docs/free).
+Render documents custom domains and automatic TLS on existing web services: [custom domains](https://render.com/docs/custom-domains). Its [pricing page](https://render.com/pricing) lists service/storage prices and usage allowances. A separate static site can be free, but cannot safely hold the gateway secret or replace the server bridge. Render's default filesystem is ephemeral; do not later add server records without durable storage. [Persistent disks](https://render.com/docs/disks). A patient database is outside this browser-only release.
 
 Cloud allowance defaults: 10 extraction attempts per access code per rolling 24 hours, 100 total per server process, existing gateway's rate/concurrency controls, and bounded source size. Failed attempts count. These counters reset on restart and do not provide a global financial cap. Keep the model provider's own billing controls. Adding/removing a code needs an environment update/redeploy; removing it invalidates sessions derived from that code.
 
-## Public launch dependencies still requiring live verification
+## Remaining live verification
 
-No public deploy, domain purchase, DNS change, account billing change, or real model call is implied by local verification. A deployed synthetic analysis plus the existing mobile API compatibility check is required before claiming production cloud readiness. The browser vault is not encrypted at rest by this website; exported backup files are encrypted. Use the device/browser profile's access controls.
+The public web deployment and preserved mobile authentication have been verified. One bounded fictional real web model call passed; no domain purchase, DNS change or account billing change was performed. Wider-device, physical microphone and fresh deployed file-upload/restore coverage remain limited as recorded in Website status. The browser vault is not encrypted at rest by this website; exported backup files are encrypted. Use the device/browser profile's access controls.

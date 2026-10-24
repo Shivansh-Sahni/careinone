@@ -35,7 +35,7 @@ Separate web product for the October 19, 2026 pivot. Browser-only records and Ca
 | W27 | Domain / Render operation | `docs/web/LAUNCH_PLAN.md`, optional second-service YAML | Single-service path can reuse existing compute. No domain purchase, DNS change, public deployment or billing change performed. |
 | W28 | Honest privacy / costs | In-product privacy/help and launch guide | Browser vault is not encrypted at rest. Encrypted exports are. No new database purchase is needed for the confirmed browser-only release. |
 
-## Automated verification snapshot
+## Historical October 19 verification snapshot
 
 - JavaScript care/import/insight/encryption suite: **38 tests passed**, including IndexedDB transaction/concurrent-writer/rollback coverage.
 - Web server/in-process gateway/packaging suite: **23 tests passed**.
@@ -44,7 +44,7 @@ Separate web product for the October 19, 2026 pivot. Browser-only records and Ca
 - Dependency audit after replacing the flagged PDF version: **zero reported vulnerabilities**. This is a point-in-time dependency check, not a penetration test.
 - Browser verification: fictional example, capture → review → My care, unresolved two-dose conflict, task date/status, visit recap/review, encrypted download/restore, PDF text extraction, local image OCR, reviewed result table and desktop layout. Remaining browser checks are recorded in `docs/web/verification/README.md`.
 
-## Genuine limits and public launch gates
+## Historical October 19 limits and public launch gates
 
 1. No public deployment or domain is configured by this local build. Select the domain, run the documented Render cutover, and verify that exact deployed revision and both web/mobile API flows.
 2. Real provider credentials/retention, deployed configuration and live fictional model extraction remain operator checks. Existing Render route reads are recorded separately; an unverified health request must not be described as a successful live API check.
@@ -56,3 +56,13 @@ Separate web product for the October 19, 2026 pivot. Browser-only records and Ca
 ## October 24 release candidate 1.0.1
 
 Fresh local verification: 38 JavaScript + 26 web/server/compatibility + 108 unchanged backend tests. Both full-cloud and explicit local-only modes pass actual localhost HTTP smoke with zero paid calls. Added multi-mobile-token/old-host compatibility after canonical-origin change, explicit `CARE_WEB_CLOUD_ENABLED=false` fallback, PDF byte-preserving Git attributes, and production image boot/HTTP smoke in CI. Current live API health/configuration and public routes are recorded under `docs/web/verification/2026-10-24/`; the existing live model/budgets are unchanged. See Website management status for the actual release SHA, CI/image outcome and public deployment; the October 19 staging/health blockers are historical, not current evidence.
+
+## October 24 public release
+
+- **Live:** https://careinone-api.onrender.com at runtime SHA `b5aeb69b8da5e1fe1acb31f7ab00974618201d5b` (web1.0.1), Render deployment `dep-dbegcno473hc73d7kbeg`, live19:27:02UTC. Same existing service/compute; no patient database added.
+- Actual Render Docker build and startup passed in39.1seconds. Public19-route/asset byte comparisons/security headers passed; native unauthenticated config401 and authenticated config200 preserve the existing model/bounds.
+- Public browser acceptance passed fictional onboarding, unresolved source comparison, acceptpending, newcapture→review→task, personal date/notes plus reload, visitrecap→pending source and carebrief. Browser warning/error log empty. Public390×844 responsive viewport passed with no horizontal page overflow and override reset.
+- Encrypted backup downloaded in the browser (13,963bytes); offline decryption verifies5sources/10claims/1visit and saved changes. The browser tool's download event timed out despite the successful download. Fresh deployed restore/PDF/OCR automation remains limited by Chrome extension file-upload permission; it has not been expanded. Historical local browser PDF/OCR/restore evidence remains separate.
+- Web cloud enabled after owner private credential setup. Same-SHA redeploy Live19:46:38UTC; real web verification19:48:35UTC passed login/cookie, matching native config, missing-consent rejection, one fictional extraction200/3exact-quote-validated claims, logout. RuntimeUID10001. Model/caps unchanged; domain deferred.
+- GitHub CI40125147913 could not start due account payment/spending-limit state; zero steps ran, no budget change. Docker read-only-container CI smoke was not executed. Render's actual production build/boot and HTTP checks are the available production evidence.
+- See `docs/web/verification/2026-10-24/` and Website management status for the latest mode and verification. The historical unconfigured/public-health/staging limitations above no longer describe the current release.

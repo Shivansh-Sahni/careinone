@@ -22,6 +22,8 @@ Optional short document demonstration: **Sources → Add a source**, choose the 
 
 ## Optional real-cloud segment
 
+The deployed bridge passed one bounded fictional real extraction on October24 at19:48:35UTC, exact runtime SHA `b5aeb69b8da5e1fe1acb31f7ab00974618201d5b`. Login/cookie/consent rejection/configuration/logout also passed. This is functional evidence, not clinical validation.
+
 Only include it after the deployed cloud path has been separately verified. The operator must issue a dedicated private judge code if judges need cloud access; supply it through a permitted private submission channel, not public video/source. Keep the existing per-code/global allowances and provider spending caps.
 
 From **Settings → Connection & consent**, connect using that code. Open a selected fictional source and choose **Analyze with cloud**. Show the real configured recipients/model and explicit consent checkbox. Only source text/type/event date is sent; the attachment remains in the browser. The returned statements are pending review. Never narrate mock/local results as live inference, and never claim no provider retention unless the account-specific data controls actually establish that.

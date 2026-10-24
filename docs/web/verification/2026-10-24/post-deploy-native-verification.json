@@ -1,0 +1,26 @@
+{
+  "checkedAtUTC": "2026-10-24T19:29:12.508490+00:00",
+  "releaseSHA": "b5aeb69b8da5e1fe1acb31f7ab00974618201d5b",
+  "transport": "Render Web Shell to public HTTPS native API",
+  "paidRequestsAttempted": 0,
+  "health": {
+    "passed": true,
+    "httpStatus": 200
+  },
+  "configuration": {
+    "passed": true,
+    "httpStatus": 200,
+    "providers": {
+      "primary": {
+        "adapter": "openai",
+        "model": "gpt-4.1-mini-2025-04-14",
+        "host": "api.openai.com",
+        "maxOutputTokens": 6000
+      },
+      "fallback": null
+    },
+    "patientContentStored": false,
+    "maxSourceCharacters": 40000
+  },
+  "liveInferenceVerified": false
+}

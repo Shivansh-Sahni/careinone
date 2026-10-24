@@ -2,7 +2,11 @@
 
 Updated October 24, 2026. No service, database or domain is purchased by these steps. Keep current model/provider settings and spending caps. The user buys the domain. The current human priority is the working HTTPS website within the next few hours on October 24; domain follows later. Apple, model migration and competition registration do not gate this web work.
 
-## Verified starting point
+## Verified live release (19:27 UTC)
+
+The existing service now serves web1.0.1 at **https://careinone-api.onrender.com**, deployed SHA **b5aeb69b8da5e1fe1acb31f7ab00974618201d5b**. Actual Render Docker build/start succeeded in39.1seconds. Public19-route/assets checks and post-deploy authenticated native health/configuration passed. Web cloud is enabled after owner private credential setup and a successful bounded fictional real extraction; same-SHA redeploy went Live19:46:38UTC. See Website status for its exact evidence/limits. No database or service was added.
+
+## Verified pre-launch starting point
 
 - Existing service: `careinone-api`, service ID `srv-db18qghsrm7s73ajqq8g`, Ohio, current compute label `0.5c-512mb`.
 - Existing URL: `https://careinone-api.onrender.com`.
@@ -16,7 +20,7 @@ Updated October 24, 2026. No service, database or domain is purchased by these s
 1. Read `docs/management/2026-10-24/WEBSITE_STATUS.md` for the exact release SHA and latest image result. A source commit or local unit pass alone is not a production-image boot.
 2. Stage/commit/push only web-owned files to `codex/careinone-web`; preserve dirty native source/test changes. Do not merge them into this web release.
 3. Prefer a production Docker image boot tested with `web/scripts/container_smoke.py`, including both cloud and explicit local-only web modes. CI is bounded to 20 minutes. If GitHub quota blocks execution, do not increase budget; record the blocker. No local Docker runtime is currently installed.
-4. Obtain the operator's action-time confirmation before changing the existing public service. Public credential setup belongs to the owner; never put provider keys, gateway tokens, web access codes, cookies or deploy-hook values in chat, screenshots, Git or video.
+4. Keep changes within the owner-authorized existing-service launch. Any new credential entry/submission belongs to the owner under browser credential rules; never put provider keys, gateway tokens, web access codes, cookies or deploy-hook values in chat, screenshots, Git or video. Route owner questions through Manager.
 
 ## First HTTPS website, before the domain is ready
 
@@ -52,7 +56,7 @@ After the operator-approved manual deploy, verify this **exact deployed revision
 - `/health` retains `{"status":"ok","schemaVersion":"care-schema-1.0"}`; `/privacy` and `/support` preserve native public content. A healthy native endpoint alone does not prove the website works.
 - Unauthenticated `/v1/config` is 401. Run `python -m backend.verify_gateway --server-environment` in the existing Render Web Shell: health and authenticated configuration should pass with **zero paid requests** and unchanged model/bounds. Never print environment variables.
 - `/api/status` reports the selected web mode. In local-only mode `/api/config` and login return 503; this is intentional. In cloud mode, an operator-issued code creates an HttpOnly Secure SameSite session, metadata identifies recipients, and source text is sent only after explicit consent.
-- Only after separate approval, perform a small bounded fictional live extraction if live cloud is part of the judge demonstration. Mock success does not establish real provider inference.
+- After private credential setup, verify a small bounded fictional live extraction within existing model/billing limits if live cloud is part of the judge demonstration. Mock success does not establish real provider inference.
 - Complete the judge walkthrough, backup/restore and a mobile-browser pass. Record the URL/revision and screenshots before using the link in submission.
 
 ## Domain purchase and DNS
