@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "transport": "actual localhost HTTP",
+  "inference": "synthetic mock only",
+  "paidRequests": 0,
+  "assetsVerified": 7,
+  "legacyAPIHealthPreserved": true,
+  "cloudBridgeVerified": true,
+  "patientRecordsStoredByServer": false
+}

@@ -1,0 +1,26 @@
+{
+  "checkedAtUTC": "2026-10-24T19:12:55.076065+00:00",
+  "source": "existing Render Web Shell, read-only backend.verify_gateway --server-environment",
+  "deployedCommit": "4ec91e3be0c45470743208e2fb337d30445c2234",
+  "paidRequestsAttempted": 0,
+  "health": {
+    "passed": true,
+    "httpStatus": 200
+  },
+  "configuration": {
+    "passed": true,
+    "httpStatus": 200,
+    "providers": {
+      "primary": {
+        "adapter": "openai",
+        "model": "gpt-4.1-mini-2025-04-14",
+        "host": "api.openai.com",
+        "maxOutputTokens": 6000
+      },
+      "fallback": null
+    },
+    "patientContentStored": false,
+    "maxSourceCharacters": 40000
+  },
+  "liveInferenceVerified": false
+}

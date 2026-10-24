@@ -1,5 +1,7 @@
 # CareInOne
 
+**Web pivot (October 19, 2026):** the separate browser product is in [`web/`](web/README.md), with its own [implementation ledger](web/IMPLEMENTATION_STATUS.md) and [Render/domain launch plan](docs/web/LAUNCH_PLAN.md). Run locally with `.venv/bin/python -m web.run` after the web setup steps. The native iOS application below remains available and independent.
+
 CareInOne connects the evidence patients capture with the decisions and unfinished work they need to carry forward. Conversations, documents, photos and personal updates become reviewed, source-linked claims in a longitudinal care memory on the iPhone. Patients can see what changed, where saved sources disagree, and what to bring into their next appointment.
 
 For hands-on testing, follow [the offline simulator walkthrough](docs/SIMULATOR_WALKTHROUGH.md). Practice TXT, PDF, image/OCR, and FHIR imports are available in Settings; no model key is required.

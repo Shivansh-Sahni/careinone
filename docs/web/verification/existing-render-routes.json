@@ -1,0 +1,26 @@
+{
+  "checkedAtUTC": "2026-10-19T14:20:18.190077+00:00",
+  "paidRequests": 0,
+  "endpoint": "https://careinone-api.onrender.com",
+  "routes": {
+    "/health": {
+      "verified": false,
+      "errorType": "URLError"
+    },
+    "/privacy": {
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noStore": true
+    },
+    "/support": {
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noStore": true
+    }
+  },
+  "healthRetry": {
+    "checkedAtUTC": "2026-10-19T14:23:06.799969+00:00",
+    "verified": false,
+    "errorType": "URLError"
+  }
+}

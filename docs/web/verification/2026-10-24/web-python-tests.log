@@ -1,0 +1,31 @@
+test_bad_internal_token_fails_startup (test_combined.CombinedTests.test_bad_internal_token_fails_startup) ... ok
+test_cloud_flag_rejects_ambiguous_values (test_combined.CombinedTests.test_cloud_flag_rejects_ambiguous_values) ... ok
+test_explicit_local_only_web_fallback_preserves_native_api (test_combined.CombinedTests.test_explicit_local_only_web_fallback_preserves_native_api) ... ok
+test_legacy_mobile_health_and_auth_routes_preserved (test_combined.CombinedTests.test_legacy_mobile_health_and_auth_routes_preserved) ... ok
+test_native_host_and_multiple_mobile_tokens_survive_domain_cutover (test_combined.CombinedTests.test_native_host_and_multiple_mobile_tokens_survive_domain_cutover) ... ok
+test_native_public_documents_still_serve (test_combined.CombinedTests.test_native_public_documents_still_serve) ... ok
+test_real_gateway_configuration_and_extract (test_combined.CombinedTests.test_real_gateway_configuration_and_extract) ... ok
+test_original_native_backend_packaging_is_still_independent (test_packaging.WebPackagingTests.test_original_native_backend_packaging_is_still_independent) ... ok
+test_web_image_uses_only_explicit_runtime_files_and_dedicated_ignore (test_packaging.WebPackagingTests.test_web_image_uses_only_explicit_runtime_files_and_dedicated_ignore) ... ok
+test_csrf_cross_origin_and_missing_request_header_rejected (test_server.WebTests.test_csrf_cross_origin_and_missing_request_header_rejected) ... ok
+test_fixed_file_allowlist_blocks_secrets_and_traversal (test_server.WebTests.test_fixed_file_allowlist_blocks_secrets_and_traversal) ... ok
+test_forged_cookie_rejected (test_server.WebTests.test_forged_cookie_rejected) ... ok
+test_forged_quote_response_is_rejected (test_server.WebTests.test_forged_quote_response_is_rejected) ... ok
+test_gateway_redirects_are_not_followed (test_server.WebTests.test_gateway_redirects_are_not_followed) ... ok
+test_head_and_methods (test_server.WebTests.test_head_and_methods) ... ok
+test_health_and_local_only_mode (test_server.WebTests.test_health_and_local_only_mode) ... ok
+test_host_header_validation (test_server.WebTests.test_host_header_validation) ... ok
+test_invalid_login_is_limited (test_server.WebTests.test_invalid_login_is_limited) ... ok
+test_no_consent_never_dispatches (test_server.WebTests.test_no_consent_never_dispatches) ... ok
+test_secure_cookie_and_hsts_in_public_mode (test_server.WebTests.test_secure_cookie_and_hsts_in_public_mode) ... ok
+test_session_login_cookie_and_config_do_not_disclose_credentials (test_server.WebTests.test_session_login_cookie_and_config_do_not_disclose_credentials) ... ok
+test_static_assets_and_security_headers (test_server.WebTests.test_static_assets_and_security_headers) ... ok
+test_unauthenticated_config_and_extract_never_call_gateway (test_server.WebTests.test_unauthenticated_config_and_extract_never_call_gateway) ... ok
+test_unsafe_model_metadata_never_reaches_browser (test_server.WebTests.test_unsafe_model_metadata_never_reaches_browser) ... ok
+test_unsafe_production_configuration_fails_closed (test_server.WebTests.test_unsafe_production_configuration_fails_closed) ... ok
+test_validated_extract_and_daily_allowance_shared_across_sessions (test_server.WebTests.test_validated_extract_and_daily_allowance_shared_across_sessions) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.461s
+
+OK
