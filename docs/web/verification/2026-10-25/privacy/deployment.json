@@ -1,0 +1,15 @@
+{
+  "checkedAtUTC": "2026-10-25T22:50:54.838159+00:00",
+  "releaseSHA": "5246f03323bed521b41f318a0e3a8d21beebfa20",
+  "version": "1.1.1",
+  "deploymentID": "dep-dbf8d7tg1s2s73ert2f0",
+  "status": "Deploy succeeded|Live",
+  "buildStartSeconds": 34.4,
+  "startedAtUTC": "2026-10-25T22:45:51Z",
+  "serviceLiveLogUTC": "2026-10-25T22:46:25Z",
+  "runtimeUID": 10001,
+  "sourceArchive": "artifacts/web/CareInOne-Web-1.1.1-source.zip",
+  "sourceArchiveSHA256": "0519c85dcb4a4ad52750828ed5bb0bc1733c0c8df266b55c3fa7c042ee35fb4a",
+  "configurationOrAccessChanges": false,
+  "paidRequests": 0
+}
