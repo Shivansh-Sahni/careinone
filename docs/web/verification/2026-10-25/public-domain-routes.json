@@ -1,0 +1,160 @@
+{
+  "checkedAtUTC": "2026-10-25T22:27:49.719785+00:00",
+  "origin": "https://careinone.org",
+  "releaseSHA": "cfc9475de3d8701d81ce0e6321b29bee4bfe4072",
+  "paidRequests": 0,
+  "routes": {
+    "/": {
+      "status": 200,
+      "bytes": 993,
+      "cacheControl": "no-store",
+      "securityHeadersPassed": true,
+      "matchesFrozenAsset": true
+    },
+    "/app.js": {
+      "status": 200,
+      "bytes": 73432,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/core.js": {
+      "status": 200,
+      "bytes": 22493,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/storage.js": {
+      "status": 200,
+      "bytes": 5653,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/style.css": {
+      "status": 200,
+      "bytes": 16353,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/imports.js": {
+      "status": 200,
+      "bytes": 11873,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/recorder.js": {
+      "status": 200,
+      "bytes": 3329,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/insights.js": {
+      "status": 200,
+      "bytes": 1937,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/icon.svg": {
+      "status": 200,
+      "bytes": 333,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/vendor/pdf-5.5.207/pdf.mjs": {
+      "status": 200,
+      "bytes": 802160,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/vendor/ocr-7.0.0/worker.min.js": {
+      "status": 200,
+      "bytes": 111307,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/vendor/ocr-7.0.0/lang/eng.traineddata.gz": {
+      "status": 200,
+      "bytes": 2952873,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/notices": {
+      "status": 200,
+      "bytes": 33546,
+      "cacheControl": "no-store"
+    },
+    "/health": {
+      "status": 200,
+      "bytes": 49,
+      "cacheControl": "no-store",
+      "json": {
+        "status": "ok",
+        "schemaVersion": "care-schema-1.0"
+      }
+    },
+    "/privacy": {
+      "status": 200,
+      "bytes": 14270,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/support": {
+      "status": 200,
+      "bytes": 11162,
+      "cacheControl": "no-store",
+      "matchesFrozenAsset": true
+    },
+    "/api/status": {
+      "status": 200,
+      "bytes": 61,
+      "cacheControl": "no-store",
+      "json": {
+        "enabled": true,
+        "storage": "browser-only",
+        "publicAccess": true
+      }
+    },
+    "/api/session": {
+      "status": 200,
+      "bytes": 23,
+      "cacheControl": "no-store",
+      "json": {
+        "authenticated": false
+      }
+    },
+    "/api/config": {
+      "status": 401
+    },
+    "/.env": {
+      "status": 404
+    },
+    "/.git/config": {
+      "status": 404
+    },
+    "legacy/health": {
+      "status": 200
+    },
+    "legacy/privacy": {
+      "status": 200
+    },
+    "legacy/support": {
+      "status": 200
+    },
+    "legacy/v1/config": {
+      "status": 401
+    },
+    "legacy/": {
+      "status": 400
+    }
+  },
+  "redirects": {
+    "www/": {
+      "status": 301,
+      "location": "https://careinone.org/"
+    },
+    "www/app.js": {
+      "status": 301,
+      "location": "https://careinone.org/app.js"
+    }
+  },
+  "passed": true
+}

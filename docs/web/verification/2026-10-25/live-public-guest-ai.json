@@ -1,0 +1,16 @@
+{
+  "checkedAtUTC": "2026-10-25T22:30:04.953Z",
+  "origin": "https://careinone.org",
+  "releaseSHA": "cfc9475de3d8701d81ce0e6321b29bee4bfe4072",
+  "publicVisitorWithoutCode": true,
+  "configuredProvider": "OpenAI gpt-4.1-mini-2025-04-14",
+  "explicitSourceConsentPassed": true,
+  "paidRequestsAttempted": 1,
+  "patientDataUsed": false,
+  "fictionalSourceCharacters": 70,
+  "pendingClaimCount": 2,
+  "displayedQuotesMatchFictionalSource": true,
+  "autoAcceptedClaims": false,
+  "browserErrors": [],
+  "passed": true
+}

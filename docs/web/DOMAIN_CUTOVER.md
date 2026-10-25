@@ -2,7 +2,11 @@
 
 Updated October 24, 2026. No service, database or domain is purchased by these steps. Keep current model/provider settings and spending caps. The user buys the domain. The current human priority is the working HTTPS website within the next few hours on October 24; domain follows later. Apple, model migration and competition registration do not gate this web work.
 
-## Verified live release (19:27 UTC)
+## October25 cutover completed
+
+**https://careinone.org/** is canonical and verified, runtime `cfc9475de3d8701d81ce0e6321b29bee4bfe4072`, live22:27:13UTC. Both domains Verified/CertificateIssued; www redirects to apex. Actual Namecheap A@216.24.57.1 / CNAMEwww careinone-api.onrender.com were saved, preserving email. Owner confirmed disposable demo data; no browser storage cleared. `CARE_WEB_ORIGIN=https://careinone.org` and `CARE_WEB_PUBLIC_AI=true` were saved after final owner confirmation. Public guest sessions and one fictional AI analysis pass; all native tokens on the old API host pass. Full current status is `docs/management/2026-10-25/DOMAIN_STATUS.md`. Prior steps below remain operational history/rollback guidance.
+
+## Historical October24 verified live release (19:27 UTC)
 
 The existing service now serves web1.0.1 at **https://careinone-api.onrender.com**, deployed SHA **b5aeb69b8da5e1fe1acb31f7ab00974618201d5b**. Actual Render Docker build/start succeeded in39.1seconds. Public19-route/assets checks and post-deploy authenticated native health/configuration passed. Web cloud is enabled after owner private credential setup and a successful bounded fictional real extraction; same-SHA redeploy went Live19:46:38UTC. See Website status for its exact evidence/limits. No database or service was added.
 

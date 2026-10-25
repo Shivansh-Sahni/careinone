@@ -1,0 +1,18 @@
+{
+  "checkedAtUTC": "2026-10-25T22:30:33.075728+00:00",
+  "serviceID": "srv-db18qghsrm7s73ajqq8g",
+  "deploymentID": "dep-dbf8485g1s2s73eqvpfg",
+  "releaseSHA": "cfc9475de3d8701d81ce0e6321b29bee4bfe4072",
+  "version": "1.1.0",
+  "status": "Live",
+  "liveAtUTC": "2026-10-25T22:27:13Z",
+  "durationSeconds": 33.0,
+  "canonicalOrigin": "https://careinone.org",
+  "publicAI": true,
+  "renderSubdomainEnabled": true,
+  "apexAndWwwTLS": "Verified / Certificate Issued",
+  "currentModelChanged": false,
+  "newServicesOrDatabase": false,
+  "providerBillingSettingsChanged": false,
+  "ownerActionTimeConfirmation": "Manager human confirm,2026-10-25"
+}

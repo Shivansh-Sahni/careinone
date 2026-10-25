@@ -4,7 +4,7 @@ Updated October 24, 2026. Use the final tested URL/SHA in `docs/management/2026-
 
 ## Access
 
-- After the combined release is verified, the fallback web route is `https://careinone-api.onrender.com/#today`. If a purchased domain is fully verified and frozen before submission, use that one canonical HTTPS origin instead.
+- The verified canonical web route is **https://careinone.org/#today**, public1.1.0 at runtime `cfc9475de3d8701d81ce0e6321b29bee4bfe4072`. The old Render hostname serves the native API; its web root is no longer the website fallback.
 - A judge needs no account, database purchase, provider key or cloud code for the browser-local fictional demo. In a fresh browser profile, click **Explore a fictional example** on onboarding. The **Fictional example workspace** banner must remain visible throughout the recording.
 - If an existing workspace is present, use a separate browser profile rather than clearing real records. Do not mix personal data with the demonstration or expose access codes in a public video.
 - Local proposal extraction is deterministic pattern matching, not a live model call. Optional cloud is a separate, consent-bound capability. In explicit local-only web mode, the UI states it is unavailable.
@@ -24,7 +24,7 @@ Optional short document demonstration: **Sources → Add a source**, choose the 
 
 The deployed bridge passed one bounded fictional real extraction on October24 at19:48:35UTC, exact runtime SHA `b5aeb69b8da5e1fe1acb31f7ab00974618201d5b`. Login/cookie/consent rejection/configuration/logout also passed. This is functional evidence, not clinical validation.
 
-Only include it after the deployed cloud path has been separately verified. Public1.1.0 connects anonymous visitors without an account or access code when enabled. Keep existing session/site allowances and provider spending controls; if an allowance is exhausted, local record workflows remain available. Confirm the actually deployed version/mode in Website domain status.
+The public guest path was verified on October25: one fictional browser analysis returned2pending exact-source-quote claims, after explicit recipient consent and without an account/code. Public1.1.0 connects anonymous visitors without an account or access code when enabled. Keep existing session/site allowances and provider spending controls; if an allowance is exhausted, local record workflows remain available. Confirm the actually deployed version/mode in Website domain status.
 
 Open a selected fictional source and choose **Analyze with cloud**. The public session is created automatically; **Settings → Connection & consent** also shows the recipients. Show the real configured recipients/model and explicit consent checkbox. Only source text/type/event date is sent; the attachment remains in the browser. The returned statements are pending review. Never narrate mock/local results as live inference, and never claim no provider retention unless the account-specific data controls actually establish that.
 

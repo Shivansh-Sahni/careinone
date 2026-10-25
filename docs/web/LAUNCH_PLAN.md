@@ -2,7 +2,11 @@
 
 Owner decisions on October 19, 2026: retain CareInOne branding; browser-only records initially; no domain purchased; run locally now; prepare for public deployment; retain the native iOS app and existing Render/model API.
 
-## October 24 launch update
+## October25 canonical public release
+
+**LIVE: https://careinone.org/**, web1.1.0/runtime `cfc9475de3d8701d81ce0e6321b29bee4bfe4072`. Namecheap DNS and apex/www TLS are verified; www redirects to apex. Public AI needs no account/code, retains per-source consent and bounded anonymous-session/site allowances, and passed one fictional real browser analysis. Native API on the old Render hostname and all configured tokens passed. No new database/service or budget increase. See Oct25 DOMAIN_STATUS for exact evidence and limits. The old Render web root is no longer a fallback; use careinone.org for web links.
+
+## Historical October24 launch update
 
 **Web1.0.1 is live at https://careinone-api.onrender.com**, runtime SHA `b5aeb69b8da5e1fe1acb31f7ab00974618201d5b`, deployed October24 at19:27:02UTC. The existing Render Docker image built/started successfully and public routes, assets, browser workflows and native authenticated API configuration passed. Web cloud is enabled after owner private credential setup; one fictional real extraction passed with3exact-quote-validated claims at19:48:35UTC. Domain purchase remains with the owner; Apple/model migration and competition-registration details are outside the website critical path. Read [the exact service/DNS/backup cutover](DOMAIN_CUTOVER.md), [judge demo path](JUDGE_DEMO.md) and current Website management status. The October19 local result is separate historical evidence.
 

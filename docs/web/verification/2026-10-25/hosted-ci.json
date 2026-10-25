@@ -1,0 +1,11 @@
+{
+  "checkedAtUTC": "2026-10-25T22:18:17.486396+00:00",
+  "releaseSHA": "cfc9475de3d8701d81ce0e6321b29bee4bfe4072",
+  "runID": 40239341455,
+  "jobID": 121307582064,
+  "url": "https://github.com/Shivansh-Sahni/careinone/actions/runs/40239341455",
+  "stepsExecuted": 0,
+  "message": "The job was not started because recent account payments have failed or your spending limit needs to be increased.",
+  "spendingLimitChanged": false,
+  "productionImageVerifiedByCI": false
+}
