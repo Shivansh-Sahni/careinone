@@ -1,0 +1,21 @@
+{
+  "checkedAtUTC": "2026-10-25T21:44:45.234092+00:00",
+  "records": {
+    "dns1.registrar-servers.com": {
+      "careinone.org A": [
+        "162.255.119.61"
+      ],
+      "www.careinone.org CNAME": [
+        "parkingpage.namecheap.com."
+      ]
+    },
+    "1.1.1.1": {
+      "careinone.org A": [
+        "162.255.119.61"
+      ],
+      "www.careinone.org CNAME": [
+        "parkingpage.namecheap.com."
+      ]
+    }
+  }
+}

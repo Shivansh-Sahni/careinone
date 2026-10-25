@@ -8,7 +8,7 @@ import asyncio
 import json
 import os
 from backend.app import create_app as gateway_factory
-from .server import Web, cloud_enabled
+from .server import Web, cloud_enabled, public_ai_enabled
 
 class Combined:
     def __init__(self,gateway,web_token,web_cloud_enabled=True,**web_options):
@@ -42,4 +42,4 @@ def create_app():
     gateway=gateway_factory()
     tokens=[t.strip() for t in os.getenv('CARE_BACKEND_TOKENS','').split(',') if t.strip()]
     token=os.getenv('CARE_WEB_GATEWAY_TOKEN','') or tokens[0]
-    return Combined(gateway,token,web_cloud_enabled=cloud_enabled(),origin=os.environ['CARE_WEB_ORIGIN'],secret=os.getenv('CARE_WEB_SESSION_SECRET',''),codes=tuple(c.strip() for c in os.getenv('CARE_WEB_ACCESS_CODES','').split(',') if c.strip()),daily_limit=os.getenv('CARE_WEB_DAILY_LIMIT','10'),global_limit=os.getenv('CARE_WEB_GLOBAL_DAILY_LIMIT','100'))
+    return Combined(gateway,token,web_cloud_enabled=cloud_enabled(),origin=os.environ['CARE_WEB_ORIGIN'],secret=os.getenv('CARE_WEB_SESSION_SECRET',''),codes=tuple(c.strip() for c in os.getenv('CARE_WEB_ACCESS_CODES','').split(',') if c.strip()),daily_limit=os.getenv('CARE_WEB_DAILY_LIMIT','10'),global_limit=os.getenv('CARE_WEB_GLOBAL_DAILY_LIMIT','100'),public_access=public_ai_enabled())

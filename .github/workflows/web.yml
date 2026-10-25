@@ -25,7 +25,9 @@ jobs:
       - run: python -m unittest discover -s backend/tests -v
       - run: python web/scripts/http_smoke.py
       - run: python web/scripts/http_smoke.py --local-only
+      - run: python web/scripts/http_smoke.py --public
       - run: npm --prefix web audit --omit=dev --audit-level=high
       - run: docker build -f web/Dockerfile -t careinone-web:test .
       - run: python web/scripts/container_smoke.py careinone-web:test
       - run: python web/scripts/container_smoke.py careinone-web:test --local-only
+      - run: python web/scripts/container_smoke.py careinone-web:test --public

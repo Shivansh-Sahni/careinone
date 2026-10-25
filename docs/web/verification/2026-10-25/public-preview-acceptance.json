@@ -1,0 +1,14 @@
+{
+  "checkedAtUTC": "2026-10-25T22:12:19.388509+00:00",
+  "origin": "http://127.0.0.1:8091",
+  "inference": "synthetic mock only",
+  "paidRequests": 0,
+  "codeFreeGuestConsentDialogPassed": true,
+  "recipientDisclosurePassed": true,
+  "explicitConsentThenPendingReviewPassed": true,
+  "browserConsoleWarningsOrErrors": [],
+  "exhaustedAllowanceMessagePassed": true,
+  "quotaPreviewLimit": 1,
+  "productionLimitUnchangedAt10": true,
+  "localRecordsRetainedAfterExhaustion": true
+}

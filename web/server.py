@@ -1,6 +1,6 @@
 """Same-origin web server; patient records remain in the browser.
 
-Optional cloud access uses operator-issued codes and HttpOnly signed sessions.
+Optional cloud access uses capped public sessions or operator-issued codes.
 No upstream credential is returned to the browser. No patient content is logged.
 """
 from __future__ import annotations
@@ -29,7 +29,9 @@ class NoRedirect(HTTPRedirectHandler):
         return None
 
 class Web:
-    def __init__(self, origin='http://127.0.0.1:8080', gateway_url='', gateway_token='', secret='', codes=(), transport=None, daily_limit=10, global_limit=100):
+    def __init__(self, origin='http://127.0.0.1:8080', gateway_url='', gateway_token='', secret='', codes=(), transport=None, daily_limit=10, global_limit=100, public_access=False):
+        if type(public_access) is not bool:raise ValueError('Public AI access must be explicitly enabled.')
+        self.public_access=public_access
         parsed=urlsplit(origin)
         if parsed.scheme not in {'http','https'} or not parsed.hostname or parsed.path not in {'','/'} or parsed.query or parsed.fragment or parsed.username:
             raise ValueError('Set CARE_WEB_ORIGIN to the exact site origin, without a path.')
@@ -46,7 +48,7 @@ class Web:
             upstream=urlsplit(gateway_url)
             if upstream.scheme!='https' or not upstream.hostname or upstream.path not in {'','/'} or upstream.query or upstream.fragment or upstream.username or upstream.password:
                 raise ValueError('CARE_WEB_GATEWAY_URL must be an HTTPS origin.')
-            if len(gateway_token)<32 or not codes or len(secret)<32: raise ValueError('Cloud access requires a server gateway token, session secret, and access codes (32+ characters each).')
+            if len(gateway_token)<32 or len(secret)<32 or (not codes and not public_access): raise ValueError('Cloud access requires server credentials and either access codes or explicitly enabled public sessions.')
         if any(len(code)<32 or len(code)>200 or any(ord(c)<=32 or ord(c)>126 for c in code) for code in codes): raise ValueError('Each web access code must have 32..200 printable characters.')
         self.gateway_url=gateway_url.rstrip('/'); self.gateway_token=gateway_token
         self.secret=(secret or secrets.token_urlsafe(48)).encode()
@@ -64,13 +66,19 @@ class Web:
         self.limits[key]=(end,count+1);return False
     def cookie(self,value='',age=0):
         return ('care_web='+value+f'; Path=/api; HttpOnly; SameSite=Strict; Max-Age={age}'+('; Secure' if self.secure else '')).encode()
+    def signed_cookie(self,identifier,age=28800):
+        expires=int(time.time()+age);signed=f'{identifier}.{expires}'
+        signature=hmac.new(self.secret,signed.encode(),hashlib.sha256).hexdigest()
+        return self.cookie(signed+'.'+signature,age)
     def session(self,headers):
         try:
             cookies=headers.get(b'cookie',b'').decode().split(';')
             raw=next(x.strip().split('=',1)[1] for x in cookies if x.strip().startswith('care_web='))
             identifier,expires,signature=raw.split('.')
             expected=hmac.new(self.secret,f'{identifier}.{expires}'.encode(),hashlib.sha256).hexdigest()
-            if not hmac.compare_digest(signature,expected) or int(expires)<time.time() or identifier not in self.code_hashes:return None
+            if not hmac.compare_digest(signature,expected) or int(expires)<time.time():return None
+            public_id=self.public_access and len(identifier)==65 and identifier.startswith('p') and all(c in '0123456789abcdef' for c in identifier[1:])
+            if identifier not in self.code_hashes and not public_id:return None
             return identifier
         except (ValueError,StopIteration,UnicodeError):return None
     async def respond(self,send,status,value,content_type='application/json',extra=(),head=False):
@@ -152,9 +160,9 @@ class Web:
             if method not in {'GET','HEAD'}:return await self.respond(send,405,{'error':'Method not allowed'},extra=[(b'allow',b'GET, HEAD')])
             file=PUBLIC/self.assets[path]
             return await self.respond(send,200,file.read_bytes(),TYPES.get(file.suffix,'application/octet-stream'),head=method=='HEAD')
-        if path=='/api/status' and method=='GET':return await self.respond(send,200,{'enabled':self.enabled,'storage':'browser-only'})
+        if path=='/api/status' and method=='GET':return await self.respond(send,200,{'enabled':self.enabled,'storage':'browser-only','publicAccess':self.enabled and self.public_access})
         if path=='/api/session' and method=='GET':return await self.respond(send,200,{'authenticated':self.enabled and bool(self.session(headers))})
-        routes={('/api/login','POST'),('/api/logout','POST'),('/api/config','GET'),('/api/extract','POST')}
+        routes={('/api/connect','POST'),('/api/login','POST'),('/api/logout','POST'),('/api/config','GET'),('/api/extract','POST')}
         if (path,method) not in routes:return await self.respond(send,404,{'error':'Not found'})
         if method=='POST':
             if headers.get(b'origin',b'').decode(errors='replace')!=self.origin or headers.get(b'x-careinone-request')!=b'1' or sum(k==b'origin' for k,v in pairs)!=1:
@@ -162,6 +170,16 @@ class Web:
         if path=='/api/logout':return await self.respond(send,200,{'disconnected':True},extra=[(b'set-cookie',self.cookie())])
         if not self.enabled:return await self.respond(send,503,{'error':'Optional cloud analysis is not configured. Local care workflows are available.'})
         try:
+            if path=='/api/connect':
+                if not self.public_access:return await self.respond(send,403,{'error':'Public analysis access is not enabled.'})
+                if await self.body(scope,receive):raise ValueError('Public connection does not accept source text or credentials.')
+                identifier=self.session(headers)
+                if identifier:return await self.respond(send,200,{'connected':True})
+                # Do not bind visitors to unstable reverse-proxy peer addresses.
+                # New identities still share the extraction-wide process cap.
+                if self.limited('public-connect',100,900):return await self.respond(send,429,{'error':'New analysis connections are busy. Try again in 15 minutes. Local records are available.'})
+                identifier='p'+secrets.token_hex(32)
+                return await self.respond(send,200,{'connected':True},extra=[(b'set-cookie',self.signed_cookie(identifier,86400))])
             if path=='/api/login':
                 ip=str(scope.get('client',('unknown',))[0]);fingerprint=hashlib.sha256(ip.encode()).hexdigest()
                 # Do not trust client-supplied forwarding headers for this limiter.
@@ -171,10 +189,9 @@ class Web:
                 digest=hashlib.sha256(code.encode()).hexdigest();valid=False
                 for expected in self.code_hashes:valid |= hmac.compare_digest(digest,expected)
                 if not valid:return await self.respond(send,401,{'error':'Invalid access code.'})
-                expires=int(time.time()+28800);signed=f'{digest}.{expires}';signature=hmac.new(self.secret,signed.encode(),hashlib.sha256).hexdigest()
-                return await self.respond(send,200,{'connected':True},extra=[(b'set-cookie',self.cookie(signed+'.'+signature,28800))])
+                return await self.respond(send,200,{'connected':True},extra=[(b'set-cookie',self.signed_cookie(digest))])
             identifier=self.session(headers)
-            if not identifier:return await self.respond(send,401,{'error':'Connect with an operator-issued access code first.'})
+            if not identifier:return await self.respond(send,401,{'error':'Your analysis session expired. Close this dialog and try again. Local records are safe.' if self.public_access else 'Connect with an operator-issued access code first.'})
             if path=='/api/config':
                 if self.limited('config:'+identifier,30,60):return await self.respond(send,429,{'error':'Too many requests. Try again shortly.'})
                 status,result=await self.upstream('/v1/config',None)
@@ -204,5 +221,10 @@ def cloud_enabled():
     if value not in {'true','false'}:raise ValueError('CARE_WEB_CLOUD_ENABLED must be true or false.')
     return value=='true'
 
+def public_ai_enabled():
+    value=os.getenv('CARE_WEB_PUBLIC_AI','false').lower()
+    if value not in {'true','false'}:raise ValueError('CARE_WEB_PUBLIC_AI must be true or false.')
+    return value=='true'
+
 def create_app():
-    return Web(origin=os.getenv('CARE_WEB_ORIGIN','http://127.0.0.1:8080'),gateway_url=os.getenv('CARE_WEB_GATEWAY_URL','') if cloud_enabled() else '',gateway_token=os.getenv('CARE_WEB_GATEWAY_TOKEN',''),secret=os.getenv('CARE_WEB_SESSION_SECRET',''),codes=tuple(c.strip() for c in os.getenv('CARE_WEB_ACCESS_CODES','').split(',') if c.strip()),daily_limit=os.getenv('CARE_WEB_DAILY_LIMIT','10'),global_limit=os.getenv('CARE_WEB_GLOBAL_DAILY_LIMIT','100'))
+    return Web(origin=os.getenv('CARE_WEB_ORIGIN','http://127.0.0.1:8080'),gateway_url=os.getenv('CARE_WEB_GATEWAY_URL','') if cloud_enabled() else '',gateway_token=os.getenv('CARE_WEB_GATEWAY_TOKEN',''),secret=os.getenv('CARE_WEB_SESSION_SECRET',''),codes=tuple(c.strip() for c in os.getenv('CARE_WEB_ACCESS_CODES','').split(',') if c.strip()),daily_limit=os.getenv('CARE_WEB_DAILY_LIMIT','10'),global_limit=os.getenv('CARE_WEB_GLOBAL_DAILY_LIMIT','100'),public_access=public_ai_enabled())

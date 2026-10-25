@@ -1,0 +1,27 @@
+{
+  "checkedAtUTC": "2026-10-25T21:41:09.253768+00:00",
+  "origin": "https://careinone-api.onrender.com",
+  "paidRequests": 0,
+  "routes": {
+    "/": {
+      "status": 200
+    },
+    "/health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "schemaVersion": "care-schema-1.0"
+      }
+    },
+    "/api/status": {
+      "status": 200,
+      "body": {
+        "enabled": true,
+        "storage": "browser-only"
+      }
+    },
+    "/v1/config": {
+      "status": 401
+    }
+  }
+}

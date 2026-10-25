@@ -34,7 +34,7 @@ def free_port():
         probe.bind(('127.0.0.1', 0))
         return probe.getsockname()[1]
 
-def verify_http(origin, token, code, *, transport, cloud=True, process_alive=lambda: True):
+def verify_http(origin, token, code, *, transport, cloud=True, public=False, process_alive=lambda: True):
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
     def request(path, body=None, authorization=False):
         headers = {'Origin': origin, 'X-CareInOne-Request': '1', 'Content-Type': 'application/json'}
@@ -72,7 +72,7 @@ def verify_http(origin, token, code, *, transport, cloud=True, process_alive=lam
     native = json.loads(request('/v1/config', authorization=True)[2])
     assert native['patientContentStored'] is False and native['providers']['primary']['adapter'] == 'mock'
     if not cloud:
-        assert json.loads(request('/api/status')[2]) == {'enabled': False, 'storage': 'browser-only'}
+        assert json.loads(request('/api/status')[2]) == {'enabled': False, 'storage': 'browser-only', 'publicAccess': False}
         for route, body in (('/api/config', None), ('/api/login', {'code': code})):
             try:
                 request(route, body)
@@ -84,7 +84,9 @@ def verify_http(origin, token, code, *, transport, cloud=True, process_alive=lam
                 'legacyAPIHealthPreserved': True, 'legacyAPIAuthenticationPreserved': True,
                 'legacyPublicDocumentBytesPreserved': True, 'webCloudEnabled': False,
                 'webLocalFallbackVerified': True, 'patientRecordsStoredByServer': False}
-    assert request('/api/login', {'code': code})[0] == 200
+    assert json.loads(request('/api/status')[2]) == {'enabled': True, 'storage': 'browser-only', 'publicAccess': public}
+    status, headers, _ = request('/api/connect', {}) if public else request('/api/login', {'code': code})
+    assert status == 200 and 'HttpOnly' in headers['Set-Cookie'] and 'SameSite=Strict' in headers['Set-Cookie']
     config = json.loads(request('/api/config')[2])
     assert config['providers']['primary']['adapter'] == 'mock'
     assert config['configurationID'] == native['configurationID']
@@ -97,25 +99,29 @@ def verify_http(origin, token, code, *, transport, cloud=True, process_alive=lam
             'transport': transport, 'inference': 'synthetic mock only', 'paidRequests': 0,
             'assetsVerified': len(ASSETS), 'legacyAPIHealthPreserved': True,
             'legacyAPIAuthenticationPreserved': True, 'legacyPublicDocumentBytesPreserved': True,
-            'cloudBridgeVerified': True, 'patientRecordsStoredByServer': False}
+            'cloudBridgeVerified': True, 'publicSessionWithoutCode': public, 'patientRecordsStoredByServer': False}
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--local-only', action='store_true')
+    parser.add_argument('--public', action='store_true')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[2]
     port = free_port()
     origin = f'http://127.0.0.1:{port}'
     env, token, code = mock_environment(origin)
+    if args.public:
+        env['CARE_WEB_PUBLIC_AI']='true'
+        env.pop('CARE_WEB_ACCESS_CODES')
     if args.local_only:
         env['CARE_WEB_CLOUD_ENABLED']='false'
-        env.pop('CARE_WEB_SESSION_SECRET'); env.pop('CARE_WEB_ACCESS_CODES')
+        env.pop('CARE_WEB_SESSION_SECRET',None); env.pop('CARE_WEB_ACCESS_CODES',None)
     process = subprocess.Popen([sys.executable, '-m', 'uvicorn', 'web.combined:create_app', '--factory',
                '--host', '127.0.0.1', '--port', str(port), '--no-access-log'], cwd=root, env=env,
                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
         print(json.dumps(verify_http(origin, token, code, transport='actual localhost HTTP',
-                                    cloud=not args.local_only, process_alive=lambda: process.poll() is None), indent=2))
+                                    cloud=not args.local_only, public=args.public, process_alive=lambda: process.poll() is None), indent=2))
     finally:
         process.terminate()
         try:

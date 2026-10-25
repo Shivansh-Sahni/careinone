@@ -14,7 +14,7 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
             self.calls.append((path,body))
             return (200,CONFIG) if path=='/v1/config' else (200,{'schemaVersion':'care-schema-1.0','claims':[{'kind':'other','label':'Test','quote':body['text'],'subject':'patient','certainty':'reported'}]})
         self.app=Web(gateway_url='https://api.example.test',gateway_token=TOKEN,secret=SECRET,codes=[CODE],transport=transport,daily_limit=2,global_limit=4)
-    async def request(self,path='/',method='GET',body=None,cookie=None,origin='http://127.0.0.1:8080',extra=(),app=None):
+    async def request(self,path='/',method='GET',body=None,cookie=None,origin='http://127.0.0.1:8080',extra=(),app=None,client=('127.0.0.1',123)):
         sent=[];received=False
         headers=[(b'host',b'127.0.0.1:8080')]
         if method=='POST':headers.extend([(b'content-type',b'application/json'),(b'x-careinone-request',b'1'),(b'origin',origin.encode())])
@@ -25,7 +25,7 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
             if not received:received=True;return {'type':'http.request','body':json.dumps(body or {}).encode(),'more_body':False}
             await asyncio.sleep(100)
         async def send(event):sent.append(event)
-        await (app or self.app)({'type':'http','path':path,'method':method,'headers':headers,'client':('127.0.0.1',123)},receive,send)
+        await (app or self.app)({'type':'http','path':path,'method':method,'headers':headers,'client':client},receive,send)
         start=sent[0];data=sent[1]['body'];return start['status'],dict(start['headers']),data
     async def login(self):
         status,headers,body=await self.request('/api/login','POST',{'code':CODE})

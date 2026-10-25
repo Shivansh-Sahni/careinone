@@ -10,13 +10,17 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('image',nargs='?',default='careinone-web:test')
     parser.add_argument('--local-only',action='store_true')
+    parser.add_argument('--public',action='store_true')
     args=parser.parse_args(); image=args.image
     port = free_port()
     origin = f'http://127.0.0.1:{port}'
     env, token, code = mock_environment(origin)
+    if args.public:
+        env['CARE_WEB_PUBLIC_AI']='true'
+        env.pop('CARE_WEB_ACCESS_CODES')
     if args.local_only:
         env['CARE_WEB_CLOUD_ENABLED']='false'
-        env.pop('CARE_WEB_SESSION_SECRET');env.pop('CARE_WEB_ACCESS_CODES')
+        env.pop('CARE_WEB_SESSION_SECRET',None);env.pop('CARE_WEB_ACCESS_CODES',None)
     name = 'careinone-web-smoke-' + secrets.token_hex(6)
     command = ['docker', 'run', '--rm', '-d', '--name', name, '--read-only', '--cap-drop=ALL',
                '--security-opt=no-new-privileges', '--tmpfs', '/tmp:rw,noexec,nosuid,size=16m',
@@ -26,7 +30,7 @@ def main():
     command.append(image)
     try:
         subprocess.run(command, env=env, check=True, capture_output=True)
-        report = verify_http(origin, token, code, transport='production Docker image over localhost HTTP',cloud=not args.local_only)
+        report = verify_http(origin, token, code, transport='production Docker image over localhost HTTP',cloud=not args.local_only,public=args.public)
         uid = subprocess.check_output(['docker', 'exec', name, 'id', '-u'], text=True).strip()
         assert uid == '10001'
         report.update(nonRootUID=uid, readOnlyContainer=True)
