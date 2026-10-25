@@ -1,0 +1,2 @@
+Condition: fictional seasonal allergies
+Task: request clinic notes

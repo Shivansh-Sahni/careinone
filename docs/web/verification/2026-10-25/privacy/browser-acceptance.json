@@ -1,0 +1,58 @@
+{
+  "checkedAtUTC": "2026-10-25T22:50:54.838159+00:00",
+  "releaseSHA": "5246f03323bed521b41f318a0e3a8d21beebfa20",
+  "paidRequests": 0,
+  "realPatientDataUsed": false,
+  "existingPublicRecordsCleared": false,
+  "localOnboarding": {
+    "freshOrigin": "http://127.0.0.1:8081",
+    "desktopPassed": true,
+    "mobileWidth": 390,
+    "mobileDocumentWidth": 390,
+    "scopeNotePresent": true,
+    "liveApplicationBytesMatchLocal": true
+  },
+  "liveSettings": {
+    "scopeNotePresent": true,
+    "browserVaultUnencryptedNoticePreserved": true,
+    "selectedTextTypeEventDateAndRenderDisclosed": true,
+    "mobileWidth": 390,
+    "mobileDocumentWidth": 390
+  },
+  "livePrivacy": {
+    "purposeAndNoHIPAAClaimPresent": true,
+    "openAIDataControlsLink": "https://developers.openai.com/api/docs/guides/your-data",
+    "storeFalseNotZeroRetentionExplained": true,
+    "default30DayAbuseLogRetentionWithExceptionsExplained": true,
+    "noVerifiedZDRClaim": true,
+    "mobileWidth": 390,
+    "mobileDocumentWidth": 390
+  },
+  "liveSourceConsent": {
+    "recipient": "OpenAI",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "host": "api.openai.com",
+    "selectedTextTypeEventDateDisclosed": true,
+    "originalAttachmentStaysLocal": true,
+    "renderHostingAndRetentionDisclosed": true,
+    "checkboxInitiallyUnchecked": true,
+    "checkboxRequired": true,
+    "existingCheckboxOnly": true,
+    "analysisSubmitted": false,
+    "desktopPassed": true,
+    "mobileWidth": 390,
+    "mobileDocumentWidth": 390,
+    "allActionsFitMobileViewport": true
+  },
+  "localSyntheticRecipient": {
+    "adapterCorrectlyDisclosed": true,
+    "notMislabelledOpenAI": true
+  },
+  "javascriptTestsPassed": 38,
+  "syntaxPassed": true,
+  "localPublicHttpSmokePassed": true,
+  "localHttpInference": "mock only",
+  "liveBrowserConsoleWarningsOrErrors": [],
+  "viewportOverrideReset": true,
+  "coverageLimits": "Fresh onboarding inspected on isolated local origin to preserve existing public workspace; production application bytes match. No inference was rerun; earlier release fictional inference evidence remains separate. No new PDF/OCR upload, restore, physical microphone or physical-device coverage."
+}

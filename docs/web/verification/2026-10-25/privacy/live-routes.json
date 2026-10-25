@@ -1,0 +1,75 @@
+{
+  "checkedAtUTC": "2026-10-25T22:48:14.625216+00:00",
+  "releaseSHA": "5246f03323bed521b41f318a0e3a8d21beebfa20",
+  "paidRequests": 0,
+  "patientDataUsed": false,
+  "checks": [
+    {
+      "url": "https://careinone.org/",
+      "status": 200,
+      "bytesMatchLocal": true,
+      "sha256": "c5d061f52a72a2bdd9c69ebf426cc80f65d1a42abc0f8c7659f92afd11e41fa5"
+    },
+    {
+      "url": "https://careinone.org/app.js",
+      "status": 200,
+      "bytesMatchLocal": true,
+      "sha256": "c66d6d5bf82657915eed10769e618762a0c5fc7c6189118b2d7671e55bde7a85"
+    },
+    {
+      "url": "https://careinone.org/api/status",
+      "status": 200
+    },
+    {
+      "url": "https://careinone.org/api/config",
+      "status": 401
+    },
+    {
+      "url": "https://careinone.org/privacy",
+      "status": 200,
+      "bytesMatchLocal": true,
+      "sha256": "177a012f25fbe8a99fd71ccf901efe7be593bcf5f9b55a05df7d5412a034fc62"
+    },
+    {
+      "url": "https://careinone.org/support",
+      "status": 200,
+      "bytesMatchLocal": true,
+      "sha256": "ecd7b0d2ec118b8fc94d1e52231e90d40d45cd5eafdf852c5965b014985683cd"
+    },
+    {
+      "url": "https://careinone-api.onrender.com/health",
+      "status": 200
+    },
+    {
+      "url": "https://careinone-api.onrender.com/v1/config",
+      "status": 401
+    },
+    {
+      "url": "https://careinone-api.onrender.com/privacy",
+      "status": 200,
+      "bytesMatchLocal": true,
+      "sha256": "177a012f25fbe8a99fd71ccf901efe7be593bcf5f9b55a05df7d5412a034fc62"
+    },
+    {
+      "url": "https://careinone-api.onrender.com/support",
+      "status": 200,
+      "bytesMatchLocal": true,
+      "sha256": "ecd7b0d2ec118b8fc94d1e52231e90d40d45cd5eafdf852c5965b014985683cd"
+    },
+    {
+      "url": "https://careinone-api.onrender.com/",
+      "status": 400
+    },
+    {
+      "wwwRedirectPath": "/",
+      "finalURL": "https://careinone.org/",
+      "passed": true
+    },
+    {
+      "wwwRedirectPath": "/app.js",
+      "finalURL": "https://careinone.org/app.js",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

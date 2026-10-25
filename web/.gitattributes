@@ -1,0 +1,2 @@
+# PDF cross-reference offsets require byte preservation; do not treat fixtures as text.
+tests/fixtures/*.pdf -text -diff -merge

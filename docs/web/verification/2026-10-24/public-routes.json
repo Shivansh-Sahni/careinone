@@ -1,0 +1,32 @@
+{
+  "checkedAtUTC": "2026-10-24T19:14:49.308192+00:00",
+  "paidRequests": 0,
+  "origin": "https://careinone-api.onrender.com",
+  "routes": {
+    "/": {
+      "status": 404
+    },
+    "/health": {
+      "status": 200,
+      "contentType": "application/json",
+      "noStore": true,
+      "body": {
+        "status": "ok",
+        "schemaVersion": "care-schema-1.0"
+      }
+    },
+    "/privacy": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noStore": true
+    },
+    "/support": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noStore": true
+    },
+    "/api/status": {
+      "status": 404
+    }
+  }
+}

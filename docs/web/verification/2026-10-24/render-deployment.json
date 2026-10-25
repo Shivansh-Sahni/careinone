@@ -1,0 +1,21 @@
+{
+  "serviceID": "srv-db18qghsrm7s73ajqq8g",
+  "releaseSHA": "b5aeb69b8da5e1fe1acb31f7ab00974618201d5b",
+  "status": "Live",
+  "dockerfile": "web/Dockerfile",
+  "branch": "codex/careinone-web",
+  "compute": "0.5c-512mb",
+  "workers": 1,
+  "webCloudEnabled": true,
+  "nativeModelOrTokensChanged": false,
+  "newServicesOrDatabase": false,
+  "priorLiveSHA": "4ec91e3be0c45470743208e2fb337d30445c2234",
+  "initialDeploymentID": "dep-dbegcno473hc73d7kbeg",
+  "initialLiveAtUTC": "2026-10-24T19:27:02Z",
+  "initialDurationSeconds": 39.1,
+  "deploymentID": "dep-dbegm2dg1s2s73fhnco0",
+  "liveAtUTC": "2026-10-24T19:46:38Z",
+  "durationSeconds": 20.0,
+  "ownerEnteredAndSavedWebCredentials": true,
+  "liveWebInferenceVerified": true
+}

@@ -1,0 +1,14 @@
+{
+  "recordedAtUTC": "2026-10-24T19:08:54.068631+00:00",
+  "files": {
+    "CareInOne/Services/SecurityServices.swift": "96b5a7b31b709bcdf0e837e2453d27362a480ed7df5a784889409f39a0821cf4",
+    "CareInOne/Views/BackupView.swift": "c641bb27a6c6f36ed63500bd58400d8cdc930b244e745550bcc12e30f70908c8",
+    "CareInOne/Views/CaptureView.swift": "4eedec35895ecfa8e4bbe5a57899ae2a16529e0bf011705953028b82379d5ea6",
+    "CareInOne/Views/VisitPacketView.swift": "feb08e0a6f086bf5b0eed74c9d570fca3725845938c1a772288a2aeed9c8833a",
+    "UITests/BackupWorkflowUITests.swift": "198fbeb212cc1e0d6e9cadd6aa7910f9405c08cbdbd402b465e3e832350d902e",
+    "UITests/CapturePipelineUITests.swift": "90dce73d36c8d417887ba9038e0a56c916024f019a28cf099f144ffa76012768",
+    "UITests/CareInOneUITests.swift": "40c30bb4e604d8ec05c5748ea75f72bdb45e38584002ed7017029ef6b9c550a3",
+    "UITests/FollowThroughDraftRecoveryUITests.swift": "61d4e7ee999cf61842462f8af69186d317a1010cf4d61b08f6e8ddd9ec42b439",
+    "UITests/PatientCompanionUITests.swift": "d076da802adb76071efc239e1cb8a529dec4ce9624f3fe7599f172a39ae2f2fe"
+  }
+}

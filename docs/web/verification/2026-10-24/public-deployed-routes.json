@@ -1,0 +1,140 @@
+{
+  "checkedAtUTC": "2026-10-24T19:27:34.819974+00:00",
+  "origin": "https://careinone-api.onrender.com",
+  "releaseSHA": "b5aeb69b8da5e1fe1acb31f7ab00974618201d5b",
+  "paidRequests": 0,
+  "routes": {
+    "/": {
+      "status": 200,
+      "bytes": 993,
+      "cacheControl": "no-store",
+      "contentType": "text/html; charset=utf-8",
+      "csp": "default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob: data:; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; object-src 'none'",
+      "matchesLocalAsset": true
+    },
+    "/app.js": {
+      "status": 200,
+      "bytes": 72673,
+      "cacheControl": "no-store",
+      "contentType": "text/javascript; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/core.js": {
+      "status": 200,
+      "bytes": 22493,
+      "cacheControl": "no-store",
+      "contentType": "text/javascript; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/storage.js": {
+      "status": 200,
+      "bytes": 5653,
+      "cacheControl": "no-store",
+      "contentType": "text/javascript; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/style.css": {
+      "status": 200,
+      "bytes": 16353,
+      "cacheControl": "no-store",
+      "contentType": "text/css; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/imports.js": {
+      "status": 200,
+      "bytes": 11873,
+      "cacheControl": "no-store",
+      "contentType": "text/javascript; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/recorder.js": {
+      "status": 200,
+      "bytes": 3329,
+      "cacheControl": "no-store",
+      "contentType": "text/javascript; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/insights.js": {
+      "status": 200,
+      "bytes": 1937,
+      "cacheControl": "no-store",
+      "contentType": "text/javascript; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/icon.svg": {
+      "status": 200,
+      "bytes": 333,
+      "cacheControl": "no-store",
+      "contentType": "image/svg+xml",
+      "matchesLocalAsset": true
+    },
+    "/vendor/pdf-5.5.207/pdf.mjs": {
+      "status": 200,
+      "bytes": 802160,
+      "cacheControl": "no-store",
+      "contentType": "text/javascript; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/vendor/ocr-7.0.0/worker.min.js": {
+      "status": 200,
+      "bytes": 111307,
+      "cacheControl": "no-store",
+      "contentType": "text/javascript; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/vendor/ocr-7.0.0/lang/eng.traineddata.gz": {
+      "status": 200,
+      "bytes": 2952873,
+      "cacheControl": "no-store",
+      "contentType": "application/gzip",
+      "matchesLocalAsset": true
+    },
+    "/notices": {
+      "status": 200,
+      "bytes": 33546,
+      "cacheControl": "no-store",
+      "contentType": "text/plain; charset=utf-8"
+    },
+    "/health": {
+      "status": 200,
+      "bytes": 49,
+      "cacheControl": "no-store",
+      "contentType": "application/json",
+      "json": {
+        "status": "ok",
+        "schemaVersion": "care-schema-1.0"
+      }
+    },
+    "/privacy": {
+      "status": 200,
+      "bytes": 14270,
+      "cacheControl": "no-store",
+      "contentType": "text/html; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/support": {
+      "status": 200,
+      "bytes": 11162,
+      "cacheControl": "no-store",
+      "contentType": "text/html; charset=utf-8",
+      "matchesLocalAsset": true
+    },
+    "/api/status": {
+      "status": 200,
+      "bytes": 42,
+      "cacheControl": "no-store",
+      "contentType": "application/json",
+      "json": {
+        "enabled": false,
+        "storage": "browser-only"
+      }
+    },
+    "/v1/config": {
+      "status": 401
+    },
+    "/api/config": {
+      "status": 503
+    }
+  },
+  "passed": true
+}

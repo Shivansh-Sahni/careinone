@@ -1,0 +1,15 @@
+{
+  "checkedAtUTC": "2026-10-25T22:50:54.838159+00:00",
+  "nineNativeFilesMatchBaseline": {
+    "CareInOne/Services/SecurityServices.swift": true,
+    "CareInOne/Views/BackupView.swift": true,
+    "CareInOne/Views/CaptureView.swift": true,
+    "CareInOne/Views/VisitPacketView.swift": true,
+    "UITests/BackupWorkflowUITests.swift": true,
+    "UITests/CapturePipelineUITests.swift": true,
+    "UITests/CareInOneUITests.swift": true,
+    "UITests/FollowThroughDraftRecoveryUITests.swift": true,
+    "UITests/PatientCompanionUITests.swift": true
+  },
+  "allPreserved": true
+}

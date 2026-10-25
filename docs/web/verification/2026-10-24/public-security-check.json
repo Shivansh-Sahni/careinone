@@ -1,0 +1,13 @@
+{
+  "checkedAtUTC": "2026-10-24T19:44:14.029563+00:00",
+  "origin": "https://careinone-api.onrender.com",
+  "routes": {
+    "/.env": 404,
+    "/.git/config": 404,
+    "/backend/app.py": 404,
+    "/web/server.py": 404
+  },
+  "paidRequests": 0,
+  "securityHeadersPassed": true,
+  "passed": true
+}

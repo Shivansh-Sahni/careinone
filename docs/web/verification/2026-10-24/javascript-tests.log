@@ -1,0 +1,204 @@
+
+> careinone-web@1.0.1 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: capture preserves exact evidence and requires review before care projection
+ok 1 - capture preserves exact evidence and requires review before care projection
+  ---
+  duration_ms: 4.117625
+  ...
+# Subtest: different accepted doses preserve both sources without selecting a winner
+ok 2 - different accepted doses preserve both sources without selecting a winner
+  ---
+  duration_ms: 26.1005
+  ...
+# Subtest: acceptance never promotes family, negated, historical, conditional or uncertain statements
+ok 3 - acceptance never promotes family, negated, historical, conditional or uncertain statements
+  ---
+  duration_ms: 0.845708
+  ...
+# Subtest: reject, reopen, and correction update projection while preserving quote
+ok 4 - reject, reopen, and correction update projection while preserving quote
+  ---
+  duration_ms: 0.163333
+  ...
+# Subtest: duplicate capture is rejected without adding a second source
+ok 5 - duplicate capture is rejected without adding a second source
+  ---
+  duration_ms: 0.421709
+  ...
+# Subtest: forged cloud quotation is rejected atomically before source insertion
+ok 6 - forged cloud quotation is rejected atomically before source insertion
+  ---
+  duration_ms: 0.094834
+  ...
+# Subtest: deleting supporting source removes its claims and generated task state
+ok 7 - deleting supporting source removes its claims and generated task state
+  ---
+  duration_ms: 0.491792
+  ...
+# Subtest: task completion does not imply source evidence changed
+ok 8 - task completion does not imply source evidence changed
+  ---
+  duration_ms: 0.275625
+  ...
+# Subtest: no date is invented from capture date or unanchored relative text
+ok 9 - no date is invented from capture date or unanchored relative text
+  ---
+  duration_ms: 0.173167
+  ...
+# Subtest: date parser rejects rolled dates and date edits must be valid
+ok 10 - date parser rejects rolled dates and date edits must be valid
+  ---
+  duration_ms: 0.255208
+  ...
+# Subtest: backup validates evidence references, duplicate IDs and quote provenance
+ok 11 - backup validates evidence references, duplicate IDs and quote provenance
+  ---
+  duration_ms: 1.001834
+  ...
+# Subtest: backup encryption round trip preserves all records and rejects wrong password/tampering
+ok 12 - backup encryption round trip preserves all records and rejects wrong password/tampering
+  ---
+  duration_ms: 495.412167
+  ...
+# Subtest: short backup password is rejected
+ok 13 - short backup password is rejected
+  ---
+  duration_ms: 0.203875
+  ...
+# Subtest: synthetic demonstration is explicitly labeled and includes real source conflicts
+ok 14 - synthetic demonstration is explicitly labeled and includes real source conflicts
+  ---
+  duration_ms: 0.389334
+  ...
+# Subtest: identical observations on different event dates are separate source evidence
+ok 15 - identical observations on different event dates are separate source evidence
+  ---
+  duration_ms: 0.190208
+  ...
+# Subtest: rejected source statements pause saved follow-through without erasing outreach
+ok 16 - rejected source statements pause saved follow-through without erasing outreach
+  ---
+  duration_ms: 0.180542
+  ...
+# Subtest: reviewed appointments populate visit workspaces and pause on source correction
+ok 17 - reviewed appointments populate visit workspaces and pause on source correction
+  ---
+  duration_ms: 0.187084
+  ...
+# Subtest: cancelled tasks and appointments do not create open next steps or planned visits
+ok 18 - cancelled tasks and appointments do not create open next steps or planned visits
+  ---
+  duration_ms: 0.197
+  ...
+# Subtest: FHIR import preserves numeric units and single-patient attribution without external fetches
+ok 19 - FHIR import preserves numeric units and single-patient attribution without external fetches
+  ---
+  duration_ms: 4.284292
+  ...
+# Subtest: FHIR unresolved subject is unknown and never promoted to personal care
+ok 20 - FHIR unresolved subject is unknown and never promoted to personal care
+  ---
+  duration_ms: 0.351333
+  ...
+# Subtest: FHIR multiple patients are rejected rather than mixed
+ok 21 - FHIR multiple patients are rejected rather than mixed
+  ---
+  duration_ms: 0.19975
+  ...
+# Subtest: FHIR unsupported resources and narrative markup never become fabricated claims
+ok 22 - FHIR unsupported resources and narrative markup never become fabricated claims
+  ---
+  duration_ms: 0.074
+  ...
+# Subtest: FHIR rejects nonfinite observations and invalid JSON
+ok 23 - FHIR rejects nonfinite observations and invalid JSON
+  ---
+  duration_ms: 0.143625
+  ...
+# Subtest: PDF page provenance is preserved for exact unchanged text and discarded when unverified
+ok 24 - PDF page provenance is preserved for exact unchanged text and discarded when unverified
+  ---
+  duration_ms: 1.298834
+  ...
+# Subtest: a preserved original can be captured without invented extracted text
+ok 25 - a preserved original can be captured without invented extracted text
+  ---
+  duration_ms: 0.206125
+  ...
+# Subtest: leading and trailing page whitespace cannot invalidate an otherwise exact source quote
+ok 26 - leading and trailing page whitespace cannot invalidate an otherwise exact source quote
+  ---
+  duration_ms: 0.838792
+  ...
+# Subtest: numeric results preserve units and dates; distinct units never share a series
+ok 27 - numeric results preserve units and dates; distinct units never share a series
+  ---
+  duration_ms: 15.343667
+  ...
+# Subtest: unknown dates and missing numbers are never replaced with zero
+ok 28 - unknown dates and missing numbers are never replaced with zero
+  ---
+  duration_ms: 0.619458
+  ...
+# Subtest: editing a reported numeric value cannot leave the old value on the chart
+ok 29 - editing a reported numeric value cannot leave the old value on the chart
+  ---
+  duration_ms: 0.521167
+  ...
+# Subtest: Ask returns original matching claims and no invented answer when records are absent
+ok 30 - Ask returns original matching claims and no invented answer when records are absent
+  ---
+  duration_ms: 19.420334
+  ...
+# Subtest: evidence map loses deleted source and dependent statements
+ok 31 - evidence map loses deleted source and dependent statements
+  ---
+  duration_ms: 0.542958
+  ...
+# Subtest: a durable save advances revision only after commit and survives reopening
+ok 32 - a durable save advances revision only after commit and survives reopening
+  ---
+  duration_ms: 9.339834
+  ...
+# Subtest: a stale save and repeated retry preserve both the winning state and caller revision
+ok 33 - a stale save and repeated retry preserve both the winning state and caller revision
+  ---
+  duration_ms: 2.600459
+  ...
+# Subtest: concurrent IndexedDB transactions permit one writer per expected revision
+ok 34 - concurrent IndexedDB transactions permit one writer per expected revision
+  ---
+  duration_ms: 1.740791
+  ...
+# Subtest: failed validation does not mutate the stored workspace
+ok 35 - failed validation does not mutate the stored workspace
+  ---
+  duration_ms: 1.633
+  ...
+# Subtest: stale clearing is rejected and current clearing permits a fresh workspace
+ok 36 - stale clearing is rejected and current clearing permits a fresh workspace
+  ---
+  duration_ms: 2.202291
+  ...
+# Subtest: restoring a snapshot uses the current revision instead of trusting backup metadata
+ok 37 - restoring a snapshot uses the current revision instead of trusting backup metadata
+  ---
+  duration_ms: 2.380583
+  ...
+# Subtest: legacy and malformed revisions normalize without inheriting attacker values
+ok 38 - legacy and malformed revisions normalize without inheriting attacker values
+  ---
+  duration_ms: 1.659417
+  ...
+1..38
+# tests 38
+# suites 0
+# pass 38
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 586.051542

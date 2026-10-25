@@ -1,0 +1,27 @@
+{
+  "checkedAtUTC": "2026-10-25T22:48:53.580170+00:00",
+  "origin": "https://careinone.org",
+  "legacyAPIOrigin": "https://careinone-api.onrender.com",
+  "releaseSHA": "5246f03323bed521b41f318a0e3a8d21beebfa20",
+  "runtimeUID": 10001,
+  "paidRequestsAttempted": 0,
+  "patientDataUsed": false,
+  "allConfiguredNativeTokensAuthenticateOnOldHost": true,
+  "legacyHealthAndAuthenticationPassed": true,
+  "noncanonicalOriginPostRejected": true,
+  "canonicalCodeFreeSessionAndSecureCookiePassed": true,
+  "providers": {
+    "primary": {
+      "adapter": "openai",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "host": "api.openai.com",
+      "maxOutputTokens": 6000
+    },
+    "fallback": null
+  },
+  "nativeConfigurationMatches": true,
+  "maxSourceCharacters": 40000,
+  "missingConsentRejectedWithoutInference": true,
+  "logoutPassed": true,
+  "passed": true
+}

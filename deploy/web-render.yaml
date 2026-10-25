@@ -1,0 +1,28 @@
+# Deploy as a separate service; keep the current careinone-api service intact.
+# No database or persistent disk: patient records live only in the browser.
+services:
+  - type: web
+    name: careinone-web
+    runtime: docker
+    branch: codex/careinone-web
+    plan: starter
+    region: ohio
+    dockerfilePath: ./web/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: "off"
+    envVars:
+      - key: CARE_WEB_ORIGIN
+        sync: false
+      - key: CARE_WEB_GATEWAY_URL
+        value: https://careinone-api.onrender.com
+      - key: CARE_WEB_GATEWAY_TOKEN
+        sync: false
+      - key: CARE_WEB_SESSION_SECRET
+        generateValue: true
+      - key: CARE_WEB_ACCESS_CODES
+        sync: false
+      - key: CARE_WEB_DAILY_LIMIT
+        value: "10"
+      - key: CARE_WEB_GLOBAL_DAILY_LIMIT
+        value: "100"

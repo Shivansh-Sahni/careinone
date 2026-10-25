@@ -1,0 +1,38 @@
+{
+  "checkedAtUTC": "2026-10-25T22:44:43.942177+00:00",
+  "nineNativeFilesMatchPreWebBaseline": {
+    "CareInOne/Services/SecurityServices.swift": true,
+    "CareInOne/Views/BackupView.swift": true,
+    "CareInOne/Views/CaptureView.swift": true,
+    "CareInOne/Views/VisitPacketView.swift": true,
+    "UITests/BackupWorkflowUITests.swift": true,
+    "UITests/CapturePipelineUITests.swift": true,
+    "UITests/CareInOneUITests.swift": true,
+    "UITests/FollowThroughDraftRecoveryUITests.swift": true,
+    "UITests/PatientCompanionUITests.swift": true
+  },
+  "nativeAndSecurityBoundaries": {
+    "backend/public/privacy.html": {
+      "sha256": "177a012f25fbe8a99fd71ccf901efe7be593bcf5f9b55a05df7d5412a034fc62",
+      "unchangedFromPreviousRelease": true
+    },
+    "backend/public/support.html": {
+      "sha256": "ecd7b0d2ec118b8fc94d1e52231e90d40d45cd5eafdf852c5965b014985683cd",
+      "unchangedFromPreviousRelease": true
+    },
+    "web/combined.py": {
+      "sha256": "be672c581067695fd9cf4d47453b1c8a8b89bb6f8c0e40e7b78f1f019eb83bec",
+      "unchangedFromPreviousRelease": true
+    },
+    "web/server.py": {
+      "sha256": "7ab69e6143d22a85869b36c5c368d52f34e8baa3dbbd7e1bf9616a6c46bc50ae",
+      "unchangedFromPreviousRelease": true
+    },
+    "backend/providers.py": {
+      "sha256": "020a035d76ad396cf0b825065d505305e4e912bf4101fe49e7a01131083cbd2d",
+      "unchangedFromPreviousRelease": true
+    }
+  },
+  "patientDataUsed": false,
+  "paidRequests": 0
+}

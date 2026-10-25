@@ -1,0 +1,1 @@
+{"resourceType":"Bundle","type":"collection","entry":[{"resource":{"resourceType":"Patient","id":"fictional-patient"}},{"resource":{"resourceType":"Observation","id":"fictional-observation","status":"final","subject":{"reference":"Patient/fictional-patient"},"code":{"text":"Fictional glucose"},"effectiveDateTime":"2026-10-01","valueQuantity":{"value":95,"unit":"mg/dL"}}}]}

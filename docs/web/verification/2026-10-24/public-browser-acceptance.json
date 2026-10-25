@@ -1,0 +1,27 @@
+{
+  "checkedAtUTC": "2026-10-24T19:43:08.218588+00:00",
+  "origin": "https://careinone-api.onrender.com",
+  "releaseSHA": "b5aeb69b8da5e1fe1acb31f7ab00974618201d5b",
+  "browser": "Google Chrome, Computer Science profile",
+  "syntheticOnly": true,
+  "patientDataUsed": false,
+  "passed": [
+    "fresh onboarding and fictional example",
+    "both medication quotations and unresolved difference",
+    "individual pending detail acceptance",
+    "new typed source to pending review to accepted task",
+    "personal task check-back date and notes persist after reload",
+    "visit recap save and recap to pending source",
+    "care brief preserves source references and unresolved difference",
+    "browser console has no warnings or errors",
+    "encrypted browser download and offline decryption of all5sources/10claims/1visit",
+    "390x844 responsive viewport: document and viewport width390 with no horizontal page overflow; override reset"
+  ],
+  "limits": [
+    "deployed PDF/OCR/restore UI upload not yet rerun: browser automation extension fileURL permission disabled",
+    "physical microphone not tested",
+    "physical device testing remains distinct from browser viewport emulation"
+  ],
+  "paidRequests": 0,
+  "cloudVerification": "live-web-verification.json: one fictional real extraction passed separately"
+}
